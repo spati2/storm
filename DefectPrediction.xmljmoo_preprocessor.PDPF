@@ -1,0 +1,34 @@
+<Experiment>
+<Problem name = 'diabeties'>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>4000</NumEvals>
+<RunTime>71.6312849522</RunTime>
+<Training>training</Training>
+<Tuning>tuning</Tuning>
+<Testing>testing</Testing>
+<Training_Tuning>
+	<parameters0> 100</parameters0> 
+	<parameters1> 5</parameters1> 
+</Training_Tuning>
+<Parameters>
+<param0>13.7323556774</param0> 
+<param1>10.3745363164</param1> 
+<param2>0.439454404534</param2> 
+<param3>32.2157790703</param3> 
+<param4>191.968942247</param4> 
+</Parameters>
+<Testing>
+	<pd> 100</pd> 
+	<pf> 5</pf> 
+</Testing>
+<Default>
+	<pd> 100</pd> 
+	<pf> 0</pf> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+</Experiment>

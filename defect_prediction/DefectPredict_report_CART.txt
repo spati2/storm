@@ -1,0 +1,496 @@
+Experiment: 
+Problem Name: ant
+Algorithm: GALE
+NumEval: Median: 138.000  IQR: 91.000
+RunTime: Median: 2.602  IQR: 1.518
+pd: Median: 50.000  IQR: 15.000
+pf: Median: 9.000  IQR: 3.000
+prec: Median: 37.500  IQR: 9.000
+Default pd: Median: 38.000  IQR: 6.000
+Default pf: Median: 13.500  IQR: 2.000
+Default prec: Median: 27.500  IQR: 4.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 24.410  IQR: 1.443
+pd: Median: 53.000  IQR: 3.000
+pf: Median: 17.000  IQR: 2.000
+prec: Median: 28.000  IQR: 2.000
+Default pd: Median: 38.000  IQR: 7.000
+Default pf: Median: 12.000  IQR: 3.000
+Default prec: Median: 27.000  IQR: 3.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 37.464  IQR: 2.157
+pd: Median: 53.000  IQR: 0.000
+pf: Median: 16.000  IQR: 4.000
+prec: Median: 28.000  IQR: 1.000
+Default pd: Median: 38.000  IQR: 4.000
+Default pf: Median: 13.000  IQR: 2.000
+Default prec: Median: 26.500  IQR: 3.000
+
+
+Algorithm: DE
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 22.823  IQR: 1.090
+pd: Median: 45.500  IQR: 18.000
+pf: Median: 18.000  IQR: 2.000
+prec: Median: 20.000  IQR: 7.000
+Default pd: Median: 38.000  IQR: 4.000
+Default pf: Median: 12.000  IQR: 2.000
+Default prec: Median: 26.500  IQR: 3.000
+
+
+Problem Name: camel
+Algorithm: GALE
+NumEval: Median: 255.500  IQR: 29.000
+RunTime: Median: 10.272  IQR: 0.877
+pd: Median: 3.000  IQR: 10.000
+pf: Median: 0.500  IQR: 3.000
+prec: Median: 66.500  IQR: 43.000
+Default pd: Median: 10.000  IQR: 2.000
+Default pf: Median: 5.000  IQR: 0.000
+Default prec: Median: 29.500  IQR: 4.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 66.334  IQR: 7.509
+pd: Median: 52.000  IQR: 7.000
+pf: Median: 35.000  IQR: 9.000
+prec: Median: 25.000  IQR: 5.000
+Default pd: Median: 10.000  IQR: 4.000
+Default pf: Median: 5.000  IQR: 0.000
+Default prec: Median: 29.000  IQR: 5.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 4000.000  IQR: 1200.000
+RunTime: Median: 63.532  IQR: 17.855
+pd: Median: 53.500  IQR: 7.000
+pf: Median: 35.000  IQR: 9.000
+prec: Median: 25.000  IQR: 5.000
+Default pd: Median: 10.000  IQR: 4.000
+Default pf: Median: 5.000  IQR: 1.000
+Default prec: Median: 29.000  IQR: 6.000
+
+
+Algorithm: DE
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 77.334  IQR: 6.999
+pd: Median: 24.000  IQR: 8.000
+pf: Median: 9.500  IQR: 5.000
+prec: Median: 33.000  IQR: 9.000
+Default pd: Median: 10.000  IQR: 4.000
+Default pf: Median: 5.000  IQR: 1.000
+Default prec: Median: 30.500  IQR: 6.000
+
+
+Problem Name: forrest
+Algorithm: GALE
+NumEval: Median: 440.000  IQR: 73.000
+RunTime: Median: 2.868  IQR: 0.212
+pd: Median: 0.000  IQR: 0.000
+pf: Median: 0.000  IQR: 0.000
+prec: Median: 94.000  IQR: 0.000
+Default pd: Median: 0.000  IQR: 0.000
+Default pf: Median: 12.000  IQR: 13.000
+Default prec: Median: 0.000  IQR: 0.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 4.512  IQR: 0.053
+pd: Median: 100.000  IQR: 0.000
+pf: Median: 57.000  IQR: 0.000
+prec: Median: 11.000  IQR: 0.000
+Default pd: Median: 0.000  IQR: 0.000
+Default pf: Median: 17.000  IQR: 20.000
+Default prec: Median: 0.000  IQR: 0.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 53.354  IQR: 1.688
+pd: Median: 100.000  IQR: 0.000
+pf: Median: 57.000  IQR: 0.000
+prec: Median: 11.000  IQR: 0.000
+Default pd: Median: 0.000  IQR: 0.000
+Default pf: Median: 17.000  IQR: 13.000
+Default prec: Median: 0.000  IQR: 0.000
+
+
+Algorithm: DE
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 4.245  IQR: 0.368
+pd: Median: 0.000  IQR: 0.000
+pf: Median: 0.000  IQR: 0.000
+prec: Median: 94.000  IQR: 0.000
+Default pd: Median: 0.000  IQR: 0.000
+Default pf: Median: 17.000  IQR: 10.000
+Default prec: Median: 0.000  IQR: 0.000
+
+
+Problem Name: ivy
+Algorithm: GALE
+NumEval: Median: 52.000  IQR: 25.000
+RunTime: Median: 1.305  IQR: 0.463
+pd: Median: 90.500  IQR: 10.000
+pf: Median: 45.500  IQR: 7.000
+prec: Median: 20.000  IQR: 1.000
+Default pd: Median: 88.000  IQR: 5.000
+Default pf: Median: 51.500  IQR: 5.000
+Default prec: Median: 18.000  IQR: 1.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 29.314  IQR: 1.780
+pd: Median: 80.000  IQR: 0.000
+pf: Median: 28.000  IQR: 0.000
+prec: Median: 27.000  IQR: 0.000
+Default pd: Median: 85.500  IQR: 5.000
+Default pf: Median: 51.500  IQR: 3.000
+Default prec: Median: 18.000  IQR: 1.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 4000.000  IQR: 1800.000
+RunTime: Median: 41.661  IQR: 20.428
+pd: Median: 80.000  IQR: 3.000
+pf: Median: 28.000  IQR: 5.000
+prec: Median: 27.000  IQR: 2.000
+Default pd: Median: 85.500  IQR: 5.000
+Default pf: Median: 51.000  IQR: 5.000
+Default prec: Median: 18.000  IQR: 1.000
+
+
+Algorithm: DE
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 29.152  IQR: 0.613
+pd: Median: 80.000  IQR: 0.000
+pf: Median: 28.000  IQR: 0.000
+prec: Median: 27.000  IQR: 0.000
+Default pd: Median: 88.000  IQR: 5.000
+Default pf: Median: 51.000  IQR: 4.000
+Default prec: Median: 18.000  IQR: 1.000
+
+
+Problem Name: jedit
+Algorithm: GALE
+NumEval: Median: 55.000  IQR: 10.000
+RunTime: Median: 1.709  IQR: 0.358
+pd: Median: 68.000  IQR: 7.000
+pf: Median: 21.500  IQR: 4.000
+prec: Median: 51.500  IQR: 6.000
+Default pd: Median: 63.000  IQR: 4.000
+Default pf: Median: 23.000  IQR: 1.000
+Default prec: Median: 49.000  IQR: 2.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 3200.000  IQR: 2200.000
+RunTime: Median: 39.208  IQR: 20.290
+pd: Median: 61.000  IQR: 4.000
+pf: Median: 17.000  IQR: 2.000
+prec: Median: 55.000  IQR: 4.000
+Default pd: Median: 63.000  IQR: 4.000
+Default pf: Median: 22.500  IQR: 1.000
+Default prec: Median: 49.000  IQR: 2.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 1900.000  IQR: 2400.000
+RunTime: Median: 27.616  IQR: 35.403
+pd: Median: 61.000  IQR: 7.000
+pf: Median: 17.500  IQR: 1.000
+prec: Median: 54.000  IQR: 5.000
+Default pd: Median: 63.000  IQR: 3.000
+Default pf: Median: 23.000  IQR: 1.000
+Default prec: Median: 49.000  IQR: 2.000
+
+
+Algorithm: DE
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 48.512  IQR: 4.768
+pd: Median: 59.000  IQR: 6.000
+pf: Median: 17.500  IQR: 1.000
+prec: Median: 53.000  IQR: 2.000
+Default pd: Median: 62.500  IQR: 3.000
+Default pf: Median: 22.000  IQR: 1.000
+Default prec: Median: 49.000  IQR: 2.000
+
+
+Problem Name: lucene
+Algorithm: GALE
+NumEval: Median: 45.500  IQR: 14.000
+RunTime: Median: 1.212  IQR: 0.341
+pd: Median: 56.500  IQR: 11.000
+pf: Median: 38.000  IQR: 11.000
+prec: Median: 69.000  IQR: 3.000
+Default pd: Median: 50.000  IQR: 2.000
+Default pf: Median: 34.500  IQR: 3.000
+Default prec: Median: 69.000  IQR: 3.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 3900.000  IQR: 1400.000
+RunTime: Median: 35.120  IQR: 12.120
+pd: Median: 58.000  IQR: 12.000
+pf: Median: 36.500  IQR: 3.000
+prec: Median: 69.500  IQR: 6.000
+Default pd: Median: 51.000  IQR: 2.000
+Default pf: Median: 34.000  IQR: 2.000
+Default prec: Median: 69.000  IQR: 3.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 1800.000  IQR: 400.000
+RunTime: Median: 20.591  IQR: 5.230
+pd: Median: 66.000  IQR: 6.000
+pf: Median: 34.000  IQR: 5.000
+prec: Median: 74.000  IQR: 4.000
+Default pd: Median: 51.000  IQR: 2.000
+Default pf: Median: 34.500  IQR: 2.000
+Default prec: Median: 69.000  IQR: 1.000
+
+
+Algorithm: DE
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 36.891  IQR: 0.942
+pd: Median: 67.000  IQR: 0.000
+pf: Median: 32.000  IQR: 0.000
+prec: Median: 75.000  IQR: 0.000
+Default pd: Median: 51.000  IQR: 2.000
+Default pf: Median: 35.000  IQR: 2.000
+Default prec: Median: 69.000  IQR: 3.000
+
+
+Problem Name: poi
+Algorithm: GALE
+NumEval: Median: 62.000  IQR: 44.000
+RunTime: Median: 1.984  IQR: 1.469
+pd: Median: 64.500  IQR: 8.000
+pf: Median: 40.000  IQR: 19.000
+prec: Median: 73.500  IQR: 6.000
+Default pd: Median: 67.500  IQR: 4.000
+Default pf: Median: 35.000  IQR: 1.000
+Default prec: Median: 78.000  IQR: 2.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 45.052  IQR: 1.674
+pd: Median: 51.500  IQR: 7.000
+pf: Median: 31.000  IQR: 3.000
+prec: Median: 76.000  IQR: 3.000
+Default pd: Median: 67.000  IQR: 2.000
+Default pf: Median: 35.000  IQR: 1.000
+Default prec: Median: 78.000  IQR: 1.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 3200.000  IQR: 1800.000
+RunTime: Median: 34.969  IQR: 26.400
+pd: Median: 56.000  IQR: 2.000
+pf: Median: 31.000  IQR: 6.000
+prec: Median: 74.500  IQR: 4.000
+Default pd: Median: 67.000  IQR: 2.000
+Default pf: Median: 35.000  IQR: 2.000
+Default prec: Median: 78.000  IQR: 1.000
+
+
+Algorithm: DE
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 44.982  IQR: 5.986
+pd: Median: 53.500  IQR: 7.000
+pf: Median: 31.000  IQR: 2.000
+prec: Median: 77.000  IQR: 1.000
+Default pd: Median: 67.000  IQR: 2.000
+Default pf: Median: 35.000  IQR: 2.000
+Default prec: Median: 78.000  IQR: 1.000
+
+
+Problem Name: synapse
+Algorithm: GALE
+NumEval: Median: 127.500  IQR: 57.000
+RunTime: Median: 3.120  IQR: 1.554
+pd: Median: 19.000  IQR: 13.000
+pf: Median: 1.000  IQR: 2.000
+prec: Median: 94.000  IQR: 20.000
+Default pd: Median: 28.000  IQR: 2.000
+Default pf: Median: 7.000  IQR: 2.000
+Default prec: Median: 65.000  IQR: 5.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 3300.000  IQR: 1400.000
+RunTime: Median: 25.230  IQR: 9.771
+pd: Median: 58.000  IQR: 0.000
+pf: Median: 15.000  IQR: 0.000
+prec: Median: 67.000  IQR: 0.000
+Default pd: Median: 28.500  IQR: 2.000
+Default pf: Median: 7.000  IQR: 2.000
+Default prec: Median: 65.500  IQR: 5.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 4000.000  IQR: 2200.000
+RunTime: Median: 45.742  IQR: 34.328
+pd: Median: 58.000  IQR: 2.000
+pf: Median: 15.000  IQR: 0.000
+prec: Median: 67.000  IQR: 0.000
+Default pd: Median: 28.000  IQR: 2.000
+Default pf: Median: 7.000  IQR: 2.000
+Default prec: Median: 67.000  IQR: 5.000
+
+
+Algorithm: DE
+NumEval: Median: 3300.000  IQR: 2200.000
+RunTime: Median: 22.108  IQR: 14.446
+pd: Median: 52.000  IQR: 15.000
+pf: Median: 15.000  IQR: 8.000
+prec: Median: 65.500  IQR: 9.000
+Default pd: Median: 28.000  IQR: 2.000
+Default pf: Median: 7.000  IQR: 2.000
+Default prec: Median: 67.000  IQR: 4.000
+
+
+Problem Name: Velocity
+Algorithm: GALE
+NumEval: Median: 62.000  IQR: 15.000
+RunTime: Median: 1.278  IQR: 0.262
+pd: Median: 77.000  IQR: 14.000
+pf: Median: 67.500  IQR: 15.000
+prec: Median: 38.500  IQR: 5.000
+Default pd: Median: 85.000  IQR: 5.000
+Default pf: Median: 84.500  IQR: 2.000
+Default prec: Median: 34.000  IQR: 2.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 4000.000  IQR: 1600.000
+RunTime: Median: 28.623  IQR: 12.100
+pd: Median: 72.000  IQR: 4.000
+pf: Median: 55.000  IQR: 3.000
+prec: Median: 41.000  IQR: 0.000
+Default pd: Median: 85.000  IQR: 4.000
+Default pf: Median: 84.000  IQR: 2.000
+Default prec: Median: 34.000  IQR: 1.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 3900.000  IQR: 2600.000
+RunTime: Median: 33.534  IQR: 24.633
+pd: Median: 69.000  IQR: 6.000
+pf: Median: 46.000  IQR: 12.000
+prec: Median: 45.000  IQR: 4.000
+Default pd: Median: 85.500  IQR: 5.000
+Default pf: Median: 84.500  IQR: 2.000
+Default prec: Median: 34.500  IQR: 1.000
+
+
+Algorithm: DE
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 28.673  IQR: 0.919
+pd: Median: 72.000  IQR: 1.000
+pf: Median: 48.000  IQR: 7.000
+prec: Median: 44.000  IQR: 2.000
+Default pd: Median: 87.000  IQR: 3.000
+Default pf: Median: 85.000  IQR: 1.000
+Default prec: Median: 35.000  IQR: 1.000
+
+
+Problem Name: xerces
+Algorithm: GALE
+NumEval: Median: 56.500  IQR: 26.000
+RunTime: Median: 2.171  IQR: 1.138
+pd: Median: 9.500  IQR: 13.000
+pf: Median: 25.500  IQR: 24.000
+prec: Median: 55.000  IQR: 17.000
+Default pd: Median: 11.000  IQR: 1.000
+Default pf: Median: 25.500  IQR: 3.000
+Default prec: Median: 55.000  IQR: 3.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 62.418  IQR: 5.685
+pd: Median: 15.000  IQR: 10.000
+pf: Median: 36.000  IQR: 9.000
+prec: Median: 56.000  IQR: 6.000
+Default pd: Median: 11.000  IQR: 0.000
+Default pf: Median: 25.500  IQR: 3.000
+Default prec: Median: 56.000  IQR: 3.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 75.421  IQR: 8.593
+pd: Median: 10.500  IQR: 11.000
+pf: Median: 22.000  IQR: 14.000
+prec: Median: 52.000  IQR: 20.000
+Default pd: Median: 11.000  IQR: 0.000
+Default pf: Median: 25.000  IQR: 3.000
+Default prec: Median: 56.000  IQR: 3.000
+
+
+Algorithm: DE
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 63.608  IQR: 10.970
+pd: Median: 17.000  IQR: 6.000
+pf: Median: 30.500  IQR: 17.000
+prec: Median: 61.000  IQR: 27.000
+Default pd: Median: 11.000  IQR: 0.000
+Default pf: Median: 26.000  IQR: 3.000
+Default prec: Median: 56.000  IQR: 2.000
+
+
+Problem Name: Xalan
+Algorithm: GALE
+NumEval: Median: 49.500  IQR: 17.000
+RunTime: Median: 2.715  IQR: 0.962
+pd: Median: 32.000  IQR: 15.000
+pf: Median: 7.000  IQR: 6.000
+prec: Median: 79.500  IQR: 8.000
+Default pd: Median: 23.500  IQR: 8.000
+Default pf: Median: 10.000  IQR: 0.000
+Default prec: Median: 67.500  IQR: 8.000
+
+
+Algorithm: NSGAII
+NumEval: Median: 4000.000  IQR: 1000.000
+RunTime: Median: 101.097  IQR: 24.487
+pd: Median: 69.000  IQR: 10.000
+pf: Median: 40.500  IQR: 4.000
+prec: Median: 59.500  IQR: 5.000
+Default pd: Median: 24.000  IQR: 7.000
+Default pf: Median: 10.000  IQR: 0.000
+Default prec: Median: 68.000  IQR: 5.000
+
+
+Algorithm: SPEA2
+NumEval: Median: 4000.000  IQR: 1000.000
+RunTime: Median: 112.283  IQR: 40.692
+pd: Median: 68.000  IQR: 9.000
+pf: Median: 40.000  IQR: 7.000
+prec: Median: 59.500  IQR: 7.000
+Default pd: Median: 24.000  IQR: 6.000
+Default pf: Median: 10.000  IQR: 0.000
+Default prec: Median: 67.000  IQR: 5.000
+
+
+Algorithm: DE
+NumEval: Median: 4000.000  IQR: 0.000
+RunTime: Median: 136.510  IQR: 0.686
+pd: Median: 53.500  IQR: 14.000
+pf: Median: 27.000  IQR: 5.000
+prec: Median: 64.000  IQR: 3.000
+Default pd: Median: 24.000  IQR: 5.000
+Default pf: Median: 10.000  IQR: 0.000
+Default prec: Median: 68.000  IQR: 5.000
+
+

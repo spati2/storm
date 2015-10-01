@@ -1,0 +1,277 @@
+Dataset:  cpm_apache_training_reduction  Repeat:  0/Users/viveknair/jmoo-jmoo_v2/Problems/CPM
+ Length of training set:  30  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  1 Length of training set:  28  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  2 Length of training set:  28  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  3 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  4 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  5 Length of training set:  30  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  6 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  7 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  8 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  9 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  10 Length of training set:  30  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  11 Length of training set:  30  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  12 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  13 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  14 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  15 Length of training set:  30  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  16 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  17 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  18 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  19 Length of training set:  32  Length of testing set:  64  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  0 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  1 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  2 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  3 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  4 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  5 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  6 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  7 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  8 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  9 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  10 Length of training set:  30  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  11 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  12 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  13 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  14 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  15 Length of training set:  30  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  16 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  17 Length of training set:  30  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  18 Length of training set:  30  Length of testing set:  57  Method:  east_west_where
+Dataset:  cpm_apache_training_reduction  Repeat:  19 Length of training set:  32  Length of testing set:  57  Method:  east_west_where
+0.6666,0.0847020306646,0.0181769772556,227418.0,east_west_where
+
+0.7,0.0871699457657,0.0105447758954,226372.5,east_west_where
+
+#################### END ####################
+1 training_percent:  0.6666
+Dataset:  cpm_BDBC  Repeat:  0 Length of training set:  238  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  1 Length of training set:  220  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  2 Length of training set:  226  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  3 Length of training set:  234  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  4 Length of training set:  222  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  5 Length of training set:  226  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  6 Length of training set:  232  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  7 Length of training set:  228  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  8 Length of training set:  216  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  9 Length of training set:  226  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  10 Length of training set:  210  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  11 Length of training set:  210  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  12 Length of training set:  214  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  13 Length of training set:  222  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  14 Length of training set:  224  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  15 Length of training set:  224  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  16 Length of training set:  222  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  17 Length of training set:  222  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  18 Length of training set:  208  Length of testing set:  853  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  19 Length of training set:  224  Length of testing set:  853  Method:  east_west_where
+1 training_percent:  0.7
+Dataset:  cpm_BDBC  Repeat:  0 Length of training set:  220  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  1 Length of training set:  224  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  2 Length of training set:  226  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  3 Length of training set:  220  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  4 Length of training set:  214  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  5 Length of training set:  220  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  6 Length of training set:  200  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  7 Length of training set:  214  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  8 Length of training set:  218  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  9 Length of training set:  216  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  10 Length of training set:  226  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  11 Length of training set:  228  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  12 Length of training set:  208  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  13 Length of training set:  218  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  14 Length of training set:  224  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  15 Length of training set:  228  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  16 Length of training set:  214  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  17 Length of training set:  228  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  18 Length of training set:  208  Length of testing set:  768  Method:  east_west_where
+Dataset:  cpm_BDBC  Repeat:  19 Length of training set:  220  Length of testing set:  768  Method:  east_west_where
+0.6666,0.00966960631806,0.00234348069783,18609.1543123,east_west_where
+
+0.7,0.00963503280483,0.0017320952901,18630.5801973,east_west_where
+
+#################### END ####################
+Dataset:  cpm_BDBJ  Repeat:  0 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  1 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  2 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  3 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  4 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  5 Length of training set:  30  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  6 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  7 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  8 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  9 Length of training set:  30  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  10 Length of training set:  30  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  11 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  12 Length of training set:  28  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  13 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  14 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  15 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  16 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  17 Length of training set:  30  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  18 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  19 Length of training set:  32  Length of testing set:  60  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  0 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  1 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  2 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  3 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  4 Length of training set:  26  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  5 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  6 Length of training set:  28  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  7 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  8 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  9 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  10 Length of training set:  30  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  11 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  12 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  13 Length of training set:  30  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  14 Length of training set:  28  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  15 Length of training set:  30  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  16 Length of training set:  28  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  17 Length of training set:  28  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  18 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+Dataset:  cpm_BDBJ  Repeat:  19 Length of training set:  32  Length of testing set:  54  Method:  east_west_where
+0.6666,0.0252446610112,0.00479191221294,921365.75,east_west_where
+
+0.7,0.0283374676005,0.00237725480315,911913.85,east_west_where
+
+#################### END ####################
+1 training_percent:  0.6666
+Dataset:  cpm_SQL  Repeat:  0 Length of training set:  244  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  1 Length of training set:  248  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  2 Length of training set:  250  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  3 Length of training set:  244  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  4 Length of training set:  248  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  5 Length of training set:  248  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  6 Length of training set:  246  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  7 Length of training set:  248  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  8 Length of training set:  248  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  9 Length of training set:  246  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  10 Length of training set:  250  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  11 Length of training set:  246  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  12 Length of training set:  248  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  13 Length of training set:  246  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  14 Length of training set:  242  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  15 Length of training set:  244  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  16 Length of training set:  244  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  17 Length of training set:  246  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  18 Length of training set:  244  Length of testing set:  1551  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  19 Length of training set:  244  Length of testing set:  1551  Method:  east_west_where
+1 training_percent:  0.7
+Dataset:  cpm_SQL  Repeat:  0 Length of training set:  248  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  1 Length of training set:  242  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  2 Length of training set:  246  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  3 Length of training set:  240  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  4 Length of training set:  244  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  5 Length of training set:  244  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  6 Length of training set:  240  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  7 Length of training set:  248  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  8 Length of training set:  250  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  9 Length of training set:  248  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  10 Length of training set:  246  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  11 Length of training set:  244  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  12 Length of training set:  246  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  13 Length of training set:  248  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  14 Length of training set:  238  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  15 Length of training set:  250  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  16 Length of training set:  244  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  17 Length of training set:  250  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  18 Length of training set:  244  Length of testing set:  1395  Method:  east_west_where
+Dataset:  cpm_SQL  Repeat:  19 Length of training set:  244  Length of testing set:  1395  Method:  east_west_where
+0.6666,0.0673794930372,0.00473467467221,63995.251118,east_west_where
+
+0.7,0.0686945392455,0.00439837319729,64013.971998,east_west_where
+
+#################### END ####################
+1 training_percent:  0.6666
+Dataset:  cpm_X264  Repeat:  0 Length of training set:  168  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  1 Length of training set:  160  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  2 Length of training set:  168  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  3 Length of training set:  180  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  4 Length of training set:  172  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  5 Length of training set:  152  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  6 Length of training set:  168  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  7 Length of training set:  168  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  8 Length of training set:  172  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  9 Length of training set:  168  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  10 Length of training set:  174  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  11 Length of training set:  150  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  12 Length of training set:  166  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  13 Length of training set:  166  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  14 Length of training set:  160  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  15 Length of training set:  164  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  16 Length of training set:  170  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  17 Length of training set:  168  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  18 Length of training set:  168  Length of testing set:  384  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  19 Length of training set:  162  Length of testing set:  384  Method:  east_west_where
+1 training_percent:  0.7
+Dataset:  cpm_X264  Repeat:  0 Length of training set:  166  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  1 Length of training set:  174  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  2 Length of training set:  166  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  3 Length of training set:  168  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  4 Length of training set:  154  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  5 Length of training set:  168  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  6 Length of training set:  158  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  7 Length of training set:  168  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  8 Length of training set:  150  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  9 Length of training set:  172  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  10 Length of training set:  160  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  11 Length of training set:  168  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  12 Length of training set:  160  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  13 Length of training set:  170  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  14 Length of training set:  168  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  15 Length of training set:  160  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  16 Length of training set:  168  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  17 Length of training set:  156  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  18 Length of training set:  164  Length of testing set:  345  Method:  east_west_where
+Dataset:  cpm_X264  Repeat:  19 Length of training set:  164  Length of testing set:  345  Method:  east_west_where
+0.6666,0.0128334134418,0.00638075555328,451452.191115,east_west_where
+
+0.7,0.0109607598247,0.00389800139374,451591.6943,east_west_where
+
+#################### END ####################
+Dataset:  cpm_LLVM  Repeat:  0 Length of training set:  172  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  1 Length of training set:  174  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  2 Length of training set:  162  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  3 Length of training set:  166  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  4 Length of training set:  174  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  5 Length of training set:  158  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  6 Length of training set:  152  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  7 Length of training set:  166  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  8 Length of training set:  168  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  9 Length of training set:  158  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  10 Length of training set:  162  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  11 Length of training set:  170  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  12 Length of training set:  152  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  13 Length of training set:  162  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  14 Length of training set:  148  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  15 Length of training set:  172  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  16 Length of training set:  154  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  17 Length of training set:  164  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  18 Length of training set:  152  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  19 Length of training set:  158  Length of testing set:  341  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  0 Length of training set:  168  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  1 Length of training set:  166  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  2 Length of training set:  166  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  3 Length of training set:  160  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  4 Length of training set:  172  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  5 Length of training set:  162  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  6 Length of training set:  154  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  7 Length of training set:  166  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  8 Length of training set:  168  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  9 Length of training set:  176  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  10 Length of training set:  166  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  11 Length of training set:  166  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  12 Length of training set:  160  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  13 Length of training set:  168  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  14 Length of training set:  180  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  15 Length of training set:  158  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  16 Length of training set:  152  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  17 Length of training set:  172  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  18 Length of training set:  178  Length of testing set:  307  Method:  east_west_where
+Dataset:  cpm_LLVM  Repeat:  19 Length of training set:  162  Length of testing set:  307  Method:  east_west_where
+0.6666,0.0216829504065,0.00247565746074,204186.521002,east_west_where
+
+0.7,0.0208256510937,0.00409905929691,203251.358722,east_west_where
+
+#################### END ####################

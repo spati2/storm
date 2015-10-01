@@ -1,0 +1,3757 @@
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  base_line 0.5
+0   testing_percent:  0.5
+/Users/viveknair/jmoo-jmoo_v2/Problems/CPM
+Length of training set:  96 Length of testing set:  96
+1   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+2   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+3   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+4   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+5   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+6   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+7   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+8   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+9   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+10   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+11   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+12   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+13   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+14   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+15   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+16   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+17   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+18   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+19   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  96
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  base_line 0.6
+0   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+1   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+2   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+3   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+4   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+5   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+6   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+7   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+8   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+9   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+10   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+11   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+12   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+13   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+14   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+15   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+16   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+17   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+18   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+19   testing_percent:  0.4
+Length of training set:  116 Length of testing set:  76
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  base_line 0.7
+0   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+1   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+2   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+3   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+4   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+5   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+6   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+7   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+8   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+9   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+10   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+11   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+12   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+13   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+14   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+15   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+16   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+17   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+18   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+19   testing_percent:  0.3
+Length of training set:  135 Length of testing set:  57
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  base_line 0.8
+0   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+1   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+2   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+3   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+4   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+5   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+6   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+7   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+8   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+9   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+10   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+11   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+12   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+13   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+14   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+15   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+16   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+17   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+18   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+19   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  38
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  base_line 0.9
+0   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+1   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+2   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+3   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+4   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+5   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+6   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+7   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+8   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+9   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+10   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+11   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+12   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+13   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+14   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+15   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+16   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+17   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+18   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+19   testing_percent:  0.1
+Length of training set:  173 Length of testing set:  19
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  exemplar_where 0.5
+0   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+1   testing_percent:  0.5
+Length of training set:  15 Length of testing set:  96
+2   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+3   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+4   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+5   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+6   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+7   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+8   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+9   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+10   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+11   testing_percent:  0.5
+Length of training set:  15 Length of testing set:  96
+12   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+13   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+14   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+15   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+16   testing_percent:  0.5
+Length of training set:  15 Length of testing set:  96
+17   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+18   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  96
+19   testing_percent:  0.5
+Length of training set:  15 Length of testing set:  96
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  exemplar_where 0.6
+0   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+1   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+2   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+3   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+4   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+5   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+6   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+7   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+8   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+9   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+10   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+11   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+12   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+13   testing_percent:  0.4
+Length of training set:  15 Length of testing set:  76
+14   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+15   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+16   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+17   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+18   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+19   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  76
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  exemplar_where 0.7
+0   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  57
+1   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  57
+2   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+3   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+4   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+5   testing_percent:  0.3
+Length of training set:  14 Length of testing set:  57
+6   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  57
+7   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+8   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+9   testing_percent:  0.3
+Length of training set:  14 Length of testing set:  57
+10   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+11   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  57
+12   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+13   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+14   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+15   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+16   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+17   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  57
+18   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  57
+19   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  57
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  exemplar_where 0.8
+0   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+1   testing_percent:  0.2
+Length of training set:  24 Length of testing set:  38
+2   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+3   testing_percent:  0.2
+Length of training set:  26 Length of testing set:  38
+4   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+5   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+6   testing_percent:  0.2
+Length of training set:  21 Length of testing set:  38
+7   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+8   testing_percent:  0.2
+Length of training set:  24 Length of testing set:  38
+9   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+10   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+11   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+12   testing_percent:  0.2
+Length of training set:  23 Length of testing set:  38
+13   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+14   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+15   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+16   testing_percent:  0.2
+Length of training set:  26 Length of testing set:  38
+17   testing_percent:  0.2
+Length of training set:  26 Length of testing set:  38
+18   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+19   testing_percent:  0.2
+Length of training set:  25 Length of testing set:  38
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  exemplar_where 0.9
+0   testing_percent:  0.1
+Length of training set:  28 Length of testing set:  19
+1   testing_percent:  0.1
+Length of training set:  27 Length of testing set:  19
+2   testing_percent:  0.1
+Length of training set:  27 Length of testing set:  19
+3   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  19
+4   testing_percent:  0.1
+Length of training set:  30 Length of testing set:  19
+5   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  19
+6   testing_percent:  0.1
+Length of training set:  28 Length of testing set:  19
+7   testing_percent:  0.1
+Length of training set:  23 Length of testing set:  19
+8   testing_percent:  0.1
+Length of training set:  31 Length of testing set:  19
+9   testing_percent:  0.1
+Length of training set:  27 Length of testing set:  19
+10   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  19
+11   testing_percent:  0.1
+Length of training set:  32 Length of testing set:  19
+12   testing_percent:  0.1
+Length of training set:  30 Length of testing set:  19
+13   testing_percent:  0.1
+Length of training set:  28 Length of testing set:  19
+14   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  19
+15   testing_percent:  0.1
+Length of training set:  31 Length of testing set:  19
+16   testing_percent:  0.1
+Length of training set:  27 Length of testing set:  19
+17   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  19
+18   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  19
+19   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  19
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  east_west_where 0.5
+0   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+1   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+2   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+3   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+4   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+5   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+6   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+7   testing_percent:  0.5
+Length of training set:  30 Length of testing set:  96
+8   testing_percent:  0.5
+Length of training set:  30 Length of testing set:  96
+9   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+10   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+11   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+12   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+13   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+14   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+15   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+16   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+17   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+18   testing_percent:  0.5
+Length of training set:  30 Length of testing set:  96
+19   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  96
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  east_west_where 0.6
+0   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+1   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+2   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+3   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+4   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+5   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+6   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  76
+7   testing_percent:  0.4
+Length of training set:  28 Length of testing set:  76
+8   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+9   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+10   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+11   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+12   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  76
+13   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+14   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+15   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  76
+16   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  76
+17   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  76
+18   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  76
+19   testing_percent:  0.4
+Length of training set:  26 Length of testing set:  76
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  east_west_where 0.7
+0   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+1   testing_percent:  0.3
+Length of training set:  30 Length of testing set:  57
+2   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+3   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+4   testing_percent:  0.3
+Length of training set:  30 Length of testing set:  57
+5   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+6   testing_percent:  0.3
+Length of training set:  28 Length of testing set:  57
+7   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+8   testing_percent:  0.3
+Length of training set:  30 Length of testing set:  57
+9   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+10   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+11   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+12   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+13   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+14   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+15   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+16   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  57
+17   testing_percent:  0.3
+Length of training set:  30 Length of testing set:  57
+18   testing_percent:  0.3
+Length of training set:  28 Length of testing set:  57
+19   testing_percent:  0.3
+Length of training set:  30 Length of testing set:  57
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  east_west_where 0.8
+0   testing_percent:  0.2
+Length of training set:  50 Length of testing set:  38
+1   testing_percent:  0.2
+Length of training set:  52 Length of testing set:  38
+2   testing_percent:  0.2
+Length of training set:  50 Length of testing set:  38
+3   testing_percent:  0.2
+Length of training set:  52 Length of testing set:  38
+4   testing_percent:  0.2
+Length of training set:  48 Length of testing set:  38
+5   testing_percent:  0.2
+Length of training set:  52 Length of testing set:  38
+6   testing_percent:  0.2
+Length of training set:  46 Length of testing set:  38
+7   testing_percent:  0.2
+Length of training set:  46 Length of testing set:  38
+8   testing_percent:  0.2
+Length of training set:  50 Length of testing set:  38
+9   testing_percent:  0.2
+Length of training set:  52 Length of testing set:  38
+10   testing_percent:  0.2
+Length of training set:  52 Length of testing set:  38
+11   testing_percent:  0.2
+Length of training set:  50 Length of testing set:  38
+12   testing_percent:  0.2
+Length of training set:  48 Length of testing set:  38
+13   testing_percent:  0.2
+Length of training set:  50 Length of testing set:  38
+14   testing_percent:  0.2
+Length of training set:  48 Length of testing set:  38
+15   testing_percent:  0.2
+Length of training set:  50 Length of testing set:  38
+16   testing_percent:  0.2
+Length of training set:  52 Length of testing set:  38
+17   testing_percent:  0.2
+Length of training set:  48 Length of testing set:  38
+18   testing_percent:  0.2
+Length of training set:  48 Length of testing set:  38
+19   testing_percent:  0.2
+Length of training set:  48 Length of testing set:  38
+Dataset:  cpm_apache_training_reduction  Repeats:  20  Treatment:  east_west_where 0.9
+0   testing_percent:  0.1
+Length of training set:  64 Length of testing set:  19
+1   testing_percent:  0.1
+Length of training set:  56 Length of testing set:  19
+2   testing_percent:  0.1
+Length of training set:  60 Length of testing set:  19
+3   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  19
+4   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  19
+5   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  19
+6   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  19
+7   testing_percent:  0.1
+Length of training set:  64 Length of testing set:  19
+8   testing_percent:  0.1
+Length of training set:  58 Length of testing set:  19
+9   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  19
+10   testing_percent:  0.1
+Length of training set:  50 Length of testing set:  19
+11   testing_percent:  0.1
+Length of training set:  58 Length of testing set:  19
+12   testing_percent:  0.1
+Length of training set:  58 Length of testing set:  19
+13   testing_percent:  0.1
+Length of training set:  60 Length of testing set:  19
+14   testing_percent:  0.1
+Length of training set:  56 Length of testing set:  19
+15   testing_percent:  0.1
+Length of training set:  58 Length of testing set:  19
+16   testing_percent:  0.1
+Length of training set:  54 Length of testing set:  19
+17   testing_percent:  0.1
+Length of training set:  60 Length of testing set:  19
+18   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  19
+19   testing_percent:  0.1
+Length of training set:  64 Length of testing set:  19
+#################### END ####################
+1 training_percent:  0.5
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  base_line 0.5
+0   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+1   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+2   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+3   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+4   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+5   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+6   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+7   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+8   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+9   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+10   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+11   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+12   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+13   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+14   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+15   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+16   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+17   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+18   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+19   testing_percent:  0.5
+Length of training set:  1280 Length of testing set:  1280
+1 training_percent:  0.6
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  base_line 0.6
+0   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+1   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+2   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+3   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+4   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+5   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+6   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+7   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+8   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+9   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+10   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+11   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+12   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+13   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+14   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+15   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+16   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+17   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+18   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+19   testing_percent:  0.4
+Length of training set:  1536 Length of testing set:  1024
+1 training_percent:  0.7
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  base_line 0.7
+0   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+1   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+2   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+3   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+4   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+5   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+6   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+7   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+8   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+9   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+10   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+11   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+12   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+13   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+14   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+15   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+16   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+17   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+18   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+19   testing_percent:  0.3
+Length of training set:  1792 Length of testing set:  768
+1 training_percent:  0.8
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  base_line 0.8
+0   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+1   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+2   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+3   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+4   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+5   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+6   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+7   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+8   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+9   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+10   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+11   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+12   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+13   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+14   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+15   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+16   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+17   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+18   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+19   testing_percent:  0.2
+Length of training set:  2049 Length of testing set:  511
+1 training_percent:  0.9
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  base_line 0.9
+0   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+1   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+2   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+3   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+4   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+5   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+6   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+7   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+8   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+9   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+10   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+11   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+12   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+13   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+14   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+15   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+16   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+17   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+18   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+19   testing_percent:  0.1
+Length of training set:  2305 Length of testing set:  255
+1 training_percent:  0.5
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  exemplar_where 0.5
+0   testing_percent:  0.5
+Length of training set:  115 Length of testing set:  1280
+1   testing_percent:  0.5
+Length of training set:  111 Length of testing set:  1280
+2   testing_percent:  0.5
+Length of training set:  103 Length of testing set:  1280
+3   testing_percent:  0.5
+Length of training set:  113 Length of testing set:  1280
+4   testing_percent:  0.5
+Length of training set:  110 Length of testing set:  1280
+5   testing_percent:  0.5
+Length of training set:  109 Length of testing set:  1280
+6   testing_percent:  0.5
+Length of training set:  109 Length of testing set:  1280
+7   testing_percent:  0.5
+Length of training set:  106 Length of testing set:  1280
+8   testing_percent:  0.5
+Length of training set:  113 Length of testing set:  1280
+9   testing_percent:  0.5
+Length of training set:  112 Length of testing set:  1280
+10   testing_percent:  0.5
+Length of training set:  112 Length of testing set:  1280
+11   testing_percent:  0.5
+Length of training set:  114 Length of testing set:  1280
+12   testing_percent:  0.5
+Length of training set:  110 Length of testing set:  1280
+13   testing_percent:  0.5
+Length of training set:  107 Length of testing set:  1280
+14   testing_percent:  0.5
+Length of training set:  107 Length of testing set:  1280
+15   testing_percent:  0.5
+Length of training set:  113 Length of testing set:  1280
+16   testing_percent:  0.5
+Length of training set:  111 Length of testing set:  1280
+17   testing_percent:  0.5
+Length of training set:  101 Length of testing set:  1280
+18   testing_percent:  0.5
+Length of training set:  107 Length of testing set:  1280
+19   testing_percent:  0.5
+Length of training set:  110 Length of testing set:  1280
+1 training_percent:  0.6
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  exemplar_where 0.6
+0   testing_percent:  0.4
+Length of training set:  113 Length of testing set:  1024
+1   testing_percent:  0.4
+Length of training set:  112 Length of testing set:  1024
+2   testing_percent:  0.4
+Length of training set:  112 Length of testing set:  1024
+3   testing_percent:  0.4
+Length of training set:  107 Length of testing set:  1024
+4   testing_percent:  0.4
+Length of training set:  110 Length of testing set:  1024
+5   testing_percent:  0.4
+Length of training set:  113 Length of testing set:  1024
+6   testing_percent:  0.4
+Length of training set:  110 Length of testing set:  1024
+7   testing_percent:  0.4
+Length of training set:  112 Length of testing set:  1024
+8   testing_percent:  0.4
+Length of training set:  102 Length of testing set:  1024
+9   testing_percent:  0.4
+Length of training set:  107 Length of testing set:  1024
+10   testing_percent:  0.4
+Length of training set:  110 Length of testing set:  1024
+11   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  1024
+12   testing_percent:  0.4
+Length of training set:  111 Length of testing set:  1024
+13   testing_percent:  0.4
+Length of training set:  111 Length of testing set:  1024
+14   testing_percent:  0.4
+Length of training set:  111 Length of testing set:  1024
+15   testing_percent:  0.4
+Length of training set:  110 Length of testing set:  1024
+16   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  1024
+17   testing_percent:  0.4
+Length of training set:  112 Length of testing set:  1024
+18   testing_percent:  0.4
+Length of training set:  106 Length of testing set:  1024
+19   testing_percent:  0.4
+Length of training set:  113 Length of testing set:  1024
+1 training_percent:  0.7
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  exemplar_where 0.7
+0   testing_percent:  0.3
+Length of training set:  107 Length of testing set:  768
+1   testing_percent:  0.3
+Length of training set:  115 Length of testing set:  768
+2   testing_percent:  0.3
+Length of training set:  112 Length of testing set:  768
+3   testing_percent:  0.3
+Length of training set:  110 Length of testing set:  768
+4   testing_percent:  0.3
+Length of training set:  113 Length of testing set:  768
+5   testing_percent:  0.3
+Length of training set:  116 Length of testing set:  768
+6   testing_percent:  0.3
+Length of training set:  109 Length of testing set:  768
+7   testing_percent:  0.3
+Length of training set:  112 Length of testing set:  768
+8   testing_percent:  0.3
+Length of training set:  108 Length of testing set:  768
+9   testing_percent:  0.3
+Length of training set:  107 Length of testing set:  768
+10   testing_percent:  0.3
+Length of training set:  112 Length of testing set:  768
+11   testing_percent:  0.3
+Length of training set:  110 Length of testing set:  768
+12   testing_percent:  0.3
+Length of training set:  110 Length of testing set:  768
+13   testing_percent:  0.3
+Length of training set:  119 Length of testing set:  768
+14   testing_percent:  0.3
+Length of training set:  105 Length of testing set:  768
+15   testing_percent:  0.3
+Length of training set:  102 Length of testing set:  768
+16   testing_percent:  0.3
+Length of training set:  111 Length of testing set:  768
+17   testing_percent:  0.3
+Length of training set:  117 Length of testing set:  768
+18   testing_percent:  0.3
+Length of training set:  106 Length of testing set:  768
+19   testing_percent:  0.3
+Length of training set:  116 Length of testing set:  768
+1 training_percent:  0.8
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  exemplar_where 0.8
+0   testing_percent:  0.2
+Length of training set:  110 Length of testing set:  511
+1   testing_percent:  0.2
+Length of training set:  114 Length of testing set:  511
+2   testing_percent:  0.2
+Length of training set:  104 Length of testing set:  511
+3   testing_percent:  0.2
+Length of training set:  110 Length of testing set:  511
+4   testing_percent:  0.2
+Length of training set:  111 Length of testing set:  511
+5   testing_percent:  0.2
+Length of training set:  113 Length of testing set:  511
+6   testing_percent:  0.2
+Length of training set:  108 Length of testing set:  511
+7   testing_percent:  0.2
+Length of training set:  108 Length of testing set:  511
+8   testing_percent:  0.2
+Length of training set:  111 Length of testing set:  511
+9   testing_percent:  0.2
+Length of training set:  109 Length of testing set:  511
+10   testing_percent:  0.2
+Length of training set:  113 Length of testing set:  511
+11   testing_percent:  0.2
+Length of training set:  109 Length of testing set:  511
+12   testing_percent:  0.2
+Length of training set:  115 Length of testing set:  511
+13   testing_percent:  0.2
+Length of training set:  114 Length of testing set:  511
+14   testing_percent:  0.2
+Length of training set:  112 Length of testing set:  511
+15   testing_percent:  0.2
+Length of training set:  113 Length of testing set:  511
+16   testing_percent:  0.2
+Length of training set:  111 Length of testing set:  511
+17   testing_percent:  0.2
+Length of training set:  109 Length of testing set:  511
+18   testing_percent:  0.2
+Length of training set:  103 Length of testing set:  511
+19   testing_percent:  0.2
+Length of training set:  110 Length of testing set:  511
+1 training_percent:  0.9
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  exemplar_where 0.9
+0   testing_percent:  0.1
+Length of training set:  115 Length of testing set:  255
+1   testing_percent:  0.1
+Length of training set:  112 Length of testing set:  255
+2   testing_percent:  0.1
+Length of training set:  109 Length of testing set:  255
+3   testing_percent:  0.1
+Length of training set:  110 Length of testing set:  255
+4   testing_percent:  0.1
+Length of training set:  105 Length of testing set:  255
+5   testing_percent:  0.1
+Length of training set:  113 Length of testing set:  255
+6   testing_percent:  0.1
+Length of training set:  112 Length of testing set:  255
+7   testing_percent:  0.1
+Length of training set:  109 Length of testing set:  255
+8   testing_percent:  0.1
+Length of training set:  113 Length of testing set:  255
+9   testing_percent:  0.1
+Length of training set:  114 Length of testing set:  255
+10   testing_percent:  0.1
+Length of training set:  111 Length of testing set:  255
+11   testing_percent:  0.1
+Length of training set:  108 Length of testing set:  255
+12   testing_percent:  0.1
+Length of training set:  111 Length of testing set:  255
+13   testing_percent:  0.1
+Length of training set:  106 Length of testing set:  255
+14   testing_percent:  0.1
+Length of training set:  102 Length of testing set:  255
+15   testing_percent:  0.1
+Length of training set:  112 Length of testing set:  255
+16   testing_percent:  0.1
+Length of training set:  109 Length of testing set:  255
+17   testing_percent:  0.1
+Length of training set:  110 Length of testing set:  255
+18   testing_percent:  0.1
+Length of training set:  104 Length of testing set:  255
+19   testing_percent:  0.1
+Length of training set:  110 Length of testing set:  255
+1 training_percent:  0.5
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  east_west_where 0.5
+0   testing_percent:  0.5
+Length of training set:  212 Length of testing set:  1280
+1   testing_percent:  0.5
+Length of training set:  224 Length of testing set:  1280
+2   testing_percent:  0.5
+Length of training set:  214 Length of testing set:  1280
+3   testing_percent:  0.5
+Length of training set:  224 Length of testing set:  1280
+4   testing_percent:  0.5
+Length of training set:  230 Length of testing set:  1280
+5   testing_percent:  0.5
+Length of training set:  208 Length of testing set:  1280
+6   testing_percent:  0.5
+Length of training set:  228 Length of testing set:  1280
+7   testing_percent:  0.5
+Length of training set:  226 Length of testing set:  1280
+8   testing_percent:  0.5
+Length of training set:  214 Length of testing set:  1280
+9   testing_percent:  0.5
+Length of training set:  220 Length of testing set:  1280
+10   testing_percent:  0.5
+Length of training set:  214 Length of testing set:  1280
+11   testing_percent:  0.5
+Length of training set:  224 Length of testing set:  1280
+12   testing_percent:  0.5
+Length of training set:  220 Length of testing set:  1280
+13   testing_percent:  0.5
+Length of training set:  226 Length of testing set:  1280
+14   testing_percent:  0.5
+Length of training set:  222 Length of testing set:  1280
+15   testing_percent:  0.5
+Length of training set:  214 Length of testing set:  1280
+16   testing_percent:  0.5
+Length of training set:  224 Length of testing set:  1280
+17   testing_percent:  0.5
+Length of training set:  228 Length of testing set:  1280
+18   testing_percent:  0.5
+Length of training set:  220 Length of testing set:  1280
+19   testing_percent:  0.5
+Length of training set:  218 Length of testing set:  1280
+1 training_percent:  0.6
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  east_west_where 0.6
+0   testing_percent:  0.4
+Length of training set:  224 Length of testing set:  1024
+1   testing_percent:  0.4
+Length of training set:  196 Length of testing set:  1024
+2   testing_percent:  0.4
+Length of training set:  216 Length of testing set:  1024
+3   testing_percent:  0.4
+Length of training set:  228 Length of testing set:  1024
+4   testing_percent:  0.4
+Length of training set:  230 Length of testing set:  1024
+5   testing_percent:  0.4
+Length of training set:  230 Length of testing set:  1024
+6   testing_percent:  0.4
+Length of training set:  216 Length of testing set:  1024
+7   testing_percent:  0.4
+Length of training set:  232 Length of testing set:  1024
+8   testing_percent:  0.4
+Length of training set:  216 Length of testing set:  1024
+9   testing_percent:  0.4
+Length of training set:  226 Length of testing set:  1024
+10   testing_percent:  0.4
+Length of training set:  222 Length of testing set:  1024
+11   testing_percent:  0.4
+Length of training set:  228 Length of testing set:  1024
+12   testing_percent:  0.4
+Length of training set:  228 Length of testing set:  1024
+13   testing_percent:  0.4
+Length of training set:  220 Length of testing set:  1024
+14   testing_percent:  0.4
+Length of training set:  226 Length of testing set:  1024
+15   testing_percent:  0.4
+Length of training set:  222 Length of testing set:  1024
+16   testing_percent:  0.4
+Length of training set:  222 Length of testing set:  1024
+17   testing_percent:  0.4
+Length of training set:  224 Length of testing set:  1024
+18   testing_percent:  0.4
+Length of training set:  232 Length of testing set:  1024
+19   testing_percent:  0.4
+Length of training set:  214 Length of testing set:  1024
+1 training_percent:  0.7
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  east_west_where 0.7
+0   testing_percent:  0.3
+Length of training set:  222 Length of testing set:  768
+1   testing_percent:  0.3
+Length of training set:  222 Length of testing set:  768
+2   testing_percent:  0.3
+Length of training set:  216 Length of testing set:  768
+3   testing_percent:  0.3
+Length of training set:  218 Length of testing set:  768
+4   testing_percent:  0.3
+Length of training set:  220 Length of testing set:  768
+5   testing_percent:  0.3
+Length of training set:  208 Length of testing set:  768
+6   testing_percent:  0.3
+Length of training set:  218 Length of testing set:  768
+7   testing_percent:  0.3
+Length of training set:  212 Length of testing set:  768
+8   testing_percent:  0.3
+Length of training set:  218 Length of testing set:  768
+9   testing_percent:  0.3
+Length of training set:  216 Length of testing set:  768
+10   testing_percent:  0.3
+Length of training set:  200 Length of testing set:  768
+11   testing_percent:  0.3
+Length of training set:  216 Length of testing set:  768
+12   testing_percent:  0.3
+Length of training set:  224 Length of testing set:  768
+13   testing_percent:  0.3
+Length of training set:  224 Length of testing set:  768
+14   testing_percent:  0.3
+Length of training set:  222 Length of testing set:  768
+15   testing_percent:  0.3
+Length of training set:  218 Length of testing set:  768
+16   testing_percent:  0.3
+Length of training set:  220 Length of testing set:  768
+17   testing_percent:  0.3
+Length of training set:  224 Length of testing set:  768
+18   testing_percent:  0.3
+Length of training set:  214 Length of testing set:  768
+19   testing_percent:  0.3
+Length of training set:  212 Length of testing set:  768
+1 training_percent:  0.8
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  east_west_where 0.8
+0   testing_percent:  0.2
+Length of training set:  226 Length of testing set:  511
+1   testing_percent:  0.2
+Length of training set:  218 Length of testing set:  511
+2   testing_percent:  0.2
+Length of training set:  222 Length of testing set:  511
+3   testing_percent:  0.2
+Length of training set:  220 Length of testing set:  511
+4   testing_percent:  0.2
+Length of training set:  230 Length of testing set:  511
+5   testing_percent:  0.2
+Length of training set:  216 Length of testing set:  511
+6   testing_percent:  0.2
+Length of training set:  208 Length of testing set:  511
+7   testing_percent:  0.2
+Length of training set:  226 Length of testing set:  511
+8   testing_percent:  0.2
+Length of training set:  218 Length of testing set:  511
+9   testing_percent:  0.2
+Length of training set:  210 Length of testing set:  511
+10   testing_percent:  0.2
+Length of training set:  198 Length of testing set:  511
+11   testing_percent:  0.2
+Length of training set:  218 Length of testing set:  511
+12   testing_percent:  0.2
+Length of training set:  214 Length of testing set:  511
+13   testing_percent:  0.2
+Length of training set:  220 Length of testing set:  511
+14   testing_percent:  0.2
+Length of training set:  222 Length of testing set:  511
+15   testing_percent:  0.2
+Length of training set:  212 Length of testing set:  511
+16   testing_percent:  0.2
+Length of training set:  218 Length of testing set:  511
+17   testing_percent:  0.2
+Length of training set:  214 Length of testing set:  511
+18   testing_percent:  0.2
+Length of training set:  222 Length of testing set:  511
+19   testing_percent:  0.2
+Length of training set:  226 Length of testing set:  511
+1 training_percent:  0.9
+Dataset:  cpm_BDBC  Repeats:  20  Treatment:  east_west_where 0.9
+0   testing_percent:  0.1
+Length of training set:  214 Length of testing set:  255
+1   testing_percent:  0.1
+Length of training set:  226 Length of testing set:  255
+2   testing_percent:  0.1
+Length of training set:  226 Length of testing set:  255
+3   testing_percent:  0.1
+Length of training set:  210 Length of testing set:  255
+4   testing_percent:  0.1
+Length of training set:  212 Length of testing set:  255
+5   testing_percent:  0.1
+Length of training set:  222 Length of testing set:  255
+6   testing_percent:  0.1
+Length of training set:  224 Length of testing set:  255
+7   testing_percent:  0.1
+Length of training set:  206 Length of testing set:  255
+8   testing_percent:  0.1
+Length of training set:  226 Length of testing set:  255
+9   testing_percent:  0.1
+Length of training set:  212 Length of testing set:  255
+10   testing_percent:  0.1
+Length of training set:  224 Length of testing set:  255
+11   testing_percent:  0.1
+Length of training set:  218 Length of testing set:  255
+12   testing_percent:  0.1
+Length of training set:  228 Length of testing set:  255
+13   testing_percent:  0.1
+Length of training set:  206 Length of testing set:  255
+14   testing_percent:  0.1
+Length of training set:  220 Length of testing set:  255
+15   testing_percent:  0.1
+Length of training set:  218 Length of testing set:  255
+16   testing_percent:  0.1
+Length of training set:  218 Length of testing set:  255
+17   testing_percent:  0.1
+Length of training set:  208 Length of testing set:  255
+18   testing_percent:  0.1
+Length of training set:  228 Length of testing set:  255
+19   testing_percent:  0.1
+Length of training set:  224 Length of testing set:  255
+#################### END ####################
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  base_line 0.5
+0   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+1   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+2   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+3   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+4   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+5   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+6   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+7   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+8   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+9   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+10   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+11   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+12   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+13   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+14   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+15   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+16   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+17   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+18   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+19   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  90
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  base_line 0.6
+0   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+1   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+2   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+3   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+4   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+5   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+6   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+7   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+8   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+9   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+10   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+11   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+12   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+13   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+14   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+15   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+16   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+17   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+18   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+19   testing_percent:  0.4
+Length of training set:  108 Length of testing set:  72
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  base_line 0.7
+0   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+1   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+2   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+3   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+4   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+5   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+6   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+7   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+8   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+9   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+10   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+11   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+12   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+13   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+14   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+15   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+16   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+17   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+18   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+19   testing_percent:  0.3
+Length of training set:  126 Length of testing set:  54
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  base_line 0.8
+0   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+1   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+2   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+3   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+4   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+5   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+6   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+7   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+8   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+9   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+10   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+11   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+12   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+13   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+14   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+15   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+16   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+17   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+18   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+19   testing_percent:  0.2
+Length of training set:  145 Length of testing set:  35
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  base_line 0.9
+0   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+1   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+2   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+3   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+4   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+5   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+6   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+7   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+8   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+9   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+10   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+11   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+12   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+13   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+14   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+15   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+16   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+17   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+18   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+19   testing_percent:  0.1
+Length of training set:  163 Length of testing set:  17
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  exemplar_where 0.5
+0   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+1   testing_percent:  0.5
+Length of training set:  15 Length of testing set:  90
+2   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+3   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+4   testing_percent:  0.5
+Length of training set:  14 Length of testing set:  90
+5   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+6   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+7   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+8   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+9   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+10   testing_percent:  0.5
+Length of training set:  15 Length of testing set:  90
+11   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+12   testing_percent:  0.5
+Length of training set:  15 Length of testing set:  90
+13   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+14   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+15   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+16   testing_percent:  0.5
+Length of training set:  15 Length of testing set:  90
+17   testing_percent:  0.5
+Length of training set:  15 Length of testing set:  90
+18   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+19   testing_percent:  0.5
+Length of training set:  16 Length of testing set:  90
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  exemplar_where 0.6
+0   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+1   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+2   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+3   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+4   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+5   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+6   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+7   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+8   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+9   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+10   testing_percent:  0.4
+Length of training set:  13 Length of testing set:  72
+11   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+12   testing_percent:  0.4
+Length of training set:  15 Length of testing set:  72
+13   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+14   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+15   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+16   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+17   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+18   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+19   testing_percent:  0.4
+Length of training set:  16 Length of testing set:  72
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  exemplar_where 0.7
+0   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+1   testing_percent:  0.3
+Length of training set:  13 Length of testing set:  54
+2   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+3   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  54
+4   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  54
+5   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+6   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  54
+7   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+8   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+9   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  54
+10   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+11   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+12   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+13   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  54
+14   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+15   testing_percent:  0.3
+Length of training set:  14 Length of testing set:  54
+16   testing_percent:  0.3
+Length of training set:  14 Length of testing set:  54
+17   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+18   testing_percent:  0.3
+Length of training set:  15 Length of testing set:  54
+19   testing_percent:  0.3
+Length of training set:  16 Length of testing set:  54
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  exemplar_where 0.8
+0   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+1   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+2   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+3   testing_percent:  0.2
+Length of training set:  16 Length of testing set:  35
+4   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+5   testing_percent:  0.2
+Length of training set:  16 Length of testing set:  35
+6   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+7   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+8   testing_percent:  0.2
+Length of training set:  16 Length of testing set:  35
+9   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+10   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+11   testing_percent:  0.2
+Length of training set:  16 Length of testing set:  35
+12   testing_percent:  0.2
+Length of training set:  16 Length of testing set:  35
+13   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+14   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+15   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+16   testing_percent:  0.2
+Length of training set:  15 Length of testing set:  35
+17   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+18   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+19   testing_percent:  0.2
+Length of training set:  17 Length of testing set:  35
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  exemplar_where 0.9
+0   testing_percent:  0.1
+Length of training set:  32 Length of testing set:  17
+1   testing_percent:  0.1
+Length of training set:  30 Length of testing set:  17
+2   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  17
+3   testing_percent:  0.1
+Length of training set:  30 Length of testing set:  17
+4   testing_percent:  0.1
+Length of training set:  27 Length of testing set:  17
+5   testing_percent:  0.1
+Length of training set:  31 Length of testing set:  17
+6   testing_percent:  0.1
+Length of training set:  30 Length of testing set:  17
+7   testing_percent:  0.1
+Length of training set:  28 Length of testing set:  17
+8   testing_percent:  0.1
+Length of training set:  31 Length of testing set:  17
+9   testing_percent:  0.1
+Length of training set:  28 Length of testing set:  17
+10   testing_percent:  0.1
+Length of training set:  30 Length of testing set:  17
+11   testing_percent:  0.1
+Length of training set:  32 Length of testing set:  17
+12   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  17
+13   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  17
+14   testing_percent:  0.1
+Length of training set:  28 Length of testing set:  17
+15   testing_percent:  0.1
+Length of training set:  29 Length of testing set:  17
+16   testing_percent:  0.1
+Length of training set:  30 Length of testing set:  17
+17   testing_percent:  0.1
+Length of training set:  27 Length of testing set:  17
+18   testing_percent:  0.1
+Length of training set:  31 Length of testing set:  17
+19   testing_percent:  0.1
+Length of training set:  26 Length of testing set:  17
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  east_west_where 0.5
+0   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+1   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+2   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+3   testing_percent:  0.5
+Length of training set:  28 Length of testing set:  90
+4   testing_percent:  0.5
+Length of training set:  30 Length of testing set:  90
+5   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+6   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+7   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+8   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+9   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+10   testing_percent:  0.5
+Length of training set:  30 Length of testing set:  90
+11   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+12   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+13   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+14   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+15   testing_percent:  0.5
+Length of training set:  30 Length of testing set:  90
+16   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+17   testing_percent:  0.5
+Length of training set:  28 Length of testing set:  90
+18   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+19   testing_percent:  0.5
+Length of training set:  32 Length of testing set:  90
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  east_west_where 0.6
+0   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  72
+1   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  72
+2   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+3   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  72
+4   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+5   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+6   testing_percent:  0.4
+Length of training set:  28 Length of testing set:  72
+7   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+8   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  72
+9   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  72
+10   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+11   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+12   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+13   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+14   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+15   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+16   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+17   testing_percent:  0.4
+Length of training set:  30 Length of testing set:  72
+18   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+19   testing_percent:  0.4
+Length of training set:  32 Length of testing set:  72
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  east_west_where 0.7
+0   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+1   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+2   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+3   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+4   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+5   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+6   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+7   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+8   testing_percent:  0.3
+Length of training set:  30 Length of testing set:  54
+9   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+10   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+11   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+12   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+13   testing_percent:  0.3
+Length of training set:  28 Length of testing set:  54
+14   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+15   testing_percent:  0.3
+Length of training set:  30 Length of testing set:  54
+16   testing_percent:  0.3
+Length of training set:  30 Length of testing set:  54
+17   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+18   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+19   testing_percent:  0.3
+Length of training set:  32 Length of testing set:  54
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  east_west_where 0.8
+0   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+1   testing_percent:  0.2
+Length of training set:  30 Length of testing set:  35
+2   testing_percent:  0.2
+Length of training set:  32 Length of testing set:  35
+3   testing_percent:  0.2
+Length of training set:  28 Length of testing set:  35
+4   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+5   testing_percent:  0.2
+Length of training set:  32 Length of testing set:  35
+6   testing_percent:  0.2
+Length of training set:  30 Length of testing set:  35
+7   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+8   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+9   testing_percent:  0.2
+Length of training set:  32 Length of testing set:  35
+10   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+11   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+12   testing_percent:  0.2
+Length of training set:  32 Length of testing set:  35
+13   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+14   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+15   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+16   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+17   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+18   testing_percent:  0.2
+Length of training set:  34 Length of testing set:  35
+19   testing_percent:  0.2
+Length of training set:  30 Length of testing set:  35
+Dataset:  cpm_BDBJ  Repeats:  20  Treatment:  east_west_where 0.9
+0   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  17
+1   testing_percent:  0.1
+Length of training set:  58 Length of testing set:  17
+2   testing_percent:  0.1
+Length of training set:  50 Length of testing set:  17
+3   testing_percent:  0.1
+Length of training set:  60 Length of testing set:  17
+4   testing_percent:  0.1
+Length of training set:  58 Length of testing set:  17
+5   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  17
+6   testing_percent:  0.1
+Length of training set:  60 Length of testing set:  17
+7   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  17
+8   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  17
+9   testing_percent:  0.1
+Length of training set:  54 Length of testing set:  17
+10   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  17
+11   testing_percent:  0.1
+Length of training set:  64 Length of testing set:  17
+12   testing_percent:  0.1
+Length of training set:  60 Length of testing set:  17
+13   testing_percent:  0.1
+Length of training set:  54 Length of testing set:  17
+14   testing_percent:  0.1
+Length of training set:  60 Length of testing set:  17
+15   testing_percent:  0.1
+Length of training set:  58 Length of testing set:  17
+16   testing_percent:  0.1
+Length of training set:  56 Length of testing set:  17
+17   testing_percent:  0.1
+Length of training set:  62 Length of testing set:  17
+18   testing_percent:  0.1
+Length of training set:  60 Length of testing set:  17
+19   testing_percent:  0.1
+Length of training set:  60 Length of testing set:  17
+#################### END ####################
+1 training_percent:  0.5
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  base_line 0.5
+0   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+1   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+2   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+3   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+4   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+5   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+6   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+7   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+8   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+9   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+10   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+11   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+12   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+13   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+14   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+15   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+16   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+17   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+18   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+19   testing_percent:  0.5
+Length of training set:  2327 Length of testing set:  2326
+1 training_percent:  0.6
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  base_line 0.6
+0   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+1   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+2   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+3   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+4   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+5   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+6   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+7   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+8   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+9   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+10   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+11   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+12   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+13   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+14   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+15   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+16   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+17   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+18   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+19   testing_percent:  0.4
+Length of training set:  2792 Length of testing set:  1861
+1 training_percent:  0.7
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  base_line 0.7
+0   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+1   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+2   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+3   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+4   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+5   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+6   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+7   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+8   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+9   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+10   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+11   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+12   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+13   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+14   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+15   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+16   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+17   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+18   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+19   testing_percent:  0.3
+Length of training set:  3258 Length of testing set:  1395
+1 training_percent:  0.8
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  base_line 0.8
+0   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+1   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+2   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+3   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+4   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+5   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+6   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+7   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+8   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+9   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+10   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+11   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+12   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+13   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+14   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+15   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+16   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+17   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+18   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+19   testing_percent:  0.2
+Length of training set:  3723 Length of testing set:  930
+1 training_percent:  0.9
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  base_line 0.9
+0   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+1   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+2   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+3   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+4   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+5   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+6   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+7   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+8   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+9   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+10   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+11   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+12   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+13   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+14   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+15   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+16   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+17   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+18   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+19   testing_percent:  0.1
+Length of training set:  4188 Length of testing set:  465
+1 training_percent:  0.5
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  exemplar_where 0.5
+0   testing_percent:  0.5
+Length of training set:  113 Length of testing set:  2326
+1   testing_percent:  0.5
+Length of training set:  112 Length of testing set:  2326
+2   testing_percent:  0.5
+Length of training set:  115 Length of testing set:  2326
+3   testing_percent:  0.5
+Length of training set:  109 Length of testing set:  2326
+4   testing_percent:  0.5
+Length of training set:  114 Length of testing set:  2326
+5   testing_percent:  0.5
+Length of training set:  113 Length of testing set:  2326
+6   testing_percent:  0.5
+Length of training set:  112 Length of testing set:  2326
+7   testing_percent:  0.5
+Length of training set:  114 Length of testing set:  2326
+8   testing_percent:  0.5
+Length of training set:  111 Length of testing set:  2326
+9   testing_percent:  0.5
+Length of training set:  113 Length of testing set:  2326
+10   testing_percent:  0.5
+Length of training set:  114 Length of testing set:  2326
+11   testing_percent:  0.5
+Length of training set:  115 Length of testing set:  2326
+12   testing_percent:  0.5
+Length of training set:  120 Length of testing set:  2326
+13   testing_percent:  0.5
+Length of training set:  113 Length of testing set:  2326
+14   testing_percent:  0.5
+Length of training set:  109 Length of testing set:  2326
+15   testing_percent:  0.5
+Length of training set:  114 Length of testing set:  2326
+16   testing_percent:  0.5
+Length of training set:  114 Length of testing set:  2326
+17   testing_percent:  0.5
+Length of training set:  114 Length of testing set:  2326
+18   testing_percent:  0.5
+Length of training set:  111 Length of testing set:  2326
+19   testing_percent:  0.5
+Length of training set:  113 Length of testing set:  2326
+1 training_percent:  0.6
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  exemplar_where 0.6
+0   testing_percent:  0.4
+Length of training set:  123 Length of testing set:  1861
+1   testing_percent:  0.4
+Length of training set:  125 Length of testing set:  1861
+2   testing_percent:  0.4
+Length of training set:  124 Length of testing set:  1861
+3   testing_percent:  0.4
+Length of training set:  122 Length of testing set:  1861
+4   testing_percent:  0.4
+Length of training set:  124 Length of testing set:  1861
+5   testing_percent:  0.4
+Length of training set:  123 Length of testing set:  1861
+6   testing_percent:  0.4
+Length of training set:  124 Length of testing set:  1861
+7   testing_percent:  0.4
+Length of training set:  124 Length of testing set:  1861
+8   testing_percent:  0.4
+Length of training set:  122 Length of testing set:  1861
+9   testing_percent:  0.4
+Length of training set:  121 Length of testing set:  1861
+10   testing_percent:  0.4
+Length of training set:  123 Length of testing set:  1861
+11   testing_percent:  0.4
+Length of training set:  123 Length of testing set:  1861
+12   testing_percent:  0.4
+Length of training set:  121 Length of testing set:  1861
+13   testing_percent:  0.4
+Length of training set:  123 Length of testing set:  1861
+14   testing_percent:  0.4
+Length of training set:  124 Length of testing set:  1861
+15   testing_percent:  0.4
+Length of training set:  121 Length of testing set:  1861
+16   testing_percent:  0.4
+Length of training set:  122 Length of testing set:  1861
+17   testing_percent:  0.4
+Length of training set:  124 Length of testing set:  1861
+18   testing_percent:  0.4
+Length of training set:  123 Length of testing set:  1861
+19   testing_percent:  0.4
+Length of training set:  122 Length of testing set:  1861
+1 training_percent:  0.7
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  exemplar_where 0.7
+0   testing_percent:  0.3
+Length of training set:  120 Length of testing set:  1395
+1   testing_percent:  0.3
+Length of training set:  123 Length of testing set:  1395
+2   testing_percent:  0.3
+Length of training set:  125 Length of testing set:  1395
+3   testing_percent:  0.3
+Length of training set:  124 Length of testing set:  1395
+4   testing_percent:  0.3
+Length of training set:  124 Length of testing set:  1395
+5   testing_percent:  0.3
+Length of training set:  124 Length of testing set:  1395
+6   testing_percent:  0.3
+Length of training set:  124 Length of testing set:  1395
+7   testing_percent:  0.3
+Length of training set:  124 Length of testing set:  1395
+8   testing_percent:  0.3
+Length of training set:  122 Length of testing set:  1395
+9   testing_percent:  0.3
+Length of training set:  120 Length of testing set:  1395
+10   testing_percent:  0.3
+Length of training set:  122 Length of testing set:  1395
+11   testing_percent:  0.3
+Length of training set:  122 Length of testing set:  1395
+12   testing_percent:  0.3
+Length of training set:  123 Length of testing set:  1395
+13   testing_percent:  0.3
+Length of training set:  124 Length of testing set:  1395
+14   testing_percent:  0.3
+Length of training set:  121 Length of testing set:  1395
+15   testing_percent:  0.3
+Length of training set:  123 Length of testing set:  1395
+16   testing_percent:  0.3
+Length of training set:  124 Length of testing set:  1395
+17   testing_percent:  0.3
+Length of training set:  124 Length of testing set:  1395
+18   testing_percent:  0.3
+Length of training set:  122 Length of testing set:  1395
+19   testing_percent:  0.3
+Length of training set:  123 Length of testing set:  1395
+1 training_percent:  0.8
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  exemplar_where 0.8
+0   testing_percent:  0.2
+Length of training set:  123 Length of testing set:  930
+1   testing_percent:  0.2
+Length of training set:  124 Length of testing set:  930
+2   testing_percent:  0.2
+Length of training set:  124 Length of testing set:  930
+3   testing_percent:  0.2
+Length of training set:  125 Length of testing set:  930
+4   testing_percent:  0.2
+Length of training set:  125 Length of testing set:  930
+5   testing_percent:  0.2
+Length of training set:  122 Length of testing set:  930
+6   testing_percent:  0.2
+Length of training set:  122 Length of testing set:  930
+7   testing_percent:  0.2
+Length of training set:  123 Length of testing set:  930
+8   testing_percent:  0.2
+Length of training set:  123 Length of testing set:  930
+9   testing_percent:  0.2
+Length of training set:  125 Length of testing set:  930
+10   testing_percent:  0.2
+Length of training set:  123 Length of testing set:  930
+11   testing_percent:  0.2
+Length of training set:  121 Length of testing set:  930
+12   testing_percent:  0.2
+Length of training set:  122 Length of testing set:  930
+13   testing_percent:  0.2
+Length of training set:  124 Length of testing set:  930
+14   testing_percent:  0.2
+Length of training set:  124 Length of testing set:  930
+15   testing_percent:  0.2
+Length of training set:  124 Length of testing set:  930
+16   testing_percent:  0.2
+Length of training set:  124 Length of testing set:  930
+17   testing_percent:  0.2
+Length of training set:  122 Length of testing set:  930
+18   testing_percent:  0.2
+Length of training set:  122 Length of testing set:  930
+19   testing_percent:  0.2
+Length of training set:  123 Length of testing set:  930
+1 training_percent:  0.9
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  exemplar_where 0.9
+0   testing_percent:  0.1
+Length of training set:  123 Length of testing set:  465
+1   testing_percent:  0.1
+Length of training set:  122 Length of testing set:  465
+2   testing_percent:  0.1
+Length of training set:  119 Length of testing set:  465
+3   testing_percent:  0.1
+Length of training set:  124 Length of testing set:  465
+4   testing_percent:  0.1
+Length of training set:  124 Length of testing set:  465
+5   testing_percent:  0.1
+Length of training set:  123 Length of testing set:  465
+6   testing_percent:  0.1
+Length of training set:  122 Length of testing set:  465
+7   testing_percent:  0.1
+Length of training set:  124 Length of testing set:  465
+8   testing_percent:  0.1
+Length of training set:  122 Length of testing set:  465
+9   testing_percent:  0.1
+Length of training set:  124 Length of testing set:  465
+10   testing_percent:  0.1
+Length of training set:  125 Length of testing set:  465
+11   testing_percent:  0.1
+Length of training set:  122 Length of testing set:  465
+12   testing_percent:  0.1
+Length of training set:  123 Length of testing set:  465
+13   testing_percent:  0.1
+Length of training set:  124 Length of testing set:  465
+14   testing_percent:  0.1
+Length of training set:  124 Length of testing set:  465
+15   testing_percent:  0.1
+Length of training set:  122 Length of testing set:  465
+16   testing_percent:  0.1
+Length of training set:  123 Length of testing set:  465
+17   testing_percent:  0.1
+Length of training set:  125 Length of testing set:  465
+18   testing_percent:  0.1
+Length of training set:  124 Length of testing set:  465
+19   testing_percent:  0.1
+Length of training set:  124 Length of testing set:  465
+1 training_percent:  0.5
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  east_west_where 0.5
+0   testing_percent:  0.5
+Length of training set:  236 Length of testing set:  2326
+1   testing_percent:  0.5
+Length of training set:  212 Length of testing set:  2326
+2   testing_percent:  0.5
+Length of training set:  238 Length of testing set:  2326
+3   testing_percent:  0.5
+Length of training set:  224 Length of testing set:  2326
+4   testing_percent:  0.5
+Length of training set:  226 Length of testing set:  2326
+5   testing_percent:  0.5
+Length of training set:  226 Length of testing set:  2326
+6   testing_percent:  0.5
+Length of training set:  222 Length of testing set:  2326
+7   testing_percent:  0.5
+Length of training set:  224 Length of testing set:  2326
+8   testing_percent:  0.5
+Length of training set:  218 Length of testing set:  2326
+9   testing_percent:  0.5
+Length of training set:  234 Length of testing set:  2326
+10   testing_percent:  0.5
+Length of training set:  220 Length of testing set:  2326
+11   testing_percent:  0.5
+Length of training set:  228 Length of testing set:  2326
+12   testing_percent:  0.5
+Length of training set:  234 Length of testing set:  2326
+13   testing_percent:  0.5
+Length of training set:  228 Length of testing set:  2326
+14   testing_percent:  0.5
+Length of training set:  220 Length of testing set:  2326
+15   testing_percent:  0.5
+Length of training set:  234 Length of testing set:  2326
+16   testing_percent:  0.5
+Length of training set:  230 Length of testing set:  2326
+17   testing_percent:  0.5
+Length of training set:  224 Length of testing set:  2326
+18   testing_percent:  0.5
+Length of training set:  226 Length of testing set:  2326
+19   testing_percent:  0.5
+Length of training set:  236 Length of testing set:  2326
+1 training_percent:  0.6
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  east_west_where 0.6
+0   testing_percent:  0.4
+Length of training set:  250 Length of testing set:  1861
+1   testing_percent:  0.4
+Length of training set:  244 Length of testing set:  1861
+2   testing_percent:  0.4
+Length of training set:  250 Length of testing set:  1861
+3   testing_percent:  0.4
+Length of training set:  248 Length of testing set:  1861
+4   testing_percent:  0.4
+Length of training set:  246 Length of testing set:  1861
+5   testing_percent:  0.4
+Length of training set:  250 Length of testing set:  1861
+6   testing_percent:  0.4
+Length of training set:  248 Length of testing set:  1861
+7   testing_percent:  0.4
+Length of training set:  248 Length of testing set:  1861
+8   testing_percent:  0.4
+Length of training set:  246 Length of testing set:  1861
+9   testing_percent:  0.4
+Length of training set:  246 Length of testing set:  1861
+10   testing_percent:  0.4
+Length of training set:  246 Length of testing set:  1861
+11   testing_percent:  0.4
+Length of training set:  246 Length of testing set:  1861
+12   testing_percent:  0.4
+Length of training set:  248 Length of testing set:  1861
+13   testing_percent:  0.4
+Length of training set:  248 Length of testing set:  1861
+14   testing_percent:  0.4
+Length of training set:  250 Length of testing set:  1861
+15   testing_percent:  0.4
+Length of training set:  246 Length of testing set:  1861
+16   testing_percent:  0.4
+Length of training set:  248 Length of testing set:  1861
+17   testing_percent:  0.4
+Length of training set:  244 Length of testing set:  1861
+18   testing_percent:  0.4
+Length of training set:  248 Length of testing set:  1861
+19   testing_percent:  0.4
+Length of training set:  246 Length of testing set:  1861
+1 training_percent:  0.7
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  east_west_where 0.7
+0   testing_percent:  0.3
+Length of training set:  246 Length of testing set:  1395
+1   testing_percent:  0.3
+Length of training set:  248 Length of testing set:  1395
+2   testing_percent:  0.3
+Length of training set:  244 Length of testing set:  1395
+3   testing_percent:  0.3
+Length of training set:  240 Length of testing set:  1395
+4   testing_percent:  0.3
+Length of training set:  242 Length of testing set:  1395
+5   testing_percent:  0.3
+Length of training set:  248 Length of testing set:  1395
+6   testing_percent:  0.3
+Length of training set:  248 Length of testing set:  1395
+7   testing_percent:  0.3
+Length of training set:  248 Length of testing set:  1395
+8   testing_percent:  0.3
+Length of training set:  248 Length of testing set:  1395
+9   testing_percent:  0.3
+Length of training set:  250 Length of testing set:  1395
+10   testing_percent:  0.3
+Length of training set:  246 Length of testing set:  1395
+11   testing_percent:  0.3
+Length of training set:  250 Length of testing set:  1395
+12   testing_percent:  0.3
+Length of training set:  244 Length of testing set:  1395
+13   testing_percent:  0.3
+Length of training set:  248 Length of testing set:  1395
+14   testing_percent:  0.3
+Length of training set:  246 Length of testing set:  1395
+15   testing_percent:  0.3
+Length of training set:  244 Length of testing set:  1395
+16   testing_percent:  0.3
+Length of training set:  246 Length of testing set:  1395
+17   testing_percent:  0.3
+Length of training set:  248 Length of testing set:  1395
+18   testing_percent:  0.3
+Length of training set:  248 Length of testing set:  1395
+19   testing_percent:  0.3
+Length of training set:  248 Length of testing set:  1395
+1 training_percent:  0.8
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  east_west_where 0.8
+0   testing_percent:  0.2
+Length of training set:  246 Length of testing set:  930
+1   testing_percent:  0.2
+Length of training set:  244 Length of testing set:  930
+2   testing_percent:  0.2
+Length of training set:  246 Length of testing set:  930
+3   testing_percent:  0.2
+Length of training set:  250 Length of testing set:  930
+4   testing_percent:  0.2
+Length of training set:  242 Length of testing set:  930
+5   testing_percent:  0.2
+Length of training set:  248 Length of testing set:  930
+6   testing_percent:  0.2
+Length of training set:  242 Length of testing set:  930
+7   testing_percent:  0.2
+Length of training set:  246 Length of testing set:  930
+8   testing_percent:  0.2
+Length of training set:  246 Length of testing set:  930
+9   testing_percent:  0.2
+Length of training set:  250 Length of testing set:  930
+10   testing_percent:  0.2
+Length of training set:  250 Length of testing set:  930
+11   testing_percent:  0.2
+Length of training set:  246 Length of testing set:  930
+12   testing_percent:  0.2
+Length of training set:  242 Length of testing set:  930
+13   testing_percent:  0.2
+Length of training set:  246 Length of testing set:  930
+14   testing_percent:  0.2
+Length of training set:  242 Length of testing set:  930
+15   testing_percent:  0.2
+Length of training set:  244 Length of testing set:  930
+16   testing_percent:  0.2
+Length of training set:  248 Length of testing set:  930
+17   testing_percent:  0.2
+Length of training set:  250 Length of testing set:  930
+18   testing_percent:  0.2
+Length of training set:  248 Length of testing set:  930
+19   testing_percent:  0.2
+Length of training set:  246 Length of testing set:  930
+1 training_percent:  0.9
+Dataset:  cpm_SQL  Repeats:  20  Treatment:  east_west_where 0.9
+0   testing_percent:  0.1
+Length of training set:  246 Length of testing set:  465
+1   testing_percent:  0.1
+Length of training set:  248 Length of testing set:  465
+2   testing_percent:  0.1
+Length of training set:  250 Length of testing set:  465
+3   testing_percent:  0.1
+Length of training set:  246 Length of testing set:  465
+4   testing_percent:  0.1
+Length of training set:  250 Length of testing set:  465
+5   testing_percent:  0.1
+Length of training set:  242 Length of testing set:  465
+6   testing_percent:  0.1
+Length of training set:  246 Length of testing set:  465
+7   testing_percent:  0.1
+Length of training set:  250 Length of testing set:  465
+8   testing_percent:  0.1
+Length of training set:  250 Length of testing set:  465
+9   testing_percent:  0.1
+Length of training set:  250 Length of testing set:  465
+10   testing_percent:  0.1
+Length of training set:  244 Length of testing set:  465
+11   testing_percent:  0.1
+Length of training set:  248 Length of testing set:  465
+12   testing_percent:  0.1
+Length of training set:  246 Length of testing set:  465
+13   testing_percent:  0.1
+Length of training set:  248 Length of testing set:  465
+14   testing_percent:  0.1
+Length of training set:  246 Length of testing set:  465
+15   testing_percent:  0.1
+Length of training set:  244 Length of testing set:  465
+16   testing_percent:  0.1
+Length of training set:  246 Length of testing set:  465
+17   testing_percent:  0.1
+Length of training set:  246 Length of testing set:  465
+18   testing_percent:  0.1
+Length of training set:  244 Length of testing set:  465
+19   testing_percent:  0.1
+Length of training set:  244 Length of testing set:  465
+#################### END ####################
+1 training_percent:  0.5
+Dataset:  cpm_X264  Repeats:  20  Treatment:  base_line 0.5
+0   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+1   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+2   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+3   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+4   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+5   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+6   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+7   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+8   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+9   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+10   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+11   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+12   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+13   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+14   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+15   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+16   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+17   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+18   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+19   testing_percent:  0.5
+Length of training set:  576 Length of testing set:  576
+1 training_percent:  0.6
+Dataset:  cpm_X264  Repeats:  20  Treatment:  base_line 0.6
+0   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+1   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+2   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+3   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+4   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+5   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+6   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+7   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+8   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+9   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+10   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+11   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+12   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+13   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+14   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+15   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+16   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+17   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+18   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+19   testing_percent:  0.4
+Length of training set:  692 Length of testing set:  460
+1 training_percent:  0.7
+Dataset:  cpm_X264  Repeats:  20  Treatment:  base_line 0.7
+0   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+1   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+2   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+3   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+4   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+5   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+6   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+7   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+8   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+9   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+10   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+11   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+12   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+13   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+14   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+15   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+16   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+17   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+18   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+19   testing_percent:  0.3
+Length of training set:  807 Length of testing set:  345
+1 training_percent:  0.8
+Dataset:  cpm_X264  Repeats:  20  Treatment:  base_line 0.8
+0   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+1   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+2   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+3   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+4   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+5   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+6   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+7   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+8   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+9   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+10   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+11   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+12   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+13   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+14   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+15   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+16   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+17   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+18   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+19   testing_percent:  0.2
+Length of training set:  922 Length of testing set:  230
+1 training_percent:  0.9
+Dataset:  cpm_X264  Repeats:  20  Treatment:  base_line 0.9
+0   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+1   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+2   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+3   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+4   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+5   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+6   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+7   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+8   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+9   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+10   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+11   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+12   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+13   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+14   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+15   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+16   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+17   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+18   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+19   testing_percent:  0.1
+Length of training set:  1037 Length of testing set:  115
+1 training_percent:  0.5
+Dataset:  cpm_X264  Repeats:  20  Treatment:  exemplar_where 0.5
+0   testing_percent:  0.5
+Length of training set:  55 Length of testing set:  576
+1   testing_percent:  0.5
+Length of training set:  51 Length of testing set:  576
+2   testing_percent:  0.5
+Length of training set:  49 Length of testing set:  576
+3   testing_percent:  0.5
+Length of training set:  52 Length of testing set:  576
+4   testing_percent:  0.5
+Length of training set:  50 Length of testing set:  576
+5   testing_percent:  0.5
+Length of training set:  49 Length of testing set:  576
+6   testing_percent:  0.5
+Length of training set:  49 Length of testing set:  576
+7   testing_percent:  0.5
+Length of training set:  54 Length of testing set:  576
+8   testing_percent:  0.5
+Length of training set:  53 Length of testing set:  576
+9   testing_percent:  0.5
+Length of training set:  48 Length of testing set:  576
+10   testing_percent:  0.5
+Length of training set:  45 Length of testing set:  576
+11   testing_percent:  0.5
+Length of training set:  53 Length of testing set:  576
+12   testing_percent:  0.5
+Length of training set:  55 Length of testing set:  576
+13   testing_percent:  0.5
+Length of training set:  53 Length of testing set:  576
+14   testing_percent:  0.5
+Length of training set:  59 Length of testing set:  576
+15   testing_percent:  0.5
+Length of training set:  55 Length of testing set:  576
+16   testing_percent:  0.5
+Length of training set:  57 Length of testing set:  576
+17   testing_percent:  0.5
+Length of training set:  54 Length of testing set:  576
+18   testing_percent:  0.5
+Length of training set:  51 Length of testing set:  576
+19   testing_percent:  0.5
+Length of training set:  47 Length of testing set:  576
+1 training_percent:  0.6
+Dataset:  cpm_X264  Repeats:  20  Treatment:  exemplar_where 0.6
+0   testing_percent:  0.4
+Length of training set:  79 Length of testing set:  460
+1   testing_percent:  0.4
+Length of training set:  81 Length of testing set:  460
+2   testing_percent:  0.4
+Length of training set:  82 Length of testing set:  460
+3   testing_percent:  0.4
+Length of training set:  85 Length of testing set:  460
+4   testing_percent:  0.4
+Length of training set:  77 Length of testing set:  460
+5   testing_percent:  0.4
+Length of training set:  85 Length of testing set:  460
+6   testing_percent:  0.4
+Length of training set:  81 Length of testing set:  460
+7   testing_percent:  0.4
+Length of training set:  86 Length of testing set:  460
+8   testing_percent:  0.4
+Length of training set:  86 Length of testing set:  460
+9   testing_percent:  0.4
+Length of training set:  85 Length of testing set:  460
+10   testing_percent:  0.4
+Length of training set:  84 Length of testing set:  460
+11   testing_percent:  0.4
+Length of training set:  82 Length of testing set:  460
+12   testing_percent:  0.4
+Length of training set:  80 Length of testing set:  460
+13   testing_percent:  0.4
+Length of training set:  80 Length of testing set:  460
+14   testing_percent:  0.4
+Length of training set:  77 Length of testing set:  460
+15   testing_percent:  0.4
+Length of training set:  83 Length of testing set:  460
+16   testing_percent:  0.4
+Length of training set:  84 Length of testing set:  460
+17   testing_percent:  0.4
+Length of training set:  84 Length of testing set:  460
+18   testing_percent:  0.4
+Length of training set:  83 Length of testing set:  460
+19   testing_percent:  0.4
+Length of training set:  84 Length of testing set:  460
+1 training_percent:  0.7
+Dataset:  cpm_X264  Repeats:  20  Treatment:  exemplar_where 0.7
+0   testing_percent:  0.3
+Length of training set:  82 Length of testing set:  345
+1   testing_percent:  0.3
+Length of training set:  82 Length of testing set:  345
+2   testing_percent:  0.3
+Length of training set:  81 Length of testing set:  345
+3   testing_percent:  0.3
+Length of training set:  85 Length of testing set:  345
+4   testing_percent:  0.3
+Length of training set:  76 Length of testing set:  345
+5   testing_percent:  0.3
+Length of training set:  79 Length of testing set:  345
+6   testing_percent:  0.3
+Length of training set:  76 Length of testing set:  345
+7   testing_percent:  0.3
+Length of training set:  82 Length of testing set:  345
+8   testing_percent:  0.3
+Length of training set:  80 Length of testing set:  345
+9   testing_percent:  0.3
+Length of training set:  80 Length of testing set:  345
+10   testing_percent:  0.3
+Length of training set:  84 Length of testing set:  345
+11   testing_percent:  0.3
+Length of training set:  78 Length of testing set:  345
+12   testing_percent:  0.3
+Length of training set:  82 Length of testing set:  345
+13   testing_percent:  0.3
+Length of training set:  79 Length of testing set:  345
+14   testing_percent:  0.3
+Length of training set:  82 Length of testing set:  345
+15   testing_percent:  0.3
+Length of training set:  87 Length of testing set:  345
+16   testing_percent:  0.3
+Length of training set:  84 Length of testing set:  345
+17   testing_percent:  0.3
+Length of training set:  77 Length of testing set:  345
+18   testing_percent:  0.3
+Length of training set:  88 Length of testing set:  345
+19   testing_percent:  0.3
+Length of training set:  81 Length of testing set:  345
+1 training_percent:  0.8
+Dataset:  cpm_X264  Repeats:  20  Treatment:  exemplar_where 0.8
+0   testing_percent:  0.2
+Length of training set:  84 Length of testing set:  230
+1   testing_percent:  0.2
+Length of training set:  77 Length of testing set:  230
+2   testing_percent:  0.2
+Length of training set:  83 Length of testing set:  230
+3   testing_percent:  0.2
+Length of training set:  84 Length of testing set:  230
+4   testing_percent:  0.2
+Length of training set:  89 Length of testing set:  230
+5   testing_percent:  0.2
+Length of training set:  82 Length of testing set:  230
+6   testing_percent:  0.2
+Length of training set:  80 Length of testing set:  230
+7   testing_percent:  0.2
+Length of training set:  76 Length of testing set:  230
+8   testing_percent:  0.2
+Length of training set:  82 Length of testing set:  230
+9   testing_percent:  0.2
+Length of training set:  83 Length of testing set:  230
+10   testing_percent:  0.2
+Length of training set:  82 Length of testing set:  230
+11   testing_percent:  0.2
+Length of training set:  89 Length of testing set:  230
+12   testing_percent:  0.2
+Length of training set:  84 Length of testing set:  230
+13   testing_percent:  0.2
+Length of training set:  77 Length of testing set:  230
+14   testing_percent:  0.2
+Length of training set:  82 Length of testing set:  230
+15   testing_percent:  0.2
+Length of training set:  85 Length of testing set:  230
+16   testing_percent:  0.2
+Length of training set:  88 Length of testing set:  230
+17   testing_percent:  0.2
+Length of training set:  72 Length of testing set:  230
+18   testing_percent:  0.2
+Length of training set:  80 Length of testing set:  230
+19   testing_percent:  0.2
+Length of training set:  79 Length of testing set:  230
+1 training_percent:  0.9
+Dataset:  cpm_X264  Repeats:  20  Treatment:  exemplar_where 0.9
+0   testing_percent:  0.1
+Length of training set:  82 Length of testing set:  115
+1   testing_percent:  0.1
+Length of training set:  84 Length of testing set:  115
+2   testing_percent:  0.1
+Length of training set:  84 Length of testing set:  115
+3   testing_percent:  0.1
+Length of training set:  84 Length of testing set:  115
+4   testing_percent:  0.1
+Length of training set:  80 Length of testing set:  115
+5   testing_percent:  0.1
+Length of training set:  87 Length of testing set:  115
+6   testing_percent:  0.1
+Length of training set:  82 Length of testing set:  115
+7   testing_percent:  0.1
+Length of training set:  84 Length of testing set:  115
+8   testing_percent:  0.1
+Length of training set:  84 Length of testing set:  115
+9   testing_percent:  0.1
+Length of training set:  84 Length of testing set:  115
+10   testing_percent:  0.1
+Length of training set:  90 Length of testing set:  115
+11   testing_percent:  0.1
+Length of training set:  86 Length of testing set:  115
+12   testing_percent:  0.1
+Length of training set:  88 Length of testing set:  115
+13   testing_percent:  0.1
+Length of training set:  85 Length of testing set:  115
+14   testing_percent:  0.1
+Length of training set:  75 Length of testing set:  115
+15   testing_percent:  0.1
+Length of training set:  79 Length of testing set:  115
+16   testing_percent:  0.1
+Length of training set:  83 Length of testing set:  115
+17   testing_percent:  0.1
+Length of training set:  81 Length of testing set:  115
+18   testing_percent:  0.1
+Length of training set:  87 Length of testing set:  115
+19   testing_percent:  0.1
+Length of training set:  81 Length of testing set:  115
+1 training_percent:  0.5
+Dataset:  cpm_X264  Repeats:  20  Treatment:  east_west_where 0.5
+0   testing_percent:  0.5
+Length of training set:  100 Length of testing set:  576
+1   testing_percent:  0.5
+Length of training set:  104 Length of testing set:  576
+2   testing_percent:  0.5
+Length of training set:  108 Length of testing set:  576
+3   testing_percent:  0.5
+Length of training set:  98 Length of testing set:  576
+4   testing_percent:  0.5
+Length of training set:  102 Length of testing set:  576
+5   testing_percent:  0.5
+Length of training set:  104 Length of testing set:  576
+6   testing_percent:  0.5
+Length of training set:  108 Length of testing set:  576
+7   testing_percent:  0.5
+Length of training set:  108 Length of testing set:  576
+8   testing_percent:  0.5
+Length of training set:  104 Length of testing set:  576
+9   testing_percent:  0.5
+Length of training set:  92 Length of testing set:  576
+10   testing_percent:  0.5
+Length of training set:  88 Length of testing set:  576
+11   testing_percent:  0.5
+Length of training set:  112 Length of testing set:  576
+12   testing_percent:  0.5
+Length of training set:  98 Length of testing set:  576
+13   testing_percent:  0.5
+Length of training set:  102 Length of testing set:  576
+14   testing_percent:  0.5
+Length of training set:  102 Length of testing set:  576
+15   testing_percent:  0.5
+Length of training set:  108 Length of testing set:  576
+16   testing_percent:  0.5
+Length of training set:  108 Length of testing set:  576
+17   testing_percent:  0.5
+Length of training set:  104 Length of testing set:  576
+18   testing_percent:  0.5
+Length of training set:  104 Length of testing set:  576
+19   testing_percent:  0.5
+Length of training set:  90 Length of testing set:  576
+1 training_percent:  0.6
+Dataset:  cpm_X264  Repeats:  20  Treatment:  east_west_where 0.6
+0   testing_percent:  0.4
+Length of training set:  162 Length of testing set:  460
+1   testing_percent:  0.4
+Length of training set:  150 Length of testing set:  460
+2   testing_percent:  0.4
+Length of training set:  148 Length of testing set:  460
+3   testing_percent:  0.4
+Length of training set:  168 Length of testing set:  460
+4   testing_percent:  0.4
+Length of training set:  174 Length of testing set:  460
+5   testing_percent:  0.4
+Length of training set:  162 Length of testing set:  460
+6   testing_percent:  0.4
+Length of training set:  158 Length of testing set:  460
+7   testing_percent:  0.4
+Length of training set:  162 Length of testing set:  460
+8   testing_percent:  0.4
+Length of training set:  172 Length of testing set:  460
+9   testing_percent:  0.4
+Length of training set:  164 Length of testing set:  460
+10   testing_percent:  0.4
+Length of training set:  162 Length of testing set:  460
+11   testing_percent:  0.4
+Length of training set:  162 Length of testing set:  460
+12   testing_percent:  0.4
+Length of training set:  162 Length of testing set:  460
+13   testing_percent:  0.4
+Length of training set:  164 Length of testing set:  460
+14   testing_percent:  0.4
+Length of training set:  166 Length of testing set:  460
+15   testing_percent:  0.4
+Length of training set:  162 Length of testing set:  460
+16   testing_percent:  0.4
+Length of training set:  150 Length of testing set:  460
+17   testing_percent:  0.4
+Length of training set:  174 Length of testing set:  460
+18   testing_percent:  0.4
+Length of training set:  146 Length of testing set:  460
+19   testing_percent:  0.4
+Length of training set:  172 Length of testing set:  460
+1 training_percent:  0.7
+Dataset:  cpm_X264  Repeats:  20  Treatment:  east_west_where 0.7
+0   testing_percent:  0.3
+Length of training set:  172 Length of testing set:  345
+1   testing_percent:  0.3
+Length of training set:  172 Length of testing set:  345
+2   testing_percent:  0.3
+Length of training set:  172 Length of testing set:  345
+3   testing_percent:  0.3
+Length of training set:  166 Length of testing set:  345
+4   testing_percent:  0.3
+Length of training set:  166 Length of testing set:  345
+5   testing_percent:  0.3
+Length of training set:  168 Length of testing set:  345
+6   testing_percent:  0.3
+Length of training set:  170 Length of testing set:  345
+7   testing_percent:  0.3
+Length of training set:  180 Length of testing set:  345
+8   testing_percent:  0.3
+Length of training set:  166 Length of testing set:  345
+9   testing_percent:  0.3
+Length of training set:  176 Length of testing set:  345
+10   testing_percent:  0.3
+Length of training set:  158 Length of testing set:  345
+11   testing_percent:  0.3
+Length of training set:  152 Length of testing set:  345
+12   testing_percent:  0.3
+Length of training set:  170 Length of testing set:  345
+13   testing_percent:  0.3
+Length of training set:  164 Length of testing set:  345
+14   testing_percent:  0.3
+Length of training set:  166 Length of testing set:  345
+15   testing_percent:  0.3
+Length of training set:  160 Length of testing set:  345
+16   testing_percent:  0.3
+Length of training set:  176 Length of testing set:  345
+17   testing_percent:  0.3
+Length of training set:  160 Length of testing set:  345
+18   testing_percent:  0.3
+Length of training set:  164 Length of testing set:  345
+19   testing_percent:  0.3
+Length of training set:  154 Length of testing set:  345
+1 training_percent:  0.8
+Dataset:  cpm_X264  Repeats:  20  Treatment:  east_west_where 0.8
+0   testing_percent:  0.2
+Length of training set:  174 Length of testing set:  230
+1   testing_percent:  0.2
+Length of training set:  170 Length of testing set:  230
+2   testing_percent:  0.2
+Length of training set:  160 Length of testing set:  230
+3   testing_percent:  0.2
+Length of training set:  168 Length of testing set:  230
+4   testing_percent:  0.2
+Length of training set:  168 Length of testing set:  230
+5   testing_percent:  0.2
+Length of training set:  168 Length of testing set:  230
+6   testing_percent:  0.2
+Length of training set:  162 Length of testing set:  230
+7   testing_percent:  0.2
+Length of training set:  162 Length of testing set:  230
+8   testing_percent:  0.2
+Length of training set:  168 Length of testing set:  230
+9   testing_percent:  0.2
+Length of training set:  166 Length of testing set:  230
+10   testing_percent:  0.2
+Length of training set:  178 Length of testing set:  230
+11   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  230
+12   testing_percent:  0.2
+Length of training set:  170 Length of testing set:  230
+13   testing_percent:  0.2
+Length of training set:  176 Length of testing set:  230
+14   testing_percent:  0.2
+Length of training set:  166 Length of testing set:  230
+15   testing_percent:  0.2
+Length of training set:  166 Length of testing set:  230
+16   testing_percent:  0.2
+Length of training set:  164 Length of testing set:  230
+17   testing_percent:  0.2
+Length of training set:  174 Length of testing set:  230
+18   testing_percent:  0.2
+Length of training set:  166 Length of testing set:  230
+19   testing_percent:  0.2
+Length of training set:  162 Length of testing set:  230
+1 training_percent:  0.9
+Dataset:  cpm_X264  Repeats:  20  Treatment:  east_west_where 0.9
+0   testing_percent:  0.1
+Length of training set:  164 Length of testing set:  115
+1   testing_percent:  0.1
+Length of training set:  178 Length of testing set:  115
+2   testing_percent:  0.1
+Length of training set:  158 Length of testing set:  115
+3   testing_percent:  0.1
+Length of training set:  164 Length of testing set:  115
+4   testing_percent:  0.1
+Length of training set:  166 Length of testing set:  115
+5   testing_percent:  0.1
+Length of training set:  158 Length of testing set:  115
+6   testing_percent:  0.1
+Length of training set:  170 Length of testing set:  115
+7   testing_percent:  0.1
+Length of training set:  158 Length of testing set:  115
+8   testing_percent:  0.1
+Length of training set:  160 Length of testing set:  115
+9   testing_percent:  0.1
+Length of training set:  166 Length of testing set:  115
+10   testing_percent:  0.1
+Length of training set:  168 Length of testing set:  115
+11   testing_percent:  0.1
+Length of training set:  156 Length of testing set:  115
+12   testing_percent:  0.1
+Length of training set:  164 Length of testing set:  115
+13   testing_percent:  0.1
+Length of training set:  162 Length of testing set:  115
+14   testing_percent:  0.1
+Length of training set:  170 Length of testing set:  115
+15   testing_percent:  0.1
+Length of training set:  162 Length of testing set:  115
+16   testing_percent:  0.1
+Length of training set:  174 Length of testing set:  115
+17   testing_percent:  0.1
+Length of training set:  158 Length of testing set:  115
+18   testing_percent:  0.1
+Length of training set:  160 Length of testing set:  115
+19   testing_percent:  0.1
+Length of training set:  162 Length of testing set:  115
+#################### END ####################
+1 training_percent:  0.5
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  base_line 0.5
+0   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+1   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+2   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+3   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+4   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+5   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+6   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+7   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+8   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+9   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+10   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+11   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+12   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+13   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+14   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+15   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+16   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+17   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+18   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+19   testing_percent:  0.5
+Length of training set:  512 Length of testing set:  512
+1 training_percent:  0.6
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  base_line 0.6
+0   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+1   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+2   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+3   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+4   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+5   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+6   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+7   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+8   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+9   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+10   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+11   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+12   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+13   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+14   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+15   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+16   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+17   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+18   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+19   testing_percent:  0.4
+Length of training set:  615 Length of testing set:  409
+1 training_percent:  0.7
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  base_line 0.7
+0   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+1   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+2   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+3   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+4   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+5   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+6   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+7   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+8   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+9   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+10   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+11   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+12   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+13   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+14   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+15   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+16   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+17   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+18   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+19   testing_percent:  0.3
+Length of training set:  717 Length of testing set:  307
+1 training_percent:  0.8
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  base_line 0.8
+0   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+1   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+2   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+3   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+4   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+5   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+6   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+7   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+8   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+9   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+10   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+11   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+12   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+13   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+14   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+15   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+16   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+17   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+18   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+19   testing_percent:  0.2
+Length of training set:  820 Length of testing set:  204
+1 training_percent:  0.9
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  base_line 0.9
+0   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+1   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+2   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+3   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+4   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+5   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+6   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+7   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+8   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+9   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+10   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+11   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+12   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+13   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+14   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+15   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+16   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+17   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+18   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+19   testing_percent:  0.1
+Length of training set:  922 Length of testing set:  102
+1 training_percent:  0.5
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  exemplar_where 0.5
+0   testing_percent:  0.5
+Length of training set:  50 Length of testing set:  512
+1   testing_percent:  0.5
+Length of training set:  48 Length of testing set:  512
+2   testing_percent:  0.5
+Length of training set:  51 Length of testing set:  512
+3   testing_percent:  0.5
+Length of training set:  55 Length of testing set:  512
+4   testing_percent:  0.5
+Length of training set:  49 Length of testing set:  512
+5   testing_percent:  0.5
+Length of training set:  58 Length of testing set:  512
+6   testing_percent:  0.5
+Length of training set:  52 Length of testing set:  512
+7   testing_percent:  0.5
+Length of training set:  53 Length of testing set:  512
+8   testing_percent:  0.5
+Length of training set:  51 Length of testing set:  512
+9   testing_percent:  0.5
+Length of training set:  55 Length of testing set:  512
+10   testing_percent:  0.5
+Length of training set:  57 Length of testing set:  512
+11   testing_percent:  0.5
+Length of training set:  50 Length of testing set:  512
+12   testing_percent:  0.5
+Length of training set:  53 Length of testing set:  512
+13   testing_percent:  0.5
+Length of training set:  50 Length of testing set:  512
+14   testing_percent:  0.5
+Length of training set:  55 Length of testing set:  512
+15   testing_percent:  0.5
+Length of training set:  56 Length of testing set:  512
+16   testing_percent:  0.5
+Length of training set:  54 Length of testing set:  512
+17   testing_percent:  0.5
+Length of training set:  52 Length of testing set:  512
+18   testing_percent:  0.5
+Length of training set:  56 Length of testing set:  512
+19   testing_percent:  0.5
+Length of training set:  51 Length of testing set:  512
+1 training_percent:  0.6
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  exemplar_where 0.6
+0   testing_percent:  0.4
+Length of training set:  67 Length of testing set:  409
+1   testing_percent:  0.4
+Length of training set:  78 Length of testing set:  409
+2   testing_percent:  0.4
+Length of training set:  74 Length of testing set:  409
+3   testing_percent:  0.4
+Length of training set:  72 Length of testing set:  409
+4   testing_percent:  0.4
+Length of training set:  75 Length of testing set:  409
+5   testing_percent:  0.4
+Length of training set:  71 Length of testing set:  409
+6   testing_percent:  0.4
+Length of training set:  78 Length of testing set:  409
+7   testing_percent:  0.4
+Length of training set:  80 Length of testing set:  409
+8   testing_percent:  0.4
+Length of training set:  72 Length of testing set:  409
+9   testing_percent:  0.4
+Length of training set:  69 Length of testing set:  409
+10   testing_percent:  0.4
+Length of training set:  65 Length of testing set:  409
+11   testing_percent:  0.4
+Length of training set:  73 Length of testing set:  409
+12   testing_percent:  0.4
+Length of training set:  70 Length of testing set:  409
+13   testing_percent:  0.4
+Length of training set:  70 Length of testing set:  409
+14   testing_percent:  0.4
+Length of training set:  76 Length of testing set:  409
+15   testing_percent:  0.4
+Length of training set:  75 Length of testing set:  409
+16   testing_percent:  0.4
+Length of training set:  74 Length of testing set:  409
+17   testing_percent:  0.4
+Length of training set:  75 Length of testing set:  409
+18   testing_percent:  0.4
+Length of training set:  77 Length of testing set:  409
+19   testing_percent:  0.4
+Length of training set:  69 Length of testing set:  409
+1 training_percent:  0.7
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  exemplar_where 0.7
+0   testing_percent:  0.3
+Length of training set:  77 Length of testing set:  307
+1   testing_percent:  0.3
+Length of training set:  75 Length of testing set:  307
+2   testing_percent:  0.3
+Length of training set:  78 Length of testing set:  307
+3   testing_percent:  0.3
+Length of training set:  80 Length of testing set:  307
+4   testing_percent:  0.3
+Length of training set:  77 Length of testing set:  307
+5   testing_percent:  0.3
+Length of training set:  84 Length of testing set:  307
+6   testing_percent:  0.3
+Length of training set:  86 Length of testing set:  307
+7   testing_percent:  0.3
+Length of training set:  85 Length of testing set:  307
+8   testing_percent:  0.3
+Length of training set:  83 Length of testing set:  307
+9   testing_percent:  0.3
+Length of training set:  82 Length of testing set:  307
+10   testing_percent:  0.3
+Length of training set:  83 Length of testing set:  307
+11   testing_percent:  0.3
+Length of training set:  80 Length of testing set:  307
+12   testing_percent:  0.3
+Length of training set:  84 Length of testing set:  307
+13   testing_percent:  0.3
+Length of training set:  81 Length of testing set:  307
+14   testing_percent:  0.3
+Length of training set:  84 Length of testing set:  307
+15   testing_percent:  0.3
+Length of training set:  83 Length of testing set:  307
+16   testing_percent:  0.3
+Length of training set:  80 Length of testing set:  307
+17   testing_percent:  0.3
+Length of training set:  86 Length of testing set:  307
+18   testing_percent:  0.3
+Length of training set:  85 Length of testing set:  307
+19   testing_percent:  0.3
+Length of training set:  85 Length of testing set:  307
+1 training_percent:  0.8
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  exemplar_where 0.8
+0   testing_percent:  0.2
+Length of training set:  82 Length of testing set:  204
+1   testing_percent:  0.2
+Length of training set:  84 Length of testing set:  204
+2   testing_percent:  0.2
+Length of training set:  83 Length of testing set:  204
+3   testing_percent:  0.2
+Length of training set:  76 Length of testing set:  204
+4   testing_percent:  0.2
+Length of training set:  83 Length of testing set:  204
+5   testing_percent:  0.2
+Length of training set:  78 Length of testing set:  204
+6   testing_percent:  0.2
+Length of training set:  81 Length of testing set:  204
+7   testing_percent:  0.2
+Length of training set:  83 Length of testing set:  204
+8   testing_percent:  0.2
+Length of training set:  82 Length of testing set:  204
+9   testing_percent:  0.2
+Length of training set:  81 Length of testing set:  204
+10   testing_percent:  0.2
+Length of training set:  85 Length of testing set:  204
+11   testing_percent:  0.2
+Length of training set:  82 Length of testing set:  204
+12   testing_percent:  0.2
+Length of training set:  79 Length of testing set:  204
+13   testing_percent:  0.2
+Length of training set:  80 Length of testing set:  204
+14   testing_percent:  0.2
+Length of training set:  81 Length of testing set:  204
+15   testing_percent:  0.2
+Length of training set:  70 Length of testing set:  204
+16   testing_percent:  0.2
+Length of training set:  80 Length of testing set:  204
+17   testing_percent:  0.2
+Length of training set:  79 Length of testing set:  204
+18   testing_percent:  0.2
+Length of training set:  84 Length of testing set:  204
+19   testing_percent:  0.2
+Length of training set:  82 Length of testing set:  204
+1 training_percent:  0.9
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  exemplar_where 0.9
+0   testing_percent:  0.1
+Length of training set:  85 Length of testing set:  102
+1   testing_percent:  0.1
+Length of training set:  87 Length of testing set:  102
+2   testing_percent:  0.1
+Length of training set:  83 Length of testing set:  102
+3   testing_percent:  0.1
+Length of training set:  82 Length of testing set:  102
+4   testing_percent:  0.1
+Length of training set:  87 Length of testing set:  102
+5   testing_percent:  0.1
+Length of training set:  83 Length of testing set:  102
+6   testing_percent:  0.1
+Length of training set:  76 Length of testing set:  102
+7   testing_percent:  0.1
+Length of training set:  89 Length of testing set:  102
+8   testing_percent:  0.1
+Length of training set:  80 Length of testing set:  102
+9   testing_percent:  0.1
+Length of training set:  85 Length of testing set:  102
+10   testing_percent:  0.1
+Length of training set:  74 Length of testing set:  102
+11   testing_percent:  0.1
+Length of training set:  84 Length of testing set:  102
+12   testing_percent:  0.1
+Length of training set:  86 Length of testing set:  102
+13   testing_percent:  0.1
+Length of training set:  77 Length of testing set:  102
+14   testing_percent:  0.1
+Length of training set:  83 Length of testing set:  102
+15   testing_percent:  0.1
+Length of training set:  78 Length of testing set:  102
+16   testing_percent:  0.1
+Length of training set:  88 Length of testing set:  102
+17   testing_percent:  0.1
+Length of training set:  84 Length of testing set:  102
+18   testing_percent:  0.1
+Length of training set:  80 Length of testing set:  102
+19   testing_percent:  0.1
+Length of training set:  84 Length of testing set:  102
+1 training_percent:  0.5
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  east_west_where 0.5
+0   testing_percent:  0.5
+Length of training set:  98 Length of testing set:  512
+1   testing_percent:  0.5
+Length of training set:  112 Length of testing set:  512
+2   testing_percent:  0.5
+Length of training set:  110 Length of testing set:  512
+3   testing_percent:  0.5
+Length of training set:  104 Length of testing set:  512
+4   testing_percent:  0.5
+Length of training set:  94 Length of testing set:  512
+5   testing_percent:  0.5
+Length of training set:  118 Length of testing set:  512
+6   testing_percent:  0.5
+Length of training set:  102 Length of testing set:  512
+7   testing_percent:  0.5
+Length of training set:  104 Length of testing set:  512
+8   testing_percent:  0.5
+Length of training set:  106 Length of testing set:  512
+9   testing_percent:  0.5
+Length of training set:  106 Length of testing set:  512
+10   testing_percent:  0.5
+Length of training set:  96 Length of testing set:  512
+11   testing_percent:  0.5
+Length of training set:  94 Length of testing set:  512
+12   testing_percent:  0.5
+Length of training set:  114 Length of testing set:  512
+13   testing_percent:  0.5
+Length of training set:  104 Length of testing set:  512
+14   testing_percent:  0.5
+Length of training set:  106 Length of testing set:  512
+15   testing_percent:  0.5
+Length of training set:  112 Length of testing set:  512
+16   testing_percent:  0.5
+Length of training set:  106 Length of testing set:  512
+17   testing_percent:  0.5
+Length of training set:  104 Length of testing set:  512
+18   testing_percent:  0.5
+Length of training set:  104 Length of testing set:  512
+19   testing_percent:  0.5
+Length of training set:  100 Length of testing set:  512
+1 training_percent:  0.6
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  east_west_where 0.6
+0   testing_percent:  0.4
+Length of training set:  156 Length of testing set:  409
+1   testing_percent:  0.4
+Length of training set:  148 Length of testing set:  409
+2   testing_percent:  0.4
+Length of training set:  148 Length of testing set:  409
+3   testing_percent:  0.4
+Length of training set:  146 Length of testing set:  409
+4   testing_percent:  0.4
+Length of training set:  158 Length of testing set:  409
+5   testing_percent:  0.4
+Length of training set:  154 Length of testing set:  409
+6   testing_percent:  0.4
+Length of training set:  158 Length of testing set:  409
+7   testing_percent:  0.4
+Length of training set:  142 Length of testing set:  409
+8   testing_percent:  0.4
+Length of training set:  140 Length of testing set:  409
+9   testing_percent:  0.4
+Length of training set:  142 Length of testing set:  409
+10   testing_percent:  0.4
+Length of training set:  150 Length of testing set:  409
+11   testing_percent:  0.4
+Length of training set:  158 Length of testing set:  409
+12   testing_percent:  0.4
+Length of training set:  136 Length of testing set:  409
+13   testing_percent:  0.4
+Length of training set:  142 Length of testing set:  409
+14   testing_percent:  0.4
+Length of training set:  138 Length of testing set:  409
+15   testing_percent:  0.4
+Length of training set:  146 Length of testing set:  409
+16   testing_percent:  0.4
+Length of training set:  148 Length of testing set:  409
+17   testing_percent:  0.4
+Length of training set:  136 Length of testing set:  409
+18   testing_percent:  0.4
+Length of training set:  130 Length of testing set:  409
+19   testing_percent:  0.4
+Length of training set:  146 Length of testing set:  409
+1 training_percent:  0.7
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  east_west_where 0.7
+0   testing_percent:  0.3
+Length of training set:  160 Length of testing set:  307
+1   testing_percent:  0.3
+Length of training set:  168 Length of testing set:  307
+2   testing_percent:  0.3
+Length of training set:  164 Length of testing set:  307
+3   testing_percent:  0.3
+Length of training set:  154 Length of testing set:  307
+4   testing_percent:  0.3
+Length of training set:  154 Length of testing set:  307
+5   testing_percent:  0.3
+Length of training set:  150 Length of testing set:  307
+6   testing_percent:  0.3
+Length of training set:  176 Length of testing set:  307
+7   testing_percent:  0.3
+Length of training set:  172 Length of testing set:  307
+8   testing_percent:  0.3
+Length of training set:  146 Length of testing set:  307
+9   testing_percent:  0.3
+Length of training set:  152 Length of testing set:  307
+10   testing_percent:  0.3
+Length of training set:  166 Length of testing set:  307
+11   testing_percent:  0.3
+Length of training set:  158 Length of testing set:  307
+12   testing_percent:  0.3
+Length of training set:  178 Length of testing set:  307
+13   testing_percent:  0.3
+Length of training set:  166 Length of testing set:  307
+14   testing_percent:  0.3
+Length of training set:  162 Length of testing set:  307
+15   testing_percent:  0.3
+Length of training set:  174 Length of testing set:  307
+16   testing_percent:  0.3
+Length of training set:  168 Length of testing set:  307
+17   testing_percent:  0.3
+Length of training set:  156 Length of testing set:  307
+18   testing_percent:  0.3
+Length of training set:  172 Length of testing set:  307
+19   testing_percent:  0.3
+Length of training set:  154 Length of testing set:  307
+1 training_percent:  0.8
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  east_west_where 0.8
+0   testing_percent:  0.2
+Length of training set:  152 Length of testing set:  204
+1   testing_percent:  0.2
+Length of training set:  158 Length of testing set:  204
+2   testing_percent:  0.2
+Length of training set:  162 Length of testing set:  204
+3   testing_percent:  0.2
+Length of training set:  164 Length of testing set:  204
+4   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  204
+5   testing_percent:  0.2
+Length of training set:  172 Length of testing set:  204
+6   testing_percent:  0.2
+Length of training set:  168 Length of testing set:  204
+7   testing_percent:  0.2
+Length of training set:  174 Length of testing set:  204
+8   testing_percent:  0.2
+Length of training set:  156 Length of testing set:  204
+9   testing_percent:  0.2
+Length of training set:  166 Length of testing set:  204
+10   testing_percent:  0.2
+Length of training set:  154 Length of testing set:  204
+11   testing_percent:  0.2
+Length of training set:  180 Length of testing set:  204
+12   testing_percent:  0.2
+Length of training set:  168 Length of testing set:  204
+13   testing_percent:  0.2
+Length of training set:  166 Length of testing set:  204
+14   testing_percent:  0.2
+Length of training set:  166 Length of testing set:  204
+15   testing_percent:  0.2
+Length of training set:  160 Length of testing set:  204
+16   testing_percent:  0.2
+Length of training set:  162 Length of testing set:  204
+17   testing_percent:  0.2
+Length of training set:  146 Length of testing set:  204
+18   testing_percent:  0.2
+Length of training set:  158 Length of testing set:  204
+19   testing_percent:  0.2
+Length of training set:  164 Length of testing set:  204
+1 training_percent:  0.9
+Dataset:  cpm_LLVM  Repeats:  20  Treatment:  east_west_where 0.9
+0   testing_percent:  0.1
+Length of training set:  168 Length of testing set:  102
+1   testing_percent:  0.1
+Length of training set:  162 Length of testing set:  102
+2   testing_percent:  0.1
+Length of training set:  158 Length of testing set:  102
+3   testing_percent:  0.1
+Length of training set:  170 Length of testing set:  102
+4   testing_percent:  0.1
+Length of training set:  176 Length of testing set:  102
+5   testing_percent:  0.1
+Length of training set:  160 Length of testing set:  102
+6   testing_percent:  0.1
+Length of training set:  176 Length of testing set:  102
+7   testing_percent:  0.1
+Length of training set:  160 Length of testing set:  102
+8   testing_percent:  0.1
+Length of training set:  162 Length of testing set:  102
+9   testing_percent:  0.1
+Length of training set:  172 Length of testing set:  102
+10   testing_percent:  0.1
+Length of training set:  158 Length of testing set:  102
+11   testing_percent:  0.1
+Length of training set:  160 Length of testing set:  102
+12   testing_percent:  0.1
+Length of training set:  148 Length of testing set:  102
+13   testing_percent:  0.1
+Length of training set:  174 Length of testing set:  102
+14   testing_percent:  0.1
+Length of training set:  152 Length of testing set:  102
+15   testing_percent:  0.1
+Length of training set:  164 Length of testing set:  102
+16   testing_percent:  0.1
+Length of training set:  168 Length of testing set:  102
+17   testing_percent:  0.1
+Length of training set:  166 Length of testing set:  102
+18   testing_percent:  0.1
+Length of training set:  166 Length of testing set:  102
+19   testing_percent:  0.1
+Length of training set:  160 Length of testing set:  102
+#################### END ####################

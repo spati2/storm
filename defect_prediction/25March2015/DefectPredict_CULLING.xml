@@ -1,0 +1,1342 @@
+<Experiment>
+<Problem name = 'camel'>
+<Algorithm name = 'GALE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>344</NumEvals>
+<RunTime>15.3630878925</RunTime>
+<Training>camel-1.0</Training>
+<Tuning>camel-1.2</Tuning>
+<Testing>camel-1.4</Testing>
+<Training_Tuning>
+	<parameters0> 5.0</parameters0> 
+	<parameters1> 0.0</parameters1> 
+	<parameters2> 92.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>2.66686091593</param0> 
+<param1>2.15535456898</param1> 
+<param2>1.0</param2> 
+<param3>50.0</param3> 
+<param4>1.0</param4> 
+</Parameters>
+<Testing>
+	<pd> 7</pd> 
+	<pf> 2</pf> 
+	<prec> 42</prec> 
+</Testing>
+<Default>
+	<pd> 12</pd> 
+	<pf> 6</pf> 
+	<prec> 29</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'NSGAII'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>813.541707039</RunTime>
+<Training>camel-1.0</Training>
+<Tuning>camel-1.2</Tuning>
+<Testing>camel-1.4</Testing>
+<Training_Tuning>
+	<parameters0> 48.0</parameters0> 
+	<parameters1> 34.0</parameters1> 
+	<parameters2> 44.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>12.6407422212</param0> 
+<param1>19.8132021738</param1> 
+<param2>0.904664656028</param2> 
+<param3>29.6964133479</param3> 
+<param4>0.000575516764285</param4> 
+</Parameters>
+<Testing>
+	<pd> 59</pd> 
+	<pf> 35</pf> 
+	<prec> 25</prec> 
+</Testing>
+<Default>
+	<pd> 10</pd> 
+	<pf> 3</pf> 
+	<prec> 36</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'SPEA2'>
+<Run id = '1'>
+<Summary>
+<NumEvals>16800</NumEvals>
+<RunTime>596.912969112</RunTime>
+<Training>camel-1.0</Training>
+<Tuning>camel-1.2</Tuning>
+<Testing>camel-1.4</Testing>
+<Training_Tuning>
+	<parameters0> 42.0</parameters0> 
+	<parameters1> 29.0</parameters1> 
+	<parameters2> 44.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>16.3842109523</param0> 
+<param1>19.8993853127</param1> 
+<param2>0.803627875172</param2> 
+<param3>49.1535560883</param3> 
+<param4>0.0123601728276</param4> 
+</Parameters>
+<Testing>
+	<pd> 52</pd> 
+	<pf> 31</pf> 
+	<prec> 25</prec> 
+</Testing>
+<Default>
+	<pd> 11</pd> 
+	<pf> 5</pf> 
+	<prec> 31</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>839.846970081</RunTime>
+<Training>camel-1.0</Training>
+<Tuning>camel-1.2</Tuning>
+<Testing>camel-1.4</Testing>
+<Training_Tuning>
+	<parameters0> 13.0</parameters0> 
+	<parameters1> 4.0</parameters1> 
+	<parameters2> 66.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>20.0</param0> 
+<param1>2.99625264113</param1> 
+<param2>0.450105397206</param2> 
+<param3>23.8911120753</param3> 
+<param4>0.343983660848</param4> 
+</Parameters>
+<Testing>
+	<pd> 21</pd> 
+	<pf> 5</pf> 
+	<prec> 45</prec> 
+</Testing>
+<Default>
+	<pd> 10</pd> 
+	<pf> 5</pf> 
+	<prec> 28</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+<Problem name = 'ant'>
+<Algorithm name = 'GALE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>69</NumEvals>
+<RunTime>1.72561597824</RunTime>
+<Training>ant-1.3</Training>
+<Tuning>ant-1.4</Tuning>
+<Testing>ant-1.5</Testing>
+<Training_Tuning>
+	<parameters0> 30.0</parameters0> 
+	<parameters1> 21.0</parameters1> 
+	<parameters2> 29.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>19.7666046282</param0> 
+<param1>13.7777026885</param1> 
+<param2>0.700471201544</param2> 
+<param3>32.6389858393</param3> 
+<param4>0.551609744314</param4> 
+</Parameters>
+<Testing>
+	<pd> 63</pd> 
+	<pf> 19</pf> 
+	<prec> 29</prec> 
+</Testing>
+<Default>
+	<pd> 34</pd> 
+	<pf> 9</pf> 
+	<prec> 31</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'NSGAII'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>280.214214802</RunTime>
+<Training>ant-1.3</Training>
+<Tuning>ant-1.4</Tuning>
+<Testing>ant-1.5</Testing>
+<Training_Tuning>
+	<parameters0> 63.0</parameters0> 
+	<parameters1> 29.0</parameters1> 
+	<parameters2> 38.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>12.7112363826</param0> 
+<param1>13.8195114679</param1> 
+<param2>0.222238189758</param2> 
+<param3>1.04014990544</param3> 
+<param4>0.417755916112</param4> 
+</Parameters>
+<Testing>
+	<pd> 75</pd> 
+	<pf> 25</pf> 
+	<prec> 27</prec> 
+</Testing>
+<Default>
+	<pd> 34</pd> 
+	<pf> 9</pf> 
+	<prec> 32</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'SPEA2'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>282.884912968</RunTime>
+<Training>ant-1.3</Training>
+<Tuning>ant-1.4</Tuning>
+<Testing>ant-1.5</Testing>
+<Training_Tuning>
+	<parameters0> 45.0</parameters0> 
+	<parameters1> 20.0</parameters1> 
+	<parameters2> 40.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>5.4685526473</param0> 
+<param1>15.3331312573</param1> 
+<param2>0.139215816159</param2> 
+<param3>6.02303871958</param3> 
+<param4>0.354301036925</param4> 
+</Parameters>
+<Testing>
+	<pd> 53</pd> 
+	<pf> 16</pf> 
+	<prec> 28</prec> 
+</Testing>
+<Default>
+	<pd> 47</pd> 
+	<pf> 12</pf> 
+	<prec> 32</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>279.992035866</RunTime>
+<Training>ant-1.3</Training>
+<Tuning>ant-1.4</Tuning>
+<Testing>ant-1.5</Testing>
+<Training_Tuning>
+	<parameters0> 40.0</parameters0> 
+	<parameters1> 17.0</parameters1> 
+	<parameters2> 41.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>5.54590691682</param0> 
+<param1>7.45259151362</param1> 
+<param2>0.0652998928408</param2> 
+<param3>50.0</param3> 
+<param4>0.447861301441</param4> 
+</Parameters>
+<Testing>
+	<pd> 56</pd> 
+	<pf> 10</pf> 
+	<prec> 40</prec> 
+</Testing>
+<Default>
+	<pd> 34</pd> 
+	<pf> 12</pf> 
+	<prec> 26</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+<Problem name = 'forrest'>
+<Algorithm name = 'GALE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>602</NumEvals>
+<RunTime>3.92113685608</RunTime>
+<Training>forrest-0.6</Training>
+<Tuning>forrest-0.7</Tuning>
+<Testing>forrest-0.8</Testing>
+<Training_Tuning>
+	<parameters0> 0.0</parameters0> 
+	<parameters1> 0.0</parameters1> 
+	<parameters2> 83.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>13.4620328934</param0> 
+<param1>7.31509233587</param1> 
+<param2>0.475445512621</param2> 
+<param3>44.8623373073</param3> 
+<param4>0.584346214631</param4> 
+</Parameters>
+<Testing>
+	<pd> 0</pd> 
+	<pf> 0</pf> 
+	<prec> 94</prec> 
+</Testing>
+<Default>
+	<pd> 0</pd> 
+	<pf> 63</pf> 
+	<prec> 0</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'NSGAII'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>43.1653439999</RunTime>
+<Training>forrest-0.6</Training>
+<Tuning>forrest-0.7</Tuning>
+<Testing>forrest-0.8</Testing>
+<Training_Tuning>
+	<parameters0> 80.0</parameters0> 
+	<parameters1> 50.0</parameters1> 
+	<parameters2> 25.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>4.04189785969</param0> 
+<param1>2.40295081289</param1> 
+<param2>0.188945557917</param2> 
+<param3>1.49904608056</param3> 
+<param4>0.0115483472106</param4> 
+</Parameters>
+<Testing>
+	<pd> 100</pd> 
+	<pf> 57</pf> 
+	<prec> 11</prec> 
+</Testing>
+<Default>
+	<pd> 0</pd> 
+	<pf> 27</pf> 
+	<prec> 0</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'SPEA2'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>98.6628160477</RunTime>
+<Training>forrest-0.6</Training>
+<Tuning>forrest-0.7</Tuning>
+<Testing>forrest-0.8</Testing>
+<Training_Tuning>
+	<parameters0> 80.0</parameters0> 
+	<parameters1> 50.0</parameters1> 
+	<parameters2> 25.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>5.6867845842</param0> 
+<param1>1.83175927285</param1> 
+<param2>0.0906485174422</param2> 
+<param3>43.0878299631</param3> 
+<param4>0.046091166238</param4> 
+</Parameters>
+<Testing>
+	<pd> 100</pd> 
+	<pf> 57</pf> 
+	<prec> 11</prec> 
+</Testing>
+<Default>
+	<pd> 0</pd> 
+	<pf> 17</pf> 
+	<prec> 0</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>43.7480559349</RunTime>
+<Training>forrest-0.6</Training>
+<Tuning>forrest-0.7</Tuning>
+<Testing>forrest-0.8</Testing>
+<Training_Tuning>
+	<parameters0> 0.0</parameters0> 
+	<parameters1> 0.0</parameters1> 
+	<parameters2> 83.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>2.03973883106</param0> 
+<param1>10.2359505114</param1> 
+<param2>0.559672124556</param2> 
+<param3>13.731569427</param3> 
+<param4>0.897113456085</param4> 
+</Parameters>
+<Testing>
+	<pd> 0</pd> 
+	<pf> 0</pf> 
+	<prec> 94</prec> 
+</Testing>
+<Default>
+	<pd> 0</pd> 
+	<pf> 17</pf> 
+	<prec> 0</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+<Problem name = 'ivy'>
+<Algorithm name = 'GALE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>47</NumEvals>
+<RunTime>1.2712829113</RunTime>
+<Training>ivy-1.1</Training>
+<Tuning>ivy-1.4</Tuning>
+<Testing>ivy-2.0</Testing>
+<Training_Tuning>
+	<parameters0> 100.0</parameters0> 
+	<parameters1> 67.0</parameters1> 
+	<parameters2> 10.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>7.53988104926</param0> 
+<param1>6.58764374393</param1> 
+<param2>0.380483458864</param2> 
+<param3>16.9303578477</param3> 
+<param4>0.584272418127</param4> 
+</Parameters>
+<Testing>
+	<pd> 98</pd> 
+	<pf> 65</pf> 
+	<prec> 16</prec> 
+</Testing>
+<Default>
+	<pd> 88</pd> 
+	<pf> 57</pf> 
+	<prec> 16</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'NSGAII'>
+<Run id = '1'>
+<Summary>
+<NumEvals>11300</NumEvals>
+<RunTime>178.243417025</RunTime>
+<Training>ivy-1.1</Training>
+<Tuning>ivy-1.4</Tuning>
+<Testing>ivy-2.0</Testing>
+<Training_Tuning>
+	<parameters0> 75.0</parameters0> 
+	<parameters1> 26.0</parameters1> 
+	<parameters2> 17.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>3.0</param0> 
+<param1>17.0</param1> 
+<param2>0.44</param2> 
+<param3>43.0</param3> 
+<param4>0.98</param4> 
+</Parameters>
+<Testing>
+	<pd> 80</pd> 
+	<pf> 28</pf> 
+	<prec> 27</prec> 
+</Testing>
+<Default>
+	<pd> 83</pd> 
+	<pf> 57</pf> 
+	<prec> 16</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'SPEA2'>
+<Run id = '1'>
+<Summary>
+<NumEvals>11500</NumEvals>
+<RunTime>212.068515062</RunTime>
+<Training>ivy-1.1</Training>
+<Tuning>ivy-1.4</Tuning>
+<Testing>ivy-2.0</Testing>
+<Training_Tuning>
+	<parameters0> 75.0</parameters0> 
+	<parameters1> 26.0</parameters1> 
+	<parameters2> 17.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>11.0</param0> 
+<param1>14.0</param1> 
+<param2>0.41</param2> 
+<param3>10.0</param3> 
+<param4>0.98</param4> 
+</Parameters>
+<Testing>
+	<pd> 80</pd> 
+	<pf> 28</pf> 
+	<prec> 27</prec> 
+</Testing>
+<Default>
+	<pd> 83</pd> 
+	<pf> 53</pf> 
+	<prec> 17</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>20034</NumEvals>
+<RunTime>263.93977499</RunTime>
+<Training>ivy-1.1</Training>
+<Tuning>ivy-1.4</Tuning>
+<Testing>ivy-2.0</Testing>
+<Training_Tuning>
+	<parameters0> 75.0</parameters0> 
+	<parameters1> 26.0</parameters1> 
+	<parameters2> 17.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>10.2274018902</param0> 
+<param1>15.7375932204</param1> 
+<param2>0.427924548633</param2> 
+<param3>24.8148670956</param3> 
+<param4>1.0</param4> 
+</Parameters>
+<Testing>
+	<pd> 80</pd> 
+	<pf> 28</pf> 
+	<prec> 27</prec> 
+</Testing>
+<Default>
+	<pd> 83</pd> 
+	<pf> 56</pf> 
+	<prec> 16</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+<Problem name = 'jedit'>
+<Algorithm name = 'GALE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>40</NumEvals>
+<RunTime>1.47180318832</RunTime>
+<Training>jedit-3.2</Training>
+<Tuning>jedit-4.0</Tuning>
+<Testing>jedit-4.1</Testing>
+<Training_Tuning>
+	<parameters0> 63.0</parameters0> 
+	<parameters1> 19.0</parameters1> 
+	<parameters2> 52.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>5.32886488809</param0> 
+<param1>1.92776253362</param1> 
+<param2>0.708653017457</param2> 
+<param3>7.95203841134</param3> 
+<param4>1.0</param4> 
+</Parameters>
+<Testing>
+	<pd> 66</pd> 
+	<pf> 20</pf> 
+	<prec> 53</prec> 
+</Testing>
+<Default>
+	<pd> 65</pd> 
+	<pf> 23</pf> 
+	<prec> 49</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'NSGAII'>
+<Run id = '1'>
+<Summary>
+<NumEvals>2400</NumEvals>
+<RunTime>66.9476649761</RunTime>
+<Training>jedit-3.2</Training>
+<Tuning>jedit-4.0</Tuning>
+<Testing>jedit-4.1</Testing>
+<Training_Tuning>
+	<parameters0> 67.0</parameters0> 
+	<parameters1> 18.0</parameters1> 
+	<parameters2> 55.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>2.0</param0> 
+<param1>1.0</param1> 
+<param2>0.32</param2> 
+<param3>6.0</param3> 
+<param4>0.85</param4> 
+</Parameters>
+<Testing>
+	<pd> 65</pd> 
+	<pf> 18</pf> 
+	<prec> 55</prec> 
+</Testing>
+<Default>
+	<pd> 65</pd> 
+	<pf> 23</pf> 
+	<prec> 49</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'SPEA2'>
+<Run id = '1'>
+<Summary>
+<NumEvals>2800</NumEvals>
+<RunTime>77.8028290272</RunTime>
+<Training>jedit-3.2</Training>
+<Tuning>jedit-4.0</Tuning>
+<Testing>jedit-4.1</Testing>
+<Training_Tuning>
+	<parameters0> 72.0</parameters0> 
+	<parameters1> 19.0</parameters1> 
+	<parameters2> 55.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>8.0</param0> 
+<param1>6.0</param1> 
+<param2>0.53</param2> 
+<param3>15.0</param3> 
+<param4>0.88</param4> 
+</Parameters>
+<Testing>
+	<pd> 70</pd> 
+	<pf> 22</pf> 
+	<prec> 51</prec> 
+</Testing>
+<Default>
+	<pd> 62</pd> 
+	<pf> 24</pf> 
+	<prec> 47</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>5908</NumEvals>
+<RunTime>96.5831410885</RunTime>
+<Training>jedit-3.2</Training>
+<Tuning>jedit-4.0</Tuning>
+<Testing>jedit-4.1</Testing>
+<Training_Tuning>
+	<parameters0> 69.0</parameters0> 
+	<parameters1> 16.0</parameters1> 
+	<parameters2> 59.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>10.8770462814</param0> 
+<param1>2.55719595819</param1> 
+<param2>0.796996641531</param2> 
+<param3>25.0647403519</param3> 
+<param4>0.858814627864</param4> 
+</Parameters>
+<Testing>
+	<pd> 57</pd> 
+	<pf> 17</pf> 
+	<prec> 53</prec> 
+</Testing>
+<Default>
+	<pd> 62</pd> 
+	<pf> 24</pf> 
+	<prec> 47</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+<Problem name = 'lucene'>
+<Algorithm name = 'GALE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>43</NumEvals>
+<RunTime>1.29801487923</RunTime>
+<Training>lucene-2.0</Training>
+<Tuning>lucene-2.2</Tuning>
+<Testing>lucene-2.4</Testing>
+<Training_Tuning>
+	<parameters0> 62.0</parameters0> 
+	<parameters1> 42.0</parameters1> 
+	<parameters2> 67.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>13.0683212351</param0> 
+<param1>7.04727554375</param1> 
+<param2>0.710123214929</param2> 
+<param3>20.5696632432</param3> 
+<param4>0.468625999715</param4> 
+</Parameters>
+<Testing>
+	<pd> 55</pd> 
+	<pf> 48</pf> 
+	<prec> 63</prec> 
+</Testing>
+<Default>
+	<pd> 53</pd> 
+	<pf> 34</pf> 
+	<prec> 70</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'NSGAII'>
+<Run id = '1'>
+<Summary>
+<NumEvals>7200</NumEvals>
+<RunTime>120.241096973</RunTime>
+<Training>lucene-2.0</Training>
+<Tuning>lucene-2.2</Tuning>
+<Testing>lucene-2.4</Testing>
+<Training_Tuning>
+	<parameters0> 59.0</parameters0> 
+	<parameters1> 37.0</parameters1> 
+	<parameters2> 69.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>12.1126530577</param0> 
+<param1>19.8570229876</param1> 
+<param2>0.286234668297</param2> 
+<param3>25.9066244338</param3> 
+<param4>0.960489112043</param4> 
+</Parameters>
+<Testing>
+	<pd> 58</pd> 
+	<pf> 36</pf> 
+	<prec> 70</prec> 
+</Testing>
+<Default>
+	<pd> 51</pd> 
+	<pf> 38</pf> 
+	<prec> 67</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'SPEA2'>
+<Run id = '1'>
+<Summary>
+<NumEvals>9600</NumEvals>
+<RunTime>155.607235193</RunTime>
+<Training>lucene-2.0</Training>
+<Tuning>lucene-2.2</Tuning>
+<Testing>lucene-2.4</Testing>
+<Training_Tuning>
+	<parameters0> 59.0</parameters0> 
+	<parameters1> 39.0</parameters1> 
+	<parameters2> 68.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>19.4551415909</param0> 
+<param1>14.7729738817</param1> 
+<param2>0.858603861624</param2> 
+<param3>21.0480467922</param3> 
+<param4>0.863467425543</param4> 
+</Parameters>
+<Testing>
+	<pd> 61</pd> 
+	<pf> 42</pf> 
+	<prec> 68</prec> 
+</Testing>
+<Default>
+	<pd> 49</pd> 
+	<pf> 31</pf> 
+	<prec> 70</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>397.997010946</RunTime>
+<Training>lucene-2.0</Training>
+<Tuning>lucene-2.2</Tuning>
+<Testing>lucene-2.4</Testing>
+<Training_Tuning>
+	<parameters0> 63.0</parameters0> 
+	<parameters1> 39.0</parameters1> 
+	<parameters2> 69.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>19.0812628377</param0> 
+<param1>10.8636404491</param1> 
+<param2>0.232614287751</param2> 
+<param3>8.05503250844</param3> 
+<param4>0.797445773296</param4> 
+</Parameters>
+<Testing>
+	<pd> 58</pd> 
+	<pf> 46</pf> 
+	<prec> 65</prec> 
+</Testing>
+<Default>
+	<pd> 51</pd> 
+	<pf> 34</pf> 
+	<prec> 69</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+<Problem name = 'poi'>
+<Algorithm name = 'GALE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>65</NumEvals>
+<RunTime>2.06295394897</RunTime>
+<Training>poi-1.5</Training>
+<Tuning>poi-2.0</Tuning>
+<Testing>poi-2.5</Testing>
+<Training_Tuning>
+	<parameters0> 78.0</parameters0> 
+	<parameters1> 65.0</parameters1> 
+	<parameters2> 14.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>7.66853126117</param0> 
+<param1>7.91659125778</param1> 
+<param2>0.477300983271</param2> 
+<param3>23.6502161496</param3> 
+<param4>0.600793738795</param4> 
+</Parameters>
+<Testing>
+	<pd> 80</pd> 
+	<pf> 45</pf> 
+	<prec> 76</prec> 
+</Testing>
+<Default>
+	<pd> 73</pd> 
+	<pf> 32</pf> 
+	<prec> 80</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'NSGAII'>
+<Run id = '1'>
+<Summary>
+<NumEvals>7200</NumEvals>
+<RunTime>147.361330986</RunTime>
+<Training>poi-1.5</Training>
+<Tuning>poi-2.0</Tuning>
+<Testing>poi-2.5</Testing>
+<Training_Tuning>
+	<parameters0> 76.0</parameters0> 
+	<parameters1> 48.0</parameters1> 
+	<parameters2> 18.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>11.4547930425</param0> 
+<param1>2.06315685947</param1> 
+<param2>0.0581689151212</param2> 
+<param3>21.2218805912</param3> 
+<param4>0.95377250437</param4> 
+</Parameters>
+<Testing>
+	<pd> 56</pd> 
+	<pf> 43</pf> 
+	<prec> 70</prec> 
+</Testing>
+<Default>
+	<pd> 71</pd> 
+	<pf> 36</pf> 
+	<prec> 78</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'SPEA2'>
+<Run id = '1'>
+<Summary>
+<NumEvals>7200</NumEvals>
+<RunTime>147.517277956</RunTime>
+<Training>poi-1.5</Training>
+<Tuning>poi-2.0</Tuning>
+<Testing>poi-2.5</Testing>
+<Training_Tuning>
+	<parameters0> 70.0</parameters0> 
+	<parameters1> 37.0</parameters1> 
+	<parameters2> 20.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>18.5344391281</param0> 
+<param1>17.6837172996</param1> 
+<param2>0.433506131438</param2> 
+<param3>4.9646015266</param3> 
+<param4>0.959939879587</param4> 
+</Parameters>
+<Testing>
+	<pd> 47</pd> 
+	<pf> 42</pf> 
+	<prec> 67</prec> 
+</Testing>
+<Default>
+	<pd> 72</pd> 
+	<pf> 35</pf> 
+	<prec> 79</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>501.714416027</RunTime>
+<Training>poi-1.5</Training>
+<Tuning>poi-2.0</Tuning>
+<Testing>poi-2.5</Testing>
+<Training_Tuning>
+	<parameters0> 59.0</parameters0> 
+	<parameters1> 26.0</parameters1> 
+	<parameters2> 24.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>6.19760637429</param0> 
+<param1>13.9855246345</param1> 
+<param2>0.427410113779</param2> 
+<param3>3.0715238681</param3> 
+<param4>1.0</param4> 
+</Parameters>
+<Testing>
+	<pd> 33</pd> 
+	<pf> 31</pf> 
+	<prec> 66</prec> 
+</Testing>
+<Default>
+	<pd> 73</pd> 
+	<pf> 35</pf> 
+	<prec> 79</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+<Problem name = 'synapse'>
+<Algorithm name = 'GALE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>167</NumEvals>
+<RunTime>4.77249383926</RunTime>
+<Training>synapse-1.0</Training>
+<Tuning>synapse-1.1</Tuning>
+<Testing>synapse-1.2</Testing>
+<Training_Tuning>
+	<parameters0> 40.0</parameters0> 
+	<parameters1> 9.0</parameters1> 
+	<parameters2> 62.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>9.95765252155</param0> 
+<param1>10.227458918</param1> 
+<param2>0.146187694268</param2> 
+<param3>34.0413697806</param3> 
+<param4>0.477886030435</param4> 
+</Parameters>
+<Testing>
+	<pd> 42</pd> 
+	<pf> 5</pf> 
+	<prec> 80</prec> 
+</Testing>
+<Default>
+	<pd> 29</pd> 
+	<pf> 6</pf> 
+	<prec> 69</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'NSGAII'>
+<Run id = '1'>
+<Summary>
+<NumEvals>15600</NumEvals>
+<RunTime>231.561265945</RunTime>
+<Training>synapse-1.0</Training>
+<Tuning>synapse-1.1</Tuning>
+<Testing>synapse-1.2</Testing>
+<Training_Tuning>
+	<parameters0> 48.0</parameters0> 
+	<parameters1> 17.0</parameters1> 
+	<parameters2> 52.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>2.59451683685</param0> 
+<param1>14.6115655145</param1> 
+<param2>0.222837543116</param2> 
+<param3>28.6042165963</param3> 
+<param4>0.262681537988</param4> 
+</Parameters>
+<Testing>
+	<pd> 49</pd> 
+	<pf> 14</pf> 
+	<prec> 65</prec> 
+</Testing>
+<Default>
+	<pd> 31</pd> 
+	<pf> 8</pf> 
+	<prec> 68</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'SPEA2'>
+<Run id = '1'>
+<Summary>
+<NumEvals>19200</NumEvals>
+<RunTime>288.075145006</RunTime>
+<Training>synapse-1.0</Training>
+<Tuning>synapse-1.1</Tuning>
+<Testing>synapse-1.2</Testing>
+<Training_Tuning>
+	<parameters0> 58.0</parameters0> 
+	<parameters1> 17.0</parameters1> 
+	<parameters2> 56.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>15.1650195428</param0> 
+<param1>19.6652166271</param1> 
+<param2>0.133691231866</param2> 
+<param3>43.1046638058</param3> 
+<param4>0.13836307351</param4> 
+</Parameters>
+<Testing>
+	<pd> 58</pd> 
+	<pf> 15</pf> 
+	<prec> 67</prec> 
+</Testing>
+<Default>
+	<pd> 27</pd> 
+	<pf> 6</pf> 
+	<prec> 70</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>350.385792017</RunTime>
+<Training>synapse-1.0</Training>
+<Tuning>synapse-1.1</Tuning>
+<Testing>synapse-1.2</Testing>
+<Training_Tuning>
+	<parameters0> 30.0</parameters0> 
+	<parameters1> 5.0</parameters1> 
+	<parameters2> 69.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>11.3073897666</param0> 
+<param1>19.1219778906</param1> 
+<param2>0.05</param2> 
+<param3>2.662475879</param3> 
+<param4>0.368837059408</param4> 
+</Parameters>
+<Testing>
+	<pd> 30</pd> 
+	<pf> 5</pf> 
+	<prec> 74</prec> 
+</Testing>
+<Default>
+	<pd> 26</pd> 
+	<pf> 6</pf> 
+	<prec> 69</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+<Problem name = 'Velocity'>
+<Algorithm name = 'GALE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>39</NumEvals>
+<RunTime>1.03175497055</RunTime>
+<Training>velocity-1.4</Training>
+<Tuning>velocity-1.5</Tuning>
+<Testing>velocity-1.6</Testing>
+<Training_Tuning>
+	<parameters0> 69.0</parameters0> 
+	<parameters1> 64.0</parameters1> 
+	<parameters2> 68.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>2.92841558642</param0> 
+<param1>4.15606679052</param1> 
+<param2>0.183418188758</param2> 
+<param3>16.8066404931</param3> 
+<param4>0.224805998921</param4> 
+</Parameters>
+<Testing>
+	<pd> 92</pd> 
+	<pf> 98</pf> 
+	<prec> 33</prec> 
+</Testing>
+<Default>
+	<pd> 88</pd> 
+	<pf> 86</pf> 
+	<prec> 35</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'NSGAII'>
+<Run id = '1'>
+<Summary>
+<NumEvals>10800</NumEvals>
+<RunTime>161.117449999</RunTime>
+<Training>velocity-1.4</Training>
+<Tuning>velocity-1.5</Tuning>
+<Testing>velocity-1.6</Testing>
+<Training_Tuning>
+	<parameters0> 64.0</parameters0> 
+	<parameters1> 32.0</parameters1> 
+	<parameters2> 80.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>16.2303705022</param0> 
+<param1>10.9635720495</param1> 
+<param2>0.777279742824</param2> 
+<param3>6.42025763202</param3> 
+<param4>0.963914000591</param4> 
+</Parameters>
+<Testing>
+	<pd> 69</pd> 
+	<pf> 40</pf> 
+	<prec> 47</prec> 
+</Testing>
+<Default>
+	<pd> 85</pd> 
+	<pf> 86</pf> 
+	<prec> 34</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'SPEA2'>
+<Run id = '1'>
+<Summary>
+<NumEvals>7200</NumEvals>
+<RunTime>109.394576073</RunTime>
+<Training>velocity-1.4</Training>
+<Tuning>velocity-1.5</Tuning>
+<Testing>velocity-1.6</Testing>
+<Training_Tuning>
+	<parameters0> 73.0</parameters0> 
+	<parameters1> 31.0</parameters1> 
+	<parameters2> 83.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>12.0</param0> 
+<param1>11.0</param1> 
+<param2>0.47</param2> 
+<param3>5.0</param3> 
+<param4>0.92</param4> 
+</Parameters>
+<Testing>
+	<pd> 68</pd> 
+	<pf> 50</pf> 
+	<prec> 41</prec> 
+</Testing>
+<Default>
+	<pd> 85</pd> 
+	<pf> 85</pf> 
+	<prec> 34</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>23957</NumEvals>
+<RunTime>358.861639977</RunTime>
+<Training>velocity-1.4</Training>
+<Tuning>velocity-1.5</Tuning>
+<Testing>velocity-1.6</Testing>
+<Training_Tuning>
+	<parameters0> 71.0</parameters0> 
+	<parameters1> 31.0</parameters1> 
+	<parameters2> 82.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>7.80039420569</param0> 
+<param1>1.0</param1> 
+<param2>0.269715930057</param2> 
+<param3>6.05189711785</param3> 
+<param4>1.0</param4> 
+</Parameters>
+<Testing>
+	<pd> 72</pd> 
+	<pf> 48</pf> 
+	<prec> 44</prec> 
+</Testing>
+<Default>
+	<pd> 83</pd> 
+	<pf> 83</pf> 
+	<prec> 34</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+<Problem name = 'xerces'>
+<Algorithm name = 'GALE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>113</NumEvals>
+<RunTime>5.44726896286</RunTime>
+<Training>xerces-1.2</Training>
+<Tuning>xerces-1.3</Tuning>
+<Testing>xerces-1.4</Testing>
+<Training_Tuning>
+	<parameters0> 22.0</parameters0> 
+	<parameters1> 11.0</parameters1> 
+	<parameters2> 26.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>11.2560120761</param0> 
+<param1>5.55555444113</param1> 
+<param2>0.464139306071</param2> 
+<param3>32.7518749251</param3> 
+<param4>0.940845120001</param4> 
+</Parameters>
+<Testing>
+	<pd> 8</pd> 
+	<pf> 25</pf> 
+	<prec> 49</prec> 
+</Testing>
+<Default>
+	<pd> 11</pd> 
+	<pf> 32</pf> 
+	<prec> 51</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'NSGAII'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>747.102937937</RunTime>
+<Training>xerces-1.2</Training>
+<Tuning>xerces-1.3</Tuning>
+<Testing>xerces-1.4</Testing>
+<Training_Tuning>
+	<parameters0> 30.0</parameters0> 
+	<parameters1> 18.0</parameters1> 
+	<parameters2> 23.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>17.8854915693</param0> 
+<param1>7.10663652485</param1> 
+<param2>0.80184890993</param2> 
+<param3>43.9438175311</param3> 
+<param4>0.58371691676</param4> 
+</Parameters>
+<Testing>
+	<pd> 10</pd> 
+	<pf> 36</pf> 
+	<prec> 44</prec> 
+</Testing>
+<Default>
+	<pd> 11</pd> 
+	<pf> 32</pf> 
+	<prec> 49</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'SPEA2'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>751.370904922</RunTime>
+<Training>xerces-1.2</Training>
+<Tuning>xerces-1.3</Tuning>
+<Testing>xerces-1.4</Testing>
+<Training_Tuning>
+	<parameters0> 26.0</parameters0> 
+	<parameters1> 13.0</parameters1> 
+	<parameters2> 26.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>18.771494689</param0> 
+<param1>13.3206651495</param1> 
+<param2>0.632711127062</param2> 
+<param3>44.9981226153</param3> 
+<param4>0.739243303307</param4> 
+</Parameters>
+<Testing>
+	<pd> 11</pd> 
+	<pf> 22</pf> 
+	<prec> 60</prec> 
+</Testing>
+<Default>
+	<pd> 11</pd> 
+	<pf> 29</pf> 
+	<prec> 51</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+<Algorithm name = 'DE'>
+<Run id = '1'>
+<Summary>
+<NumEvals>24000</NumEvals>
+<RunTime>750.594103098</RunTime>
+<Training>xerces-1.2</Training>
+<Tuning>xerces-1.3</Tuning>
+<Testing>xerces-1.4</Testing>
+<Training_Tuning>
+	<parameters0> 32.0</parameters0> 
+	<parameters1> 15.0</parameters1> 
+	<parameters2> 27.0</parameters2> 
+</Training_Tuning>
+<Parameters>
+<param0>14.4594957</param0> 
+<param1>1.0</param1> 
+<param2>0.820056771198</param2> 
+<param3>25.6132674637</param3> 
+<param4>0.444844648943</param4> 
+</Parameters>
+<Testing>
+	<pd> 16</pd> 
+	<pf> 31</pf> 
+	<prec> 60</prec> 
+</Testing>
+<Default>
+	<pd> 11</pd> 
+	<pf> 32</pf> 
+	<prec> 49</prec> 
+</Default>
+</Summary
+></Run>
+</Algorithm>
+</Problem>
+</Experiment>
