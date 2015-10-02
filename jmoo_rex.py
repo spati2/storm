@@ -12,7 +12,7 @@ import pylab as mpl
 
 def validation():
     #read baseline
-    f2input = open("data/" + problem.name + str(MU) + "dataset.txt", 'rb')
+    f2input = open("Data/" + problem.name + str(MU) + "dataset.txt", 'rb')
     reader2 = csv.reader(f2input, delimiter=',')
     referencePoint = []
     for i,row in enumerate(reader2):
@@ -155,9 +155,9 @@ class singleBin:
             self.items.append(item)
 
 date_folder_prefix = strftime("%m-%d-%Y")
-if not os.path.isdir('reports/' + date_folder_prefix):
-    os.makedirs('reports/' + date_folder_prefix)
-fignum = len([name for name in os.listdir('reports/' + date_folder_prefix)]) + 1
+if not os.path.isdir('Reports/' + date_folder_prefix):
+    os.makedirs('Reports/' + date_folder_prefix)
+fignum = len([name for name in os.listdir('Reports/' + date_folder_prefix)]) + 1
 #optional tag name for the file
 #fa = open('reports/' + date_folder_prefix + "/decision_bin_rules_report" + "_" + tag + str("%02d" % fignum) + ".txt", 'w')
 
@@ -261,12 +261,12 @@ for p,problem in enumerate(problems):
                 axarr[int(splits/3)][(splits % 3)].plot(X, Y, linestyle='None', marker=algorithm.type, color=algorithm.color, markersize=5, markeredgecolor='none')
                 validation()
                 splits += 1
-            if not os.path.isdir('charts/' + date_folder_prefix):
-                os.makedirs('charts/' + date_folder_prefix)
+            if not os.path.isdir('Charts/' + date_folder_prefix):
+                os.makedirs('Charts/' + date_folder_prefix)
         
-            fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
+            fignum = len([name for name in os.listdir('Charts/' + date_folder_prefix)]) + 1
             print fignum
-            mpl.plt.savefig('charts/' + date_folder_prefix + '/REX(splits=)'+str(splits) + 'figure' + str("%02d" % fignum) + "_" + problem.name + "_" + algorithm.name + "_"+ '.png', dpi=100)
+            mpl.plt.savefig('Charts/' + date_folder_prefix + '/REX(splits=)'+str(splits) + 'figure' + str("%02d" % fignum) + "_" + problem.name + "_" + algorithm.name + "_"+ '.png', dpi=100)
             mpl.cla()
                 
                 

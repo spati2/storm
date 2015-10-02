@@ -21,7 +21,7 @@ def median_mre_scores():
     for file in files:
         name = file[:-4].split("_")[1]
         data[name] = get_data(file)
-    # print data.keys()
+    # print Data.keys()
     return data
 
 
@@ -81,7 +81,7 @@ ax3.plot(x_axis, median_mre_scores()["BDBJ"]["base_line"], 'kx-', color='b')
 ax3.set_ylim(0.0, 40)
 ax3.set_yticks(np.arange(0, 40, 10))
 ax3.set_xlim(0.05, 0.95)
-# ax3.set_xlabel("Training Data (% of data)")
+# ax3.set_xlabel("Training Data (% of Data)")
 # ax3.set_ylabel("MRE")
 ax3.text(right, 0.5*(bottom+top), 'BDBJ',
         horizontalalignment='center',

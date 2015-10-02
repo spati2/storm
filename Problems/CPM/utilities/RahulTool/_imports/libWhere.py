@@ -205,12 +205,12 @@ def timing(f,repeats=10):
 
 ## Data Completion Tool
 
-Fills in some details on a table of data. For example, 
+Fills in some details on a table of Data. For example,
 
      def nasa93():
        vl=1;l=2;n=3;h=4;vh=5;xh=6
-       return data(indep= [ 
-                     'Prec', 'Flex', 'Resl', 'Team', 'Pmat', 'rely', 'data', 'cplx', 'ruse',
+       return Data(indep= [
+                     'Prec', 'Flex', 'Resl', 'Team', 'Pmat', 'rely', 'Data', 'cplx', 'ruse',
                      'docu', 'time', 'stor', 'pvol', 'acap', 'pcap', 'pcon', 'aexp', 'plex',  
                      'ltex', 'tool', 'site', 'sced', 'kloc'],
                    less = ['effort', 'defects', 'months'],
@@ -238,7 +238,7 @@ Adds in information on _cols_, _decisions_, _hi,lo_, etc:
            13: 3, 14: 3, 15: 3, 16: 2, 17: 1, 18: 1, 
             19: 3, 20: 3, 21: 2, 22: 0.9, 23: 8.4, 24: 28}
  	    :names ['Prec', 'Flex', 'Resl', 'Team', 'Pmat', 
-              'rely', 'data', 'cplx', 'ruse', 'docu', 
+              'rely', 'Data', 'cplx', 'ruse', 'docu',
               'time', 'stor', 'pvol', 'acap', 'pcap', 
               'pcon', 'aexp', 'plex', 'ltex', 'tool', 
               'site', 'sced', 'kloc', 'effort', 

@@ -91,11 +91,11 @@ class bin:
          
 def joes_decision_reporter(problems, algorithms, tag=""):
     date_folder_prefix = strftime("%m-%d-%Y")
-    if not os.path.isdir('reports/' + date_folder_prefix):
-        os.makedirs('reports/' + date_folder_prefix)
-    fignum = len([name for name in os.listdir('reports/' + date_folder_prefix)]) + 1
+    if not os.path.isdir('Reports/' + date_folder_prefix):
+        os.makedirs('Reports/' + date_folder_prefix)
+    fignum = len([name for name in os.listdir('Reports/' + date_folder_prefix)]) + 1
     #optional tag name for the file
-    fa = open('reports/' + date_folder_prefix + "/decision_bin_rules_report" + "_" + tag + str("%02d" % fignum) + ".txt", 'w')
+    fa = open('Reports/' + date_folder_prefix + "/decision_bin_rules_report" + "_" + tag + str("%02d" % fignum) + ".txt", 'w')
     
     decision_data = []
     objective_data = []
@@ -172,7 +172,7 @@ def joes_decision_reporter(problems, algorithms, tag=""):
             for o in problem.objectives: z += '{0: >8}'.format(o.name) + ","
             
             #read baseline
-            f2input = open("data/" + problem.name + str(MU) + "dataset.txt", 'rb')
+            f2input = open("Data/" + problem.name + str(MU) + "dataset.txt", 'rb')
             reader2 = csv.reader(f2input, delimiter=',')
             referencePoint = []
             for i,row in enumerate(reader2):

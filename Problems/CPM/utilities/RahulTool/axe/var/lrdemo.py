@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import linear_model, datasets
 
-# import some data to play with
+# import some Data to play with
 iris = datasets.load_iris()
 X = iris.data[:]  # we only take the first two features.
 Y = iris.target
@@ -18,7 +18,7 @@ h = .02  # step size in the mesh
 
 logreg = linear_model.LogisticRegression(C=1e5)
 
-# we create an instance of Neighbours Classifier and fit the data.
+# we create an instance of Neighbours Classifier and fit the Data.
 logreg.fit(X, Y)
 
 exit()

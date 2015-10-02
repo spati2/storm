@@ -50,7 +50,7 @@ def createTbl(
         duplicate=False):
   """
   kwargs:
-  _smote = True/False : SMOTE input data (or not)
+  _smote = True/False : SMOTE input Data (or not)
   _isBin = True/False : Reduce bugs to defects/no defects
   _bugThres = int : Threshold for marking stuff as defective,
                     default = 1. Not defective => Bugs < 1
@@ -90,7 +90,7 @@ def wrapper_createTbl(dir):
 
 
 def test_createTbl():
-  dir = '../../data/Apache_AllMeasurements.csv'
+  dir = '../../Data/Apache_AllMeasurements.csv'
   newTbl = createTbl([dir], _smote=False)
   # import pdb
   # pdb.set_trace()

@@ -28,10 +28,7 @@
 "Command line interface."
 
 from jmoo_properties import *
-# from jmoo_defect_prediction_properties import *
 from jmoo_core import *
-from jmoo_version_space import version_space_search
-from jmoo_version_space import build_version_space_chart
    
 """
 ------------
@@ -57,14 +54,6 @@ reportOnly = False
 chartOnly = False
 binsOnly = False
 noReports = True
-dfreportOnly = False
-dfrankOnly = False
-dfchartOnly = False
-versionspace = False
-vschart = False
-df = False
-optimization = False
-
 for i,arg in enumerate(sys.argv):
     if arg == "-n" or arg == "-N":
         repeats = sys.argv[i+1]
@@ -82,46 +71,15 @@ for i,arg in enumerate(sys.argv):
     if arg == "-binsOnly":
         binsOnly = True
         reportOnly = True
-
-    if arg == "-defect":
-        df = True
-    if arg == "-opti":
-        optimization = True
-
-    if arg == "-defectreport":
-        dfreportOnly = True
-    if arg == "-defectchart":
-        dfchartOnly = True
-    if arg == "-defectranking":
-        dfrankOnly = True
-    if arg == "-versionspace":
-        versionspace = True
-    if arg == "-vschart":
-        vschart = True
-
-
-
-
         
-print "VSCHART: ", vschart
-
+        
 # Build new initial populations if suggested.  Before tests can be performed, a problem requires an initial dataset.
 if build_new_pop:
-    # Thought this if condition is not important but I am just sticking to the NSGA paper
-    if "NSGA3" not in [algorithm.name for algorithm in algorithms]:
-        for problem in problems:
-            initialPopulation(problem, MU)
-    else:
-        # This was added specifically for NSGA-III
-        for problem in problems:
-            # Only for nsga3 experiments
-            # initialPopulation(problem, population_size[problem.name.split("_")[-1]])
-            initialPopulation(problem, MU)
-
+    for problem in problems:
+        initialPopulation(problem, MU)
         
 # Wrap the tests in the jmoo core framework
-if not vschart:
-    tests = jmoo_test(problems, algorithms)
+tests = jmoo_test(problems, algorithms)
 
 # Define the reports
 if chartOnly == True: reports = [jmoo_chart_report(tests)]
@@ -131,35 +89,11 @@ elif reportOnly: reports = [jmoo_stats_report(tests)]
 elif noReports: reports = []
 else: reports = [jmoo_stats_report(tests), jmoo_decision_report(tests), jmoo_chart_report(tests)]
 
-if dfreportOnly is True:
-    reports = [jmoo_df_report("stats")]
-if dfchartOnly is True:
-    reports = [jmoo_df_report("charts")]
-if dfrankOnly is True:
-    reports = [jmoo_df_report("ranking", tests)]
-
-
 # Associate core with tests and reports
-if not vschart:
-    core = JMOO(tests, reports)
-
-
-print "here"
+core = JMOO(tests, reports)
 
 # Perform the tests
-if df and not reportOnly and not dfreportOnly and not dfchartOnly and not dfrankOnly and not versionspace and not vschart:
-    core.doDefectPrediction()
-
-if not reportOnly and optimization:
-    core.doTests()
-
-if versionspace and not reportOnly and not dfreportOnly and not dfchartOnly and not dfrankOnly and not vschart:
-    version_space_searcsh(core)
-
-if vschart and not reportOnly and not dfreportOnly and not dfchartOnly and not dfrankOnly and not versionspace:
-    print "there"
-    build_version_space_chart()
+if not reportOnly: core.doTests()
 
 # Prepare the reports
-if not vschart:
-    core.doReports(tag)
+core.doReports(tag)

@@ -68,7 +68,7 @@ from xomo import *
 class Xomo:
     def __init__(self,
                  out=os.environ["HOME"]+"/tmp/xomo",
-                 data = "data",
+                 data = "Data",
                  model=None):
         def theModel(model):
             #default model is flight
@@ -81,11 +81,11 @@ class Xomo:
         self.out = out + "/" + self.model + ".csv"
         self.data = data
         self.names = ["aa", "sced", "cplx", "site", "resl", "acap",
-                      "etat", "rely","data", "prec", "pmat", "aexp",
+                      "etat", "rely","Data", "prec", "pmat", "aexp",
                       "flex", "pcon", "tool", "time","stor", "docu",
                       "b", "plex", "pcap", "kloc", "ltex", "pr", 
                       "ruse", "team", "pvol"] 
-        #LOWs and UPs are defined in data/* files according to models
+        #LOWs and UPs are defined in Data/* files according to models
     
         for _n,n in enumerate(self.names):
             self.collection[n] = Attr(n)

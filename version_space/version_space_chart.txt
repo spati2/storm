@@ -1,9 +1,0 @@
-Experiment: 
-Algorithm Name: GALE
-diabeties|True,(100,)|True,(0,)|True,(100,)|True,(100,5,)|True,(0,100,)|True,(100,90,)|True,(100,5,90,)|
-Algorithm Name: NSGAII
-diabeties|True,(100,)|True,(0,)|True,(100,)|True,(98,0,)|True,(0,100,)|True,(100,96,)|True,(96,0,100,)|
-Algorithm Name: SPEA2
-diabeties|True,(100,)|True,(0,)|True,(100,)|True,(98,0,)|True,(0,100,)|True,(98,100,)|True,(98,0,100,)|
-Algorithm Name: DE
-diabeties|True,(100,)|True,(0,)|True,(100,)|True,(100,5,)|True,(0,100,)|True,(98,100,)|True,(98,0,100,)|

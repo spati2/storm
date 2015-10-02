@@ -68,7 +68,7 @@ def parseXML( xml_file, tag, tests = None):
     tree = ET.ElementTree(file=xml_file)
     experiment = tree.getroot()
     result = "Experiment: \n"
-    if tag == "charts":
+    if tag == "Charts":
         import os
         try:
             os.remove(DEFECT_PREDICT_PREFIX + "DefectPredict_chart.txt")
@@ -131,7 +131,7 @@ def parseXML( xml_file, tag, tests = None):
                     ranking[alg] = [float(median(pd)), float(median(pf)), float(median(prec))]
 
 
-                if tag == "charts":
+                if tag == "Charts":
                     scores_pd[str(algorithm.attrib["name"])] = []
                     scores_pf[str(algorithm.attrib["name"])] = []
                     scores_prec[str(algorithm.attrib["name"])] = []
@@ -144,7 +144,7 @@ def parseXML( xml_file, tag, tests = None):
             if tag == "ranking":
                 ranking["default"] = [median(dpd), median(dpf), median(dprec)]
 
-            if tag == "charts":
+            if tag == "Charts":
                 scores_pd["default"] = []
                 scores_pf["default"] = []
                 scores_prec["default"] = []

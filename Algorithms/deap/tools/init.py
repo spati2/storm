@@ -4,11 +4,11 @@ def initRepeat(container, func, n):
     """Call the function *container* with a generator function corresponding
     to the calling *n* times the function *func*.
     
-    :param container: The type to put in the data from func.
+    :param container: The type to put in the Data from func.
     :param func: The function that will be called n times to fill the
                  container.
     :param n: The number of times to repeat func.
-    :returns: An instance of the container filled with data from func.
+    :returns: An instance of the container filled with Data from func.
     
     This helper function can can be used in conjunction with a Toolbox 
     to register a generator of filled containers, as individuals or 
@@ -27,10 +27,10 @@ def initIterate(container, generator):
     its only argument. The iterable must be returned by 
     the method or the object *generator*.
     
-    :param container: The type to put in the data from func.
+    :param container: The type to put in the Data from func.
     :param generator: A function returning an iterable (list, tuple, ...),
                       the content of this iterable will fill the container.
-    :returns: An instance of the container filled with data from the
+    :returns: An instance of the container filled with Data from the
               generator.
     
     This helper function can can be used in conjunction with a Toolbox 
@@ -52,11 +52,11 @@ def initCycle(container, seq_func, n=1):
     """Call the function *container* with a generator function corresponding
     to the calling *n* times the functions present in *seq_func*.
     
-    :param container: The type to put in the data from func.
+    :param container: The type to put in the Data from func.
     :param seq_func: A list of function objects to be called in order to
                      fill the container.
     :param n: Number of times to iterate through the list of functions.
-    :returns: An instance of the container filled with data from the
+    :returns: An instance of the container filled with Data from the
               returned by the functions.
     
     This helper function can can be used in conjunction with a Toolbox 

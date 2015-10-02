@@ -29,36 +29,11 @@
 
 from jmoo_algorithms import *
 from jmoo_problems import *
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"Problems/tera")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-from tera_dataset import *
-from tera_datasets_WHERE import *
-from tera_dataset_RF import *
 
-
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"Problems")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-from CPM.cpm import *
-from CPM.cpm_reduction import *
-
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"Problems/NRP")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-from nrp import *
-
-
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"Problems/MONRP")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-from monrp import *
-
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"Problems/sklearn_dataset")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-
-from diabaties import *
+from Problems.CPM.cpm import *
+from Problems.CPM.cpm_reduction import *
+from Problems.NRP.nrp import *
+from Problems.MONRP.monrp import *
 
 
 
@@ -66,17 +41,12 @@ from diabaties import *
 algorithms = [
               jmoo_GALE(),
               jmoo_NSGAII(),
-              # # jmoo_SPEA2(),
+              jmoo_SPEA2(),
               jmoo_DE(),
               # jmoo_MOEAD(),
               # jmoo_NSGAIII(),
-              # #   jmoo_ANYWHERE(),
-              # jmoo_ANYWHERE2(),
 
               ]
-
-#problems = [defect_prediction([ant14()], [ant15()], [ant16()])]#srinivas(), fonseca(3)]
-
 
 problems =[
     # dtlz1(9, 5),
@@ -102,38 +72,20 @@ problems =[
     #MONRP(50, 5, 5, 20, 120)
     # cpm_apache(),cpm_X264(), cpm_SQL_4553(), cpm_SQL_100(), cpm_LLVM(), cpm_BDBJ(), cpm_BDBC()
     cpm_apache_training_reduction(treatment=None),
-    cpm_X264(treatment=None),
-    cpm_SQL(treatment=None),
-    cpm_LLVM(treatment=None),
-    cpm_BDBJ(treatment=None),
-    cpm_BDBC(treatment=None)
+    # cpm_X264(treatment=None),
+    # cpm_SQL(treatment=None),
+    # cpm_LLVM(treatment=None),
+    # cpm_BDBJ(treatment=None),
+    # cpm_BDBC(treatment=None)
 
 
     # #, fonseca(3), srinivas(), schaffer(), osyczka2(),# water()
-    #diabeties()
        #camel(), ant(),  forrest(), ivy(), jedit(), lucene(), poi(), synapse(), velocity(), xerces(),
      #antRF()  , camelRF(),  forrestRF(), ivyRF(), jeditRF(), luceneRF(), poiRF(), synapseRF(), velocityRF(), xercesRF(),
      #antW()  , camelW(),  forrestW(), ivyW(), jeditW(), luceneW(), poiW(), synapseW(), velocityW(), xercesW()
 
 
 ]
-
-# population_size = {
-#     "3": 92,
-#     "5": 212,
-#     "8": 156,
-#     "10": 276,
-#     "15": 136
-#
-# }
-#
-# max_generation = {
-#     "DTLZ1_9_5": 600, "DTLZ2_14_5": 350, "DTLZ3_14_5": 1000, "DTLZ4_14_5": 1000,
-#     "DTLZ1_7_3": 400, "DTLZ2_12_3": 250, "DTLZ3_12_3": 1000, "DTLZ4_12_3": 600,
-#     "DTLZ1_12_8": 750, "DTLZ2_17_8": 500, "DTLZ3_17_8": 1000, "DTLZ4_17_8": 1250,
-#     "DTLZ1_14_10": 1000, "DTLZ2_19_10": 750, "DTLZ3_19_10": 1500, "DTLZ4_19_10": 2000,
-#     "DTLZ1_19_15": 1500, "DTLZ2_24_15": 1000, "DTLZ3_24_15": 2000, "DTLZ4_24_15": 3000
-#                    }
 
 build_new_pop = False                                       # Whether or not to rebuild the initial population
 
@@ -164,15 +116,9 @@ ANYWHERE_POLES = 20  # number of actual poles is 2 * ANYWHERE_POLES
 # Properties of NSGAIII
 # NSGA3_P = 5 # not required anymore since this is not strictly followed. Looked at nsga3 paper section V
 
-# Properties of Culling
-if CULLING == True:
-    CULLING_PD = 66
-    CULLING_PF = 33
-
-
 
 # File Names
-DATA_PREFIX        = "data/"
+DATA_PREFIX        = "Data/"
 DEFECT_PREDICT_PREFIX = "defect_prediction/"
 VERSION_SPACE_PREFIX = "version_space/"
 

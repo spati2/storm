@@ -27,39 +27,21 @@
 "Brief notes"
 "Algorithms for evolution"
 
-from deap import base
-from deap import creator
-from deap import tools
+from Algorithms.deap import base
+from Algorithms.deap import creator
+from Algorithms.deap import tools
 
 import os, sys, inspect
 
 def do_nothing_initializer(problem, population):
     return population, 0
 
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"GALE")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-from gale_components import *
 
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"DE")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-from de_components import *
-
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"MOEA_D")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-from moead_components import *
-
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"NSGAIII")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-from nsgaiii_components import *
-
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"ANYWHERE")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-from anywhere_components import *
+from Algorithms.GALE.gale_components import *
+from Algorithms.DE.de_components import *
+from Algorithms.MOEA_D.moead_components import *
+from Algorithms.NSGAIII.nsgaiii_components import *
+from Algorithms.STORM.storm_components import *
 
     
 from jmoo_individual import *
@@ -67,7 +49,6 @@ from jmoo_individual import *
 
 
 from jmoo_properties import *
-from jmoo_preprocessor import CULLING
 from utility import *
 import jmoo_stats_box
 import array,random,numpy
@@ -196,13 +177,13 @@ def binner(problem, mu):
     
 def selTournament(problem, individuals):
     
-    # Format a population data structure usable by DEAP's package
+    # Format a population Data structure usable by DEAP's package
     dIndividuals = deap_format(problem, individuals)
     
     # Select elites
     selectees = tools.selTournament(dIndividuals, len(individuals), 4)
     
-    # Update beginning population data structure
+    # Update beginning population Data structure
     selectedIndices = [i for i,sel in enumerate(selectees)]
     return [individuals[s] for s in selectedIndices], len(individuals)
 
@@ -213,7 +194,7 @@ def selTournamentDCD(problem, individuals):
         if not individual.valid:
             individual.evaluate()
             
-    # Format a population data structure usable by DEAP's package
+    # Format a population Data structure usable by DEAP's package
     dIndividuals = deap_format(problem, individuals)
     
     # Assign crowding distance
@@ -222,7 +203,7 @@ def selTournamentDCD(problem, individuals):
     # Select elites
     selectees = tools.selTournamentDCD(dIndividuals, len(individuals))
     
-    # Update beginning population data structure
+    # Update beginning population Data structure
     selectedIndices = [i for i,sel in enumerate(selectees)]
     return [individuals[s] for s in selectedIndices], len(individuals)
 
@@ -245,92 +226,38 @@ def crossoverAndMutation(problem, individuals):
     from copy import copy
     new_individuals = individuals
 
-    if CULLING is True:
-        count = 0
-        new_crop = []
+    # Format a population Data structure usable by DEAP's package
+    dIndividuals = deap_format(problem, individuals)
+    new_dIndividuals = []
+    # print "Number of Individuals: ", len(dIndividuals)
 
-        # Format a population data structure usable by DEAP's package
-        dIndividuals = deap_format(problem, individuals)
-
-        while True:
-            count += 1
-            if count > 10 or len(dIndividuals) == 1 or len(new_crop) == len(individuals):
-                break
-
-            # Crossover
-            for ind1, ind2 in zip(dIndividuals[::2], dIndividuals[1::2]):
-                if random.random() <= 0.9: #crossover rate
-                    tools.cxUniform(ind1, ind2, indpb=1.0/len(problem.decisions))
-
-            # Mutation
-            for ind in dIndividuals:
-                temp = []
-                tools.mutPolynomialBounded(ind, eta = 1.0, low=[dec.low for dec in problem.decisions], up=[dec.up for dec in problem.decisions], indpb=0.1 )
-                del ind.fitness.values
-                temp = problem.evaluate(ind)
-                if temp[0] > jmoo_properties.CULLING_PD and temp[1] < jmoo_properties.CULLING_PF:
-                    import numpy as np
-                    test = np.array(ind).tolist()
-                    # print "IND: ", ind
-                    # print "TEST: ", test
-                    if len(new_crop) != len(individuals):
-                        new_crop = helper_list(new_crop, test)
-                    # print ">> ", problem.evaluate(ind)
+    # Crossover
+    for ind1, ind2 in zip(dIndividuals[::2], dIndividuals[1::2]):
+        if random.random() <= 1: #crossover rate
+            # print ".",
+            ind1, ind2 = tools.cxUniform(ind1, ind2, indpb=1.0/len(problem.decisions))
+            new_dIndividuals.append(ind1)
+            new_dIndividuals.append(ind2)
+        else:
+            new_dIndividuals.append(ind1)
+            new_dIndividuals.append(ind2)
 
 
 
-        print "NEW CROP: ", len(new_crop)
-        for x in new_crop:
-            if x in dIndividuals:
-                dIndividuals.remove(x)
-            else:
-                dIndividuals.remove(random.choice(dIndividuals))
-            for _ in xrange(1):
-                print ">> ", problem.evaluate(x), x
-        dIndividuals.extend(new_crop)
-        print "Length : ", len(dIndividuals)
+    # Mutation
+    for ind in new_dIndividuals:
+        # print "+",
+        tools.mutPolynomialBounded(ind, eta = 1.0, low=[dec.low for dec in problem.decisions], up=[dec.up for dec in problem.decisions], indpb=0.1 )
+        del ind.fitness.values
 
-        # Update beginning population data structure
-        for individual,dIndividual in zip(individuals, dIndividuals):
-            for i in range(len(individual.decisionValues)):
-                individual.decisionValues[i] = dIndividual[i]
-                individual.fitness = None
-
-        return individuals, len(individuals) * (count - 1)
-
-    else:
-        # Format a population data structure usable by DEAP's package
-        dIndividuals = deap_format(problem, individuals)
-        new_dIndividuals = []
-        # print "Number of Individuals: ", len(dIndividuals)
-
-        # Crossover
-        for ind1, ind2 in zip(dIndividuals[::2], dIndividuals[1::2]):
-            if random.random() <= 1: #crossover rate
-                # print ".",
-                ind1, ind2 = tools.cxUniform(ind1, ind2, indpb=1.0/len(problem.decisions))
-                new_dIndividuals.append(ind1)
-                new_dIndividuals.append(ind2)
-            else:
-                new_dIndividuals.append(ind1)
-                new_dIndividuals.append(ind2)
+    # Update beginning population Data structure
+    for individual, dIndividual in zip(new_individuals, new_dIndividuals):
+        for i in range(len(individual.decisionValues)):
+            individual.decisionValues[i] = dIndividual[i]
+            individual.fitness = None
 
 
-
-        # Mutation
-        for ind in new_dIndividuals:
-            # print "+",
-            tools.mutPolynomialBounded(ind, eta = 1.0, low=[dec.low for dec in problem.decisions], up=[dec.up for dec in problem.decisions], indpb=0.1 )
-            del ind.fitness.values
-
-        # Update beginning population data structure
-        for individual, dIndividual in zip(new_individuals, new_dIndividuals):
-            for i in range(len(individual.decisionValues)):
-                individual.decisionValues[i] = dIndividual[i]
-                individual.fitness = None
-
-
-        return new_individuals,0
+    return new_individuals,0
 
 def variator(problem, selectees):
     return selectees, 0
@@ -355,7 +282,7 @@ def selSPEA2(problem, population, selectees, k):
         if not individual.valid:
             individual.evaluate()
             
-    # Format a population data structure usable by DEAP's package
+    # Format a population Data structure usable by DEAP's package
     dIndividuals = deap_format(problem, population+selectees)
     
     # Combine
@@ -379,7 +306,7 @@ def selNSGA2(problem, population, selectees, k):
         if not individual.valid:
             individual.evaluate()
             
-    # Format a population data structure usable by DEAP's package
+    # Format a population Data structure usable by DEAP's package
     dIndividuals = deap_format(problem, population+selectees)
     
     # Combine

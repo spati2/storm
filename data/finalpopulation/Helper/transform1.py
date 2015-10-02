@@ -8,12 +8,12 @@ def read_file_return_list(filename):
     return open("../"+filename, "r").readlines()
 
 def get_dataset(filename):
-    convert_names = {"CPM_APACHE": "../../../Problems/CPM/data/Apache_AllMeasurements.csv",
-                     "CPM_BDBC": "../../../Problems/CPM/data/BDBC_AllMeasurements.csv",
-                     "CPM_BDBJ": "../../../Problems/CPM/data/BDBJ_AllMeasurements.csv",
-                     "CPM_LLVM": "../../../Problems/CPM/data/LLVM_AllMeasurements.csv",
-                     "CPM_SQL": "../../../Problems/CPM/data/SQL_AllMeasurements.csv",
-                     "cpm_X264": "../../../Problems/CPM/data/x264_AllMeasurements.csv"
+    convert_names = {"CPM_APACHE": "../../../Problems/CPM/Data/Apache_AllMeasurements.csv",
+                     "CPM_BDBC": "../../../Problems/CPM/Data/BDBC_AllMeasurements.csv",
+                     "CPM_BDBJ": "../../../Problems/CPM/Data/BDBJ_AllMeasurements.csv",
+                     "CPM_LLVM": "../../../Problems/CPM/Data/LLVM_AllMeasurements.csv",
+                     "CPM_SQL": "../../../Problems/CPM/Data/SQL_AllMeasurements.csv",
+                     "cpm_X264": "../../../Problems/CPM/Data/x264_AllMeasurements.csv"
                      }
     filename = convert_names[filename]
     temp_list = open(filename, "r").readlines()[1:]

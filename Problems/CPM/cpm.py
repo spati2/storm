@@ -67,8 +67,8 @@ class cpm(jmoo_problem):
         return False
 
 class cpm_apache(cpm):
-    # def __init__(self, requirements=9, fraction=0.5, name="CPM_APACHE", filename="./data/Apache_AllMeasurements.csv"):
-    def __init__(self, requirements=9, fraction=0.5, name="CPM_APACHE", filename="./Problems/CPM/data/Apache_AllMeasurements.csv"):
+    # def __init__(self, requirements=9, fraction=0.5, name="CPM_APACHE", filename="./Data/Apache_AllMeasurements.csv"):
+    def __init__(self, requirements=9, fraction=0.5, name="CPM_APACHE", filename="./Problems/CPM/Data/Apache_AllMeasurements.csv"):
         self.name = name
         self.filename = filename
         names = ["x"+str(i+1) for i in xrange(requirements)]
@@ -83,8 +83,8 @@ class cpm_apache(cpm):
         self.CART = self.CART.fit(self.training_independent, self.training_dependent)
 
 class cpm_BDBC(cpm):
-    # def __init__(self, requirements=9, fraction=0.5, name="CPM_BDBC", filename="./data/BDBC_AllMeasurements.csv"):
-    def __init__(self, requirements=18, fraction=0.5, name="CPM_BDBC", filename="./Problems/CPM/data/BDBC_AllMeasurements.csv"):
+    # def __init__(self, requirements=9, fraction=0.5, name="CPM_BDBC", filename="./Data/BDBC_AllMeasurements.csv"):
+    def __init__(self, requirements=18, fraction=0.5, name="CPM_BDBC", filename="./Problems/CPM/Data/BDBC_AllMeasurements.csv"):
         self.name = name
         self.filename = filename
         names = ["x"+str(i+1) for i in xrange(requirements)]
@@ -99,8 +99,8 @@ class cpm_BDBC(cpm):
         self.CART = self.CART.fit(self.training_independent, self.training_dependent)
 
 class cpm_BDBJ(cpm):
-    # def __init__(self, requirements=9, fraction=0.5, name="CPM_BDBJ", filename="./data/BDBJ_AllMeasurements.csv"):
-    def __init__(self, requirements=26, fraction=0.5, name="CPM_BDBJ", filename="./Problems/CPM/data/BDBJ_AllMeasurements.csv"):
+    # def __init__(self, requirements=9, fraction=0.5, name="CPM_BDBJ", filename="./Data/BDBJ_AllMeasurements.csv"):
+    def __init__(self, requirements=26, fraction=0.5, name="CPM_BDBJ", filename="./Problems/CPM/Data/BDBJ_AllMeasurements.csv"):
         self.name = name
         self.filename = filename
         names = ["x"+str(i+1) for i in xrange(requirements)]
@@ -115,8 +115,8 @@ class cpm_BDBJ(cpm):
         self.CART = self.CART.fit(self.training_independent, self.training_dependent)
 
 class cpm_LLVM(cpm):
-    # def __init__(self, requirements=9, fraction=0.5, name="CPM_LLVM", filename="./data/LLVM_AllMeasurements.csv"):
-    def __init__(self, requirements=11, fraction=0.5, name="CPM_LLVM", filename="./Problems/CPM/data/LLVM_AllMeasurements.csv"):
+    # def __init__(self, requirements=9, fraction=0.5, name="CPM_LLVM", filename="./Data/LLVM_AllMeasurements.csv"):
+    def __init__(self, requirements=11, fraction=0.5, name="CPM_LLVM", filename="./Problems/CPM/Data/LLVM_AllMeasurements.csv"):
         self.name = name
         self.filename = filename
         names = ["x"+str(i+1) for i in xrange(requirements)]
@@ -131,8 +131,8 @@ class cpm_LLVM(cpm):
         self.CART = self.CART.fit(self.training_independent, self.training_dependent)
 
 class cpm_SQL_100(cpm):
-    # def __init__(self, requirements=9, fraction=0.5, name="CPM_SQL_100", filename="./data/SQL_100testing.csv"):
-    def __init__(self, requirements=39, fraction=0.5, name="CPM_SQL_100", filename="./Problems/CPM/data/SQL_100testing.csv"):
+    # def __init__(self, requirements=9, fraction=0.5, name="CPM_SQL_100", filename="./Data/SQL_100testing.csv"):
+    def __init__(self, requirements=39, fraction=0.5, name="CPM_SQL_100", filename="./Problems/CPM/Data/SQL_100testing.csv"):
         self.name = name
         self.filename = filename
         names = ["x"+str(i+1) for i in xrange(requirements)]
@@ -147,8 +147,8 @@ class cpm_SQL_100(cpm):
         self.CART = self.CART.fit(self.training_independent, self.training_dependent)
 
 class cpm_SQL_4553(cpm):
-    # def __init__(self, requirements=9, fraction=0.5, name="CPM_SQL_4553", filename="./data/SQL_4553training.csv"):
-    def __init__(self, requirements=39, fraction=0.5, name="CPM_SQL_4553", filename="./Problems/CPM/data/SQL_4553training.csv"):
+    # def __init__(self, requirements=9, fraction=0.5, name="CPM_SQL_4553", filename="./Data/SQL_4553training.csv"):
+    def __init__(self, requirements=39, fraction=0.5, name="CPM_SQL_4553", filename="./Problems/CPM/Data/SQL_4553training.csv"):
         self.name = name
         self.filename = filename
         names = ["x"+str(i+1) for i in xrange(requirements)]
@@ -163,8 +163,8 @@ class cpm_SQL_4553(cpm):
         self.CART = self.CART.fit(self.training_independent, self.training_dependent)
 
 class cpm_X264(cpm):
-    # def __init__(self, requirements=9, fraction=0.5, name="cpm_X264", filename="./data/X264_AllMeasurements.csv"):
-    def __init__(self, requirements=16, fraction=0.5, name="cpm_X264", filename="./Problems/CPM/data/X264_AllMeasurements.csv"):
+    # def __init__(self, requirements=9, fraction=0.5, name="cpm_X264", filename="./Data/X264_AllMeasurements.csv"):
+    def __init__(self, requirements=16, fraction=0.5, name="cpm_X264", filename="./Problems/CPM/Data/X264_AllMeasurements.csv"):
         self.name = name
         self.filename = filename
         names = ["x"+str(i+1) for i in xrange(requirements)]

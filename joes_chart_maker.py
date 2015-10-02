@@ -16,7 +16,7 @@ for p,prob in enumerate(problems):
     data.append([])
     heads.append([])
     for a,alg in enumerate(algorithms):
-        finput = open("data/results_" + prob.name + "_" + alg + ".datatable", 'rb')
+        finput = open("Data/results_" + prob.name + "_" + alg + ".datatable", 'rb')
         reader = csv.reader(finput, delimiter=',')
         
         data[p].append( [] )
@@ -57,7 +57,7 @@ for p,prob in enumerate(problems):
             #show()
             
             fignum += 1
-            plt.savefig('charts/4-2-2013/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + alg + '_f' + str(i+1) + '.png', dpi=100)
+            plt.savefig('Charts/4-2-2013/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + alg + '_f' + str(i+1) + '.png', dpi=100)
             cla()
     
             plot([x for x in data[p][a][0]], data[p][a][len(prob.objectives)*2 + 1], 'k', label="IBD")
@@ -69,7 +69,7 @@ for p,prob in enumerate(problems):
             #show()
             
             fignum += 1
-            plt.savefig('charts/4-2-2013/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + alg + '_ibd_ibs.png', dpi=100)
+            plt.savefig('Charts/4-2-2013/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + alg + '_ibd_ibs.png', dpi=100)
             cla()
     
 """
@@ -88,7 +88,7 @@ for i in range(numObjectives):
 
 # GRAPH A PARETO FRONTIER
 
-input = open('data/SchafferPF.pf', 'rb')
+input = open('Data/SchafferPF.pf', 'rb')
 reader = csv.reader(input, delimiter='\t')
 
 PF = [[], []]
@@ -99,7 +99,7 @@ for row in reader:
 X = PF[0]
 Y = PF[1]
 
-input = open('data/Schaffer_rrsl_front', 'rb')
+input = open('Data/Schaffer_rrsl_front', 'rb')
 reader = csv.reader(input, delimiter=',')
 PF = [[], []]
 for row in reader:
@@ -115,7 +115,7 @@ plot(X2,Y2, 'ro')
 show()
 fig = matplotlib.pyplot.gcf()
 fig.set_size_inches(18.5,10.5)
-plt.savefig('charts/schaffer10krrsl.png',dpi=100)
+plt.savefig('Charts/schaffer10krrsl.png',dpi=100)
 
 
 """
@@ -123,7 +123,7 @@ plt.savefig('charts/schaffer10krrsl.png',dpi=100)
 
 #GRAPH OF THE DISTRIBUTIONS OF EACH POM2JOE OBJECTIVE
 """
-readData = slurpFile("data/foo10000.txt")
+readData = slurpFile("Data/foo10000.txt")
 X = [[] for x in range(len(readData.headers))]
 
 for row in readData.rows:
@@ -145,5 +145,5 @@ hist([X[12]])
 title("idle")
 fig = matplotlib.pyplot.gcf()
 fig.set_size_inches(18.5,10.5)
-plt.savefig('charts/objective_distributions.png',dpi=100)
+plt.savefig('Charts/objective_distributions.png',dpi=100)
 """

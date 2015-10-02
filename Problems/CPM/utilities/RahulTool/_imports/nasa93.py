@@ -18,7 +18,7 @@ def nasa93():
   vl = 1;l = 2;n = 3;h = 4;vh = 5;xh = 6
   return data(indep = [
      # 0..8
-     'Prec', 'Flex', 'Resl', 'Team', 'Pmat', 'rely', 'data', 'cplx', 'ruse',
+     'Prec', 'Flex', 'Resl', 'Team', 'Pmat', 'rely', 'Data', 'cplx', 'ruse',
      # 9 .. 17
      'docu', 'time', 'stor', 'pvol', 'acap', 'pcap', 'pcon', 'aexp', 'plex',
      # 18 .. 25

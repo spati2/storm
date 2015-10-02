@@ -6,19 +6,14 @@ import sys, os, inspect
 from jmoo_objective import *
 from jmoo_decision import *
 from jmoo_problem import jmoo_problem
-parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../../Techniques")))
+parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../..")))
 if parentdir not in sys.path:
     sys.path.insert(0, parentdir)
-from smote import smote
-from jmoo_preprocessor import PDPF, ABCD, GF, ACC, SMOTE
+from Techniques.SMOTE import smote
 
+from WHERE.main import *
 
-parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../../WHERE")))
-if parentdir not in sys.path:
-    sys.path.insert(0, parentdir)
-from main import *
-
-prefix = "tera/"
+prefix = "Tera/"
 suffix = ".csv"
 
 def avg(lst):
@@ -157,7 +152,7 @@ elif ACC:
 
 
 def readSmoteDataset(file, properties):
-    prefix = "tera/"
+    prefix = "Tera/"
     suffix = ".csv"
     finput = open(prefix + file + suffix, 'rb')
     reader = csv.reader(finput, delimiter=',')
@@ -166,7 +161,7 @@ def readSmoteDataset(file, properties):
 
 
 def readDataset(file, properties):
-    prefix = "tera/"
+    prefix = "Tera/"
     suffix = ".csv"
     finput = open(prefix + file + suffix, 'rb')
     reader = csv.reader(finput, delimiter=',')

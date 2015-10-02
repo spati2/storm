@@ -1,7 +1,9 @@
 from collections import defaultdict
 from random import choice, random
 
-from jmoo_preprocessor import SMOTE_BINARY_CLASSIFICATION
+# Flag:
+SMOTE_BINARY_CLASSIFICATION = True
+
 def euclidean(list1, list2, k=3):
     assert(len(list1) == len(list2)), "Length mismatch"
     dist = 0

@@ -55,7 +55,7 @@ def SMOTE(data=None, k=5, atleast=100, atmost=100, bugIndx=2, resample=False):
 
   def populate(data):
     newData = []
-    # reps = (len(data) - atleast)
+    # reps = (len(Data) - atleast)
     for _ in xrange(atleast):
       for one in data:
         neigh = knn(one, data)[1:k + 1]
@@ -66,7 +66,7 @@ def SMOTE(data=None, k=5, atleast=100, atmost=100, bugIndx=2, resample=False):
         except IndexError:
           two = one
         newData.append(extrapolate(one, two))
-    # data.extend(newData)
+    # Data.extend(newData)
     return newData
 
   def depopulate(data):

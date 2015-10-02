@@ -150,7 +150,7 @@ elif ACC:
 
 
 def readSmoteDataset(file, properties):
-    prefix = "tera/"
+    prefix = "Tera/"
     suffix = ".csv"
     finput = open(prefix + file + suffix, 'rb')
     reader = csv.reader(finput, delimiter=',')
@@ -159,7 +159,7 @@ def readSmoteDataset(file, properties):
 
 
 def readDataset(file, properties):
-    prefix = "tera/"
+    prefix = "Tera/"
     suffix = ".csv"
     finput = open(prefix + file + suffix, 'rb')
     reader = csv.reader(finput, delimiter=',')

@@ -198,7 +198,7 @@ class Rsteps(Sample):
 
 @demo 
 def somed6(): 
-  "Divide data into 5 steps"
+  "Divide Data into 5 steps"
   lst = [x for x in xrange(0,33)]
   somed0(Rsteps("xx",7,int).bias(lst))
 import random
@@ -590,11 +590,11 @@ DefectIntroCodingNeg = ['pmat','prec','resl','team',
                         'acap','aexp','docu','ltex', 
                         'pcon','plex','rely','sced',
                         'site','tool','pcap']
-DefectIntroReqsPos = ['cplx','data','pvol',
+DefectIntroReqsPos = ['cplx','Data','pvol',
                       'ruse','stor','time']
-DefectIntroDesignPos = ['cplx','data','pvol',
+DefectIntroDesignPos = ['cplx','Data','pvol',
                         'ruse','stor','time']
-DefectIntroCodingPos = ['cplx','data','pvol',
+DefectIntroCodingPos = ['cplx','Data','pvol',
                         'ruse','stor','time']
 DefectIntroReqsIgnore = ["flex","pcap"]
 DefectIntroDesignIgnore = ["flex"]
@@ -608,7 +608,7 @@ class Cocomo(Model):
     o.bounds = {}
     _s = "flex pmat prec resl team"
     o.scaleFactors = _s.split()
-    _s = ("acap aexp cplx data docu ltex "
+    _s = ("acap aexp cplx Data docu ltex "
           "pcap pcon plex pvol rely ruse "
           "sced site stor time tool")
     o.effortMultipliers = _s.split()
@@ -826,7 +826,7 @@ class Cocomo(Model):
         _rtn.append( sf(_sf) )
     # Effort Multipliers, Positive Slope
     for _emp, _rng in [ ( "rely", (1,5) ),
-                        ( "data", (2,5) ),
+                        ( "Data", (2,5) ),
                         ( "cplx", (1,6) ),
                         ( "ruse", (2,6) ),
                         ( "docu", (1,5) ),
@@ -1063,7 +1063,7 @@ class Calibrations():
 
 
 class Calib():
-  """CoQualMo calibration data generator"""
+  """CoQualMo calibration Data generator"""
   def __init__(o, phase, category, sign):
     o.phase = phase        # Intro/Removal
     o.category = category  # Reqs/Dsgn/Code
@@ -1166,14 +1166,14 @@ class B(Range):
 # import os
 # import sys
 # def coced0(output=os.environ["HOME"]+"/tmp",
-#            data = "./data",
+#            Data = "./Data",
 #            model=None):
 #   if not model:
 #     if len(sys.argv) > 1:
 #       model = sys.argv[1]
 #     else:
 #       model="flight"
-#   _c = Cocomo(data + '/' + model)
+#   _c = Cocomo(Data + '/' + model)
 #   _c.xys(verbose=False)
 #   out = output + "/" + model + ".csv"
 #   _c.trials(out=out,verbose=False)

@@ -35,14 +35,9 @@ from jmoo_stats_box import *
 import math
 from math import *
 import os,sys,inspect
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"Problems/pom3")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-import pom3
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"Problems/xomo")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
-import xomo_liaison
+
+import Problems.pom3.pom3
+import Problems.xomo.xomo_liaison
 
 def distance(in1, in2):
     return sum([abs(x-y) for x,y in zip(in1,in2)])**0.5
@@ -54,12 +49,12 @@ def initialPopulation(problem, n):
         dataset.append(problem.generateInput())
         
     #write the dataset to file
-    filename = "data/" + problem.name + "-p" + str(n) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
+    filename = "Data/" + problem.name + "-p" + str(n) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
     print filename
     fo = open(filename, 'w')
     h = problem.buildHeader() #the header row
     fo.write(h + "\n")
-    for data in dataset: #each row of actual data
+    for data in dataset: #each row of actual Data
         fo.write(str(data).strip("[]") + "\n")
     
     print "Dataset generated for " + problem.name + " in " + filename + "."
@@ -89,10 +84,10 @@ def initialPopulation(problem, n):
     fo.close()
     
 def dataGen(problem, n):
-    "Generate data to be used in Initial Population of jmoo_jmeoa" 
-    "- This method generates data for a particular problem."
-    "- The data consists of a header row, followed by rows of actual data."
-    "- Each row of data after the header contains values for each decision/objective."
+    "Generate Data to be used in Initial Population of jmoo_jmeoa"
+    "- This method generates Data for a particular problem."
+    "- The Data consists of a header row, followed by rows of actual Data."
+    "- Each row of Data after the header contains values for each decision/objective."
     "- '$' indicates a decision, while '>>' indicates an objective to minimize.  '<<' is" 
     "  an objective to maximize."
     
@@ -131,11 +126,11 @@ def dataGen(problem, n):
     #    dataset.append(problem.generateInput() + problem.evaluate())
         
     #write the dataset to file
-    filename = "data/" + problem.name + str(n) + "dataset.txt"  #i.e. "Golinski100dataset.txt"  
+    filename = "Data/" + problem.name + str(n) + "dataset.txt"  #i.e. "Golinski100dataset.txt"
     fo = open(filename, 'w')
     h = problem.buildHeader() #the header row
     fo.write(h + "\n")
-    for data in dataset: #each row of actual data
+    for data in dataset: #each row of actual Data
         fo.write(str(data).strip("[]") + "\n")
     fo.close()
     print "Dataset generated for " + problem.name + " in " + filename + "."
@@ -1173,7 +1168,7 @@ class XOMO_flight(jmoo_problem):
         prob.name = "xomofl"
         #Should be as xomol.names to maintain order of LOWs and UPs
         names = ["aa", "sced", "cplx", "site", "resl", "acap", "etat", "rely", 
-             "data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
+             "Data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
              "stor", "docu", "b", "plex", "pcap", "kloc", "ltex", "pr", 
              "ruse", "team", "pvol"] 
         #Generic Bounds as per menzies.us/pdf/06xomo101.pdf fig.9
@@ -1185,7 +1180,7 @@ class XOMO_flight(jmoo_problem):
                  "acap" : (0.71,1.42),
                  "etat" : (1,6),
                  "rely" : (0.82,1.26),
-                 "data" : (0.90,1.28),
+                 "Data" : (0.90,1.28),
                  "prec" : (1.24,6.20),
                  "pmat" : (1.56,7.80),
                  "aexp" : (0.81,1.22),
@@ -1212,7 +1207,7 @@ class XOMO_flight(jmoo_problem):
                          "pmat" : (6.24,4.68),
                          "rely" : (1,1.26),
                          "cplx" : (1,1.74),
-                         "data" : (0.9,1),
+                         "Data" : (0.9,1),
                          "ruse" : (0.95,1.24),
                          "time" : (1,1.11),
                          "stor" : (1,1.05),
@@ -1254,7 +1249,7 @@ class XOMO_ground(jmoo_problem):
         prob.name = "xomogr"
         #Should be as xomol.names to maintain order of LOWs and UPs
         names = ["aa", "sced", "cplx", "site", "resl", "acap", "etat", "rely", 
-             "data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
+             "Data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
              "stor", "docu", "b", "plex", "pcap", "kloc", "ltex", "pr", 
              "ruse", "team", "pvol"] 
         #Generic Bounds as per menzies.us/pdf/06xomo101.pdf fig.9
@@ -1266,7 +1261,7 @@ class XOMO_ground(jmoo_problem):
                  "acap" : (0.71,1.42),
                  "etat" : (1,6),
                  "rely" : (0.82,1.26),
-                 "data" : (0.90,1.28),
+                 "Data" : (0.90,1.28),
                  "prec" : (1.24,6.20),
                  "pmat" : (1.56,7.80),
                  "aexp" : (0.81,1.22),
@@ -1293,7 +1288,7 @@ class XOMO_ground(jmoo_problem):
                           "pmat" : (1.56,7.8),
                           "rely" : (0.82,1.1),
                           "cplx" : (0.73,1.17),
-                          "data" : (0.9,1),
+                          "Data" : (0.9,1),
                           "ruse" : (0.95,1.24),
                           "time" : (1,1.11),
                           "stor" : (1,1.05),
@@ -1336,7 +1331,7 @@ class XOMO_osp(jmoo_problem):
         prob.name = "xomoos"
         #Should be as xomol.names to maintain order of LOWs and UPs
         names = ["aa", "sced", "cplx", "site", "resl", "acap", "etat", "rely", 
-             "data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
+             "Data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
              "stor", "docu", "b", "plex", "pcap", "kloc", "ltex", "pr", 
              "ruse", "team", "pvol"] 
         #Generic Bounds as per menzies.us/pdf/06xomo101.pdf fig.9
@@ -1348,7 +1343,7 @@ class XOMO_osp(jmoo_problem):
                  "acap" : (0.71,1.42),
                  "etat" : (1,6),
                  "rely" : (0.82,1.26),
-                 "data" : (0.90,1.28),
+                 "Data" : (0.90,1.28),
                  "prec" : (1.24,6.20),
                  "pmat" : (1.56,7.80),
                  "aexp" : (0.81,1.22),
@@ -1375,7 +1370,7 @@ class XOMO_osp(jmoo_problem):
                        "pmat" : (3.12,7.8),
                        "rely" : (1.26,1.26),
                        "cplx" : (1.34,1.74),
-                       "data" : (1,1),
+                       "Data" : (1,1),
                        "ruse" : (0.95,1.07),
                        "time" : (1,1.63),
                        "stor" : (1,1.17),
@@ -1418,7 +1413,7 @@ class XOMO_osp2(jmoo_problem):
         prob.name = "xomoo2"
         #Should be as xomol.names to maintain order of LOWs and UPs
         names = ["aa", "sced", "cplx", "site", "resl", "acap", "etat", "rely", 
-             "data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
+             "Data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
              "stor", "docu", "b", "plex", "pcap", "kloc", "ltex", "pr", 
              "ruse", "team", "pvol"] 
         #Generic Bounds as per menzies.us/pdf/06xomo101.pdf fig.9
@@ -1430,7 +1425,7 @@ class XOMO_osp2(jmoo_problem):
                  "acap" : (0.71,1.42),
                  "etat" : (1,6),
                  "rely" : (0.82,1.26),
-                 "data" : (0.90,1.28),
+                 "Data" : (0.90,1.28),
                  "prec" : (1.24,6.20),
                  "pmat" : (1.56,7.80),
                  "aexp" : (0.81,1.22),
@@ -1457,7 +1452,7 @@ class XOMO_osp2(jmoo_problem):
                         "pmat" : (1.56,3.12),
                         "rely" : (1.26,1.26),
                         "cplx" : (1.34,1.74),
-                        "data" : (1.14,1.14),
+                        "Data" : (1.14,1.14),
                         "ruse" : (0.95,1.07),
                         "time" : (1,1),
                         "stor" : (1,1),
@@ -1500,7 +1495,7 @@ class XOMO_all(jmoo_problem):
         prob.name = "xomoal"
         #Should be as xomol.names to maintain order of LOWs and UPs
         names = ["aa", "sced", "cplx", "site", "resl", "acap", "etat", "rely", 
-             "data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
+             "Data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
              "stor", "docu", "b", "plex", "pcap", "kloc", "ltex", "pr", 
              "ruse", "team", "pvol"] 
         #Generic Bounds as per menzies.us/pdf/06xomo101.pdf fig.9
@@ -1512,7 +1507,7 @@ class XOMO_all(jmoo_problem):
                  "acap" : (0.71,1.42),
                  "etat" : (1,6),
                  "rely" : (0.82,1.26),
-                 "data" : (0.90,1.28),
+                 "Data" : (0.90,1.28),
                  "prec" : (1.24,6.20),
                  "pmat" : (1.56,7.80),
                  "aexp" : (0.81,1.22),
@@ -1539,7 +1534,7 @@ class XOMO_all(jmoo_problem):
                        "pmat" : (1.56,7.8),
                        "rely" : (0.82,1.26),
                        "cplx" : (0.73,1.74),
-                       "data" : (0.9,1.14),
+                       "Data" : (0.9,1.14),
                        "ruse" : (0.95,1.24),
                        "time" : (1,1.63),
                        "stor" : (1,1.17),

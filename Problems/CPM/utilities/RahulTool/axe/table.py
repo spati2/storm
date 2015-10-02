@@ -118,13 +118,13 @@ def clone(tbl1,rows=[],discrete=False,keepSelections=False) :
 
 
 @demo
-def tabled(f='data/weather.csv'):
+def tabled(f='Data/weather.csv'):
   t=table(f)
   for x in  t.indep: rprintln(x)
   #rprintln(t)
 
 @demo
-def tableCopied(f='data/weather.csv'):
+def tableCopied(f='Data/weather.csv'):
   t0=table(f)
   t1=copyTable(t0)
   rprintln([t0.nums,t1.nums]); 

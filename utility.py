@@ -29,7 +29,7 @@
 
 import numpy
 import math
-from sk import *
+
 
 def avg(list):
     return (float)(sum(list))/(float)(len(list))
@@ -74,7 +74,7 @@ def matrix_avg(matrix):
     for i in range(len(matrix[0])):
         vals.append([])
 
-    #populate vals with matrix data
+    #populate vals with matrix Data
     for i,row in enumerate(matrix):
         for j,col in enumerate(row):
             vals[j].append(col)
@@ -93,7 +93,7 @@ def matrix_var(matrix):
     for i in range(len(matrix[0])):
         vals.append([])
 
-    #populate vals with matrix data
+    #populate vals with matrix Data
     for i,row in enumerate(matrix):
         for j,col in enumerate(row):
             vals[j].append(col)

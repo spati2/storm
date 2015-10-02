@@ -21,7 +21,7 @@ for p,prob in enumerate(problems):
     RRS.append([])
     RRS_scores.append([])
     for a,alg in enumerate(algorithms):
-        finput = open("data/results_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + ".datatable", 'rb')
+        finput = open("Data/results_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + ".datatable", 'rb')
         f2input = open(DATA_PREFIX + RRS_TABLE + "_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + DATA_SUFFIX, 'rb')
         reader = csv.reader(finput, delimiter=',')
         reader2 = csv.reader(f2input, delimiter=',')
@@ -143,9 +143,9 @@ for p,prob in enumerate(problems):
                     axarr[o_o][p].set_title(prob.name)
                 if p == 0:
                     axarr[o_o][p].set_ylabel(prob.objectives[o].name, rotation=90)
-                #axarr[o_o][p].plot([x for x in range(0,10000,10)], [100 for x in range(0,10000,10)], 'k-', [int(round(x/5.0)*5.0) for x in data[p][a][0]], data[p][a][o*3+2], codes[a],label=alg.name, markersize=1)
+                #axarr[o_o][p].plot([x for x in range(0,10000,10)], [100 for x in range(0,10000,10)], 'k-', [int(round(x/5.0)*5.0) for x in Data[p][a][0]], Data[p][a][o*3+2], codes[a],label=alg.name, markersize=1)
                 #axarr[o_o][p].plot([x for x in range(0,10000,10)], [best[p][a][o*3+2] for x in range(0,10000,10)], colors[a]+dotted, markersize=1)
-                #axarr[o_o][p].plot([x for x in data[p][a][0]], [best[p][a][o*3+2] for x in data[p][a][0]], codes2[a])
+                #axarr[o_o][p].plot([x for x in Data[p][a][0]], [best[p][a][o*3+2] for x in Data[p][a][0]], codes2[a])
                 #axarr[o_o][p].plot([x for x in range(0,10000,10)], [100 for x in range(0,10000,10)], 'k-', [key for key in RRS[p][a][o].keys()], [getPercentile(RRS[p][a][o], 25), getPercentile(RRS[p][a][o], 50), getPercentile(RRS[p][a][o], 75)], codes[a],label=alg.name, markersize=4)
                 X = []
                 Y = []
@@ -190,7 +190,7 @@ plt.subplots_adjust(bottom=0.15)
 legend(loc='upper center', bbox_to_anchor=(-0.10, -0.10), ncol=3, prop=fontP)
 #show()
 
-fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)])
+fignum = len([name for name in os.listdir('Charts/' + date_folder_prefix)])
 print fignum
-plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + "objectives_" + prob.name + "_" + tag + '.png', dpi=100)
+plt.savefig('Charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + "objectives_" + prob.name + "_" + tag + '.png', dpi=100)
 cla()

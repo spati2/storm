@@ -21,13 +21,13 @@ for line in rdr:
         if num != "": solution.append(float(num))
     pf.append(solution)
 
-#f1 = "data/decision_bin_table_Tanaka-p100-d2-o2_NSGAII.datatable"
-#f2 = "data/decision_bin_table_Tanaka-p100-d2-o2_GALE.datatable"
-#f3 = "data/decision_bin_table_Tanaka-p100-d2-o2_SPEA2.datatable"
+#f1 = "Data/decision_bin_table_Tanaka-p100-d2-o2_NSGAII.datatable"
+#f2 = "Data/decision_bin_table_Tanaka-p100-d2-o2_GALE.datatable"
+#f3 = "Data/decision_bin_table_Tanaka-p100-d2-o2_SPEA2.datatable"
 
-f1 = "data/decision_bin_table_Srinivas-p100-d2-o2_NSGAII.datatable"
-f2 = "data/decision_bin_table_Srinivas-p100-d2-o2_GALE.datatable"
-f3 = "data/decision_bin_table_Srinivas-p100-d2-o2_SPEA2.datatable"
+f1 = "Data/decision_bin_table_Srinivas-p100-d2-o2_NSGAII.datatable"
+f2 = "Data/decision_bin_table_Srinivas-p100-d2-o2_GALE.datatable"
+f3 = "Data/decision_bin_table_Srinivas-p100-d2-o2_SPEA2.datatable"
 
 fronts = [getFront(fname) for fname in [f1, f2, f3]]
 HV = hv.HyperVolume([300, 300])

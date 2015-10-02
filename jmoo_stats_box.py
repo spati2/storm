@@ -33,8 +33,7 @@ from jmoo_individual import *
 import jmoo_properties
 from utility import *
 from deap.tools.support import ParetoFront
-from jmoo_preprocessor import IGDMEASURE
-
+IGDMEASURE = False
 import os, inspect, sys
 cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0], "Techniques")))
 if cmd_subfolder not in sys.path:
@@ -84,7 +83,7 @@ class jmoo_stats_box:
     
     def update(statBox, population, gen, numNewEvals, initial = False, printOption=True):
         "add a stat box - compute the statistics first"
-        filename = "data/results_"+statBox.problem.name + "-p" + str(len(population)) + "-d" + \
+        filename = "Data/results_"+statBox.problem.name + "-p" + str(len(population)) + "-d" + \
                    str(len(statBox.problem.decisions)) + "-o" + str(len(statBox.problem.objectives))+\
                    "_"+statBox.alg.name+".datatable"
         fa = open(filename, 'a')

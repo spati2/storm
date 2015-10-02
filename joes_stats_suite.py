@@ -38,8 +38,8 @@ from scipy import stats
 from time import *
 import os
 
-from stats import *
-from a12 import *
+from Techniques.stats import *
+from Techniques.a12 import *
 
 
 def joes_stats_reporter(problems, algorithms, tag=""):
@@ -48,16 +48,16 @@ def joes_stats_reporter(problems, algorithms, tag=""):
     date_folder_prefix = strftime("%m-%d-%Y")
     
     #if folder does not exist, create it
-    if not os.path.isdir('reports/' + date_folder_prefix):
-        os.makedirs('reports/' + date_folder_prefix)
+    if not os.path.isdir('Reports/' + date_folder_prefix):
+        os.makedirs('Reports/' + date_folder_prefix)
         
     #fignum generator counts the number of files in the folder
-    fignum = len([name for name in os.listdir('reports/' + date_folder_prefix)]) + 1
+    fignum = len([name for name in os.listdir('Reports/' + date_folder_prefix)]) + 1
     
     #optional tag name for the file
-    fa = open('reports/' + date_folder_prefix + "/stats_suite_summary_report" + "_" + tag + str("%02d" % fignum) + ".txt", 'w')
+    fa = open('Reports/' + date_folder_prefix + "/stats_suite_summary_report" + "_" + tag + str("%02d" % fignum) + ".txt", 'w')
     
-    #container for summary data
+    #container for summary Data
     data = []
     algranks = [[] for alg in algorithms]
     nemalgranks = [[] for alg in algorithms]
@@ -92,7 +92,7 @@ def joes_stats_reporter(problems, algorithms, tag=""):
             reports.append( s  )
         
         #read baseline
-        filename = "data/" + problem.name + "-p" + str(MU) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
+        filename = "Data/" + problem.name + "-p" + str(MU) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
         f2input = open(filename, 'rb')
         reader2 = csv.reader(f2input, delimiter=',')
         
@@ -117,7 +117,7 @@ def joes_stats_reporter(problems, algorithms, tag=""):
         #normed_data = [ [(g - avg(group))/(var(group)**2) for g in group] for group in groups] 
         #rv = [stats.kstest(nd, 'norm') for nd in normed_data]
         
-        #print "We can reject that the data is normal: ", [r[1]<0.01 for r in rv]
+        #print "We can reject that the Data is normal: ", [r[1]<0.01 for r in rv]
         ranks = []
         for i in range(len(groups[0])):
             array = numpy.array([group[i] for group in groups])

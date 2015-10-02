@@ -76,7 +76,7 @@ class MovingPeaks:
     default parameters are based on scenario 1 of this benchmark.
     
     =================== ============================= =================== =================== ======================================================================================================================
-    Parameter           :data:`SCENARIO_1` (Default)  :data:`SCENARIO_2`  :data:`SCENARIO_3`    Details
+    Parameter           :Data:`SCENARIO_1` (Default)  :Data:`SCENARIO_2`  :Data:`SCENARIO_3`    Details
     =================== ============================= =================== =================== ======================================================================================================================
     ``pfunc``           :func:`function1`             :func:`cone`        :func:`cone`        The peak function or a list of peak function.
     ``npeaks``          5                             10                  50                  Number of peaks. If an integer, the number of peaks won't change, if a sequence it will fluctuate [min, current, max].
@@ -96,8 +96,8 @@ class MovingPeaks:
     ``period``          5000                          5000                1000                Period between two changes.
     =================== ============================= =================== =================== ======================================================================================================================
     
-    Dictionnaries :data:`SCENARIO_1`, :data:`SCENARIO_2` and
-    :data:`SCENARIO_3` of this module define the defaults for these
+    Dictionnaries :Data:`SCENARIO_1`, :Data:`SCENARIO_2` and
+    :Data:`SCENARIO_3` of this module define the defaults for these
     parameters. The scenario 3 requires a constant basis function
     which can be given as a lambda function ``lambda x: constant``.
     

@@ -13,7 +13,6 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir)
 
 import jmoo_properties
-from jmoo_preprocessor import CULLING, NEW_DE
 
 
 def three_others(individuals, one):
@@ -55,11 +54,6 @@ def extrapolate(problem, individuals, one, f, cf):
             solution.append(trim(mutated, decision.low, decision.up))
         else:
             solution.append(one.decisionValues[d])
-
-    if NEW_DE is True:
-        if random.random() < cf:
-            solution = crossover(problem, one.decisionValues, solution)
-
 
     return jmoo_individual(problem, [float(d) for d in solution], None)
 
@@ -114,45 +108,17 @@ def de_selector(problem, individuals):
         if not individual.valid:
             individual.evaluate()
     no_evals = 0
-    #print "Length of population: ", len(individuals)
-    #print "F: ", jmoo_properties.F
-    #print "CF: ", jmoo_properties.CF
     for individual in individuals:
-        #print "Old Decision: ",individual.decisionValues
-        #print "Old Score: ", individual.fitness.fitness
-        if CULLING is True:
-            count = 0
-            while True:
-                mutant = extrapolate(problem, individuals, individual, jmoo_properties.F, jmoo_properties.CF)
-                mutant.evaluate()
-                temp = mutant.fitness.fitness
-                count += 1
-                if (temp[0] > 66 and temp[1] < 33) or count > 10:
-                    if count < 10:
-                        print "SUCCESS"
-                    no_evals += count
-                    break
-        else:
-            mutant = extrapolate(problem, individuals, individual, jmoo_properties.F, jmoo_properties.CF)
-            mutant.evaluate()
-            #print mutant.fitness.fitness
-            no_evals += 1
 
-        ##print "Mutant Decisions: ",mutant.decisionValues
-        #print "New Score: ", mutant.fitness.fitness
+        mutant = extrapolate(problem, individuals, individual, jmoo_properties.F, jmoo_properties.CF)
+        mutant.evaluate()
+        no_evals += 1
         newer_generation.append(better(problem, individual, mutant))
 
-    # print len(newer_generation)
     return newer_generation, no_evals
 
 #Vivek: This is just a stub
 def de_mutate(problem, population):
-    #print "mutate"
-    # print "mutated: Length of the Population: ",len(population)
-    #for i,p in enumerate(population):
-    #    print ">>", i, sum(p.fitness.fitness)
-    #print "Minimum in population: ", min([sum(p.fitness.fitness) for p in population])
-
     return population, 0
 
 #Vivek: This is just a stub

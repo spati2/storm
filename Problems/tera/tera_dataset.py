@@ -9,8 +9,7 @@ from jmoo_problem import jmoo_problem
 parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../../Techniques")))
 if parentdir not in sys.path:
     sys.path.insert(0, parentdir)
-from smote import smote
-import jmoo_preprocessor
+from SMOTE import smote
 
 
 
@@ -183,7 +182,7 @@ def get_tera_objectives():
 
 
 def readSmoteDataset(file, properties):
-    prefix = "tera/"
+    prefix = "Tera/"
     suffix = ".csv"
     finput = open(prefix + file + suffix, 'rb')
     reader = csv.reader(finput, delimiter=',')
@@ -192,7 +191,7 @@ def readSmoteDataset(file, properties):
 
 
 def readDataset(file, properties):
-    prefix = "tera/"
+    prefix = "Tera/"
     suffix = ".csv"
     finput = open(prefix + file + suffix, 'rb')
     reader = csv.reader(finput, delimiter=',')

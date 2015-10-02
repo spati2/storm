@@ -4,11 +4,11 @@ class xomol:
     
   def run(self, input):  
     names = ["aa", "sced", "cplx", "site", "resl", "acap", "etat", "rely", 
-             "data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
+             "Data", "prec", "pmat", "aexp", "flex", "pcon", "tool", "time",
              "stor", "docu", "b", "plex", "pcap", "kloc", "ltex", "pr", 
              "ruse", "team", "pvol"]
     model = "flight"
-    #c = Cocomo("./Problems/xomo/data" + "/" + model)
+    #c = Cocomo("./Problems/xomo/Data" + "/" + model)
     c = Cocomo(input)
     out = c.xys(verbose = False,olist=True)
     return out
@@ -23,7 +23,7 @@ if __name__ == '__main__':
             "acap" : (0.71,1.42),
             "etat" : (1,6),
             "rely" : (0.82,1.26),
-            "data" : (0.90,1.28),
+            "Data" : (0.90,1.28),
             "prec" : (1.24,6.20),
             "pmat" : (1.56,7.80),
             "aexp" : (0.81,1.22),

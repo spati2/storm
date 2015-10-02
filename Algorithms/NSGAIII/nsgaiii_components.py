@@ -71,7 +71,7 @@ def nsgaiii_recombine(problem, population, selectees, k):
             import pdb
             pdb.set_trace()
 
-    # Format a population data structure usable by DEAP's package
+    # Format a population Data structure usable by DEAP's package
     dIndividuals = jmoo_algorithms.deap_format(problem, population+selectees)
 
     # Combine

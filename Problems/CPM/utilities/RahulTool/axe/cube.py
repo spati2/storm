@@ -373,7 +373,7 @@ def _sdiv():
   go(l,cohen=0.5)
 
 @demo
-def ideaed(f='data/nasa93.csv'):
+def ideaed(f='Data/nasa93.csv'):
   def change(x):
     prefix=suffix=""
     for ch in x:
@@ -429,7 +429,7 @@ def ideaed(f='data/nasa93.csv'):
   #    len(asIs.tbl._rows)
       
 
-def loosed(f='data/nasa93.csv'):
+def loosed(f='Data/nasa93.csv'):
   dists={}
   t=table(f)
   opt= distings(
@@ -443,7 +443,7 @@ def loosed(f='data/nasa93.csv'):
   nums = loos(t,opt)
   print "", int(100*nums.median()), int(100*nums.iqr())#sorted(nums.all())
 
-def moea(f='data/coc81dem.csv'):
+def moea(f='Data/coc81dem.csv'):
   seed(1)
   dists={}
   t=table(f)
@@ -462,7 +462,7 @@ def moea(f='data/coc81dem.csv'):
  
 
 @demo
-def sidesed(f='data/diabetes.csv'):
+def sidesed(f='Data/diabetes.csv'):
   t=table(f)
 
 if __name__ == '__main__': eval(cmd())
@@ -473,13 +473,13 @@ if __name__ == '__main__': eval(cmd())
 
 # july 29
 """
-data=h	:_178 #1 62% * 8
-data=l	:_166 #1 69% * 23
-data=n	:_160 #3
+Data=h	:_178 #1 62% * 8
+Data=l	:_166 #1 69% * 23
+Data=n	:_160 #3
 |..acap=h	:_172 #2
 |..|..cplx=h	:_178 #1 75% * 4
 |..acap=n	:_160 #1 85% * 14
-data=vh	:_172 #1 85% * 7
+Data=vh	:_172 #1 85% * 7
 1368,:n,8, :score,0.131 :want,1679, :plan,{8: 'h', 14: 'h', 7: 'n'}
 1476,:n,23, :score,0.572 :hate,1724, :watch,{14: 'n', 7: 'n'}
 1679,:n,4, :score,0.156 :want,1724, :plan,{14: 'n'} :hate,1368, :watch,{7: 'h'}

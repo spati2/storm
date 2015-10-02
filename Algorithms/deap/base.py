@@ -140,7 +140,7 @@ class Fitness(object):
 
     .. note::
        When comparing fitness values that are **minimized**, ``a > b`` will
-       return :data:`True` if *a* is **smaller** than *b*.
+       return :Data:`True` if *a* is **smaller** than *b*.
     """
     
     weights = None

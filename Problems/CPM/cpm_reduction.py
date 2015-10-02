@@ -1,8 +1,5 @@
 from __future__ import division
 import sys, os, inspect
-parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../../")))
-if parentdir not in sys.path:
-    sys.path.insert(0, parentdir)
 
 parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../../Techniques")))
 if parentdir not in sys.path:
@@ -25,7 +22,7 @@ def equal_list(lista, listb):
 
 def WHEREDataTransformation(filename):
     from utilities.RahulTool.methods1 import wrapper_createTbl
-    # The data has to be access using this attribute table._rows.cells
+    # The Data has to be access using this attribute table._rows.cells
     transformed_table = [[int(z) for z in x.cells[:-1]] + x.cells[-1:] for x in wrapper_createTbl(filename)._rows]
     cluster_numbers = set(map(lambda x: x[-1], transformed_table))
 
@@ -90,7 +87,7 @@ def random_where(filename):
 #     # todo
 #
 
-def base_line(filename="./data/Apache_AllMeasurements.csv"):
+def base_line(filename="./Data/Apache_AllMeasurements.csv"):
     cluster_table = WHEREDataTransformation(filename)
 
     ret = []
@@ -195,8 +192,8 @@ class cpm_reduction(jmoo_problem):
         return False
 
 class cpm_apache_training_reduction(cpm_reduction):
-    # def __init__(self, treatment, requirements=9, name="CPM_APACHE", filename="./data/Apache_AllMeasurements.csv"):
-    def __init__(self, treatment, number=50, requirements=9, name="CPM_APACHE", filename="./Problems/CPM/data/Apache_AllMeasurements.csv"):
+    # def __init__(self, treatment, requirements=9, name="CPM_APACHE", filename="./Data/Apache_AllMeasurements.csv"):
+    def __init__(self, treatment, number=50, requirements=9, name="CPM_APACHE", filename="./Problems/CPM/Data/Apache_AllMeasurements.csv"):
 
         self.name = name
         self.filename = filename
@@ -210,7 +207,7 @@ class cpm_apache_training_reduction(cpm_reduction):
         self.decisions = [jmoo_decision(names[i], lows[i], ups[i]) for i in range(requirements)]
         # Generating Objectives (this is single objective)
         self.objectives = [jmoo_objective("f1", True)]
-        # Read data
+        # Read Data
         self.header, self.data = read_csv(self.filename, header=True)
 
         self.training_independent, self.training_dependent = self.get_training_data(method=treatment)
@@ -227,8 +224,8 @@ class cpm_apache_training_reduction(cpm_reduction):
         return True
 
 class cpm_BDBC(cpm_reduction):
-    # def __init__(self, treatment, number=50, requirements=18, name="CPM_BDBC", filename="./data/BDBC_AllMeasurements.csv"):
-    def __init__(self, treatment, number=50, requirements=18, name="CPM_BDBC", filename="./Problems/CPM//data/BDBC_AllMeasurements.csv"):
+    # def __init__(self, treatment, number=50, requirements=18, name="CPM_BDBC", filename="./Data/BDBC_AllMeasurements.csv"):
+    def __init__(self, treatment, number=50, requirements=18, name="CPM_BDBC", filename="./Problems/CPM//Data/BDBC_AllMeasurements.csv"):
 
         self.name = name
         self.filename = filename
@@ -240,7 +237,7 @@ class cpm_BDBC(cpm_reduction):
         self.decisions = [jmoo_decision(names[i], lows[i], ups[i]) for i in range(requirements)]
         self.objectives = [jmoo_objective("f1", True)]
         self.header, self.data = read_csv(self.filename, header=True)
-        print "Length of data: ", len(self.data)
+        print "Length of Data: ", len(self.data)
 
         self.training_independent, self.training_dependent = self.get_training_data(method=treatment)
         self.CART = tree.DecisionTreeRegressor()
@@ -260,8 +257,8 @@ class cpm_BDBC(cpm_reduction):
         return True
 
 class cpm_BDBJ(cpm_reduction):
-    # def __init__(self, treatment, number=50, requirements=26, name="CPM_BDBJ", filename="./data/BDBJ_AllMeasurements.csv"):
-    def __init__(self, treatment, number=50, requirements=26, name="CPM_BDBJ", filename="./Problems/CPM/data/BDBJ_AllMeasurements.csv"):
+    # def __init__(self, treatment, number=50, requirements=26, name="CPM_BDBJ", filename="./Data/BDBJ_AllMeasurements.csv"):
+    def __init__(self, treatment, number=50, requirements=26, name="CPM_BDBJ", filename="./Problems/CPM/Data/BDBJ_AllMeasurements.csv"):
 
         self.name = name
         self.filename = filename
@@ -275,7 +272,7 @@ class cpm_BDBJ(cpm_reduction):
         self.decisions = [jmoo_decision(names[i], lows[i], ups[i]) for i in range(requirements)]
         # Generating Objectives (this is single objective)
         self.objectives = [jmoo_objective("f1", True)]
-        # Read data
+        # Read Data
         self.header, self.data = read_csv(self.filename, header=True)
         self.training_independent, self.training_dependent = self.get_training_data(method=treatment)
         self.CART = tree.DecisionTreeRegressor()
@@ -306,8 +303,8 @@ class cpm_BDBJ(cpm_reduction):
         return True
 
 class cpm_LLVM(cpm_reduction):
-    # def __init__(self, treatment, number=50, requirements=11, fraction=0.5, name="CPM_LLVM", filename="./data/LLVM_AllMeasurements.csv"):
-    def __init__(self, treatment, number=50, requirements=11, name="CPM_LLVM", filename="./Problems/CPM/data/LLVM_AllMeasurements.csv"):
+    # def __init__(self, treatment, number=50, requirements=11, fraction=0.5, name="CPM_LLVM", filename="./Data/LLVM_AllMeasurements.csv"):
+    def __init__(self, treatment, number=50, requirements=11, name="CPM_LLVM", filename="./Problems/CPM/Data/LLVM_AllMeasurements.csv"):
 
         self.name = name
         self.filename = filename
@@ -321,7 +318,7 @@ class cpm_LLVM(cpm_reduction):
         self.decisions = [jmoo_decision(names[i], lows[i], ups[i]) for i in range(requirements)]
         # Generating Objectives (this is single objective)
         self.objectives = [jmoo_objective("f1", True)]
-        # Read data
+        # Read Data
         self.header, self.data = read_csv(self.filename, header=True)
         self.training_independent, self.training_dependent = self.get_training_data(method=treatment)
         self.CART = tree.DecisionTreeRegressor()
@@ -334,8 +331,8 @@ class cpm_LLVM(cpm_reduction):
         return True
 
 class cpm_SQL(cpm_reduction):
-    # def __init__(self, treatment, number=50, requirements=39, fraction=0.5, name="CPM_SQL", filename="./data/SQL_AllMeasurements.csv"):
-    def __init__(self, treatment, number=50, requirements=39, name="CPM_SQL", filename="./Problems/CPM/data/SQL_AllMeasurements.csv"):
+    # def __init__(self, treatment, number=50, requirements=39, fraction=0.5, name="CPM_SQL", filename="./Data/SQL_AllMeasurements.csv"):
+    def __init__(self, treatment, number=50, requirements=39, name="CPM_SQL", filename="./Problems/CPM/Data/SQL_AllMeasurements.csv"):
 
         self.name = name
         self.filename = filename
@@ -349,7 +346,7 @@ class cpm_SQL(cpm_reduction):
         self.decisions = [jmoo_decision(names[i], lows[i], ups[i]) for i in range(requirements)]
         # Generating Objectives (this is single objective)
         self.objectives = [jmoo_objective("f1", True)]
-        # Read data
+        # Read Data
         self.header, self.data = read_csv(self.filename, header=True)
 
 
@@ -375,8 +372,8 @@ class cpm_SQL(cpm_reduction):
 
 
 class cpm_X264(cpm_reduction):
-    # def __init__(self, treatment, number=50, requirements=16, fraction=0.5, name="cpm_X264", filename="./data/X264_AllMeasurements.csv"):
-    def __init__(self, treatment, number=50, requirements=16, fraction=0.5, name="cpm_X264", filename="./Problems/CPM/data/X264_AllMeasurements.csv"):
+    # def __init__(self, treatment, number=50, requirements=16, fraction=0.5, name="cpm_X264", filename="./Data/X264_AllMeasurements.csv"):
+    def __init__(self, treatment, number=50, requirements=16, fraction=0.5, name="cpm_X264", filename="./Problems/CPM/Data/X264_AllMeasurements.csv"):
 
         self.name = name
         self.filename = filename
@@ -390,7 +387,7 @@ class cpm_X264(cpm_reduction):
         self.decisions = [jmoo_decision(names[i], lows[i], ups[i]) for i in range(requirements)]
         # Generating Objectives (this is single objective)
         self.objectives = [jmoo_objective("f1", True)]
-        # Read data
+        # Read Data
         self.header, self.data = read_csv(self.filename, header=True)
         self.training_independent, self.training_dependent = self.get_training_data(method=treatment)
         self.CART = tree.DecisionTreeRegressor()
@@ -451,7 +448,7 @@ def draw(data, name):
     pl.xlim(0.4, 1.2)
     # pl.ylim(min([min(s1[1]) for s1 in scores1]) * 0.9, max([max(s1[1]) for s1 in scores1]) * 1.4)
     pl.ylim(0, 1.0)
-    pl.xlabel('Training Data (% of data)')
+    pl.xlabel('Training Data (% of Data)')
     pl.ylabel('MRE variation over 20 repeats')
     pl.legend(loc='upper right')
     pl.title(name)
@@ -566,7 +563,6 @@ def test_LLVM():
             for percent in percents:
                 training_percent = percent/100
                 testing_percent = 1 - training_percent
-                print "1 training_percent: ", training_percent
                 temp = performance_test(dataset=problem, treatment=treatment)
                 treatscores.append([[x.fraction for x in temp], [x.value for x in temp], treatment.__name__])
             scores.append(treatscores)

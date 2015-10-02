@@ -30,7 +30,7 @@
 from jmoo_algorithms import *
 from jmoo_stats_box import *
 from jmoo_properties import *
-from Moo import *
+from Algorithms.GALE.Fastmap.Moo import *
 from pylab import *
 import jmoo_properties
 
@@ -144,8 +144,8 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
 
 
 
-        fignum = len([name for name in os.listdir('data/finalpopulation')]) + 1
-        filename = "data/finalpopulation/" + problem.name + "_" + algorithm.name + "_" + str(repeat) + "_" + str(fignum) + ".txt"
+        fignum = len([name for name in os.listdir('Data/finalpopulation')]) + 1
+        filename = "Data/finalpopulation/" + problem.name + "_" + algorithm.name + "_" + str(repeat) + "_" + str(fignum) + ".txt"
         filedesc = open(filename, 'w')
         print "hold population: ", len(statBox.box[-1].population)
         for pop in statBox.box[-1].population:

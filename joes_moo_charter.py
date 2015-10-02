@@ -57,11 +57,11 @@ def joes_charter_reporter(problems, algorithms, tag=""):
         RRS.append([])
         data.append([])
         foam.append([])
-        finput = open("data/" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt", 'rb')
+        finput = open("Data/" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt", 'rb')
         reader = csv.reader(finput, delimiter=',')
         initial = []
 
-        filename = "data/" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt"
+        filename = "Data/" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt"
         row_count = sum(1 for _ in csv.reader( open(filename)))
         for i,row in enumerate(reader):
             if i > 1 and i != row_count-1:
@@ -75,15 +75,15 @@ def joes_charter_reporter(problems, algorithms, tag=""):
         for a,alg in enumerate(algorithms):
             
             f2input = open(DATA_PREFIX + RRS_TABLE + "_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + DATA_SUFFIX, 'rb')
-            f3input = open("data/results_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + ".datatable", 'rb')
+            f3input = open("Data/results_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + ".datatable", 'rb')
             f4input = open(DATA_PREFIX + "decision_bin_table" + "_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + DATA_SUFFIX, 'rb')
 
             # print f2input.name
             # print f3input.name
             # print f4input.name
-            # data/RRS_TABLE__DTLZ1_12_8-p100-d12-o8_GALE.datatable
-            # data/results_DTLZ1_12_8-p100-d12-o8_GALE.datatable
-            # data/decision_bin_table_DTLZ1_12_8-p100-d12-o8_GALE.datatable
+            # Data/RRS_TABLE__DTLZ1_12_8-p100-d12-o8_GALE.datatable
+            # Data/results_DTLZ1_12_8-p100-d12-o8_GALE.datatable
+            # Data/decision_bin_table_DTLZ1_12_8-p100-d12-o8_GALE.datatable
             # import pdb
             # pdb.set_trace()
             
@@ -138,10 +138,10 @@ def joes_charter_reporter(problems, algorithms, tag=""):
                     # row is now read
                     if i > 0:
                         for o,obj in enumerate(prob.objectives):
-                            n = data[p][a][0][-1]
+                            n = Data[p][a][0][-1]
                             n = (int(round(n/20.0)*20.0))
-                            if n in foam[p][a][o]: foam[p][a][o][n].append(float(data[p][a][o*3+2][-1]))
-                            else: foam[p][a][o][n] = [float(data[p][a][o*3+2][-1])]         
+                            if n in foam[p][a][o]: foam[p][a][o][n].append(float(Data[p][a][o*3+2][-1]))
+                            else: foam[p][a][o][n] = [float(Data[p][a][o*3+2][-1])]
                     """ 
 
 
@@ -199,7 +199,7 @@ def joes_charter_reporter(problems, algorithms, tag=""):
     #                     else:
     #                         if refPoint[i] > row.fitness.values[i]: refPoint[i] = row.fitness.values[i]
     #
-    #         finput = open("data/" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt", 'rb')
+    #         finput = open("Data/" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt", 'rb')
     #         reader = csv.reader(finput, delimiter=',')
     #
     #         hellPoint = []
@@ -393,20 +393,20 @@ def joes_charter_reporter(problems, algorithms, tag=""):
 
                             #axarr[p][oo].set_ylim([20, 160])# -- xomo
                             #axarr[p][oo].set_ylim([-5, 115])
-                            axarr[oo].set_ylim([min_yaxis -  0.1 * max_yaxis, max_yaxis + 0.1 * max_yaxis])# -- tera
+                            axarr[oo].set_ylim([min_yaxis -  0.1 * max_yaxis, max_yaxis + 0.1 * max_yaxis])# -- Tera
                             # axarr[oo].set_ylim([int(min_yaxis*0.9), int(max_yaxis*1.1)])  # NRP/MONRP
                             axarr[oo].set_xscale('log', nonposx='clip')
                             if oo == 0:
                                 axarr[oo].legend(loc='best')
                         
                             
-    if not os.path.isdir('charts/' + date_folder_prefix):
-        os.makedirs('charts/' + date_folder_prefix)
+    if not os.path.isdir('Charts/' + date_folder_prefix):
+        os.makedirs('Charts/' + date_folder_prefix)
     
-    fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
+    fignum = len([name for name in os.listdir('Charts/' + date_folder_prefix)]) + 1
     print fignum
 
-    plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + tag + '.png', dpi=100)
+    plt.savefig('Charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + tag + '.png', dpi=100)
     cla()
     clf()
     close()
@@ -421,14 +421,14 @@ def joes_charter_reporter(problems, algorithms, tag=""):
     #
     #         # to handle multiple runs
     #         scores = {}
-    #         for score,eval in zip(data[p][a][-2], data[p][a][0]):
+    #         for score,eval in zip(Data[p][a][-2], Data[p][a][0]):
     #             # print score
     #             if eval in scores: scores[eval].append(score)
     #             else: scores[eval] = [score]
     #
     #         score_list = []
     #         try:
-    #             for eval in sorted(data[p][a][0]):
+    #             for eval in sorted(Data[p][a][0]):
     #                 score_list.append(median(scores[int(eval)]))
     #         except:
     #             import traceback
@@ -436,14 +436,14 @@ def joes_charter_reporter(problems, algorithms, tag=""):
     #             print scores.keys()
     #             exit()
     #
-    #         # for xx, yy in zip(data[p][a][0], score_list):
+    #         # for xx, yy in zip(Data[p][a][0], score_list):
     #         #     print xx, yy
     #         # exit()
     #
     #
-    #         plt.plot(sorted(data[p][a][0]), score_list, label=alg.name, marker=alg.type, color=alg.color) #MARKER PLOTS )
-    #         min_number = min(min(data[p][a][-2]), min_number)
-    #         max_number = max(max(data[p][a][-2]), max_number)
+    #         plt.plot(sorted(Data[p][a][0]), score_list, label=alg.name, marker=alg.type, color=alg.color) #MARKER PLOTS )
+    #         min_number = min(min(Data[p][a][-2]), min_number)
+    #         max_number = max(max(Data[p][a][-2]), max_number)
     #         #max_number = 10
     #
     #
@@ -453,8 +453,8 @@ def joes_charter_reporter(problems, algorithms, tag=""):
     # plt.title('Variation of IGD')
     # plt.legend()
     # print min_number, max_number
-    # plt.ylim([min_number - 1, max_number + 1])# -- tera
-    # plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + "IGD" + '.png', dpi=100)
+    # plt.ylim([min_number - 1, max_number + 1])# -- Tera
+    # plt.savefig('Charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + "IGD" + '.png', dpi=100)
     # cla()
 
 

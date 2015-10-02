@@ -186,7 +186,7 @@ class Statistics(object):
         :param name: The name of the statistics function as it would appear
                      in the dictionnary of the statistics object.
         :param function: A function that will compute the desired statistics
-                         on the data as preprocessed by the key.
+                         on the Data as preprocessed by the key.
         :param argument: One or more argument (and keyword argument) to pass
                          automatically to the registered function when called,
                          optional.
@@ -195,7 +195,7 @@ class Statistics(object):
         self.fields.append(name)
 
     def compile(self, data):
-        """Apply to the input sequence *data* each registered function 
+        """Apply to the input sequence *Data* each registered function
         and return the results as a dictionnary.
         
         :param data: Sequence of objects on which the statistics are computed.
@@ -226,7 +226,7 @@ class MultiStatistics(dict):
         {'length': {'max': 4, 'mean': 3.0}, 'item': {'max': 2.0, 'mean': 1.0}}
     """ 
     def compile(self, data):
-        """Calls :meth:`Statistics.compile` with *data* of each
+        """Calls :meth:`Statistics.compile` with *Data* of each
         :class:`Statistics` object.
         
         :param data: Sequence of objects on which the statistics are computed.
@@ -246,7 +246,7 @@ class MultiStatistics(dict):
         :param name: The name of the statistics function as it would appear
                      in the dictionnary of the statistics object.
         :param function: A function that will compute the desired statistics
-                         on the data as preprocessed by the key.
+                         on the Data as preprocessed by the key.
         :param argument: One or more argument (and keyword argument) to pass
                          automatically to the registered function when called,
                          optional.
@@ -308,7 +308,7 @@ class Logbook(list):
 
         self.columns_len = None
         self.header = None
-        """Order of the columns to print when using the :data:`stream` and
+        """Order of the columns to print when using the :Data:`stream` and
         :meth:`__str__` methods. The syntax is a single iterable containing
         string elements. For example, with the previously
         defined statistics class, one can print the generation and the
@@ -318,8 +318,8 @@ class Logbook(list):
             logbook.header = ("gen", "mean", "max")
         
         If not set the header is built with all fields, in arbritrary order
-        on insertion of the first data. The header can be removed by setting
-        it to :data:`None`.
+        on insertion of the first Data. The header can be removed by setting
+        it to :Data:`None`.
         """
         
         self.log_header = True
@@ -593,7 +593,7 @@ class ParetoFront(HallOfFame):
     The size of the front may become very large if it is used for example on
     a continuous function with a continuous domain. In order to limit the number
     of individuals, it is possible to specify a similarity function that will
-    return :data:`True` if the genotype of two individuals are similar. In that
+    return :Data:`True` if the genotype of two individuals are similar. In that
     case only one of the two individuals will be added to the hall of fame. By
     default the similarity function is :func:`operator.__eq__`.
     

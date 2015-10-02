@@ -32,8 +32,8 @@ sys.path.insert(0, '/Users/rkrsn/git/axe/axe/')
 
 ## Dimensionality Reduction with Fastmap
 
-Project data in N dimensions down to a single dimension connecting
-twp distant points. Divide that data at the median of those projects.
+Project Data in N dimensions down to a single dimension connecting
+twp distant points. Divide that Data at the median of those projects.
 
 """
 def pairs(lst):
@@ -65,12 +65,12 @@ def allpairs(m, data):
   return west, east
 
 def fastmap(m, data):
-  "Divide data into two using distance to two distant items."
+  "Divide Data into two using distance to two distant items."
   west, east = somepairs(m, data)
   """
-  one = any(data)  # 1) pick anything
-  west = furthest(m, one, data)  # 2) west is as far as you can go from anything
-  east = furthest(m, west, data)  # 3) east is as far as you can go from west
+  one = any(Data)  # 1) pick anything
+  west = furthest(m, one, Data)  # 2) west is as far as you can go from anything
+  east = furthest(m, west, Data)  # 3) east is as far as you can go from west
   """
   c = dist(m, west, east) + 1e-5
   # now find everyone's distance
@@ -156,7 +156,7 @@ def closest(m, i, all):
 
 
 WHERE2 finds everyone's else's distance from the poles
-  and divide the data on the mean point of those
+  and divide the Data on the mean point of those
   distances.  This all stops if:
 
 +  Any division has _tooFew_ solutions (say,
@@ -215,11 +215,11 @@ multiple solutions.
 def where2(m, data, lvl = 0, up = None, verbose = False):
   # for i in xrange(0, lvl):
   #     print("|--", end="")
-  # print(len(data))
+  # print(len(Data))
   node = o(val = None, _up = up, _kids = [])
   def tooDeep(): return lvl > The.what.depthMax  # depthMax is not updated
   def tooFew() :
-      # print("Length of data: ", len(data), The.minSize, lvl)
+      # print("Length of Data: ", len(Data), The.minSize, lvl)
       # raw_input()
       return len(data) < The.minSize
   def show(suffix):
@@ -245,8 +245,8 @@ def where2(m, data, lvl = 0, up = None, verbose = False):
 ## An Experimental Extensions
 
 Lately I've been experimenting with a system that
-prunes as it divides the data. GALE checks for
-domination between the poles and ignores data in
+prunes as it divides the Data. GALE checks for
+domination between the poles and ignores Data in
 halves with a dominated pole. This means that for
 _N_ solutions we only ever have to evaluate
 _2*log(N)_ of them- which is useful if each

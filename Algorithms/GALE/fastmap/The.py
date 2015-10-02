@@ -22,7 +22,7 @@ class The():
   binsMin = 20      # when to start discretization
   
   # recursion control: 
-  alpha           = 1.0  # prunes data in recursion
+  alpha           = 1.0  # prunes Data in recursion
   allowDomination = True # enables sub-tree pruning
 
   # misc
