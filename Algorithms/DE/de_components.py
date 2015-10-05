@@ -6,18 +6,16 @@ import random
 from jmoo_individual import *
 from jmoo_algorithms import *
 from jmoo_stats_box import *
-
-
-currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-sys.path.insert(0, parentdir)
-
 import jmoo_properties
 
 
 def three_others(individuals, one):
+    """
+    :param individuals: members of the population
+    :param one: individual used for mutation
+    :return: three other members of the population
+    """
     seen = [one]
-
     def other():
         while True:
             random_selection = random.randint(0, len(individuals) - 1)
@@ -25,14 +23,16 @@ def three_others(individuals, one):
                 seen.append(individuals[random_selection])
                 break
         return individuals[random_selection]
-
     return other(), other(), other()
 
 
 def trim(mutated, low, up):
+    """Constraint checking of decision"""
     return max(low, min(mutated, up))
 
+
 def crossover(problem, candidate_a, candidate_b):
+    """Crossover operator"""
     assert(len(candidate_a) == len(candidate_b)), "Candidate length are not the same"
     crossover_point = random.randrange(1, len(candidate_a), 1)
     assert(crossover_point < len(candidate_a)), "Crossover point has gone overboard"
@@ -41,68 +41,44 @@ def crossover(problem, candidate_a, candidate_b):
     assert(len(mutant) == len(candidate_a)), "Mutant created doesn't have the same length as candidates"
     return mutant
 
+
 def extrapolate(problem, individuals, one, f, cf):
-    # #print "Extrapolate"
     two, three, four = three_others(individuals, one)
-    # #print two,three,four
     solution = []
     for d, decision in enumerate(problem.decisions):
         assert isinstance(two, jmoo_individual)
         x, y, z = two.decisionValues[d], three.decisionValues[d], four.decisionValues[d]
-        if random.random() < cf:
-            mutated = x + f * (y - z)
-            solution.append(trim(mutated, decision.low, decision.up))
-        else:
-            solution.append(one.decisionValues[d])
+        if random.random() < cf: solution.append(trim(x + f * (y - z), decision.low, decision.up))
+        else: solution.append(one.decisionValues[d])
 
     return jmoo_individual(problem, [float(d) for d in solution], None)
 
 def better(problem,individual,mutant):
     if len(individual.fitness.fitness) > 1:
-        # From Joe: Score the poles
-        # print "### Individual: ", individual.fitness.fitness
-        # print "### Mutant: ", mutant.fitness.fitness
-        n = len(problem.decisions)
         weights = []
         for obj in problem.objectives:
             # w is negative when we are maximizing that objective
-            if obj.lismore:
-                weights.append(+1)
-            else:
-                weights.append(-1)
+            if obj.lismore:  weights.append(+1)
+            else:  weights.append(-1)
         weighted_individual = [c*w for c,w in zip(individual.fitness.fitness, weights)]
         weighted_mutant = [c*w for c,w in zip(mutant.fitness.fitness, weights)]
         individual_loss = loss(weighted_individual, weighted_mutant, mins = [obj.low for obj in problem.objectives], maxs = [obj.up for obj in problem.objectives])
         mutant_loss = loss(weighted_mutant, weighted_individual, mins = [obj.low for obj in problem.objectives], maxs = [obj.up for obj in problem.objectives])
 
-        if individual_loss < mutant_loss:
-            # print ">>", mutant.fitness.fitness, individual.fitness.fitness
-            return mutant
-        else:
-            # print ">>", individual.fitness.fitness, mutant.fitness.fitness
-            return individual  # otherwise
+        if individual_loss < mutant_loss:  return mutant
+        else:  return individual  # otherwise
     else:
-        # print "Binary"
         assert(len(individual.fitness.fitness) == len(mutant.fitness.fitness)), "length of the objectives are not equal"
-        # print  problem.objectives[-1].lismore
         if problem.objectives[-1].lismore:
             indi = 100 - individual.fitness.fitness[-1]
             mut = 100 - mutant.fitness.fitness[-1]
         else:
             indi = individual.fitness.fitness[-1]
             mut = mutant.fitness.fitness[-1]
-        if indi >= mut:
-            # print ">>", mutant.fitness.fitness, individual.fitness.fitness
-            return individual
-        else:
-            # print ">>", individual.fitness.fitness, mutant.fitness.fitness
-            return mutant
-
-
-
+        if indi >= mut:  return individual
+        else:  return mutant
 
 def de_selector(problem, individuals):
-    #print "selector"
     newer_generation = []
     for individual in individuals:
         if not individual.valid:
@@ -117,11 +93,10 @@ def de_selector(problem, individuals):
 
     return newer_generation, no_evals
 
-#Vivek: This is just a stub
+
 def de_mutate(problem, population):
     return population, 0
 
-#Vivek: This is just a stub
+
 def de_recombine(problem, unusedSlot, mutants, MU):
-    # print "recombine: Length of population: ", len(mutants)
     return mutants, 0

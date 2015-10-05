@@ -2,7 +2,7 @@ from __future__ import division
 
 def perpendicular_distance(pointa, pointb):
     """
-
+    Perpendicular distance between point a and point b
     :param pointa:  the line from the origin passes through point a
     :param pointb:
     :return:
@@ -22,10 +22,11 @@ def perpendicular_distance(pointa, pointb):
     base = mag
     return (lengthb ** 2 - base ** 2) ** 0.5
 
-"""
-Perpendicular distance between point a and point b, Adapted from Dr. Chiang's code
-"""
+
 def perpendicular_distance2(pointa, pointb):
+    """
+    Perpendicular distance between point a and point b, Adapted from Dr. Chiang's code
+    """
     numerator = 0
     denominator = 0
     for d, p in zip(pointa, pointb):

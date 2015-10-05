@@ -72,41 +72,18 @@ def chosen_one(problem, lst):
                 new.append(l[i])
             else:
                 new.append(100 - l[i])
-        # print "New: ", min(new)
-
-        if jmoo_preprocessor.PD or jmoo_preprocessor.PREC:
-            return max(new)
-        elif jmoo_preprocessor.PF:
-            return min(new)
-        else:
             return min(new)
 
     print "Length of frontier: ", len(lst)
     chosen = lst[0]
-    print "================================================"
-    print "Start: ", lst[0]
 
     for element in lst:
-        score = problem.evaluate(element.decisionValues)
-        # print element.fitness.fitness
         if sum(chosen) < sum(element):
             chosen = element
-        # print "There: ", chosen
-
-    # print "Chosen: ", chosen
 
     return chosen
 
-def readpf(problem):
-    filename = "./PF/" + problem.name + "(" + str(len(problem.objectives)) + ")-PF.txt"
-    f = open(filename, "r")
-    true_PF = []
-    for line in f:
-        temp = []
-        for x in line.split():
-            temp.append(float(x))
-        true_PF.append(temp)
-    return true_PF
+
 
 
 "Brief notes"
@@ -183,16 +160,11 @@ class JMOO:
 
         # Main control loop
         representatives = []                        # List of resulting final generations (stat boxe datatype)
-        zOut = "<Experiment>\n"
         for problem in self.tests.problems:
-
-            zOut += "<Problem name = '" + problem.name + "'>\n"
-            
             for algorithm in self.tests.algorithms:
                 
                 # if algorithm.name == "NSGAIII":
                 #     jmoo_properties.MU = jmoo_properties.population_size[problem.name.split("_")[-1]]
-                zOut += "<Algorithm name = '" + algorithm.name + "'>\n"
                 
                 print "#<------- " + problem.name + " + " + algorithm.name + " ------->#"
                 
@@ -228,29 +200,11 @@ class JMOO:
                 # Repeat Core
                 for repeat in range(repeats):
                     
-                    # Run 
-                    
-                    zOut += "<Run id = '" + str(repeat+1) + "'>\n"
-                    
-
+                    # Run
                     start = time.time()
                     statBox = jmoo_evo(problem, algorithm, repeat)
                     end = time.time()
 
-                    # approx = []
-                    # for pop in statBox.box[-1].population:
-                    #     temp = []
-                    #     for n in pop.fitness.fitness: temp.append(n)
-                    #     approx.append(temp)
-                    # true_pf = readpf(statBox.problem)
-                    # IGD_Values.append(IGD(approx, true_pf))
-
-
-
-
-                    
-                    # Record
-                    
                     # Find best generation
                     representative = statBox.box[0]
                     for r,rep in enumerate(statBox.box):
@@ -259,10 +213,7 @@ class JMOO:
                         if rep.IBD < representative.IBD: 
                             representative = statBox.box[r]
                     representatives.append(representative)
-                    
-                    
-                    
-                    
+
                         
                     # Decision Bin Data
                     s = ""
@@ -310,37 +261,13 @@ class JMOO:
                         sr.write(s_out + "\n")
                         sc2.write(s_out + "\n")
 
-
-                    zOut += "<Summary>\n"
-                    zOut += "<NumEvals>" + str(representative.numEval) + "</NumEvals>\n"
-                    zOut += "<RunTime>" + str((end-start)) + "</RunTime>\n"
-                    zOut += "<IBD>" + str(box.IBD) + "</IBD>\n"
-                    zOut += "<IBS>" + str(box.IBS) + "</IBS>\n"
-                    for i in range(len(problem.objectives)):
-                        zOut += "<" + problem.objectives[i].name + ">" + str(representative.fitnessMedians[i]) + "</" + problem.objectives[i].name + ">\n" 
-                    zOut += "</Summary>"
                         
                         
                     
                     
                     # Finish
-                    zOut += "</Run>\n"
                     print " # Finished: Celebrate! # " + " Time taken: " + str("%10.5f" % (end-start)) + " seconds."
 
-            # if
-            #     file_name = "./IGD/IGD_Values" + str(problem.name) + "-d-" + str(len(problem.decisions)) + "-o-" + str(len(problem.objectives))\
-            #                 + " -a-" + str(algorithm.name) + ".txt"
-            #     fd = open(file_name, "a")
-            #     for igd in IGD_Values:
-            #         fd.write(str(igd) + "\n")
-            #     fd.close()
-
-                zOut += "</Algorithm>\n"
-            zOut += "</Problem>\n"
-        zOut += "</Experiment>\n"
-
-        zOutFile = open("ExperimentRecords.xml", 'w')
-        zOutFile.write(zOut)
 
 
     def remove_dominated_solution(self, problem, final_generation):

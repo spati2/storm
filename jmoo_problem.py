@@ -109,3 +109,6 @@ class jmoo_problem(object):
             else:
                 header += "<<" + objective.name + ","          
         return header[:len(header)-1] #remove the last comma at the end
+
+    def validate(self, temp):
+        return True

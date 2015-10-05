@@ -17,14 +17,7 @@ def niche_counting(count, population):
     return niche_count
 
 def niching(k, no_ref_points, population, last_level):
-    # import time
-    # file_name = "./tmp4/nicheb4" + str(time.clock()) + ".txt"
-    # f = open(file_name, "w")
-    # for pop in population:
-    #     for a in pop.decisionValues:
-    #         f.write(str(a) + " ")
-    #     f.write("\n")
-    # f.close()
+
 
     blah = len(population)
     remove_candidates = []

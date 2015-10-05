@@ -55,6 +55,8 @@ def get_extreme_points(problem, population):
         asf = 1e32
         extreme = None
         for individual in population:
+            print dir(individual)
+            raw_input()
             t = compute_asf(individual.translated, weight)
             if t < asf:
                 asf = t
@@ -84,7 +86,6 @@ def final_normalize(intercepts, utopia, population):
     for individual in population:
         temp = []
         for no, (i, u) in enumerate(zip(intercepts, utopia)):
-            # if i == u: print "oo o"
             if abs(i - u) > 1e-10:
                 temp.append(individual.translated[no] / float(i - u))
             else:
@@ -146,7 +147,9 @@ def gauss_elimination(A):
 
 def compute_asf(individual, weights):
     assert(len(individual.translated) == len(weights)), "Something's wrong"
-    return max([float(o/w) for o, w in zip(individual.fitness.fitness, weights)])
+    # return max([float(o/w) for o, w in zip(individual.fitness.fitness, weights)])
+    return max([float(o/w) for o, w in zip(individual.translated, weights)])
+
 
 def compute_extreme_points(problem, S_t, objective_number):
     # construct weights
@@ -160,7 +163,6 @@ def compute_extreme_points(problem, S_t, objective_number):
 
 
 def normalize(problem, population, Z_r, Z_s, Z_a):
-
     extreme_points = []
     ideal_points = []
 
@@ -169,10 +171,9 @@ def normalize(problem, population, Z_r, Z_s, Z_a):
         pop.translated = []
         pop.normalized = []
 
-
     """
     1. Find the ideal point
-    2. Translate the objectives by substracting the min value from the objective function
+    2. Translate the objectives by subtracting the min value from the objective function
     """
     for i in xrange(len(problem.objectives)):
         z_j_min = min([individual.fitness.fitness[i] for individual in population if individual.front_no == 0])
@@ -184,9 +185,15 @@ def normalize(problem, population, Z_r, Z_s, Z_a):
     for i in xrange(len(problem.objectives)):
         extreme_points.append(compute_extreme_points(problem, population, i))
 
+    # print "Extreme Points: ", len(extreme_points) != len(deduplicate(extreme_points))
+    # for extreme_point in extreme_points:
+    #     print extreme_point.translated
+    # assert(len(extreme_points) != len(deduplicate(extreme_points))), "Extreme point bugs"
+
+
     if len(extreme_points) != len(deduplicate(extreme_points)):
         # print "Duplicate exists",
-        print "-" * 20 + ">"
+        # print "-" * 20 + ">"
         a = [0 for _ in problem.objectives]
         # for i, obj in enumerate(problem.objectives):
         #     a[i] = extreme_points[i].fitness.fitness[i]  # Changed using Dr. Chiang's code

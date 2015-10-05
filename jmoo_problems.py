@@ -50,7 +50,6 @@ def initialPopulation(problem, n):
         
     #write the dataset to file
     filename = "Data/" + problem.name + "-p" + str(n) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
-    print filename
     fo = open(filename, 'w')
     h = problem.buildHeader() #the header row
     fo.write(h + "\n")

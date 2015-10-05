@@ -123,12 +123,12 @@ def cover(n):
                 temp[j].coordinates[i] = round(((1 - tau)/points_inner_layer) + tau * obj, 3)
                 assert(old != point.coordinates[i]), "something's wrong"
         lst.extend(temp)
-    f = open("generation.txt", "w")
-    for l in lst:
-        for ll in l.coordinates:
-            f.write(str(ll) + " ")
-        f.write("\n")
-    f.close()
+    # f = open("generation.txt", "w")
+    # for l in lst:
+    #     for ll in l.coordinates:
+    #         f.write(str(ll) + " ")
+    #     f.write("\n")
+    # f.close()
     return lst
 
 # -------------------------- Testing -------------------------- #
@@ -139,6 +139,19 @@ def _get_ref_points():
             print xx,
         print
 
+def _get_ref_points2():
+    from scipy.misc import comb
+    n = 4
+    p = 5
+    root = Node(-1)
+    tree(root, n, p)
+    lst = get_ref_points(root)
+    print len(lst), comb(n + p - 1, p)
+    assert(len(lst) == comb(n + p - 1, p)), "Length of the lst should be equal to combination"
+    for i in lst:
+        for xx in i.coordinates:
+            print xx,
+        print
 
 if __name__ == "__main__":
-     _get_ref_points()
+     _get_ref_points2()

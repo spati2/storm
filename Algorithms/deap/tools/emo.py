@@ -46,8 +46,6 @@ def selNSGA3(problem, individuals, k):
     Evolutionary Computation, IEEE Transactions on 18.4 (2014): 577-601.
     """
 
-    #print "Length of individuals: ", len(individuals)
-
 
     pareto_fronts = sortNondominated(individuals, k)
     f_l_no = len(pareto_fronts) - 1
@@ -89,6 +87,7 @@ def selNSGA3(problem, individuals, k):
             f_l.append(pop)
         else:
             P_t_1.append(pop)
+    print len(P_t_1), P_t_1[0], P_t_1[0].front_no
     assert(len(P_t_1) == P_t_1_no), "Something's wrong"
     P_t_1 = niching(K, len(Z_s), P_t_1, f_l)
     assert(len(P_t_1) == jmoo_properties.MU), "Length is mismatched"

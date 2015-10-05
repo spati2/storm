@@ -34,26 +34,10 @@ def nsgaiii_sbx(problem, population):
         mchild1 = pmutation(problem, child1)
         mchild2 = pmutation(problem, child2)
 
-        # print father.decisionValues
-        # print mother.decisionValues
-        # print
-        # print child1.decisionValues
-        # print child2.decisionValues
-        # print
-        # print mchild1.decisionValues
-        # print mchild2.decisionValues
-        # exit()
-
         mutants.append(mchild1)
         mutants.append(mchild2)
 
     return mutants, 0
-
-
-
-
-
-
 
 
 def nsgaiii_recombine(problem, population, selectees, k):
@@ -68,8 +52,6 @@ def nsgaiii_recombine(problem, population, selectees, k):
                 evaluate_no += 1
         except:
             print individual
-            import pdb
-            pdb.set_trace()
 
     # Format a population Data structure usable by DEAP's package
     dIndividuals = jmoo_algorithms.deap_format(problem, population+selectees)

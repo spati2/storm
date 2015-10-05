@@ -39,17 +39,17 @@ from Problems.MONRP.monrp import *
 
 # JMOO Experimental Definitions
 algorithms = [
-              jmoo_GALE(),
-              jmoo_NSGAII(),
-              jmoo_SPEA2(),
-              jmoo_DE(),
+              # jmoo_GALE(),
+              # jmoo_NSGAII(),
+              # jmoo_SPEA2(),
+              # jmoo_DE(),
               # jmoo_MOEAD(),
-              # jmoo_NSGAIII(),
+              jmoo_NSGAIII(),
 
               ]
 
 problems =[
-    # dtlz1(9, 5),
+    dtlz1(9, 5),
     # dtlz2(14, 5),
     # dtlz3(14, 5),
     # dtlz4(14, 5),
@@ -71,7 +71,7 @@ problems =[
     # NRP(50, 5, 5, 20, 120)
     #MONRP(50, 5, 5, 20, 120)
     # cpm_apache(),cpm_X264(), cpm_SQL_4553(), cpm_SQL_100(), cpm_LLVM(), cpm_BDBJ(), cpm_BDBC()
-    cpm_apache_training_reduction(treatment=None),
+    # cpm_apache_training_reduction(treatment=None),
     # cpm_X264(treatment=None),
     # cpm_SQL(treatment=None),
     # cpm_LLVM(treatment=None),

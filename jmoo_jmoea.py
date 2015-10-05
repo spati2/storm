@@ -72,7 +72,7 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
     #     jmoo_properties.MU = population_size[problem.name.split("_")[-1]]
 
     population = problem.loadInitialPopulation(jmoo_properties.MU)
-    print "Length of population: ", len(population)
+    assert(len(population) == MU), "The population loaded from the file must be equal to MU"
 
 
 
@@ -125,8 +125,7 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
         population, evals = algorithm.recombiner(problem, population, selectees, MU)
         numNewEvals += evals
 
-
-        print "Length of pop: jmoea: ", len(population)
+        assert(len(population) == MU), "Length of the population should be equal to MU"
         # # # # # # # # # # #
         # 4d) Collect Stats #
         # # # # # # # # # # #
@@ -142,14 +141,6 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
         stoppingCriteria = toStop(statBox)
         # stoppingCriteria = False
 
+        assert(len(statBox.box[-1].population) == MU), "Length in the statBox should be equal to MU"
 
-
-        fignum = len([name for name in os.listdir('Data/finalpopulation')]) + 1
-        filename = "Data/finalpopulation/" + problem.name + "_" + algorithm.name + "_" + str(repeat) + "_" + str(fignum) + ".txt"
-        filedesc = open(filename, 'w')
-        print "hold population: ", len(statBox.box[-1].population)
-        for pop in statBox.box[-1].population:
-            if problem.validate(pop.decisionValues) is False: continue
-            filedesc.write(','.join([str(int(round(p, 0))) for p in pop.decisionValues]) + " : " + ','.join([str(p) for p in pop.fitness.fitness]) + "\n")
-        filedesc.close()
     return statBox
