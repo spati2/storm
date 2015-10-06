@@ -12,7 +12,7 @@ import jmoo_properties
 parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../../NSGAIII")))
 if parentdir not in sys.path:
     sys.path.insert(0, parentdir)
-from normalize import normalize
+from normalize import normalize, easy_normalize
 from ref_point import cover
 from ref_point_2 import generate_reference_points
 from associate import associate
@@ -67,17 +67,15 @@ def selNSGA3(problem, individuals, k):
     Z_r = None
 
     if total_points_returned == k:
-        return normalize(problem, population, Z_r, Z_s, Z_a)
+        return easy_normalize(problem, population, Z_r, Z_s, Z_a)
 
     # S_t = P_t_1 + pareto_fronts[-1]
 
 
     K = k - P_t_1_no
 
-    # Get the reference points
-
-
-    population = normalize(problem, population, Z_r, Z_s, Z_a)
+    # population = normalize(problem, population, Z_r, Z_s, Z_a)
+    population = easy_normalize(problem, population, Z_r, Z_s, Z_a)
     population = associate(population, Z_s)
 
     f_l = []

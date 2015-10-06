@@ -177,6 +177,8 @@ def normalize(problem, population, Z_r, Z_s, Z_a):
     """
     for i in xrange(len(problem.objectives)):
         z_j_min = min([individual.fitness.fitness[i] for individual in population if individual.front_no == 0])
+        import pdb
+        pdb.set_trace()
         ideal_points.append(z_j_min)
         for index, individual in enumerate(population):
             individual.translated.append(individual.fitness.fitness[i] - z_j_min)
@@ -216,6 +218,27 @@ def normalize(problem, population, Z_r, Z_s, Z_a):
         # time.sleep(1)
     population = final_normalize(a, ideal_points, population)
 
+
+    return population
+
+def easy_normalize(problem, population, Z_r, Z_s, Z_a):
+    """
+        Normalization technique adapted from "An improved NSGA-III procedure for evolutionary many objective optimization"
+    """
+    z_min_points = []  # Ideal points: which means minimum values of all objectives
+    z_max_points = []  # Inverse Ideal points: which means maximum values of all objectives
+    for i in xrange(len(problem.objectives)):
+        temp_obejctives = sorted([individual.fitness.fitness[i] for individual in population])
+        z_min_points.append(temp_obejctives[0])
+        z_max_points.append(temp_obejctives[-1])
+    assert(len(z_min_points) == len(z_min_points)), "The length of the z_min_points and z_max_points must be same"
+    assert(len(z_min_points) == len(problem.objectives)), "The length of the z_min_points and number of objectives must be same"
+
+    for individual in population:
+        temp_normalized_values = [0 for _ in xrange(len(problem.objectives))]
+        for i in xrange(len(problem.objectives)):
+            temp_normalized_values[i] = (individual.fitness.fitness[i] - z_min_points[i])/(z_max_points[i] - z_min_points[i])
+        individual.normalized = temp_normalized_values
 
     return population
 
