@@ -25,7 +25,7 @@ def nsgaiii_selector(problem, population):
 def nsgaiii_sbx(problem, population):
     from random import choice
     mutants = []
-    for _ in xrange((len(population)/2)+1):
+    for _ in xrange(len(population)/2):
         father = choice(population)
         while True:
             mother = choice(population)
@@ -36,27 +36,20 @@ def nsgaiii_sbx(problem, population):
 
         mutants.append(mchild1)
         mutants.append(mchild2)
-
+    assert(len(mutants) == len(population)), "Length of the offspring population should be equal to the parent population"
     return mutants, 0
 
 
 def nsgaiii_recombine(problem, population, selectees, k):
     evaluate_no = 0
-
-
+    assert(len(population+selectees) == 2 * len(population)), "The recombination population should be 2 * len(population)"
     # Evaluate any new guys
     for individual in population+selectees:
-        try:
             if not individual.valid:
                 individual.evaluate()
                 evaluate_no += 1
-        except:
-            print individual
-
     # Format a population Data structure usable by DEAP's package
     dIndividuals = jmoo_algorithms.deap_format(problem, population+selectees)
-
     # Combine
     population = tools.selNSGA3(problem, dIndividuals, k)
-
     return population, evaluate_no

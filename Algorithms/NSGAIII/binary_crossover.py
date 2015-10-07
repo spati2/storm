@@ -20,6 +20,10 @@ def get_betaq(rand, alpha, eta=30):
     return betaq
 
 def sbx_crossover(problem, parent1, parent2, cr=1, eta=30):
+    """
+    Adapted from the code from Dr. Deb's NSGAII code [http://www.iitk.ac.in/kangal/codes.shtml]
+    """
+
     assert(len(parent1.decisionValues) == len(parent2.decisionValues)), "Parents are sick"
 
     from copy import deepcopy

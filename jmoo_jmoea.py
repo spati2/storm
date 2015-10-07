@@ -84,13 +84,6 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
     # # # # # # # # # # # # # # #
     statBox.update(population, 0, numeval, initial=True)
 
-    # # # # # # # # # # # # # # # #
-    # 3.1) Special Initialization #
-    # # # # # # # # # # # # # # # #
-    if algorithm.initializer is not None:
-        # TODO:fix MOEAD
-        population, numeval = algorithm.initializer(problem, population)
-    
     # # # # # # # # # # # # # # #
     # 4) Generational Evolution #
     # # # # # # # # # # # # # # #
@@ -101,15 +94,10 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
         # 4a) Selection #
         # # # # # # # # #
 
-        # from copy import deepcopy
-        # new_population = deepcopy(population)
-            
         problem.referencePoint = statBox.referencePoint
         selectees, evals = algorithm.selector(problem, population)
         numNewEvals = evals
 
-
-        #raw_input("Press any Key")
         # # # # # # # # # #
         # 4b) Adjustment  #
         # # # # # # # # # #
@@ -124,15 +112,11 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
 
         population, evals = algorithm.recombiner(problem, population, selectees, MU)
         numNewEvals += evals
-
         assert(len(population) == MU), "Length of the population should be equal to MU"
         # # # # # # # # # # #
         # 4d) Collect Stats #
         # # # # # # # # # # #
         statBox.update(population, gen, numNewEvals)
-        #for row in population: print row.valid
-        # print statBox.bests
-        
         
             
         # # # # # # # # # # # # # # # # # #

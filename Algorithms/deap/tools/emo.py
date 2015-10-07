@@ -45,10 +45,13 @@ def selNSGA3(problem, individuals, k):
     reference-point-based nondominated sorting approach, part i: Solving problems with box constraints."x
     Evolutionary Computation, IEEE Transactions on 18.4 (2014): 577-601.
     """
-
-
     pareto_fronts = sortNondominated(individuals, k)
     f_l_no = len(pareto_fronts) - 1
+
+    # The Non dominated sort stops as soon as it has sorted atleast MU(parent population) number of points
+    assert(len(list(chain(*pareto_fronts))) <= len(individuals)), "Non Dominated Sorting is wrong!"
+    assert(len(list(chain(*pareto_fronts))) > len(individuals)/2), "Non Dominated Sorting is wrong!"
+
     P_t_1_no = len(list(chain(*pareto_fronts[:-1])))
     total_points_returned = len(list(chain(*pareto_fronts)))
     population =[]
@@ -61,16 +64,14 @@ def selNSGA3(problem, individuals, k):
             population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
             population[-1].front_no = front_no
 
-    print ">" * 10
+    assert(len(population) == total_points_returned), "Conversation from deap to jmoo format failed"
+
     Z_s = cover(len(problem.objectives))
     Z_a = None
     Z_r = None
 
     if total_points_returned == k:
-        return easy_normalize(problem, population, Z_r, Z_s, Z_a)
-
-    # S_t = P_t_1 + pareto_fronts[-1]
-
+        return population
 
     K = k - P_t_1_no
 
@@ -81,12 +82,11 @@ def selNSGA3(problem, individuals, k):
     f_l = []
     P_t_1 = []
     for pop in population:
-        if pop.front_no == f_l_no:
-            f_l.append(pop)
-        else:
-            P_t_1.append(pop)
-    print len(P_t_1), P_t_1[0], P_t_1[0].front_no
-    assert(len(P_t_1) == P_t_1_no), "Something's wrong"
+        if pop.front_no == f_l_no: f_l.append(pop)
+        else:  P_t_1.append(pop)
+
+    assert(len(P_t_1) == P_t_1_no), "Length of the population other than last front is not correct"
+
     P_t_1 = niching(K, len(Z_s), P_t_1, f_l)
     assert(len(P_t_1) == jmoo_properties.MU), "Length is mismatched"
     return P_t_1
@@ -154,15 +154,11 @@ def sortNondominated(individuals, k, first_front_only=False):
     if k == 0:
         return []
 
-
     map_fit_ind = defaultdict(list)
-
 
     for ind in individuals:
         map_fit_ind[ind.fitness].append(ind)
     fits = map_fit_ind.keys()
-    #for f in fits:
-    #    print f.decisionValues, f
     current_front = []
     next_front = []
     dominating_fits = defaultdict(int)
@@ -170,6 +166,7 @@ def sortNondominated(individuals, k, first_front_only=False):
 
     # Rank first Pareto front
     # some of the elements are repeated
+    # Non dominated solutions
     for i, fit_i in enumerate(fits):
         for fit_j in fits:
             if fit_i.dominates(fit_j):

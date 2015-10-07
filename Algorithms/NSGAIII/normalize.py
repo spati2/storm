@@ -228,9 +228,9 @@ def easy_normalize(problem, population, Z_r, Z_s, Z_a):
     z_min_points = []  # Ideal points: which means minimum values of all objectives
     z_max_points = []  # Inverse Ideal points: which means maximum values of all objectives
     for i in xrange(len(problem.objectives)):
-        temp_obejctives = sorted([individual.fitness.fitness[i] for individual in population])
-        z_min_points.append(temp_obejctives[0])
-        z_max_points.append(temp_obejctives[-1])
+        temp_objectives = sorted([individual.fitness.fitness[i] for individual in population])
+        z_min_points.append(temp_objectives[0])
+        z_max_points.append(temp_objectives[-1])
     assert(len(z_min_points) == len(z_min_points)), "The length of the z_min_points and z_max_points must be same"
     assert(len(z_min_points) == len(problem.objectives)), "The length of the z_min_points and number of objectives must be same"
 

@@ -123,12 +123,7 @@ def cover(n):
                 temp[j].coordinates[i] = round(((1 - tau)/points_inner_layer) + tau * obj, 3)
                 assert(old != point.coordinates[i]), "something's wrong"
         lst.extend(temp)
-    # f = open("generation.txt", "w")
-    # for l in lst:
-    #     for ll in l.coordinates:
-    #         f.write(str(ll) + " ")
-    #     f.write("\n")
-    # f.close()
+
     return lst
 
 # -------------------------- Testing -------------------------- #

@@ -8,34 +8,35 @@ from jmoo_core import *
 
 def readpf(problem):
     filename = "./Testing/PF/" + problem.name.split("_")[0] + "(" + str(len(problem.objectives)) + ")-PF.txt"
-    print filename
-    for line in open(filename, "r").readlines():
-        print line.split()
-    exit()
-    # true_PF = [[float(x) for x in line.split(",")] for line in open(filename, "r").readlines()]
-    return true_PF
-
+    return [[float(num) for num in line.split()] for line in open(filename, "r").readlines()]
 
 
 algorithms = [jmoo_NSGAIII()]
 problems =[dtlz1(9, 5)]
 os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
-for l in readpf(problems[0]):
-    print l
-    exit()
+
 
 from Techniques.IGD_Calculation import IGD
 
 
 # Wrap the tests in the jmoo core framework
 tests = jmoo_test(problems, algorithms)
+IGD_Results = []
 for problem in tests.problems:
     initialPopulation(problem, MU)
     for algorithm in tests.algorithms:
-        for repeat in range(repeats):
+        for repeat in xrange(repeats):
             statBox = jmoo_evo(problem, algorithm, repeat)
-        print "Problem Name: ", problem.__name__
-        print "Algorithm Name: ", algorithm.__name__
+            resulting_pf = [[round(f, 6) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+            IGD_Results.append(IGD(resulting_pf, readpf(problem)))
+        sorted(IGD_Results)
+        print "Problem Name: ", problem.name
+        print "Algorithm Name: ", algorithm.name
         print "- Generated New Population"
-        print "- Ran the algorithm for ", repeat
+        print "- Ran the algorithm for ", repeats
+        print "- The SBX crossover and mutation parameters are correct"
+        print "Best: ", IGD_Results[0]
+        print "Worst: ", IGD_Results[-1]
+        print "Median: ", IGD_Results[int(len(IGD_Results)/2)]
+
 

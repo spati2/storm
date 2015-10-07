@@ -3,6 +3,9 @@ import random
 
 
 def pmutation(problem, individual, eta=20):
+    """
+    Adapted from the code from Dr. Deb's NSGAII code [http://www.iitk.ac.in/kangal/codes.shtml]
+    """
     mr = 1/len(problem.decisions)
 
     parent = individual.decisionValues

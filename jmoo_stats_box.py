@@ -129,29 +129,13 @@ class jmoo_stats_box:
         lossInQualities = [item["qual"] for item in lossInQualities]
         #best_fitness = [min(fitCol) for fitCol in fitnessColumns if len(fitCol) > 0]
 
-        # + IGD Calculation: This would only work if the true PF is known.
-        if IGDMEASURE is True:
-            approximate = []
-            true_PF = readpf(statBox.problem)
-            for individual in population:
-                temp = []
-                for x in individual.fitness.fitness: temp.append(round(x, 5))
-                approximate.append(temp)
-        # - IGD Calculation
 
         IBD = median(lossInQualities)
         IBS = spread(lossInQualities)
-        if IGDMEASURE is True:
-            IGD = IGD_Calculation.IGD(approximate, true_PF)
-        
+
         if initial == True:
             IBD = 1.0
             statBox.referenceIBD = 1.0
-            # TODO: Need to come up with an smart way to assign reference IGD: This is stupid I ran into the problems
-            # with this
-            if IGDMEASURE is True:
-                statBox.referenceIGD = 1e30
-        
         
         changes = []
         # Print Option
@@ -187,20 +171,7 @@ class jmoo_stats_box:
                     else: statBox.foam[o][statBox.numEval] = [change]
                 outString += str("%8.4f" % IBD) + "," + percentChange(IBD, statBox.referenceIBD, True, 0, 1) + "," + str("%8.4f" % IBS)
                 print outString  + ", violations: " + str("%4.1f" % violationsPercent)
-                if IGDMEASURE is True:
-                    outString += "," + str("%8.4f" % IGD) + "," + percentChange(IGD, statBox.referenceIGD, True, 0, 1e3)
 
-
-
-
-            # if initial:
-            #     if IGDMEASURE is True:
-            #         print outString  + ", violations: " + str("%4.1f" % violationsPercent) + "||IGD: " + str(IGD_Calculation.IGD(approximate, true_PF))
-            #     else: print outString  + ", violations: " + str("%4.1f" % violationsPercent)
-            # else:
-            #     # print outString  + ", violations: " + str("%4.1f" % violationsPercent) + "||IGD: " + str(IGD(approximate, true_PF))
-            #     # print str(statBox.numEval) + "|IGD: |" + str(IGD(approximate, true_PF)) + "|Fitness:| ", normalized_median
-            #     print "|Fitness: |", fitnessMedians
             fa.write(outString + "\n")
         
             

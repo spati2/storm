@@ -43,16 +43,30 @@ def associate(population, reference_points):
     :param reference_points: list of reference_points
     :return:
     """
+    temp_ref_points = []
+    temp_population = []
+    for rf in reference_points: temp_ref_points.extend(rf.coordinates)
+    for indi in population: temp_population.extend(indi.normalized)
+    assert(reduce(lambda x, y: (x and y), map(lambda x: (x >= 0.0) and (x <= 1.0), temp_ref_points))
+           is True), "Inequality not satisfied for reference points"
+    assert(reduce(lambda x, y: (x and y), map(lambda x: (x >= 0.0) and (x <= 1.0), temp_population))
+           is True), "Inequality not satisfied for normalized fitness"
+
     for individual in population:
-        temp = []
+        temp_perpendicular_distance = []
         for point in reference_points:
-            temp.append([point.id, perpendicular_distance(point.coordinates, individual.normalized)])
+            temp_perpendicular_distance.append([point.id,
+                                                perpendicular_distance(point.coordinates, individual.normalized)])
+        temp_perpendicular_distance = sorted(temp_perpendicular_distance, key=lambda x: x[1])
+
+        assert(temp_perpendicular_distance[0][1] <= temp_perpendicular_distance[0][1]), \
+            "Perpendicular distance is wrong"
 
         # closed ref point
-        nearest_ref_point = sorted(temp, key=lambda x: x[1])[0]
-
+        nearest_ref_point = temp_perpendicular_distance[0]
         individual.closest_ref = nearest_ref_point[0]
         individual.closest_ref_dist = nearest_ref_point[1]
+
     return population
 
 
