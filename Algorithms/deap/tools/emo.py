@@ -50,7 +50,7 @@ def selNSGA3(problem, individuals, k):
 
     # The Non dominated sort stops as soon as it has sorted atleast MU(parent population) number of points
     assert(len(list(chain(*pareto_fronts))) <= len(individuals)), "Non Dominated Sorting is wrong!"
-    assert(len(list(chain(*pareto_fronts))) > len(individuals)/2), "Non Dominated Sorting is wrong!"
+    assert(len(list(chain(*pareto_fronts))) >= len(individuals)/2), "Non Dominated Sorting is wrong!"
 
     P_t_1_no = len(list(chain(*pareto_fronts[:-1])))
     total_points_returned = len(list(chain(*pareto_fronts)))
@@ -75,7 +75,7 @@ def selNSGA3(problem, individuals, k):
 
     K = k - P_t_1_no
 
-    # population = normalize(problem, population, Z_r, Z_s, Z_a)
+    # population = normalize(problem, population, Z_r, Z_s, Z_a) # Normalize doesn't work
     population = easy_normalize(problem, population, Z_r, Z_s, Z_a)
     population = associate(population, Z_s)
 

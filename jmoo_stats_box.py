@@ -74,7 +74,7 @@ class jmoo_stats_box:
     def __init__(statBox, problem, alg, foam=None):
         statBox.problem = problem
         statBox.numEval = 0
-        statBox.box = []
+        statBox.box = [0]
         statBox.alg = alg
         statBox.foam = [{} for o in problem.objectives]
         statBox.bests = [100.0 for o in problem.objectives]
@@ -170,7 +170,10 @@ class jmoo_stats_box:
                     if statBox.numEval in statBox.foam[o]: statBox.foam[o][statBox.numEval].append(change)
                     else: statBox.foam[o][statBox.numEval] = [change]
                 outString += str("%8.4f" % IBD) + "," + percentChange(IBD, statBox.referenceIBD, True, 0, 1) + "," + str("%8.4f" % IBS)
-                print outString  + ", violations: " + str("%4.1f" % violationsPercent)
+                # print outString  + ", violations: " + str("%4.1f" % violationsPercent)
+                import sys
+                print "#",
+                sys.stdout.flush()
 
             fa.write(outString + "\n")
         
@@ -180,7 +183,7 @@ class jmoo_stats_box:
         for i,pop in enumerate(population):
             trunk.append(jmoo_individual(statBox.problem, pop.decisionValues, pop.fitness.fitness))
             #if i < 5: print trunk[-1].decisionValues, statBox.problem.evalConstraints(trunk[-1].decisionValues)
-        statBox.box.append(jmoo_stats(trunk, fitnesses, best_fitness, fitnessSpreads, statBox.numEval, gen, IBD, IBS, changes))
+        statBox.box[-1] = jmoo_stats(trunk, fitnesses, best_fitness, fitnessSpreads, statBox.numEval, gen, IBD, IBS, changes)
         fa.close()
 ###########
 ### Utility Functions

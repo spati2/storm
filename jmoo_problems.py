@@ -677,6 +677,10 @@ class dtlz1(jmoo_problem):
         if input:
             for i,decision in enumerate(prob.decisions):
                 decision.value = input[i]
+
+        for i,decision in enumerate(prob.decisions):
+            assert(0<=decision.value <= 1), "Something is wrong"
+
         k = len(prob.decisions) - len(prob.objectives) + 1
         g = 0.0
         
@@ -690,19 +694,17 @@ class dtlz1(jmoo_problem):
         g = 100 * (k + g)
         
         f = []
-        for i in range(0, len(prob.objectives)):
-            f.append((1.0 + g)*0.5)
+        for i in range(0, len(prob.objectives)): f.append((1.0 + g)*0.5)
         
-        for i in range(0, len(prob.objectives)):
+        for i in xrange(len(prob.objectives)):
             for j in range(0, len(prob.objectives) - (i+1)):
-                f[i] *= x[j];
+                f[i] *= x[j]
             if not (i == 0):
                 aux = len(prob.objectives) - (i+1)
                 f[i] *= 1 - x[aux]
 
 
-        
-        for i in range(0, len(prob.objectives)):            
+        for i in xrange(len(prob.objectives)):
             prob.objectives[i].value = f[i]  
 
         return [objective.value for objective in prob.objectives]

@@ -1,7 +1,7 @@
 import csv
-from scipy import stats
+# from scipy import stats
 import numpy as np
-from friedman import *
+# from friedman import *
 
 
 

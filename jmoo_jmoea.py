@@ -31,7 +31,7 @@ from jmoo_algorithms import *
 from jmoo_stats_box import *
 from jmoo_properties import *
 from Algorithms.GALE.Fastmap.Moo import *
-from pylab import *
+# from pylab import *
 import jmoo_properties
 
 import os, sys, inspect
@@ -122,8 +122,8 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
         # # # # # # # # # # # # # # # # # #
         # 4e) Evaluate Stopping Criteria  #
         # # # # # # # # # # # # # # # # # #
-        stoppingCriteria = toStop(statBox)
-        # stoppingCriteria = False
+        # stoppingCriteria = toStop(statBox)
+        stoppingCriteria = False
 
         assert(len(statBox.box[-1].population) == MU), "Length in the statBox should be equal to MU"
 

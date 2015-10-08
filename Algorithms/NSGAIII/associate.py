@@ -1,12 +1,34 @@
 from __future__ import division
 
-def perpendicular_distance(pointa, pointb):
-    """
-    Perpendicular distance between point a and point b
-    :param pointa:  the line from the origin passes through point a
-    :param pointb:
-    :return:
-    """
+# def perpendicular_distance(pointa, pointb):
+#     """
+#     Perpendicular distance between point a and point b
+#     :param pointa:  the line from the origin passes through point a
+#     :param pointb:
+#     :return:
+#     """
+#     def dotproduct(pointa, pointb):
+#         ret = 0
+#         for i, j in zip(pointa, pointb):
+#             ret += (i*j)
+#         return ret
+#     def magnitude(pointa):
+#         sum = 0
+#         for i in pointa:
+#             sum += i ** 2
+#         return sum ** 0.5
+#     mag = dotproduct(pointa, pointb)/(magnitude(pointa))
+#     lengthb = magnitude(pointb) # hypotenuse
+#     if (lengthb ** 2 - mag ** 2) <= 0:
+#         print
+#         print pointa
+#         print pointb
+#         print lengthb, mag
+#     assert((lengthb ** 2 - mag ** 2) > 0), "Something is wrong!"
+#     base = mag
+#     return (lengthb ** 2 - base ** 2) ** 0.5
+
+def perpendicular_distance(d, z):
     def dotproduct(pointa, pointb):
         ret = 0
         for i, j in zip(pointa, pointb):
@@ -17,10 +39,18 @@ def perpendicular_distance(pointa, pointb):
         for i in pointa:
             sum += i ** 2
         return sum ** 0.5
-    mag = dotproduct(pointa, pointb)/(magnitude(pointa))
-    lengthb = magnitude(pointb) # hypotenuse
-    base = mag
-    return (lengthb ** 2 - base ** 2) ** 0.5
+
+    temp = (dotproduct(d, z) / (magnitude(d) * magnitude(z))) ** 2  # Dr. Deb's formula
+    distance = magnitude(z) * ((1 - temp) ** 0.5)
+    if distance < 0:
+        print d, magnitude(d)
+        print z, magnitude(z)
+        print "dot product: ", dotproduct(d, z)
+        print "blah: ", (magnitude(d) * magnitude(z))
+        print "temp: ", (dotproduct(d, z) / (magnitude(d) * magnitude(z))) ** 2
+        print distance
+    assert(distance >= 0), "Distance can't be less than 0"
+    return distance
 
 
 def perpendicular_distance2(pointa, pointb):
@@ -47,8 +77,10 @@ def associate(population, reference_points):
     temp_population = []
     for rf in reference_points: temp_ref_points.extend(rf.coordinates)
     for indi in population: temp_population.extend(indi.normalized)
-    assert(reduce(lambda x, y: (x and y), map(lambda x: (x >= 0.0) and (x <= 1.0), temp_ref_points))
-           is True), "Inequality not satisfied for reference points"
+
+    # Check if the reference coordinates are between 0 and 1
+    assert(reduce(lambda x, y: (x and y), map(lambda x: (x >= 0.0) and (x <= 1.0), temp_ref_points)) is True), "Inequality not satisfied for reference points"
+    # Check if the normalized points are between 0 and 1
     assert(reduce(lambda x, y: (x and y), map(lambda x: (x >= 0.0) and (x <= 1.0), temp_population))
            is True), "Inequality not satisfied for normalized fitness"
 

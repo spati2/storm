@@ -30,10 +30,10 @@
 from jmoo_algorithms import *
 from jmoo_problems import *
 
-from Problems.CPM.cpm import *
-from Problems.CPM.cpm_reduction import *
-from Problems.NRP.nrp import *
-from Problems.MONRP.monrp import *
+# from Problems.CPM.cpm import *
+# from Problems.CPM.cpm_reduction import *
+# from Problems.NRP.nrp import *
+# from Problems.MONRP.monrp import *
 
 
 
@@ -49,11 +49,11 @@ algorithms = [
               ]
 
 problems =[
-    dtlz1(9, 5),
+    # dtlz1(9, 5),
     # dtlz2(14, 5),
     # dtlz3(14, 5),
     # dtlz4(14, 5),
-    # dtlz1(7, 3),
+    dtlz1(7, 3),
     # dtlz2(12, 3),
     # dtlz3(12, 3),
     # dtlz4(12, 3),
@@ -91,9 +91,9 @@ build_new_pop = False                                       # Whether or not to 
 
 
 # JMOO Universal Properties
-repeats = 3   #Repeats of each MOEA
+repeats = 5   #Repeats of each MOEA
 MU      = 212   #Population Size
-PSI     = 600    #Maximum number of generations
+PSI     = 400    #Maximum number of generations
 
 # Properties of GALE
 GAMMA   = 0.15  #Constrained Mutation Parameter

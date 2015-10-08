@@ -27,7 +27,7 @@
 "Brief notes"
 "Report on decision bins used."
 
-from pylab import *
+# from pylab import *
 import csv
 from jmoo_problems import *
 from jmoo_algorithms import *

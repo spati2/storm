@@ -27,7 +27,7 @@
 "Brief notes"
 "Objective Space Plotter"
 
-from pylab import *
+# from pylab import *
 import csv
 from jmoo_problems import *
 from jmoo_algorithms import *

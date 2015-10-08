@@ -27,13 +27,13 @@
 "Brief notes"
 "Stats reports for MOEAs"
 
-from pylab import *
+# from pylab import *
 import csv
 #from jmoo_problems import *
 #from jmoo_algorithms import *
 from jmoo_properties import *
 from utility import *
-from scipy import stats 
+# from scipy import stats
 
 from time import *
 import os

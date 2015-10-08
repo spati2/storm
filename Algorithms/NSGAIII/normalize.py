@@ -177,8 +177,6 @@ def normalize(problem, population, Z_r, Z_s, Z_a):
     """
     for i in xrange(len(problem.objectives)):
         z_j_min = min([individual.fitness.fitness[i] for individual in population if individual.front_no == 0])
-        import pdb
-        pdb.set_trace()
         ideal_points.append(z_j_min)
         for index, individual in enumerate(population):
             individual.translated.append(individual.fitness.fitness[i] - z_j_min)

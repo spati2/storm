@@ -21,7 +21,7 @@ def get_ref_points(root):
                 temp = vertex
                 points = []
                 while temp is not None:
-                    points = [round(temp.data, 5)] + points
+                    points = [temp.data] + points
                     temp = temp.parent
                 ref_points.append(reference_point(count, points))
                 count += 1
@@ -78,8 +78,13 @@ def transform_points_id(start, population):
         point.id = start + i
     return population
 
+from math import factorial
+
+def comb(n, r):
+    return factorial(n) // factorial(r) // factorial(n-r)
+
 def cover(n):
-    from scipy.misc import comb
+
     if n <= 5:
         if n == 3: p = 12
         elif n == 5: p = 6
@@ -120,10 +125,12 @@ def cover(n):
         for j, point in enumerate(temp):
             for i, obj in enumerate(point.coordinates):
                 old = obj
-                temp[j].coordinates[i] = round(((1 - tau)/points_inner_layer) + tau * obj, 3)
+                temp[j].coordinates[i] = ((1 - tau)/points_inner_layer) + tau * obj
                 assert(old != point.coordinates[i]), "something's wrong"
         lst.extend(temp)
 
+    for l in lst:
+        for i, lc in enumerate(l.coordinates): l.coordinates[i] = lc.item()
     return lst
 
 # -------------------------- Testing -------------------------- #
@@ -135,9 +142,8 @@ def _get_ref_points():
         print
 
 def _get_ref_points2():
-    from scipy.misc import comb
-    n = 4
-    p = 5
+    n = 5
+    p = 6
     root = Node(-1)
     tree(root, n, p)
     lst = get_ref_points(root)
