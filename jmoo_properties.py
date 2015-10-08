@@ -92,8 +92,8 @@ build_new_pop = False                                       # Whether or not to 
 
 # JMOO Universal Properties
 repeats = 5   #Repeats of each MOEA
-MU      = 212   #Population Size
-PSI     = 400    #Maximum number of generations
+MU      = 136   #Population Size
+PSI     = 1500    #Maximum number of generations
 
 # Properties of GALE
 GAMMA   = 0.15  #Constrained Mutation Parameter
