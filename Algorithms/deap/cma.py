@@ -20,9 +20,11 @@
 """A module that provides support for the Covariance Matrix Adaptation 
 Evolution Strategy.
 """
-import numpy
 import copy
 from math import sqrt, log, exp
+
+import numpy
+
 
 class Strategy(object):
     """

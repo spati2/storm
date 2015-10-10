@@ -36,7 +36,7 @@ from utility import *
 import numpy
 from time import *
 import os
-from deap.tools.support import ParetoFront
+from DEAP.tools.support import ParetoFront
 
 def joes_charter_reporter(problems, algorithms, tag=""):
     date_folder_prefix = strftime("%m-%d-%Y")

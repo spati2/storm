@@ -27,9 +27,9 @@
 "Brief notes"
 "Algorithms for evolution"
 
-from Algorithms.deap import base
-from Algorithms.deap import creator
-from Algorithms.deap import tools
+from Algorithms.DEAP import base
+from Algorithms.DEAP import creator
+from Algorithms.DEAP import tools
 
 import os, sys, inspect
 
@@ -42,8 +42,9 @@ from Algorithms.DE.de_components import *
 from Algorithms.MOEA_D.moead_components import *
 from Algorithms.NSGAIII.nsgaiii_components import *
 from Algorithms.STORM.storm_components import *
+from Algorithms.NSGAIII_New.nsgaiii_components import *
 
-    
+
 from jmoo_individual import *
 
 
@@ -115,6 +116,16 @@ class jmoo_NSGAIII:
         self.selector = nsgaiii_selector
         self.adjustor = nsgaiii_sbx
         self.recombiner = nsgaiii_recombine
+        self.color = color
+        self.type = 'p'
+
+class jmoo_NSGAIII_New:
+    def __init__(self, color="blue"):
+        self.name = "NSGA3"
+        self.initializer = None
+        self.selector = nsgaiii_selector2
+        self.adjustor = nsgaiii_regenerate2
+        self.recombiner = nsgaiii_recombine2
         self.color = color
         self.type = 'p'
 

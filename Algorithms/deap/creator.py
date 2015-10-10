@@ -13,10 +13,10 @@
 #    You should have received a copy of the GNU Lesser General Public
 #    License along with DEAP. If not, see <http://www.gnu.org/licenses/>.
 
-"""The :mod:`~deap.creator` is a meta-factory allowing to create classes that
+"""The :mod:`~DEAP.creator` is a meta-factory allowing to create classes that
 will fulfill the needs of your evolutionary algorithms. In effect, new
 classes can be built from any imaginable type, from :class:`list` to
-:class:`set`, :class:`dict`, :class:`~deap.gp.PrimitiveTree` and more,
+:class:`set`, :class:`dict`, :class:`~DEAP.gp.PrimitiveTree` and more,
 providing the possibility to implement genetic algorithms, genetic
 programming, evolution strategies, particle swarm optimizers, and many more.
 """
@@ -92,7 +92,7 @@ class_replacers[array.array] = _array
 
 def create(name, base, **kargs):
     """Creates a new class named *name* inheriting from *base* in the
-    :mod:`~deap.creator` module. The new class can have attributes defined by
+    :mod:`~DEAP.creator` module. The new class can have attributes defined by
     the subsequent keyword arguments passed to the function create. If the
     argument is a class (without the parenthesis), the __init__ function is
     called in the initialization of an instance of the new object and the

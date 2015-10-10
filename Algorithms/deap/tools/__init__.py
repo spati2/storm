@@ -12,10 +12,10 @@
 #
 #    You should have received a copy of the GNU Lesser General Public
 #    License along with DEAP. If not, see <http://www.gnu.org/licenses/>.
-"""The :mod:`~deap.tools` module contains the operators for evolutionary
+"""The :mod:`~DEAP.tools` module contains the operators for evolutionary
 algorithms. They are used to modify, select and move the individuals in their
 environment. The set of operators it contains are readily usable in the
-:class:`~deap.base.Toolbox`. In addition to the basic operators this module
+:class:`~DEAP.base.Toolbox`. In addition to the basic operators this module
 also contains utility tools to enhance the basic algorithms with
 :class:`Statistics`, :class:`HallOfFame`, :class:`Checkpoint`, and
 :class:`History`.

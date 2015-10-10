@@ -18,7 +18,7 @@ in order to execute very common evolutionary algorithms. The method used here
 are more for convenience than reference as the implementation of every 
 evolutionary algorithm may vary infinitely. Most of the algorithms in this 
 module use operators registered in the toolbox. Generaly, the keyword used are
-:meth:`mate` for crossover, :meth:`mutate` for mutation, :meth:`~deap.select`
+:meth:`mate` for crossover, :meth:`mutate` for mutation, :meth:`~DEAP.select`
 for selection and :meth:`evaluate` for evaluation.
 
 You are encouraged to write your own algorithms in order to make them do what
@@ -36,7 +36,7 @@ def varAnd(population, toolbox, cxpb, mutpb):
     independent of the input population.
     
     :param population: A list of individuals to vary.
-    :param toolbox: A :class:`~deap.base.Toolbox` that contains the evolution
+    :param toolbox: A :class:`~DEAP.base.Toolbox` that contains the evolution
                     operators.
     :param cxpb: The probability of mating two individuals.
     :param mutpb: The probability of mutating an individual.
@@ -85,14 +85,14 @@ def eaSimple(population, toolbox, cxpb, mutpb, ngen, stats=None,
     presented in chapter 7 of [Back2000]_.
     
     :param population: A list of individuals.
-    :param toolbox: A :class:`~deap.base.Toolbox` that contains the evolution
+    :param toolbox: A :class:`~DEAP.base.Toolbox` that contains the evolution
                     operators.
     :param cxpb: The probability of mating two individuals.
     :param mutpb: The probability of mutating an individual.
     :param ngen: The number of generation.
-    :param stats: A :class:`~deap.tools.Statistics` object that is updated
+    :param stats: A :class:`~DEAP.tools.Statistics` object that is updated
                   inplace, optional.
-    :param halloffame: A :class:`~deap.tools.HallOfFame` object that will
+    :param halloffame: A :class:`~DEAP.tools.HallOfFame` object that will
                        contain the best individuals, optional.
     :param verbose: Whether or not to log the statistics.
     :returns: The final population.
@@ -178,7 +178,7 @@ def varOr(population, toolbox, lambda_, cxpb, mutpb):
     population is independent of the input population.
     
     :param population: A list of individuals to vary.
-    :param toolbox: A :class:`~deap.base.Toolbox` that contains the evolution
+    :param toolbox: A :class:`~DEAP.base.Toolbox` that contains the evolution
                     operators.
     :param lambda\_: The number of children to produce
     :param cxpb: The probability of mating two individuals.
@@ -231,16 +231,16 @@ def eaMuPlusLambda(population, toolbox, mu, lambda_, cxpb, mutpb, ngen,
     """This is the :math:`(\mu + \lambda)` evolutionary algorithm.
     
     :param population: A list of individuals.
-    :param toolbox: A :class:`~deap.base.Toolbox` that contains the evolution
+    :param toolbox: A :class:`~DEAP.base.Toolbox` that contains the evolution
                     operators.
     :param mu: The number of individuals to select for the next generation.
     :param lambda\_: The number of children to produce at each generation.
     :param cxpb: The probability that an offspring is produced by crossover.
     :param mutpb: The probability that an offspring is produced by mutation.
     :param ngen: The number of generation.
-    :param stats: A :class:`~deap.tools.Statistics` object that is updated
+    :param stats: A :class:`~DEAP.tools.Statistics` object that is updated
                   inplace, optional.
-    :param halloffame: A :class:`~deap.tools.HallOfFame` object that will
+    :param halloffame: A :class:`~DEAP.tools.HallOfFame` object that will
                        contain the best individuals, optional.
     :param verbose: Whether or not to log the statistics.
     :returns: The final population.
@@ -312,16 +312,16 @@ def eaMuCommaLambda(population, toolbox, mu, lambda_, cxpb, mutpb, ngen,
     """This is the :math:`(\mu~,~\lambda)` evolutionary algorithm.
     
     :param population: A list of individuals.    
-    :param toolbox: A :class:`~deap.base.Toolbox` that contains the evolution
+    :param toolbox: A :class:`~DEAP.base.Toolbox` that contains the evolution
                     operators.
     :param mu: The number of individuals to select for the next generation.
     :param lambda\_: The number of children to produce at each generation.
     :param cxpb: The probability that an offspring is produced by crossover.
     :param mutpb: The probability that an offspring is produced by mutation.
     :param ngen: The number of generation.
-    :param stats: A :class:`~deap.tools.Statistics` object that is updated
+    :param stats: A :class:`~DEAP.tools.Statistics` object that is updated
                   inplace, optional.
-    :param halloffame: A :class:`~deap.tools.HallOfFame` object that will
+    :param halloffame: A :class:`~DEAP.tools.HallOfFame` object that will
                        contain the best individuals, optional.
     :param verbose: Whether or not to log the statistics.
     :returns: The final population.
@@ -396,12 +396,12 @@ def eaGenerateUpdate(toolbox, ngen, halloffame=None, stats=None,
     """This is algorithm implements the ask-tell model proposed in 
     [Colette2010]_, where ask is called `generate` and tell is called `update`.
     
-    :param toolbox: A :class:`~deap.base.Toolbox` that contains the evolution
+    :param toolbox: A :class:`~DEAP.base.Toolbox` that contains the evolution
                     operators.
     :param ngen: The number of generation.
-    :param stats: A :class:`~deap.tools.Statistics` object that is updated
+    :param stats: A :class:`~DEAP.tools.Statistics` object that is updated
                   inplace, optional.
-    :param halloffame: A :class:`~deap.tools.HallOfFame` object that will
+    :param halloffame: A :class:`~DEAP.tools.HallOfFame` object that will
                        contain the best individuals, optional.
     :param verbose: Whether or not to log the statistics.
 

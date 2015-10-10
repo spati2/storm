@@ -123,7 +123,7 @@ class History(object):
     def getGenealogy(self, individual, max_depth=float("inf")):
         """Provide the genealogy tree of an *individual*. The individual must
         have an attribute :attr:`history_index` as defined by
-        :func:`~deap.tools.History.update` in order to retrieve its associated
+        :func:`~DEAP.tools.History.update` in order to retrieve its associated
         genealogy tree. The returned graph contains the parents up to
         *max_depth* variations before this individual. If not provided
         the maximum depth is up to the begining of the evolution.

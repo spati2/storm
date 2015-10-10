@@ -32,7 +32,6 @@ import jmoo_algorithms
 from jmoo_individual import *
 import jmoo_properties
 from utility import *
-from deap.tools.support import ParetoFront
 IGDMEASURE = False
 import os, inspect, sys
 cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0], "Techniques")))

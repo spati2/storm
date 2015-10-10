@@ -42,29 +42,33 @@ import Problems.xomo.xomo_liaison
 def distance(in1, in2):
     return sum([abs(x-y) for x,y in zip(in1,in2)])**0.5
 
-def initialPopulation(problem, n):
+def initialPopulation(problem, n, path=""):
     #generate dataset
     dataset = []
     for run in range(n):
         dataset.append(problem.generateInput())
         
     #write the dataset to file
-    filename = "Data/" + problem.name + "-p" + str(n) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
+    if path == "":
+        filename = "Data/" + problem.name + "-p" + str(n) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
+    elif path == "unittesting":
+        filename = "../../Data/Testing-dataset.txt"
+    else:
+        print "No accounted for"
+        exit()
+
     fo = open(filename, 'w')
     h = problem.buildHeader() #the header row
     fo.write(h + "\n")
     for data in dataset: #each row of actual Data
         fo.write(str(data).strip("[]") + "\n")
     
-    print "Dataset generated for " + problem.name + " in " + filename + "."
+    # print "Dataset generated for " + problem.name + " in " + filename + "."
     
     #preprocessing
     #take first X guys of dataset to get reference point and objective highs and lows
     fitnesses = []
     for i in range(500):
-        print ".",
-        import sys
-        sys.stdout.flush()
         fitnesses.append( problem.evaluate(problem.generateInput()) )
     # Split Columns into Lists
     print len(problem.objectives)

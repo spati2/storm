@@ -104,7 +104,7 @@ class noise(object):
     """Decorator for evaluation functions, it evaluates the objective function
     and adds noise by calling the function(s) provided in the *noise*
     argument. The noise functions are called without any argument, consider
-    using the :class:`~deap.base.Toolbox` or Python's
+    using the :class:`~DEAP.base.Toolbox` or Python's
     :func:`functools.partial` to provide any required argument. If a single
     function is provided it is applied to all objectives of the evaluation
     function. If a list of noise functions is provided, it must be of length

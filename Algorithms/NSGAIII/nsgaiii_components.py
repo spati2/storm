@@ -1,23 +1,16 @@
 import os, sys, inspect
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0], "../DEAP")))
-if cmd_subfolder not in sys.path:
-    sys.path.insert(0, cmd_subfolder)
 
-from deap import base
-from deap import creator
-from deap import tools
 
-from jmoo_individual import *
-from binary_crossover import sbx_crossover
-from polynomial_mutation import pmutation
 
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0], "..")))
-# grep print cmd_subfolder
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0], "../..")))
+print cmd_subfolder
 if cmd_subfolder not in sys.path:
     sys.path.insert(0, cmd_subfolder)
 
 from jmoo_algorithms import *
-
+from jmoo_individual import *
+from binary_crossover import sbx_crossover
+from polynomial_mutation import pmutation
 
 def nsgaiii_selector(problem, population):
     return population, 0

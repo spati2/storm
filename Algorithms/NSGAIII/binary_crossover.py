@@ -30,14 +30,17 @@ def sbx_crossover(problem, parent1, parent2, cr=1, eta=30):
     child1 = [0 for _ in xrange(len(parent1.decisionValues))]
     child2 = [0 for _ in xrange(len(parent1.decisionValues))]
 
-    if random.random() > cr: return parent1, parent2
+    if random() > cr:
+        print "book"
+        exit()
+        return parent1, parent2
     for index in xrange(len(parent1.decisionValues)):
 
         # import pdb
         # pdb.set_trace()
 
         # Should these variables be considered for crossover
-        if random.random() > 0.5:
+        if random() > 0.5:
             child1[index] = parent1.decisionValues[index]
             child2[index] = parent2.decisionValues[index]
             continue

@@ -24,13 +24,13 @@ import copy
 import random
 import re
 import sys
-
 from collections import defaultdict
 from functools import partial,wraps
 from inspect import isclass
 from operator import eq, lt
 
 from deap import creator
+
 
 ######################################
 # GP Data structure                  #
@@ -356,7 +356,7 @@ class PrimitiveSetTyped(object):
         return self.terms_count / float(self.terms_count + self.prims_count)
 
 class PrimitiveSet(PrimitiveSetTyped):
-    """Class same as :class:`~deap.gp.PrimitiveSetTyped`, except there is no 
+    """Class same as :class:`~DEAP.gp.PrimitiveSetTyped`, except there is no
     definition of type.
     """
     def __init__(self, name, arity, prefix="ARG"):
@@ -491,8 +491,8 @@ def genGrow(pset, min_, max_, type_=__type__):
     
 def genRamped(pset, min_, max_, type_=__type__):
     """Generate an expression with a PrimitiveSet *pset*.
-    Half the time, the expression is generated with :func:`~deap.gp.genGrow`,
-    the other half, the expression is generated with :func:`~deap.gp.genFull`.
+    Half the time, the expression is generated with :func:`~DEAP.gp.genGrow`,
+    the other half, the expression is generated with :func:`~DEAP.gp.genFull`.
     
     :param pset: A primitive set from wich to select primitives of the trees.
     :param min_: Minimum height of the produced trees.
@@ -808,7 +808,7 @@ def staticDepthLimit(max_depth):
     
     :param max_depth: The maximum depth allowed for an individual.
     :returns: A decorator that can be applied to a GP operator using \
-    :func:`~deap.base.Toolbox.decorate`
+    :func:`~DEAP.base.Toolbox.decorate`
 
     .. note::
        If you want to reproduce the exact behavior intended by Koza, set
@@ -839,7 +839,7 @@ def staticSizeLimit(max_size):
     :param max_size: The maximum size (number of nodes) allowed for an \
     individual
     :returns: A decorator that can be applied to a GP operator using \
-    :func:`~deap.base.Toolbox.decorate`
+    :func:`~DEAP.base.Toolbox.decorate`
     """
     def decorator(func):
         @wraps(func)

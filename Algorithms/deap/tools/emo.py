@@ -2,24 +2,23 @@ from __future__ import division
 import bisect
 import math
 import random
-
 from itertools import chain
 from operator import attrgetter, itemgetter
 from collections import defaultdict
+import os
+import sys
+import inspect
 
-import os, sys, inspect
-import jmoo_properties
 parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../../NSGAIII")))
 if parentdir not in sys.path:
     sys.path.insert(0, parentdir)
-from normalize import normalize, easy_normalize
+from normalize import easy_normalize
 from ref_point import cover
-from ref_point_2 import generate_reference_points
 from associate import associate
-from niche import niche_counting, niching
+from niche import niching
 
 import os, sys, inspect
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0], "../..")))
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0], "../../..")))
 if cmd_subfolder not in sys.path:
     sys.path.insert(0, cmd_subfolder)
 from jmoo_individual import *
@@ -48,6 +47,9 @@ def selNSGA3(problem, individuals, k):
     pareto_fronts = sortNondominated(individuals, k)
     f_l_no = len(pareto_fronts) - 1
 
+    import pdb
+    pdb.set_trace()
+
     # The Non dominated sort stops as soon as it has sorted atleast MU(parent population) number of points
     assert(len(list(chain(*pareto_fronts))) <= len(individuals)), "Non Dominated Sorting is wrong!"
     assert(len(list(chain(*pareto_fronts))) >= len(individuals)/2), "Non Dominated Sorting is wrong!"
@@ -64,7 +66,7 @@ def selNSGA3(problem, individuals, k):
             population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
             population[-1].front_no = front_no
 
-    assert(len(population) == total_points_returned), "Conversation from deap to jmoo format failed"
+    assert(len(population) == total_points_returned), "Conversation from DEAP to jmoo format failed"
 
     Z_s = cover(len(problem.objectives))
     Z_a = None
