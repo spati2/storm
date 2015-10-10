@@ -262,9 +262,6 @@ def variation(problem, individual_index, population):
     another_parent = individual_index
     while another_parent == individual_index: another_parent = randint(0, len(population)-1)
 
-    # import pdb
-    # pdb.set_trace()
-    print individual_index, another_parent
     parent1 = population[individual_index]
     parent2 = population[another_parent]
 
@@ -272,14 +269,6 @@ def variation(problem, individual_index, population):
 
     mchild1 = sbxmutation(problem, child1)
     mchild1.evaluate()
-    count = 0
-    # for i, j in zip(parent1.decisionValues, child1.decisionValues):
-    #     if i == j: count += 1
-    # if count == len(parent1.decisionValues): print "Same"
-    # else: print "Different"
-    # print parent1.decisionValues
-    # print child1.decisionValues
-    # raw_input()
     return mchild1
 
 
@@ -301,28 +290,79 @@ def compute_max_points(problem, population):
     return max_points
 
 
-# def asf_function(individual, index):
-#     max = -1e32
-#     epsilon = 1e-6
-#
-#     for
+def asf_function(individual, index, ideal_point):
+    max_value = -1e32
+    epsilon = 1e-6
+    for i, obj in enumerate(individual.fitness.fitness):
+        temp_value = abs(obj - ideal_point[i])
+        if index != i: temp_value /= epsilon
+        if temp_value > max_value: max_value = temp_value
+    return max_value
 
-# def compute_extreme_points(problem, population):
-#     extreme_points = []
-#     for i in xrange(len(problem.objectives)):
-#         index = -1
-#         min_value = 1e32
-#         for individual in population:
-#
-#     assert(len(extreme_points) == len(problem.objectives)), "Number of extreme points should be equal to number of objectives"
+def compute_extreme_points(problem, population, ideal_point):
+    extreme_points = []
+    for i in xrange(len(problem.objectives)):
+        index = -1
+        min_value = 1e32
+        for individual in population:
+            assert(len(individual.fitness.fitness) == len(problem.objectives)), "somethings wrong"
+            asf_value = asf_function(individual, i, ideal_point)
+            if asf_value < min_value: index = i
+        extreme_points.append(population[index].fitness.fitness)
+
+    assert(len(extreme_points) == len(problem.objectives)), "Number of extreme points should be equal to number of objectives"
+    return extreme_points
+
+def computer_intercept_points(problem, extreme_points, ideal_point, max_point):
+    import numpy
+    assert(len(extreme_points) == len(problem.objectives)), "Length of extreme points should be equal to the number of objectives of the problem"
+    assert(len(extreme_points[0]) == len(ideal_point)), "Length of extreme points and ideal points should be the same"
+    temp_L = []
+    for extreme_point in extreme_points:
+        temp = []
+        for i, j in zip(extreme_point, ideal_point): temp.append(i-j)
+        temp_L.append(temp)
+
+    EX = numpy.array(temp_L)
+    intercepts = [-1 for _ in problem.objectives]
+    if numpy.linalg.matrix_rank(EX) == len(EX):
+        UM = numpy.matrix([[1] for _ in problem.objectives])
+        AL0 = numpy.linalg.inv(EX)
+        AL = AL0 * UM
+        for i, ideal_co in enumerate(ideal_point):
+            try:
+                temp_aj = 1/AL[i] + ideal_co
+            except ZeroDivisionError:
+                break
+            if temp_aj > ideal_co:
+                intercepts[i] = temp_aj
+            else: break
+        if i != len(problem.objectives):
+            for k, max_v in enumerate(max_point):
+                intercepts[k] = max_v
+
+    else:
+        for k,max_value in enumerate(max_point):
+            intercepts[k] = max_value # zmax
+    return intercepts
 
 
-# def normalization(problem, population):
-#     max_points = compute_max_points(problem, population)
-#     compute_extreme_points()
-#     compute_intecepts()
-#     normalize_population()
 
+def normalization(problem, population, intercept_point, ideal_point):
+alkdjaslkdjsalkdj
+def convert_to_jmoo(problem, pareto_fronts):
+    population = []
+    for front_no, front in enumerate(pareto_fronts):
+        for i, dIndividual in enumerate(front):
+            cells = []
+            for j in xrange(len(dIndividual)):
+                cells.append(dIndividual[j])
+            population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
+
+    from itertools import chain
+    assert(len(list(chain(*pareto_fronts))) <= len(population)), "Non Dominated Sorting is wrong!"
+
+    return population
 
 
 # ---------------------- Helper --------------------------------
@@ -356,25 +396,16 @@ def nsgaiii_recombine2(problem, population, selectees, k):
     Individuals = jmoo_algorithms.deap_format(problem, population + selectees)
     pareto_fronts = sortNondominated(Individuals, k)
 
-    pareto_fronts is correct now
+    minus_last_front_population = convert_to_jmoo(problem, pareto_fronts[:-1])
+    last_front = convert_to_jmoo(problem, pareto_fronts[-1:])
+    population = minus_last_front_population + last_front
 
-    # # Change from DEAP format to jmoo format
-    # for front_no, front in enumerate(pareto_fronts):
-    #     for i, dIndividual in enumerate(front):
-    #         cells = []
-    #         for j in xrange(len(dIndividual)):
-    #             cells.append(dIndividual[j])
-    #         population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
-    #         population[-1].front_no = front_no
-    #
-    # new_pop = []
-    # remain = k
-    # index = 0
-    # front = pareto_fronts[0]
-    # while remain > 0 and remain >= len(front):
-    #     for individual in front:
+    from itertools import chain
+    assert(len(minus_last_front_population) + len(last_front) == len(list(chain(*pareto_fronts)))), "Length of the population and mgpopulation should be equal to pareto_fronts"
 
-
-    compute_ideal_points()
-    normalization()
+    ideal_point = compute_ideal_points(problem, population)
+    max_point = compute_max_points(problem, population)
+    extreme_points = compute_extreme_points(problem, population, ideal_point)
+    intercept_point = computer_intercept_points(problem, extreme_points, ideal_point, max_point)
+    population = normalization(problem, population, intercept_point, ideal_point)
     print

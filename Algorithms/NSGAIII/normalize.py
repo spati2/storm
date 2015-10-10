@@ -1,8 +1,9 @@
 from __future__ import division
 import os, sys, inspect
-cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"..")))
+cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../..")))
 if cmd_subfolder not in sys.path:
     sys.path.insert(0, cmd_subfolder)
+print cmd_subfolder
 from jmoo_individual import *
 from ref_point import cover
 
@@ -240,16 +241,52 @@ def easy_normalize(problem, population, Z_r, Z_s, Z_a):
 
     return population
 
+
+def test():
+    import numpy
+    EX = numpy.matrix([[15.707736310987924,211.2763436713055,265.5626953528718],[151.18874467099698,800.8106458512383,74.47433535814318],[9.030300437360912,0.0,1057.5671626332546]])
+    zideal = [4.5699810820927, 0.0, 57.8939921967703]
+    print "rank: ", numpy.linalg.matrix_rank(EX)
+    print "row: ", len(EX)
+    intercepts = [-1 for _ in zideal]
+    if numpy.linalg.matrix_rank(EX) == len(EX):
+        UM = numpy.matrix([[1] for _ in zideal])
+        print UM
+        AL0 = numpy.linalg.inv(EX)
+        AL = AL0 * UM
+
+        print UM
+        print AL
+
+
+        for i in xrange(len(zideal)):
+            try:
+                temp_aj = 1/AL[i] + zideal[i]
+            except ZeroDivisionError:
+                break
+            if temp_aj > zideal[i]:
+                for k in xrange(len(zideal)):
+                    intercepts[k] = 100 # zmax
+    else:
+        for k in xrange(len(zideal)):
+            intercepts[k] = 100 # zmax
+
+    print intercepts
+
+
+
 if __name__ == "__main__":
-    A = [[0 for _ in xrange(4)] for _ in xrange(3)]
-    print A
-    for i, x in enumerate([-1, 1, 2]):
-        A[0][i] = x
-    for i, x in enumerate([2, 0, -3]):
-        A[1][i] = x
-    for i, x in enumerate([5, 1, -2]):
-        A[2][i] = x
-    A[0][3] = 1
-    A[1][3] = 1
-    A[2][3] = 1
-    gauss_elimination(A)
+    # A = [[0 for _ in xrange(4)] for _ in xrange(3)]
+    # print A
+    # for i, x in enumerate([626.005840126248, 17.65177402253587, 0.0]):
+    #     A[0][i] = x
+    # for i, x in enumerate([55.385028410583004, 1056.186303469722, 111.34874228099781]):
+    #     A[1][i] = x
+    # for i, x in enumerate([0.0, 10.683255094756921, 1226.4509105230284]):
+    #     A[2][i] = x
+    # A[0][3] = 1
+    # A[1][3] = 1
+    # A[2][3] = 1
+    # gauss_elimination(A)
+
+    test()

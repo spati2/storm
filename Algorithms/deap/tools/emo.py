@@ -47,8 +47,6 @@ def selNSGA3(problem, individuals, k):
     pareto_fronts = sortNondominated(individuals, k)
     f_l_no = len(pareto_fronts) - 1
 
-    import pdb
-    pdb.set_trace()
 
     # The Non dominated sort stops as soon as it has sorted atleast MU(parent population) number of points
     assert(len(list(chain(*pareto_fronts))) <= len(individuals)), "Non Dominated Sorting is wrong!"
