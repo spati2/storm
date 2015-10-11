@@ -6,13 +6,11 @@ from sys import path
 
 cmd_subfolder = realpath(abspath(join(split(getfile(currentframe()))[0], "..")))
 if cmd_subfolder not in path: path.insert(0, cmd_subfolder)
-print "2new", cmd_subfolder
 from DEAP.tools.emo import sortNondominated
 
 
 cmd_subfolder = realpath(abspath(join(split(getfile(currentframe()))[0], "../..")))
 if cmd_subfolder not in path: path.insert(0, cmd_subfolder)
-print "new", cmd_subfolder
 from jmoo_individual import *
 from jmoo_properties import *
 from jmoo_algorithms import *
@@ -20,6 +18,12 @@ from random import random
 
 
 # ---------------------- Helper --------------------------------
+
+division_dict = {"3": [12,0],
+                 "5": [6,0],
+                 "8": [3,2],
+                 "10": [3, 2],
+                 "15": [2, 1]}
 
 class Node(object):
     def __init__(self, data=-1, level=0, parent=None):
@@ -132,6 +136,9 @@ def generate_weight_vector(division, number_of_objectives):
 def two_level_weight_vector_generator(divisions, number_of_objectives):
     division1 = divisions[0]
     division2 = divisions[1]
+
+    N1 = 0
+    N2 = 0
 
     if division1 != 0: N1 = comb(number_of_objectives + division1 - 1, division1)
     if division2 != 0: N2 = comb(number_of_objectives + division2 - 1, division2)
@@ -313,7 +320,7 @@ def compute_extreme_points(problem, population, ideal_point):
     assert(len(extreme_points) == len(problem.objectives)), "Number of extreme points should be equal to number of objectives"
     return extreme_points
 
-def computer_intercept_points(problem, extreme_points, ideal_point, max_point):
+def compute_intercept_points(problem, extreme_points, ideal_point, max_point):
     import numpy
     assert(len(extreme_points) == len(problem.objectives)), "Length of extreme points should be equal to the number of objectives of the problem"
     assert(len(extreme_points[0]) == len(ideal_point)), "Length of extreme points and ideal points should be the same"
@@ -349,21 +356,151 @@ def computer_intercept_points(problem, extreme_points, ideal_point, max_point):
 
 
 def normalization(problem, population, intercept_point, ideal_point):
-alkdjaslkdjsalkdj
+    for individual in population:
+        temp_normalized = []
+        for count, obj in enumerate(individual.fitness.fitness):
+            temp_normalized.append((obj - ideal_point[count])/(intercept_point[count] - ideal_point[count]))
+        individual.normalized = temp_normalized
+
+    for pop in population:
+        for nor in pop.normalized:
+            assert(0<=nor<=1), "Something's wrong"
+    return population
+
+
 def convert_to_jmoo(problem, pareto_fronts):
     population = []
-    for front_no, front in enumerate(pareto_fronts):
+    tpopulation = []
+    for front_no, front in enumerate(pareto_fronts[:-1]):
         for i, dIndividual in enumerate(front):
             cells = []
             for j in xrange(len(dIndividual)):
                 cells.append(dIndividual[j])
-            population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
+            tpopulation.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
+    for pop in tpopulation: pop.front_no = 0  # all the front except the last front
+
+    lpopulation = []
+    for front_no, front in enumerate(pareto_fronts[-1:]):
+        for i, dIndividual in enumerate(front):
+            cells = []
+            for j in xrange(len(dIndividual)):
+                cells.append(dIndividual[j])
+            lpopulation.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
+    for pop in lpopulation: pop.front_no = -1  # last front
 
     from itertools import chain
-    assert(len(list(chain(*pareto_fronts))) <= len(population)), "Non Dominated Sorting is wrong!"
+    assert(len(list(chain(*pareto_fronts))) <= len(lpopulation) + len(tpopulation)), "Non Dominated Sorting is wrong!"
+
+    return lpopulation + tpopulation
+
+def perpendicular_distance(d, z):
+    """
+    :param d: reference point
+    :param z: individual from population
+    :return:  perpendicular distance
+    """
+    def dotproduct(pointa, pointb):
+        ret = 0
+        for i, j in zip(pointa, pointb):
+            ret += (i*j)
+        return ret
+    def magnitude(pointa):
+        sum = 0
+        for i in pointa:
+            sum += i ** 2
+        return sum ** 0.5
+
+    temp = (dotproduct(d, z) / (magnitude(d) * magnitude(z))) ** 2  # Dr. Deb's formula
+    distance = magnitude(z) * ((1 - temp) ** 0.5)
+    if distance < 0:
+        print d, magnitude(d)
+        print z, magnitude(z)
+        print "dot product: ", dotproduct(d, z)
+        print "blah: ", (magnitude(d) * magnitude(z))
+        print "temp: ", (dotproduct(d, z) / (magnitude(d) * magnitude(z))) ** 2
+        print distance
+    assert(distance >= 0), "Distance can't be less than 0"
+    return distance
+
+def associate(problem, population, reference_points):
+    for individual in population:
+        temp_min_value = 1e32
+        for reference_point in reference_points:
+            temp_distance = perpendicular_distance(reference_point.coordinates, individual.normalized)
+            if temp_distance < temp_min_value:
+                temp_min_value = temp_distance
+                index = reference_point.id
+        individual.cluster_id = index
+        individual.perpendicular_distance = temp_min_value
 
     return population
 
+
+def assignment(problem, fullpopulation, reference_points):
+
+    population = [pop for pop in fullpopulation if pop.front_no == 0]
+    last_front = [pop for pop in fullpopulation if pop.front_no == -1]
+
+    assert(len(population) + len(last_front) == len(fullpopulation)), "population + last_front == full_population"
+
+    remain = jmoo_properties.MU - len(population)
+    assert(remain <= len(last_front)), "remain should be less that last_front"
+    count_reference_points = [0 for _ in reference_points]
+    for individual in population: count_reference_points[individual.cluster_id] += 1
+    assert(sum(count_reference_points) == len(population)), "Sanity Check"
+    from random import shuffle
+    flags = [False for _ in xrange(len(reference_points))]
+    num = 0
+
+    while num < remain:
+        # print "p",
+        print num, remain
+        perm = [i for i in xrange(len(reference_points))]
+        shuffle(perm)
+        min_no = 1e32
+        id_to_consider = -1
+
+        for i in xrange(len(perm)):
+            if not flags[i] and count_reference_points[perm[i]] < min_no:
+                min_no = count_reference_points[perm[i]]
+                id_to_consider = perm[i]
+
+        possible_options = []
+        for counter, individual in enumerate(last_front):
+            if individual.cluster_id == id_to_consider:
+                possible_options.append(counter)
+            # else:
+            #     print individual.cluster_id, id
+            #     raw_input()
+
+        if len(possible_options) != 0:
+            index_number = 0
+            if count_reference_points[id_to_consider] == 0:  # population doesn't have point near reference point id
+                min_distance = 1e32
+                for index in possible_options:
+                    if last_front[index].perpendicular_distance < min_distance:
+                        min_distance = last_front[index].perpendicular_distance
+                        index_number = index
+
+            else:
+                from random import randint
+                index_number = randint(0, len(possible_options))
+
+            population.append(last_front[index_number])
+            count_reference_points[id_to_consider] += 1
+
+            last_front.pop(index_number)
+            num += 1
+
+        elif len(possible_options) == 0:
+            print "FAIL ", id_to_consider
+            flags[id_to_consider] = True
+            # print [i for i,bool in enumerate(flags) if bool is True]
+            # raw_input()
+
+    assert(len(population) == jmoo_properties.MU), "This function needs to generate remain number of population"
+    there is somethign wrong with index and index_to_consider
+    exit()
 
 # ---------------------- Helper --------------------------------
 
@@ -396,16 +533,20 @@ def nsgaiii_recombine2(problem, population, selectees, k):
     Individuals = jmoo_algorithms.deap_format(problem, population + selectees)
     pareto_fronts = sortNondominated(Individuals, k)
 
-    minus_last_front_population = convert_to_jmoo(problem, pareto_fronts[:-1])
-    last_front = convert_to_jmoo(problem, pareto_fronts[-1:])
-    population = minus_last_front_population + last_front
+    population = convert_to_jmoo(problem, pareto_fronts)
 
     from itertools import chain
-    assert(len(minus_last_front_population) + len(last_front) == len(list(chain(*pareto_fronts)))), "Length of the population and mgpopulation should be equal to pareto_fronts"
+    assert(len(population) == len(list(chain(*pareto_fronts)))), "Length of the population and mgpopulation should be equal to pareto_fronts"
 
     ideal_point = compute_ideal_points(problem, population)
     max_point = compute_max_points(problem, population)
     extreme_points = compute_extreme_points(problem, population, ideal_point)
-    intercept_point = computer_intercept_points(problem, extreme_points, ideal_point, max_point)
+    intercept_point = compute_intercept_points(problem, extreme_points, ideal_point, max_point)
     population = normalization(problem, population, intercept_point, ideal_point)
-    print
+
+    divisions = division_dict[str(len(problem.objectives))]
+    reference_points = two_level_weight_vector_generator(divisions, len(problem.objectives))
+    population = associate(problem, population, reference_points)
+    population = assignment(problem, population, reference_points)
+    exit()
+
