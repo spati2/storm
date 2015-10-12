@@ -10,8 +10,8 @@ def readpf(problem):
     return [[float(num) for num in line.split()] for line in open(filename, "r").readlines()]
 
 from Techniques.IGD_Calculation import IGD
-algorithms = [jmoo_NSGAIII()]
-problems = [dtlz1(19, 15)]
+algorithms = [jmoo_NSGAIII_New()]
+problems = [dtlz1(7, 3)]
 os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
 
 # Wrap the tests in the jmoo core framework

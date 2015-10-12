@@ -191,7 +191,6 @@ def sbxcrossover(problem, parent1, parent2, cr=1, eta=30):
         # Are these variable the same
         EPS = 1.0e-14
         if abs(parent1.decisionValues[index] - parent2.decisionValues[index]) <= EPS:
-            print "boom"
             child1[index] = parent1.decisionValues[index]
             child2[index] = parent2.decisionValues[index]
             continue
@@ -283,6 +282,7 @@ def compute_ideal_points(problem, population):
     ideal_point = [1e32 for _ in xrange(len(problem.objectives))]
     for i in xrange(len(problem.objectives)):
         for individual in population:
+            assert(individual.valid is not False), "All the individuals of the population must be evaluated"
             if individual.fitness.fitness[i] < ideal_point[i]:
                 ideal_point[i] = individual.fitness.fitness[i]
     return ideal_point
@@ -453,17 +453,15 @@ def assignment(problem, fullpopulation, reference_points):
     num = 0
 
     while num < remain:
-        # print "p",
-        print num, remain
         perm = [i for i in xrange(len(reference_points))]
         shuffle(perm)
         min_no = 1e32
         id_to_consider = -1
 
-        for i in xrange(len(perm)):
-            if not flags[i] and count_reference_points[perm[i]] < min_no:
-                min_no = count_reference_points[perm[i]]
-                id_to_consider = perm[i]
+        for perm_index in perm:
+            if not flags[perm_index] and count_reference_points[perm_index] < min_no:
+                min_no = count_reference_points[perm_index]
+                id_to_consider = perm_index
 
         possible_options = []
         for counter, individual in enumerate(last_front):
@@ -484,23 +482,23 @@ def assignment(problem, fullpopulation, reference_points):
 
             else:
                 from random import randint
-                index_number = randint(0, len(possible_options))
+                index_number = randint(0, len(possible_options)-1)
 
-            population.append(last_front[index_number])
-            count_reference_points[id_to_consider] += 1
+            try:
+                population.append(last_front[index_number])
+                count_reference_points[id_to_consider] += 1
+            except:
+                import pdb
+                pdb.set_trace()
 
             last_front.pop(index_number)
             num += 1
 
         elif len(possible_options) == 0:
-            print "FAIL ", id_to_consider
             flags[id_to_consider] = True
-            # print [i for i,bool in enumerate(flags) if bool is True]
-            # raw_input()
 
     assert(len(population) == jmoo_properties.MU), "This function needs to generate remain number of population"
-    there is somethign wrong with index and index_to_consider
-    exit()
+    return population
 
 # ---------------------- Helper --------------------------------
 
@@ -548,5 +546,7 @@ def nsgaiii_recombine2(problem, population, selectees, k):
     reference_points = two_level_weight_vector_generator(divisions, len(problem.objectives))
     population = associate(problem, population, reference_points)
     population = assignment(problem, population, reference_points)
-    exit()
+
+
+    return population, evaluate_no
 
