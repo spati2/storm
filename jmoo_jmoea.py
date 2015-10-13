@@ -111,6 +111,7 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
         # # # # # # # # # # #
 
         population, evals = algorithm.recombiner(problem, population, selectees, MU)
+
         numNewEvals += evals
         assert(len(population) == MU), "Length of the population should be equal to MU"
         # # # # # # # # # # #

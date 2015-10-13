@@ -7,7 +7,7 @@ if cmd_subfolder not in sys.path:
     sys.path.insert(0, cmd_subfolder)
 
 from jmoo_individual import jmoo_individual
-
+from random import random
 
 EPS = 1.0e-14
 
@@ -57,7 +57,7 @@ def sbx_crossover(problem, parent1, parent2, cr=1, eta=30):
 
         y1 = min(parent1.decisionValues[index], parent2.decisionValues[index])
         y2 = max(parent1.decisionValues[index], parent2.decisionValues[index])
-        random_no = random.random()
+        random_no = random()
 
         # child 1
         beta = 1.0 + (2.0 * (y1 - lower_bound)/(y2 - y1))

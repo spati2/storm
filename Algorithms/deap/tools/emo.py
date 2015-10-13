@@ -13,6 +13,7 @@ parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.
 if parentdir not in sys.path:
     sys.path.insert(0, parentdir)
 from normalize import easy_normalize
+# from normalize import normalize
 from ref_point import cover
 from associate import associate
 from niche import niching

@@ -53,11 +53,11 @@ problems =[
     # dtlz2(14, 5),
     # dtlz3(14, 5),
     # dtlz4(14, 5),
-    dtlz1(7, 3),
+    # dtlz1(7, 3),
     # dtlz2(12, 3),
     # dtlz3(12, 3),
     # dtlz4(12, 3),
-    # dtlz1(12, 8),
+    dtlz1(12, 8),
     # dtlz2(17, 8),
     # dtlz3(17, 8),
     # dtlz4(17, 8),
@@ -91,7 +91,7 @@ build_new_pop = False                                       # Whether or not to 
 
 
 # JMOO Universal Properties
-repeats = 5   #Repeats of each MOEA
+repeats = 1   #Repeats of each MOEA
 MU      = 92   #Population Size
 PSI     = 400    #Maximum number of generations
 

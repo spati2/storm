@@ -84,7 +84,6 @@ def comb(n, r):
     return factorial(n) // factorial(r) // factorial(n-r)
 
 def cover(n):
-
     if n <= 5:
         if n == 3: p = 12
         elif n == 5: p = 6
@@ -119,14 +118,19 @@ def cover(n):
         # checkout the new kdebs paper to change the reference point selection
         combination = int(comb(n + p - 1, p))
         assert(len(temp) == combination), "Length of the temp should be equal to combination"
-        # center = 1/n
-        points_inner_layer = len(temp)
-        tau = 0.5
-        for j, point in enumerate(temp):
-            for i, obj in enumerate(point.coordinates):
-                old = obj
-                temp[j].coordinates[i] = ((1 - tau)/points_inner_layer) + tau * obj
-                assert(old != point.coordinates[i]), "something's wrong"
+
+        mid = 1 / n
+        for temp_ref_point in temp:
+            temp_ref_point.coordinates = [(t + mid) / 2 for t in temp_ref_point.coordinates]
+
+        # # center = 1/n
+        # points_inner_layer = len(temp)
+        # tau = 0.5
+        # for j, point in enumerate(temp):
+        #     for i, obj in enumerate(point.coordinates):
+        #         old = obj
+        #         temp[j].coordinates[i] = ((1 - tau)/points_inner_layer) + tau * obj
+        #         assert(old != point.coordinates[i]), "something's wrong"
         lst.extend(temp)
 
     for l in lst:
