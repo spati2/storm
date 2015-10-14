@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3320aa-1484-4329-99a5-9539995d5922" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Helper/IGD.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/cross_over_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/jmetal_igd_check.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/model_checking.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Helper/originalpf.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/reference_point_check.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_7_3-p92-d7-o3-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_7_3-p92-d7-o3-dataset.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/assignment.txt" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/assignment.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/associated.txt" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/associated.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/DE/de_components.py" afterPath="$PROJECT_DIR$/Algorithms/DE/de_components.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_19_15-p136-d19-o15-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_19_15-p136-d19-o15-dataset.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_jmoea.py" afterPath="$PROJECT_DIR$/jmoo_jmoea.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_problem.py" afterPath="$PROJECT_DIR$/jmoo_problem.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_properties.py" afterPath="$PROJECT_DIR$/jmoo_properties.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_stats_box.py" afterPath="$PROJECT_DIR$/jmoo_stats_box.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/lastfront.txt" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/lastfront.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py" afterPath="$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/normalized_result.txt" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/normalized_result.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py" afterPath="$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/STORM/Helper/poles.py" afterPath="$PROJECT_DIR$/Algorithms/STORM/Helper/poles.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/population.txt" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/population.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_7_3-p92-d7-o3_NSGA3.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_7_3-p92-d7-o3_NSGA3.datatable" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/STORM/Helper/scores.py" afterPath="$PROJECT_DIR$/Algorithms/STORM/Helper/scores.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/STORM/storm_components.py" afterPath="$PROJECT_DIR$/Algorithms/STORM/storm_components.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problems/tera/WHERE/table.py" afterPath="$PROJECT_DIR$/Problems/tera/WHERE/table.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problems/tera/tera_datasets_WHERE.py" afterPath="$PROJECT_DIR$/Problems/tera/tera_datasets_WHERE.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_19_15-p136-d19-o15_NSGA3.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_19_15-p136-d19-o15_NSGA3.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="storm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jmoo_properties.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="jmoo_properties.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="12" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.28399312">
+              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
                 <element signature="e#1078#1107#0" expanded="true" />
               </folding>
@@ -64,8 +43,8 @@
       <file leaf-file-name="nsgaiii_components.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.037037">
+              <caret line="475" column="0" selection-start-line="475" selection-start-column="0" selection-end-line="475" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -103,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38726333">
-              <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -127,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/jmoo_jmoea.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -192,13 +171,13 @@
         <option value="$PROJECT_DIR$/jmoo_stats_box.py" />
         <option value="$PROJECT_DIR$/Algorithms/DEAP/tools/emo.py" />
         <option value="$PROJECT_DIR$/Algorithms/DE/de_components.py" />
-        <option value="$PROJECT_DIR$/jmoo_jmoea.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/niche.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/reference_point_check.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/jmetal_igd_check.py" />
+        <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" />
+        <option value="$PROJECT_DIR$/jmoo_jmoea.py" />
         <option value="$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py" />
         <option value="$PROJECT_DIR$/jmoo_properties.py" />
-        <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" />
       </list>
     </option>
   </component>
@@ -781,14 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_problem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="2" selection-start-line="100" selection-start-column="2" selection-end-line="100" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jmoo_core.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -905,14 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_jmoea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/jmetal_igd_check.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -929,31 +892,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py">
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_problem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.31325302">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.037037">
+          <caret line="475" column="0" selection-start-line="475" selection-start-column="0" selection-end-line="475" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
+    <entry file="file://$PROJECT_DIR$/jmoo_jmoea.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="12" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="12" />
-          <folding>
-            <element signature="e#1078#1107#0" expanded="true" />
-          </folding>
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py">
+    <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38726333">
-          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="0.28399312">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding>
+            <element signature="e#1078#1107#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

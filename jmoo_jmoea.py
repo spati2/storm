@@ -90,7 +90,7 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
     population = problem.loadInitialPopulation(jmoo_properties.MU)
 
 
-    population = read_file(problem, "./Testing/Algorithms/NSGAIII/initial_population.txt")
+    # population = read_file(problem, "./Testing/Algorithms/NSGAIII/initial_population.txt")
 
     assert(len(population) == MU), "The population loaded from the file must be equal to MU"
 

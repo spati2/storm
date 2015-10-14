@@ -90,10 +90,11 @@ problems =[
 build_new_pop = False                                       # Whether or not to rebuild the initial population
 
 
+
 # JMOO Universal Properties
 repeats = 10   #Repeats of each MOEA
-MU      = 92   #Population Size
-PSI     = 400    #Maximum number of generations
+MU      = 136   #Population Size
+PSI     = 1500    #Maximum number of generations
 
 # Properties of GALE
 GAMMA   = 0.15  #Constrained Mutation Parameter

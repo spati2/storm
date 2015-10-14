@@ -469,7 +469,6 @@ def compute_intercept_points(problem, extreme_points, ideal_point, max_point):
 
 
     else:
-        print "here"
         for k,max_value in enumerate(max_point):
             intercepts[k] = max_value # zmax
 

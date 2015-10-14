@@ -22,7 +22,7 @@ def convert_jmoo(pareto_fronts):
 
 from Techniques.IGD_Calculation import IGD
 algorithms = [jmoo_NSGAIII_New()]
-problems = [dtlz1(7, 3)]
+problems = [dtlz1(19, 15)]
 os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
 
 from Algorithms.DEAP.tools.emo import sortNondominated
