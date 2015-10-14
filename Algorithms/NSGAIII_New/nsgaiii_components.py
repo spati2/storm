@@ -171,100 +171,204 @@ def get_betaq(rand, alpha, eta=30):
     return betaq
 
 
-def sbxcrossover(problem, parent1, parent2, cr=1, eta=30):
-    """
-    Adapted from the code from Dr. Deb's NSGAII code [http://www.iitk.ac.in/kangal/codes.shtml]
-    """
+# def sbxcrossover(problem, parent1, parent2, cr=1, eta=30):
+#     """
+#     Adapted from the code from Dr. Deb's NSGAII code [http://www.iitk.ac.in/kangal/codes.shtml]
+#     """
+#
+#     assert (len(parent1.decisionValues) == len(parent2.decisionValues)), "Parents are sick"
+#
+#     from copy import deepcopy
+#     child1 = [0 for _ in xrange(len(parent1.decisionValues))]
+#     child2 = [0 for _ in xrange(len(parent1.decisionValues))]
+#
+#     if random() > cr: return parent1, parent2
+#     for index in xrange(len(parent1.decisionValues)):
+#
+#         # import pdb
+#         # pdb.set_trace()
+#
+#         # Should these variables be considered for crossover
+#         if random() > 0.5:
+#             child1[index] = parent1.decisionValues[index]
+#             child2[index] = parent2.decisionValues[index]
+#             continue
+#
+#         # Are these variable the same
+#         EPS = 1.0e-14
+#         if abs(parent1.decisionValues[index] - parent2.decisionValues[index]) <= EPS:
+#             child1[index] = parent1.decisionValues[index]
+#             child2[index] = parent2.decisionValues[index]
+#             continue
+#
+#         lower_bound = problem.decisions[index].low
+#         upper_bound = problem.decisions[index].up
+#
+#         y1 = min(parent1.decisionValues[index], parent2.decisionValues[index])
+#         y2 = max(parent1.decisionValues[index], parent2.decisionValues[index])
+#         random_no = random()
+#
+#         # child 1
+#         beta = 1.0 + (2.0 * (y1 - lower_bound) / (y2 - y1))
+#         alpha = 2.0 - beta ** (-(eta + 1.0))
+#         betaq = get_betaq(random_no, alpha, eta)
+#
+#         child1[index] = 0.5 * ((y1 + y2) - betaq * (y2 - y1))
+#
+#         # child 2
+#         beta = 1.0 + (2.0 * (upper_bound - y2) / (y2 - y1))
+#         alpha = 2.0 - beta ** -(eta + 1.0)
+#         betaq = get_betaq(random_no, alpha, eta)
+#
+#         child2[index] = 0.5 * ((y1 + y2) + betaq * (y2 - y1))
+#
+#         child1[index] = max(lower_bound, min(child1[index], upper_bound))
+#         child2[index] = max(lower_bound, min(child2[index], upper_bound))
+#
+#     return jmoo_individual(problem, child1), jmoo_individual(problem, child2)
 
-    assert (len(parent1.decisionValues) == len(parent2.decisionValues)), "Parents are sick"
 
-    from copy import deepcopy
-    child1 = [0 for _ in xrange(len(parent1.decisionValues))]
-    child2 = [0 for _ in xrange(len(parent1.decisionValues))]
-
-    if random() > cr: return parent1, parent2
-    for index in xrange(len(parent1.decisionValues)):
-
-        # import pdb
-        # pdb.set_trace()
-
-        # Should these variables be considered for crossover
-        if random() > 0.5:
-            child1[index] = parent1.decisionValues[index]
-            child2[index] = parent2.decisionValues[index]
-            continue
-
-        # Are these variable the same
-        EPS = 1.0e-14
-        if abs(parent1.decisionValues[index] - parent2.decisionValues[index]) <= EPS:
-            child1[index] = parent1.decisionValues[index]
-            child2[index] = parent2.decisionValues[index]
-            continue
-
-        lower_bound = problem.decisions[index].low
-        upper_bound = problem.decisions[index].up
-
-        y1 = min(parent1.decisionValues[index], parent2.decisionValues[index])
-        y2 = max(parent1.decisionValues[index], parent2.decisionValues[index])
-        random_no = random()
-
-        # child 1
-        beta = 1.0 + (2.0 * (y1 - lower_bound) / (y2 - y1))
-        alpha = 2.0 - beta ** (-(eta + 1.0))
-        betaq = get_betaq(random_no, alpha, eta)
-
-        child1[index] = 0.5 * ((y1 + y2) - betaq * (y2 - y1))
-
-        # child 2
-        beta = 1.0 + (2.0 * (upper_bound - y2) / (y2 - y1))
-        alpha = 2.0 - beta ** -(eta + 1.0)
-        betaq = get_betaq(random_no, alpha, eta)
-
-        child2[index] = 0.5 * ((y1 + y2) + betaq * (y2 - y1))
-
-        child1[index] = max(lower_bound, min(child1[index], upper_bound))
-        child2[index] = max(lower_bound, min(child2[index], upper_bound))
-
-    return jmoo_individual(problem, child1), jmoo_individual(problem, child2)
+# def sbxmutation(problem, individual, eta=20):
+#     """
+#     Adapted from the code from Dr. Deb's NSGAII code [http://www.iitk.ac.in/kangal/codes.shtml]
+#     """
+#     mr = 1 / len(problem.decisions)
+#
+#     parent = individual.decisionValues
+#     mutant = [0 for _ in individual.decisionValues]
+#
+#     for index, p in enumerate(parent):
+#         if random() > mr:
+#             mutant[index] = parent[index]
+#             continue
+#
+#         lower_bound = problem.decisions[index].low
+#         upper_bound = problem.decisions[index].up
+#
+#         delta1 = (p - lower_bound) / (upper_bound - lower_bound)
+#         delta2 = (upper_bound - p) / (upper_bound - lower_bound)
+#
+#         mutation_power = 1 / (eta + 1)
+#
+#         random_no = random()
+#
+#         if random_no < 0.5:
+#             xy = 1 - delta1
+#             val = 2.0 * random_no + (1.0 - 2.0 * random_no) * (xy ** (eta + 1.0))
+#             deltaq = val ** mutation_power - 1.0
+#         else:
+#             xy = 1 - delta2
+#             val = 2.0 * (1 - random_no) + 2.0 * (random_no - 0.5) * (xy ** (eta + 1.0))
+#             deltaq = 1.0 - val ** mutation_power
+#
+#         mutant[index] = max(lower_bound, min((parent[index] + deltaq * (upper_bound - lower_bound)), upper_bound))
+#     individual.decisionValues = mutant
+#
+#     return individual
 
 
-def sbxmutation(problem, individual, eta=20):
-    """
-    Adapted from the code from Dr. Deb's NSGAII code [http://www.iitk.ac.in/kangal/codes.shtml]
-    """
-    mr = 1 / len(problem.decisions)
+def polynomial_mutation(problem, individual):
+    from numpy.random import random
+    ETA_M_DEFAULT_ = 20.0
+    eta_m_=ETA_M_DEFAULT_
+    distributionIndex_ = eta_m_
+    output = jmoo_individual(problem, individual.decisionValues)
 
-    parent = individual.decisionValues
-    mutant = [0 for _ in individual.decisionValues]
+    probability = 1/len(problem.decisions)
+    for var in xrange(len(problem.decisions)):
+        if random() <= probability:
+            y = individual.decisionValues[var]
+            yU = problem.decisions[var].up
+            yL = problem.decisions[var].low
+            delta1 = (y - yL)/(yU - yL)
+            delta2 = (yU - y)/(yU - yL)
+            rnd = random()
 
-    for index, p in enumerate(parent):
-        if random() > mr:
-            mutant[index] = parent[index]
-            continue
+            mut_pow = 1.0/(eta_m_ + 1.0)
+            if rnd < 0.5:
+                xy = 1.0 - delta1
+                val = 2.0 * rnd + (1 - 2 * rnd) * (xy ** (distributionIndex_ + 1.0))
+                deltaq = val ** mut_pow - 1
+            else:
+                xy = 1.0 - delta2
+                val = 2.0 * (1.0-rnd) + 2.0 * (rnd-0.5) * (xy ** (distributionIndex_+1.0))
+                deltaq = 1.0 - (val ** mut_pow)
 
-        lower_bound = problem.decisions[index].low
-        upper_bound = problem.decisions[index].up
 
-        delta1 = (p - lower_bound) / (upper_bound - lower_bound)
-        delta2 = (upper_bound - p) / (upper_bound - lower_bound)
+            y +=  deltaq * (yU - yL)
+            if y < yL: y = yL
+            if y > yU: y = yU
 
-        mutation_power = 1 / (eta + 1)
+            output.decisionValues[var] = y
 
-        random_no = random()
+    return output
 
-        if random_no < 0.5:
-            xy = 1 - delta1
-            val = 2.0 * random_no + (1.0 - 2.0 * random_no) * (xy ** (eta + 1.0))
-            deltaq = val ** mutation_power - 1.0
-        else:
-            xy = 1 - delta2
-            val = 2.0 * (1 - random_no) + 2.0 * (random_no - 0.5) * (xy ** (eta + 1.0))
-            deltaq = 1.0 - val ** mutation_power
 
-        mutant[index] = max(lower_bound, min((parent[index] + deltaq * (upper_bound - lower_bound)), upper_bound))
-    individual.decisionValues = mutant
+def sbxcrossover(problem, parent1, parent2):
 
-    return individual
+    EPS = 1.0e-14
+    ETA_C_DEFAULT_ = 20.0
+    distribution_index = ETA_C_DEFAULT_
+    probability = 1
+    from numpy.random import random
+    offspring1 = jmoo_individual(problem, parent1.decisionValues)
+    offspring2 = jmoo_individual(problem, parent2.decisionValues)
+
+    number_of_variables = len(problem.decisions)
+    if random() <= probability:
+        for i in xrange(number_of_variables):
+            valuex1 = offspring1.decisionValues[i]
+            valuex2 = offspring2.decisionValues[i]
+            if random() <= 0.5:
+                if abs(valuex1 - valuex2) > EPS:
+                    if valuex1 < valuex2:
+                        y1 = valuex1
+                        y2 = valuex2
+                    else:
+                        y1 = valuex2
+                        y2 = valuex1
+
+                    yL = problem.decisions[i].low
+                    yU = problem.decisions[i].up
+                    rand = random()
+                    beta = 1.0 + (2.0 * (y1 - yL) / (y2 - y1))
+                    alpha = 2.0 - beta ** (-1 * (distribution_index + 1.0))
+
+                    if rand <= 1/alpha:
+                        betaq = (1.0 / (2.0 - rand * alpha)) ** (1.0 / (distribution_index + 1.0))
+                    else:
+                        betaq = (1.0 / (2.0 - rand * alpha)) ** (1.0 / (distribution_index + 1.0))
+
+                    c1 = 0.5 * ((y1 + y2) - betaq * (y2 - y1))
+                    beta = 1.0 + (2.0 * (yU - y2) / (y2 - y1))
+                    alpha = 2.0 - beta ** -(distribution_index + 1.0)
+
+                    if rand <= (1.0 / alpha):
+                        betaq = (rand * alpha) ** (1.0 / (distribution_index + 1.0))
+                    else:
+                        betaq = ((1.0 / (2.0 - rand * alpha)) ** (1.0 / (distribution_index + 1.0)))
+
+                    c2 = 0.5 * ((y1 + y2) + betaq * (y2 - y1))
+
+                    if c1 < yL: c1 = yL
+                    if c2 < yL: c2 = yL
+                    if c1 > yU: c1 = yU
+                    if c2 > yU: c2 = yU
+
+                    if random() <= 0.5:
+                        offspring1.decisionValues[i] = c2
+                        offspring2.decisionValues[i] = c1
+                    else:
+                        offspring1.decisionValues[i] = c1
+                        offspring2.decisionValues[i] = c2
+                else:
+                    offspring1.decisionValues[i] = valuex1
+                    offspring2.decisionValues[i] = valuex2
+            else:
+                offspring1.decisionValues[i] = valuex2
+                offspring2.decisionValues[i] = valuex1
+
+    return offspring1, offspring2
 
 
 def variation(problem, individual_index, population):
@@ -274,15 +378,14 @@ def variation(problem, individual_index, population):
     another_parent = individual_index
     while another_parent == individual_index: another_parent = randint(0, len(population)-1)
 
-    parent1 = population[individual_index]
-    parent2 = population[another_parent]
+    from copy import deepcopy
+    parent1 = deepcopy(population[individual_index])
+    parent2 = deepcopy(population[another_parent])
 
     child1, _ = sbxcrossover(problem, parent1, parent2)
+    mchild1 = polynomial_mutation(problem, child1)
+    mchild1.evaluate()  #checked| correct
 
-    mchild1 = sbxmutation(problem, child1)
-    mchild1.evaluate()
-    for decision in mchild1.decisionValues:
-        assert(0 <= decision <= 1), "Something is wrong| Specific for DTLZ models"
     assert(mchild1.valid is True), "Something is wrong| Check if the evaluation is complete"
     return mchild1
 
@@ -408,77 +511,31 @@ def convert_to_jmoo(problem, pareto_fronts):
 
     from itertools import chain
     assert(len(list(chain(*pareto_fronts))) <= len(lpopulation) + len(tpopulation)), "Non Dominated Sorting is wrong!"
-
-
     return lpopulation + tpopulation
 
-def perpendicular_distance(d, z):
-    """
-    :param d: reference point
-    :param z: individual from population
-    :return:  perpendicular distance
-    """
-    def dotproduct(pointa, pointb):
-        ret = 0
-        for i, j in zip(pointa, pointb):
-            ret += (i*j)
-        return ret
-    def magnitude(pointa):
-        sum = 0
-        for i in pointa:
-            sum += i ** 2
-        return sum ** 0.5
-
-    temp = (dotproduct(d, z) / (magnitude(d) * magnitude(z))) ** 2  # Dr. Deb's formula
-    distance = magnitude(z) * ((1 - temp) ** 0.5)
-    if distance < 0:
-        print d, magnitude(d)
-        print z, magnitude(z)
-        print "dot product: ", dotproduct(d, z)
-        print "blah: ", (magnitude(d) * magnitude(z))
-        print "temp: ", (dotproduct(d, z) / (magnitude(d) * magnitude(z))) ** 2
-        print distance
-    assert(distance >= 0), "Distance can't be less than 0"
-    return distance
-
-
-def perpendicular_distance2(ref, sol):
-    assert(len(ref) == len(sol)),"ref and sol should be of same length"
+def perpendicular_distance(ref, sol):
+    assert(len(ref) == len(sol)), "ref and sol should be of same length"
     ip =0
     refLenSQ = 0
 
     for j in xrange(len(ref)):
         ip += sol[j] * ref[j]
         refLenSQ += ref[j] * ref[j]
-
     refLenSQ **= 0.5
     d1 = abs(ip)/ refLenSQ
 
     d2 = 0
-
     for i in xrange(len(ref)):
         d2 += (sol[i] - d1 * (ref[i] / refLenSQ)) * (sol[i] - d1 * (ref[i] / refLenSQ))
-
     d2 **= 0.5
     return d2
+
 
 def associate(problem, population, reference_points):
     for individual in population:
         temp_min_value = 1e32
         for rp in reference_points:
             temp_distance = perpendicular_distance(rp.coordinates, individual.normalized)
-            check_temp_distance = perpendicular_distance2(rp.coordinates, individual.normalized)
-            if round(temp_distance, 4) != round(check_temp_distance, 4):
-                print temp_distance
-                print check_temp_distance
-                import pdb
-                pdb.set_trace()
-            # assert(temp_distance == check_temp_distance), "Something is wrong"
-            if temp_distance < 0:
-                print temp_distance
-                print rp.coordinates
-                print individual.normalized
-
             assert(temp_distance >= 0), "Something is wrong"
             if temp_distance < temp_min_value:
                 temp_min_value = temp_distance
@@ -489,13 +546,14 @@ def associate(problem, population, reference_points):
     return population
 
 
-def assignment(problem, fullpopulation, reference_points):
+def assignment(problem, fullpopulation0, reference_points):
 
+    from copy import deepcopy
+    fullpopulation = deepcopy(fullpopulation0)
     population = [pop for pop in fullpopulation if pop.front_no == 0]
     last_front = [pop for pop in fullpopulation if pop.front_no == -1]
 
     assert(len(population) + len(last_front) == len(fullpopulation)), "population + last_front == full_population"
-
 
     remain = jmoo_properties.MU - len(population)
     assert(remain <= len(last_front)), "remain should be less that last_front"
@@ -535,7 +593,7 @@ def assignment(problem, fullpopulation, reference_points):
                 from random import randint
                 index_number = randint(0, len(possible_options) - 1)
 
-            population.append(last_front[possible_options[index_number]])
+            population.append(deepcopy(last_front[possible_options[index_number]]))
             count_reference_points[id_to_consider] += 1
 
             last_front.pop(possible_options[index_number])
@@ -595,16 +653,11 @@ def nsgaiii_recombine2(problem, population, selectees, k):
     population = normalization(problem, population, intercept_point, ideal_point)
 
     divisions = division_dict[str(len(problem.objectives))]
-    reference_points = two_level_weight_vector_generator(divisions, len(problem.objectives))
-
-    # ------------------------------------------ For normalization checking
-    for rp in reference_points:
-        assert(sum(rp.coordinates) == 1), "Something's wrong"
-    # ------------------------------------------ For normalization checking
+    reference_points = two_level_weight_vector_generator(divisions, len(problem.objectives))  # is always constant | checked!
 
     population = associate(problem, population, reference_points)
     population = assignment(problem, population, reference_points)
-    for pop in population: clear_extra_fields(pop)
+    assert(len(population) == jmoo_properties.MU), "This function needs to generate remain number of population"
 
     return population, evaluate_no
 

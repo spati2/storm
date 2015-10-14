@@ -37,6 +37,22 @@ import jmoo_properties
 import os, sys, inspect
 
 
+
+def readpf(problem):
+    filename = "./Testing/PF/" + problem.name.split("_")[0] + "(" + str(len(problem.objectives)) + ")-PF.txt"
+    return [[float(num) for num in line.split()] for line in open(filename, "r").readlines()]
+
+def read_file(problem, filename):
+    population = []
+    for line in open(filename, "r").readlines():
+        if line == "\n": continue
+        decision = 7
+        objectives = 3
+        line = [float(a) for a in line.split()]
+        population.append(jmoo_individual(problem, line[:decision], None))
+    return population
+
+
 def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
     """
     ----------------------------------------------------------------------------
@@ -72,6 +88,10 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
     #     jmoo_properties.MU = population_size[problem.name.split("_")[-1]]
 
     population = problem.loadInitialPopulation(jmoo_properties.MU)
+
+
+    population = read_file(problem, "./Testing/Algorithms/NSGAIII/initial_population.txt")
+
     assert(len(population) == MU), "The population loaded from the file must be equal to MU"
 
 
@@ -90,6 +110,7 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
     
     while gen < jmoo_properties.PSI and stoppingCriteria is False:
         gen+= 1
+        print "Generation: ", gen, " | ",
         # # # # # # # # #
         # 4a) Selection #
         # # # # # # # # #
@@ -118,7 +139,10 @@ def jmoo_evo(problem, algorithm, repeat=-1, toStop = bstop):
         # 4d) Collect Stats #
         # # # # # # # # # # #
         statBox.update(population, gen, numNewEvals)
-        
+
+        from Techniques.IGD_Calculation import IGD
+        resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+        print IGD(resulting_pf, readpf(problem))
             
         # # # # # # # # # # # # # # # # # #
         # 4e) Evaluate Stopping Criteria  #

@@ -30,6 +30,7 @@ from Algorithms.DEAP.tools.emo import sortNondominated
 # Wrap the tests in the jmoo core framework
 tests = jmoo_test(problems, algorithms)
 IGD_Results = []
+random.seed(20)
 for problem in tests.problems:
     for algorithm in tests.algorithms:
         for repeat in xrange(repeats):
@@ -42,11 +43,8 @@ for problem in tests.problems:
 
             resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
             IGD_Results.append(IGD(resulting_pf, readpf(problem)))
-            print
-            import pdb
-            pdb.set_trace()
             print IGD(resulting_pf, readpf(problem))
-        IGD_ResultsIGD_R = sorted(IGD_Results)
+        IGD_Results = sorted(IGD_Results)
         print "Problem Name: ", problem.name
         print "Algorithm Name: ", algorithm.name
         print "- Generated New Population"

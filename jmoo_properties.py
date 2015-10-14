@@ -91,7 +91,7 @@ build_new_pop = False                                       # Whether or not to 
 
 
 # JMOO Universal Properties
-repeats = 1   #Repeats of each MOEA
+repeats = 10   #Repeats of each MOEA
 MU      = 92   #Population Size
 PSI     = 400    #Maximum number of generations
 

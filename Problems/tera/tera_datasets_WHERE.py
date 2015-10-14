@@ -1,15 +1,15 @@
 import csv
-from sklearn import tree
-import numpy as np
-from sklearn.tree import DecisionTreeClassifier
-import sys, os, inspect
+import sys
+import os
+import inspect
+
 from jmoo_objective import *
 from jmoo_decision import *
 from jmoo_problem import jmoo_problem
+
 parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../..")))
 if parentdir not in sys.path:
     sys.path.insert(0, parentdir)
-from Techniques.SMOTE import smote
 
 from WHERE.main import *
 

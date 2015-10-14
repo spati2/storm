@@ -84,7 +84,7 @@ class jmoo_problem(object):
                 problem.objectives[k-MU-1].med = float(p[1])
                 lownotfound = False
                 upnotfound = False
-                
+
                 if problem.objectives[k-MU-1].low == None:
                     problem.objectives[k-MU-1].low = float(p[0])
                     lownotfound = True

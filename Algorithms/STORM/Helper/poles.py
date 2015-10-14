@@ -4,7 +4,7 @@ cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(insp
 if cmd_subfolder not in sys.path:
     sys.path.insert(0, cmd_subfolder)
 
-from euclidean_distance import euclidean_distance
+from Techniques.euclidean_distance import euclidean_distance
 from ndimes import generate_direction
 from perpendicular_distance import perpendicular_distance
 from geometry import find_extreme_point, find_midpoint

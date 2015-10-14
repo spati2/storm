@@ -1,7 +1,5 @@
 from __future__ import division
 # from lib    import *
-from demos  import *
-from counts import *
 from fi     import *
 import os, sys, inspect
 
@@ -11,7 +9,7 @@ sys.path.insert(0, cmd_subfolder)
 parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../../")))
 if parentdir not in sys.path:
     sys.path.insert(0, parentdir)
-from Techniques.SMOTE import smote
+from Techniques import smote
 
 import sys
 sys.dont_write_bytecode = True
