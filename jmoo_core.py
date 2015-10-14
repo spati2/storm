@@ -150,9 +150,10 @@ class jmoo_test:
         return str(self.problems) + str(self.algorithms)
         
 class JMOO:
-    def __init__(self,tests,reports):
+    def __init__(self,tests,reports, configurations):
         self.tests = tests
         self.reports = reports
+        self.configurations = configurations
         
     def doTests(self):
 
@@ -162,9 +163,7 @@ class JMOO:
         representatives = []                        # List of resulting final generations (stat boxe datatype)
         for problem in self.tests.problems:
             for algorithm in self.tests.algorithms:
-                
-                # if algorithm.name == "NSGAIII":
-                #     jmoo_properties.MU = jmoo_properties.population_size[problem.name.split("_")[-1]]
+
                 
                 print "#<------- " + problem.name + " + " + algorithm.name + " ------->#"
                 
@@ -172,7 +171,7 @@ class JMOO:
                 backend = problem.name + "_" + algorithm.name + ".txt"
                 
                 # Decision Data
-                filename = problem.name + "-p" + str(MU) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives))+"_"+algorithm.name+DATA_SUFFIX
+                filename = problem.name + "-p" + str(self.configurations["Universal"]["Population_Size"]) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives))+"_"+algorithm.name+DATA_SUFFIX
                 dbt = open(DATA_PREFIX + DECISION_BIN_TABLE + "_" + filename, 'w')
                 sr = open(DATA_PREFIX + SUMMARY_RESULTS + filename, 'w')
                 rrs = open(DATA_PREFIX + RRS_TABLE + "_" + filename, 'w')
@@ -198,11 +197,11 @@ class JMOO:
 
                 IGD_Values = []
                 # Repeat Core
-                for repeat in range(repeats):
+                for repeat in range(self.configurations["Universal"]["Repeats"]):
                     
                     # Run
                     start = time.time()
-                    statBox = jmoo_evo(problem, algorithm, repeat)
+                    statBox = jmoo_evo(problem, algorithm, self.configurations)
                     end = time.time()
 
                     # Find best generation

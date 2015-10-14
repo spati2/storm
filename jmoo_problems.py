@@ -71,7 +71,7 @@ def initialPopulation(problem, n, path=""):
     for i in range(500):
         fitnesses.append( problem.evaluate(problem.generateInput()) )
     # Split Columns into Lists
-    print len(problem.objectives)
+
     fitnessColumns = [[fit[i] for fit in fitnesses] for i,obj in enumerate(problem.objectives)]
 
     # Calculate Medians and Spreads

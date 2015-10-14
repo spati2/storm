@@ -9,89 +9,12 @@ import os
 import sys
 import inspect
 
-parentdir = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0],"../../NSGAIII")))
-if parentdir not in sys.path:
-    sys.path.insert(0, parentdir)
-from normalize import easy_normalize
-# from normalize import normalize
-from ref_point import cover
-from associate import associate
-from niche import niching
-
 import os, sys, inspect
 cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0], "../../..")))
 if cmd_subfolder not in sys.path:
     sys.path.insert(0, cmd_subfolder)
 from jmoo_individual import *
 import jmoo_properties
-
-######################################
-#   NSGAIII                          #
-######################################
-def selNSGA3(problem, individuals, k):
-    """Apply NSGA-III selection operator on the *individuals*. Usually, the
-    size of *individuals* will be larger than *k* because any individual
-    present in *individuals* will appear in the returned list at most once.
-    Having the size of *individuals* equals to *k* will have no effect other
-    than sorting the population according according to their front rank. The
-    list returned contains references to the input *individuals*. For more
-    details on the NSGA-II operator see [Deb2002]_.
-
-    :param individuals: A list of individuals to select from.
-    :param k: The number of individuals to select.
-    :returns: A list of selected individuals.
-
-    Deb, Kalyanmoy, and Himanshu Jain. "An evolutionary many-objective optimization algorithm using
-    reference-point-based nondominated sorting approach, part i: Solving problems with box constraints."x
-    Evolutionary Computation, IEEE Transactions on 18.4 (2014): 577-601.
-    """
-    pareto_fronts = sortNondominated(individuals, k)
-    f_l_no = len(pareto_fronts) - 1
-
-
-    # The Non dominated sort stops as soon as it has sorted atleast MU(parent population) number of points
-    assert(len(list(chain(*pareto_fronts))) <= len(individuals)), "Non Dominated Sorting is wrong!"
-    assert(len(list(chain(*pareto_fronts))) >= len(individuals)/2), "Non Dominated Sorting is wrong!"
-
-    P_t_1_no = len(list(chain(*pareto_fronts[:-1])))
-    total_points_returned = len(list(chain(*pareto_fronts)))
-    population =[]
-
-    for front_no, front in enumerate(pareto_fronts):
-        for i, dIndividual in enumerate(front):
-            cells = []
-            for j in xrange(len(dIndividual)):
-                cells.append(dIndividual[j])
-            population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
-            population[-1].front_no = front_no
-
-    assert(len(population) == total_points_returned), "Conversation from DEAP to jmoo format failed"
-
-    Z_s = cover(len(problem.objectives))
-    Z_a = None
-    Z_r = None
-
-    if total_points_returned == k:
-        return population
-
-    K = k - P_t_1_no
-
-    # population = normalize(problem, population, Z_r, Z_s, Z_a) # Normalize doesn't work
-    population = easy_normalize(problem, population, Z_r, Z_s, Z_a)
-    population = associate(population, Z_s)
-
-    f_l = []
-    P_t_1 = []
-    for pop in population:
-        if pop.front_no == f_l_no: f_l.append(pop)
-        else:  P_t_1.append(pop)
-
-    assert(len(P_t_1) == P_t_1_no), "Length of the population other than last front is not correct"
-
-    P_t_1 = niching(K, len(Z_s), P_t_1, f_l)
-    assert(len(P_t_1) == jmoo_properties.MU), "Length is mismatched"
-    return P_t_1
-
 
 
 ######################################

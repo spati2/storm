@@ -44,8 +44,7 @@ algorithms = [
               # jmoo_SPEA2(),
               # jmoo_DE(),
               # jmoo_MOEAD(),
-              # jmoo_NSGAIII(),
-                jmoo_NSGAIII_New()
+              jmoo_NSGAIII(),
               ]
 
 problems =[
@@ -89,33 +88,36 @@ problems =[
 
 build_new_pop = False                                       # Whether or not to rebuild the initial population
 
-
-
-# JMOO Universal Properties
-repeats = 10   #Repeats of each MOEA
-MU      = 136   #Population Size
-PSI     = 1500    #Maximum number of generations
-
-# Properties of GALE
-GAMMA   = 0.15  #Constrained Mutation Parameter
-EPSILON = 1.00  #Continuous Domination Parameter
-LAMBDA =  3     #Number of lives for bstop
-
-# Propoerties of DE
-F = 0.75 # extrapolate amount
-CF = 0.3 # prob of cross over
-
-# Properties of MOEA/D
-T = 30  # Neighbourhood size
-MOEAD_F = 0.5
-MOEAD_CF = 1.0
-
-# Properties of Anywhere
-ANYWHERE_EXPLOSION = 5
-ANYWHERE_POLES = 20  # number of actual poles is 2 * ANYWHERE_POLES
-
-# Properties of NSGAIII
-# NSGA3_P = 5 # not required anymore since this is not strictly followed. Looked at nsga3 paper section V
+Configurations = {
+    "Universal": {
+        "Repeats" : 10,
+        "Population_Size" : 136,
+        "No_of_Generations" : 1500
+    },
+    "NSGAIII": {
+        "SBX_Probability": 1,
+        "ETA_C_DEFAULT_" : 30,
+        "ETA_M_DEFAULT_" : 20
+    },
+    "GALE": {
+        "GAMMA" : 0.15,  #Constrained Mutation Parameter
+        "EPSILON" : 1.00,  #Continuous Domination Parameter
+        "LAMBDA" :  3     #Number of lives for bstop
+    },
+    "DE": {
+        "F" : 0.75, # extrapolate amount
+        "CF" : 0.3, # prob of cross over
+    },
+    "MOEAD" : {
+        "T" : 30,  # Neighbourhood size
+        "MOEAD_F" : 0.5,
+        "MOEAD_CF" : 1.0,
+    },
+    "STORM": {
+        "STORM_EXPLOSION" : 5,
+        "STORM_POLES" : 20  # number of actual poles is 2 * ANYWHERE_POLES
+    }
+}
 
 
 # File Names

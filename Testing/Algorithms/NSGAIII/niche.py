@@ -62,7 +62,7 @@ for lf in last_front:
 print "length of the front -1 : ", len(population)
 print "length of the last front : ", len(last_front)
 
-from Algorithms.NSGAIII_New.nsgaiii_components import compute_ideal_points, compute_max_points, compute_extreme_points
+from Algorithms.NSGAIII.nsgaiii_components import compute_ideal_points, compute_max_points, compute_extreme_points
 
 ideal_point = compute_ideal_points(problem, population+last_front)
 print "Ideal point: ", ideal_point
@@ -73,11 +73,11 @@ print "Max point: ", max_point
 extreme_points = compute_extreme_points(problem, population+last_front, ideal_point)
 print "Extreme Points: ", extreme_points
 
-from Algorithms.NSGAIII_New.nsgaiii_components import compute_intercept_points
+from Algorithms.NSGAIII.nsgaiii_components import compute_intercept_points
 intercept_point = compute_intercept_points(problem, extreme_points, ideal_point, max_point)
 print "Intercept points: ", intercept_point
 
-from Algorithms.NSGAIII_New.nsgaiii_components import normalization
+from Algorithms.NSGAIII.nsgaiii_components import normalization
 normalized_population = normalization(problem, population+last_front, intercept_point, ideal_point)
 normal_values = [pop.normalized for pop in normalized_population]
 jmetal_population = read_normalized("normalized_result.txt")
@@ -96,7 +96,7 @@ for op in normal_values:
 
 print "Normalized Values are the same"
 
-from Algorithms.NSGAIII_New.nsgaiii_components import associate
+from Algorithms.NSGAIII.nsgaiii_components import associate
 reference_points = two_level_weight_vector_generator([12, 0], len(problem.objectives))
 jmetal_reference_points = read_reference("reference_point.txt")
 

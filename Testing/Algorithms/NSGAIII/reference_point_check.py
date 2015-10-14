@@ -16,7 +16,7 @@ def read_reference(filename):
 
 def test():
     compare = lambda a,b: len(a)==len(b) and len(a)==sum([1 for i,j in zip(a,b) if round(i, 5) == round(j,5)])
-    from Algorithms.NSGAIII_New.nsgaiii_components import associate
+    from Algorithms.NSGAIII.nsgaiii_components import associate
     reference_points = two_level_weight_vector_generator([12, 0], len(problem.objectives))
     jmetal_reference_points = read_reference("reference_point.txt")
 

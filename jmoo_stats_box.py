@@ -170,9 +170,7 @@ class jmoo_stats_box:
                     else: statBox.foam[o][statBox.numEval] = [change]
                 outString += str("%8.4f" % IBD) + "," + percentChange(IBD, statBox.referenceIBD, True, 0, 1) + "," + str("%8.4f" % IBS)
                 # print outString  + ", violations: " + str("%4.1f" % violationsPercent)
-                import sys
-                print "#",
-                sys.stdout.flush()
+
 
             fa.write(outString + "\n")
         

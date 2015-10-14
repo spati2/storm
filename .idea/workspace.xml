@@ -2,12 +2,446 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3320aa-1484-4329-99a5-9539995d5922" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_19_15-p136-d19-o15-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_19_15-p136-d19-o15-dataset.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII/associate.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII/binary_crossover.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII/generation.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII/niche.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII/normalize.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII/polynomial_mutation.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII/ref_point.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII/ref_point_2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII_New/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/0.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/10.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/100.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/101.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/102.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/103.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/104.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/105.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/106.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/107.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/108.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/109.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/11.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/110.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/111.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/112.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/113.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/114.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/115.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/116.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/117.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/118.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/119.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/12.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/120.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/121.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/122.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/123.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/124.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/125.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/126.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/127.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/128.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/129.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/13.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/130.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/131.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/132.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/133.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/134.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/135.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/136.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/137.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/138.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/139.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/14.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/140.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/141.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/142.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/143.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/144.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/145.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/146.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/147.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/148.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/149.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/15.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/150.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/151.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/152.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/153.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/154.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/155.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/156.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/157.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/158.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/159.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/16.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/160.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/161.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/162.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/163.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/164.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/165.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/166.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/167.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/168.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/169.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/17.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/170.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/171.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/172.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/173.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/174.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/175.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/176.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/177.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/178.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/179.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/18.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/180.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/181.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/182.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/183.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/184.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/185.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/186.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/187.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/188.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/189.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/19.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/190.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/191.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/192.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/193.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/194.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/195.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/196.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/197.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/198.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/199.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/20.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/200.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/201.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/202.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/203.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/204.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/205.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/206.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/207.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/208.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/209.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/21.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/210.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/211.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/212.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/213.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/214.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/215.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/216.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/217.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/218.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/219.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/22.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/220.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/221.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/222.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/223.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/224.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/225.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/226.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/227.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/228.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/229.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/23.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/230.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/231.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/232.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/233.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/234.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/235.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/236.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/237.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/238.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/239.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/24.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/240.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/241.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/242.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/243.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/244.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/245.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/246.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/247.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/248.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/249.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/25.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/250.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/251.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/252.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/253.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/254.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/255.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/256.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/257.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/258.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/259.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/26.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/260.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/261.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/262.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/263.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/264.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/265.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/266.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/267.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/268.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/269.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/27.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/270.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/271.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/272.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/273.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/274.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/275.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/276.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/277.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/278.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/279.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/28.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/280.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/281.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/282.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/283.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/284.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/285.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/286.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/287.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/288.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/289.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/29.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/290.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/291.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/292.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/293.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/294.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/295.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/296.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/297.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/298.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/299.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/30.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/300.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/301.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/302.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/303.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/304.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/305.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/306.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/307.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/308.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/309.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/31.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/310.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/311.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/312.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/313.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/314.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/315.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/316.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/317.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/318.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/319.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/32.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/320.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/321.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/322.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/323.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/324.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/325.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/326.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/327.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/328.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/329.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/33.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/330.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/331.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/332.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/333.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/334.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/335.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/336.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/337.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/338.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/339.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/34.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/340.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/341.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/342.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/343.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/344.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/345.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/346.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/347.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/348.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/349.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/35.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/350.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/351.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/352.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/353.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/354.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/355.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/356.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/357.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/358.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/359.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/36.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/360.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/361.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/362.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/363.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/364.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/365.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/366.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/367.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/368.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/369.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/37.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/370.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/371.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/372.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/373.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/374.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/375.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/376.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/377.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/378.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/379.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/38.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/380.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/381.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/382.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/383.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/384.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/385.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/386.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/387.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/388.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/389.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/39.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/390.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/391.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/392.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/393.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/394.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/395.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/396.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/397.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/398.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/399.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/40.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/41.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/42.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/43.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/44.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/45.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/46.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/47.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/48.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/49.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/50.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/51.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/52.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/53.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/54.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/55.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/56.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/57.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/58.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/59.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/6.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/60.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/61.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/62.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/63.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/64.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/65.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/66.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/67.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/68.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/69.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/7.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/70.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/71.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/72.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/73.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/74.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/75.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/76.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/77.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/78.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/79.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/8.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/80.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/81.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/82.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/83.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/84.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/85.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/86.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/87.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/88.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/89.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/9.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/90.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/91.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/92.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/93.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/94.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/95.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/96.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/97.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/98.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/99.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/assignment.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/associated.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/initial_population.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/jmetal_PF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/jmetal_PF.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/lastfront.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/normalized_result.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/population.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/reference_point.txt" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py" afterPath="$PROJECT_DIR$/Algorithms/NSGAIII/nsgaiii_components.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII_New/unit_test.py" afterPath="$PROJECT_DIR$/Algorithms/NSGAIII/unit_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_12_8-p156-d12-o8-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_12_8-p156-d12-o8-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_7_3-p92-d7-o3-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_7_3-p92-d7-o3-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_9_5-p212-d9-o5-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_9_5-p212-d9-o5-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/DEAP/tools/__init__.py" afterPath="$PROJECT_DIR$/Algorithms/DEAP/tools/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/DEAP/tools/emo.py" afterPath="$PROJECT_DIR$/Algorithms/DEAP/tools/emo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_algorithms.py" afterPath="$PROJECT_DIR$/jmoo_algorithms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_core.py" afterPath="$PROJECT_DIR$/jmoo_core.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_interface.py" afterPath="$PROJECT_DIR$/jmoo_interface.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_jmoea.py" afterPath="$PROJECT_DIR$/jmoo_jmoea.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_problems.py" afterPath="$PROJECT_DIR$/jmoo_problems.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_properties.py" afterPath="$PROJECT_DIR$/jmoo_properties.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py" afterPath="$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_stats_box.py" afterPath="$PROJECT_DIR$/jmoo_stats_box.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/niche.py" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/niche.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/reference_point_check.py" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/reference_point_check.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_12_8-p156-d12-o8_NSGA3.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_12_8-p156-d12-o8_NSGA3.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_19_15-p136-d19-o15_NSGA3.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_19_15-p136-d19-o15_NSGA3.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_7_3-p92-d7-o3_NSGA3.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_7_3-p92-d7-o3_NSGA3.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p212-d9-o5_NSGA3.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p212-d9-o5_NSGA3.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="storm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +462,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jmoo_properties.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jmoo_properties.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28399312">
-              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="19" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="19" />
               <folding>
                 <element signature="e#1078#1107#0" expanded="true" />
               </folding>
@@ -40,73 +474,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nsgaiii_components.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.037037">
-              <caret line="475" column="0" selection-start-line="475" selection-start-column="0" selection-end-line="475" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.45876288">
+              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#2757#4494#0" expanded="false" />
+                <element signature="e#4518#6256#0" expanded="false" />
+                <element signature="e#6280#8019#0" expanded="false" />
+                <element signature="e#8045#9790#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cross_over_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/cross_over_test.py">
+      <file leaf-file-name="jmoo_stats_box.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmoo_stats_box.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="niche.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/niche.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="106" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reference_point_check.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/reference_point_check.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jmetal_igd_check.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/jmetal_igd_check.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jmoo_jmoea.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jmoo_jmoea.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+              <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,7 +514,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Problems/Tera/WHERE/fi.py" />
         <option value="$PROJECT_DIR$/Problems/Tera/WHERE/dtree.py" />
         <option value="$PROJECT_DIR$/Problems/Tera/WHERE/main.py" />
         <option value="$PROJECT_DIR$/Algorithms/NSGAIII/polynomial_mutation.py" />
@@ -136,13 +522,9 @@
         <option value="$PROJECT_DIR$/joes_decision_binner.py" />
         <option value="$PROJECT_DIR$/Techniques/euclidean_distance.py" />
         <option value="$PROJECT_DIR$/Algorithms/deap/tools/emo.py" />
-        <option value="$PROJECT_DIR$/jmoo_problems.py" />
-        <option value="$PROJECT_DIR$/Algorithms/DEAP/tools/__init__.py" />
         <option value="$PROJECT_DIR$/Algorithms/DEAP/__init__.py" />
         <option value="$PROJECT_DIR$/Algorithms/NSGAIII_New/unit_test.py" />
         <option value="$PROJECT_DIR$/joes_moo_charter.py" />
-        <option value="$PROJECT_DIR$/Algorithms/NSGAIII/nsgaiii_components.py" />
-        <option value="$PROJECT_DIR$/jmoo_algorithms.py" />
         <option value="$PROJECT_DIR$/Algorithms/NSGAIII/normalize.py" />
         <option value="$PROJECT_DIR$/Algorithms/NSGAIII/associate.py" />
         <option value="$PROJECT_DIR$/Algorithms/NSGAIII/binary_crossover.py" />
@@ -161,23 +543,28 @@
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Helper/__init__.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/__init__.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Helper/IGD.py" />
-        <option value="$PROJECT_DIR$/jmoo_core.py" />
-        <option value="$PROJECT_DIR$/jmoo_problem.py" />
         <option value="$PROJECT_DIR$/joes_stats_suite.py" />
         <option value="$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py" />
         <option value="$PROJECT_DIR$/Algorithms/STORM/storm_components.py" />
         <option value="$PROJECT_DIR$/Algorithms/STORM/Helper/poles.py" />
         <option value="$PROJECT_DIR$/Algorithms/STORM/Helper/scores.py" />
-        <option value="$PROJECT_DIR$/jmoo_stats_box.py" />
-        <option value="$PROJECT_DIR$/Algorithms/DEAP/tools/emo.py" />
         <option value="$PROJECT_DIR$/Algorithms/DE/de_components.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/niche.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/reference_point_check.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/jmetal_igd_check.py" />
-        <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" />
-        <option value="$PROJECT_DIR$/jmoo_jmoea.py" />
+        <option value="$PROJECT_DIR$/jmoo_interface.py" />
+        <option value="$PROJECT_DIR$/jmoo_core.py" />
         <option value="$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py" />
+        <option value="$PROJECT_DIR$/jmoo_algorithms.py" />
+        <option value="$PROJECT_DIR$/Algorithms/DEAP/tools/emo.py" />
+        <option value="$PROJECT_DIR$/Algorithms/DEAP/tools/__init__.py" />
         <option value="$PROJECT_DIR$/jmoo_properties.py" />
+        <option value="$PROJECT_DIR$/Algorithms/NSGAIII/nsgaiii_components.py" />
+        <option value="$PROJECT_DIR$/jmoo_problem.py" />
+        <option value="$PROJECT_DIR$/jmoo_jmoea.py" />
+        <option value="$PROJECT_DIR$/jmoo_problems.py" />
+        <option value="$PROJECT_DIR$/jmoo_stats_box.py" />
+        <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" />
       </list>
     </option>
   </component>
@@ -185,7 +572,6 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1886" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="1008" />
@@ -265,38 +651,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="NSGAIII" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Algorithms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NSGAIII_New" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -465,10 +819,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1886" y="23" width="1920" height="1008" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1008" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33660132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30458516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278867" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -506,32 +860,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Algorithms/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/joes_moo_charter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-          <folding>
-            <element signature="e#1086#1096#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_fitness.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm40/python_stubs/348993582/itertools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -540,45 +868,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII_New/unit_test.py">
+    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/unit_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding>
             <element signature="e#0#15#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/binary_crossover.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/associate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.21170396">
-          <caret line="43" column="49" selection-start-line="30" selection-start-column="0" selection-end-line="52" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/nsgaiii_components.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8192771">
-          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/ref_point.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -590,74 +886,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/niche.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33212996">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/population.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79345953">
-          <caret line="87" column="93" selection-start-line="87" selection-start-column="93" selection-end-line="87" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/lastfront.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77452666">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/normalized_result.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="40" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/reference_point.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/non_dominated_sorting.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/normalize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0830325">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/associated.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/assignment.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.740741">
-          <caret line="85" column="41" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -676,30 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3321859">
           <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/initial_population.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79345953">
-          <caret line="91" column="178" selection-start-line="91" selection-start-column="178" selection-end-line="91" selection-end-column="178" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/jmetal_PF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5301205">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_problems.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="678" column="38" selection-start-line="678" selection-start-column="38" selection-end-line="678" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -744,26 +952,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Helper/IGD.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -796,42 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/poles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/scores.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_stats_box.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/DEAP/tools/emo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms/DE/de_components.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.962963">
@@ -847,16 +1003,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_algorithms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
-          <folding>
-            <element signature="e#1065#1097#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,46 +1038,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py">
+    <entry file="file://$PROJECT_DIR$/Algorithms/DEAP/tools/emo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#31#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/DEAP/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_problem.py">
+    <entry file="file://$PROJECT_DIR$/Algorithms/DEAP/tools/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.31325302">
-          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py">
+    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/scores.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.037037">
-          <caret line="475" column="0" selection-start-line="475" selection-start-column="0" selection-end-line="475" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5542312">
+          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/poles.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.76877236">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/better.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/ndimes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/perpendicular_distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/nudge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/mutator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/geometry.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_algorithms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+          <folding>
+            <element signature="e#1065#1097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="157" column="8" selection-start-line="157" selection-start-column="8" selection-end-line="157" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/nsgaiii_components.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.25926">
+          <caret line="225" column="36" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_jmoea.py">
+    <entry file="file://$PROJECT_DIR$/jmoo_interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85924715">
+          <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_problem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28399312">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="19" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="19" />
           <folding>
             <element signature="e#1078#1107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_jmoea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="113" column="36" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_problems.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9507389">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_stats_box.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45876288">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding>
+            <element signature="e#2757#4494#0" expanded="false" />
+            <element signature="e#4518#6256#0" expanded="false" />
+            <element signature="e#6280#8019#0" expanded="false" />
+            <element signature="e#8045#9790#0" expanded="false" />
           </folding>
         </state>
       </provider>

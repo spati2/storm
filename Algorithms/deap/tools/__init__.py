@@ -22,7 +22,7 @@ also contains utility tools to enhance the basic algorithms with
 """
 
 from .crossover import *
-from .emo import *
+# from .emo import *
 from .init import *
 from .migration import *
 from .mutation import *

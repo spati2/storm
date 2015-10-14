@@ -42,7 +42,7 @@ from Algorithms.DE.de_components import *
 from Algorithms.MOEA_D.moead_components import *
 from Algorithms.NSGAIII.nsgaiii_components import *
 from Algorithms.STORM.storm_components import *
-from Algorithms.NSGAIII_New.nsgaiii_components import *
+from Algorithms.NSGAIII.nsgaiii_components import *
 
 
 from jmoo_individual import *
@@ -110,16 +110,6 @@ class jmoo_MOEAD:
         self.type = '*'
 
 class jmoo_NSGAIII:
-    def __init__(self, color="blue"):
-        self.name = "NSGA3"
-        self.initializer = None
-        self.selector = nsgaiii_selector
-        self.adjustor = nsgaiii_sbx
-        self.recombiner = nsgaiii_recombine
-        self.color = color
-        self.type = 'p'
-
-class jmoo_NSGAIII_New:
     def __init__(self, color="blue"):
         self.name = "NSGA3"
         self.initializer = None

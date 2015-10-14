@@ -9,145 +9,216 @@ def readpf(problem):
     filename = "./Testing/PF/" + problem.name.split("_")[0] + "(" + str(len(problem.objectives)) + ")-PF.txt"
     return [[float(num) for num in line.split()] for line in open(filename, "r").readlines()]
 
-
-def convert_jmoo(pareto_fronts):
-    tpopulation = []
-    for front_no, front in enumerate(pareto_fronts[:1]):
-        for i, dIndividual in enumerate(front):
-            cells = []
-            for j in xrange(len(dIndividual)):
-                cells.append(dIndividual[j])
-            tpopulation.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
-    return tpopulation
-
 from Techniques.IGD_Calculation import IGD
-algorithms = [jmoo_NSGAIII_New()]
-problems = [dtlz1(19, 15)]
-os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
+algorithms = [jmoo_NSGAIII()]
+Configurations = {
+    "Universal": {
+        "Repeats" : 10,
+        "Population_Size" : 136,
+        "No_of_Generations" : 1500
+    },
+    "NSGAIII": {
+        "SBX_Probability": 1,
+        "ETA_C_DEFAULT_" : 30,
+        "ETA_M_DEFAULT_" : 20
+    }
+}
 
-from Algorithms.DEAP.tools.emo import sortNondominated
-
-# Wrap the tests in the jmoo core framework
-tests = jmoo_test(problems, algorithms)
-IGD_Results = []
-random.seed(20)
-for problem in tests.problems:
-    for algorithm in tests.algorithms:
-        for repeat in xrange(repeats):
-            initialPopulation(problem, MU)
-            statBox = jmoo_evo(problem, algorithm, repeat)
-
-            # Individuals = jmoo_algorithms.deap_format(problem, statBox.box[-1].population)
-            # pareto_fronts = sortNondominated(Individuals, jmoo_properties.MU)
-            # result_population = convert_jmoo(pareto_fronts)
-
-            resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
-            IGD_Results.append(IGD(resulting_pf, readpf(problem)))
-            print IGD(resulting_pf, readpf(problem))
-        IGD_Results = sorted(IGD_Results)
-        print "Problem Name: ", problem.name
-        print "Algorithm Name: ", algorithm.name
-        print "- Generated New Population"
-        print "- Ran the algorithm for ", repeats
-        print "- The SBX crossover and mutation parameters are correct"
-        print "Best: ", IGD_Results[0]
-        print "Worst: ", IGD_Results[-1]
-        print "Median: ", IGD_Results[int(len(IGD_Results)/2)]
+def problems_runner(list_args):
+    problems = [list_args[0]]
+    Configurations["Universal"]["Population_Size"] = list_args[1]
+    Configurations["Universal"]["No_of_Generations"] = list_args[2]
 
 
-# jmetal = [[0.292,0.042,0.167],
-# [0,0.208,0.292],
-# [0.125,0.043,0.333],
-# [0.042,0.334,0.125],
-# [0.334,0.042,0.125],
-# [0.334,0.125,0.042],
-# [0.083,0.125,0.292],
-# [0.125,0.334,0.042],
-# [0.167,0.334,0],
-# [0.042,0.167,0.292],
-# [0,0.459,0.042],
-# [0.168,0.126,0.207],
-# [0.25,0.126,0.125],
-# [0.208,0,0.292],
-# [0.292,0,0.209],
-# [0.042,0,0.459],
-# [0.167,0.209,0.126],
-# [0.209,0.125,0.167],
-# [0,0.041,0.46],
-# [0.083,0.083,0.334],
-# [0.042,0.376,0.083],
-# [0.249,0.085,0.167],
-# [0.25,0.251,0],
-# [0,0.125,0.375],
-# [0.376,0,0.125],
-# [0.209,0.041,0.25],
-# [0.083,0.209,0.209],
-# [0.042,0.042,0.417],
-# [0,0.25,0.25],
-# [0.167,0.083,0.251],
-# [0.376,0.084,0.042],
-# [0.125,0.125,0.25],
-# [0.126,0,0.375],
-# [0,0,0.501],
-# [0.125,0.084,0.292],
-# [0,0.292,0.209],
-# [0.042,0.251,0.209],
-# [0.125,0.209,0.167],
-# [0.167,0,0.334],
-# [0.417,0.042,0.042],
-# [0,0.167,0.334],
-# [0.209,0.209,0.083],
-# [0,0.501,0],
-# [0,0.334,0.167],
-# [0.083,0.042,0.376],
-# [0.083,0.376,0.042],
-# [0.043,0.417,0.042],
-# [0.167,0.292,0.042],
-# [0.25,0.04,0.21],
-# [0.124,0.168,0.209],
-# [0.292,0.209,0],
-# [0.042,0.292,0.167],
-# [0.083,0.167,0.251],
-# [0.21,0.083,0.208],
-# [0.459,0.042,0],
-# [0.125,0.251,0.125],
-# [0.167,0.042,0.292],
-# [0.125,0.375,0],
-# [0.167,0.25,0.084],
-# [0.042,0.084,0.375],
-# [0.376,0.125,0],
-# [0.209,0.292,0],
-# [0.209,0.251,0.041],
-# [0.208,0.168,0.125],
-# [0.417,0,0.083],
-# [0.334,0.167,0],
-# [0.25,0.209,0.042],
-# [0.041,0.209,0.251],
-# [0.334,0.083,0.084],
-# [0.041,0.459,0],
-# [0.167,0.167,0.167],
-# [0.292,0.167,0.042],
-# [0,0.376,0.125],
-# [0.292,0.084,0.125],
-# [0.334,0.001,0.167],
-# [0.251,0,0.251],
-# [0,0.084,0.417],
-# [0.084,0.418,0],
-# [0.292,0.126,0.083],
-# [0.251,0.167,0.084],
-# [0.501,0,0],
-# [0.376,0.042,0.083],
-# [0.083,0.334,0.084],
-# [0,0.417,0.083],
-# [0.417,0.084,0],
-# [0.459,0,0.042],
-# [0.084,0.25,0.167],
-# [0.083,0.292,0.125],
-# [0.042,0.125,0.334],
-# [0.125,0.292,0.083],
-# [0.083,0,0.417],
-# [0.235,0.217,0.048]]
-#
-#
-#
-# print IGD(jmetal, readpf(dtlz1(7, 3)))
+    os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
+    # Wrap the tests in the jmoo core framework
+    tests = jmoo_test(problems, algorithms)
+    IGD_Results = []
+    random.seed(20)
+    for problem in tests.problems:
+        print problem.name, " ",
+        for algorithm in tests.algorithms:
+            for repeat in xrange(Configurations["Universal"]["Repeats"]):
+                print repeat, " ",
+                import sys
+                sys.stdout.flush()
+                initialPopulation(problem, Configurations["Universal"]["Population_Size"])
+                statBox = jmoo_evo(problem, algorithm, Configurations)
+
+                resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+                IGD_Results.append(IGD(resulting_pf, readpf(problem)))
+                print IGD(resulting_pf, readpf(problem))
+            IGD_Results = sorted(IGD_Results)
+
+            results_string = ""
+            results_string += "Problem Name: ", problem.name
+            results_string += "Algorithm Name: ", algorithm.name
+            results_string += "- Generated New Population"
+            results_string += "- Ran the algorithm for ", Configurations["Universal"]["Repeats"]
+            results_string += "- The SBX crossover and mutation parameters are correct"
+            results_string += "Best: ", IGD_Results[0]
+            results_string += "Worst: ", IGD_Results[-1]
+            results_string += "Median: ", IGD_Results[int(len(IGD_Results)/2)]
+
+            filename = "./Results/" + problem.name + ".txt"
+            f = open(filename, "w")
+            f.write(results_string)
+            f.close()
+
+def dtlz_7_3():
+    Configurations["Universal"]["Population_Size"] = 92
+    Configurations["Universal"]["No_of_Generations"] = 400
+
+    problems = [dtlz1(7, 3)]
+    os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
+    # Wrap the tests in the jmoo core framework
+    tests = jmoo_test(problems, algorithms)
+    IGD_Results = []
+    random.seed(20)
+    for problem in tests.problems:
+        for algorithm in tests.algorithms:
+            for repeat in xrange(Configurations["Universal"]["Repeats"]):
+                initialPopulation(problem, Configurations["Universal"]["Population_Size"])
+                statBox = jmoo_evo(problem, algorithm, Configurations)
+
+                resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+                IGD_Results.append(IGD(resulting_pf, readpf(problem)))
+                print IGD(resulting_pf, readpf(problem))
+            IGD_Results = sorted(IGD_Results)
+
+            results_string = ""
+            results_string += "Problem Name: ", problem.name
+            results_string += "Algorithm Name: ", algorithm.name
+            results_string += "- Generated New Population"
+            results_string += "- Ran the algorithm for ", Configurations["Universal"]["Repeats"]
+            results_string += "- The SBX crossover and mutation parameters are correct"
+            results_string += "Best: ", IGD_Results[0]
+            results_string += "Worst: ", IGD_Results[-1]
+            results_string += "Median: ", IGD_Results[int(len(IGD_Results)/2)]
+
+            filename = "./Results/" + problem.name + ".txt"
+            f = open(filename, "w")
+            f.write(results_string)
+            f.close()
+
+
+def dtlz1_9_5():
+    Configurations["Universal"]["Population_Size"] = 212
+    Configurations["Universal"]["No_of_Generations"] = 600
+
+    problems = [dtlz1(9, 5)]
+    os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
+    # Wrap the tests in the jmoo core framework
+    tests = jmoo_test(problems, algorithms)
+    IGD_Results = []
+    random.seed(20)
+    for problem in tests.problems:
+        for algorithm in tests.algorithms:
+            for repeat in xrange(Configurations["Universal"]["Repeats"]):
+                initialPopulation(problem, Configurations["Universal"]["Population_Size"])
+                statBox = jmoo_evo(problem, algorithm, Configurations)
+
+                resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+                IGD_Results.append(IGD(resulting_pf, readpf(problem)))
+                print IGD(resulting_pf, readpf(problem))
+            IGD_Results = sorted(IGD_Results)
+
+            results_string = ""
+            results_string += "Problem Name: ", problem.name
+            results_string += "Algorithm Name: ", algorithm.name
+            results_string += "- Generated New Population"
+            results_string += "- Ran the algorithm for ", Configurations["Universal"]["Repeats"]
+            results_string += "- The SBX crossover and mutation parameters are correct"
+            results_string += "Best: ", IGD_Results[0]
+            results_string += "Worst: ", IGD_Results[-1]
+            results_string += "Median: ", IGD_Results[int(len(IGD_Results)/2)]
+
+            filename = "./Results/" + problem.name + ".txt"
+            f = open(filename, "w")
+            f.write(results_string)
+            f.close()
+
+def dtlz1_12_8():
+    Configurations["Universal"]["Population_Size"] = 156
+    Configurations["Universal"]["No_of_Generations"] = 750
+
+    problems = [dtlz1(12, 8)]
+    os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
+    # Wrap the tests in the jmoo core framework
+    tests = jmoo_test(problems, algorithms)
+    IGD_Results = []
+    random.seed(20)
+    for problem in tests.problems:
+        for algorithm in tests.algorithms:
+            for repeat in xrange(Configurations["Universal"]["Repeats"]):
+                initialPopulation(problem, Configurations["Universal"]["Population_Size"])
+                statBox = jmoo_evo(problem, algorithm, Configurations)
+
+                resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+                IGD_Results.append(IGD(resulting_pf, readpf(problem)))
+                print IGD(resulting_pf, readpf(problem))
+            IGD_Results = sorted(IGD_Results)
+
+            results_string = ""
+            results_string += "Problem Name: ", problem.name
+            results_string += "Algorithm Name: ", algorithm.name
+            results_string += "- Generated New Population"
+            results_string += "- Ran the algorithm for ", Configurations["Universal"]["Repeats"]
+            results_string += "- The SBX crossover and mutation parameters are correct"
+            results_string += "Best: ", IGD_Results[0]
+            results_string += "Worst: ", IGD_Results[-1]
+            results_string += "Median: ", IGD_Results[int(len(IGD_Results)/2)]
+
+            filename = "./Results/" + problem.name + ".txt"
+            f = open(filename, "w")
+            f.write(results_string)
+            f.close()
+
+
+def dtlz1_14_10():
+    Configurations["Universal"]["Population_Size"] = 276
+    Configurations["Universal"]["No_of_Generations"] = 1000
+
+    problems = [ dtlz1(14, 10)]
+    os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
+    # Wrap the tests in the jmoo core framework
+    tests = jmoo_test(problems, algorithms)
+    IGD_Results = []
+    random.seed(20)
+    for problem in tests.problems:
+        for algorithm in tests.algorithms:
+            for repeat in xrange(Configurations["Universal"]["Repeats"]):
+                initialPopulation(problem, Configurations["Universal"]["Population_Size"])
+                statBox = jmoo_evo(problem, algorithm, Configurations)
+
+                resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+                IGD_Results.append(IGD(resulting_pf, readpf(problem)))
+                print IGD(resulting_pf, readpf(problem))
+            IGD_Results = sorted(IGD_Results)
+
+            results_string = ""
+            results_string += "Problem Name: ", problem.name
+            results_string += "Algorithm Name: ", algorithm.name
+            results_string += "- Generated New Population"
+            results_string += "- Ran the algorithm for ", Configurations["Universal"]["Repeats"]
+            results_string += "- The SBX crossover and mutation parameters are correct"
+            results_string += "Best: ", IGD_Results[0]
+            results_string += "Worst: ", IGD_Results[-1]
+            results_string += "Median: ", IGD_Results[int(len(IGD_Results)/2)]
+
+            filename = "./Results/" + problem.name + ".txt"
+            f = open(filename, "w")
+            f.write(results_string)
+            f.close()
+
+
+# dtlz1_14_10()
+problems = [
+    [dtlz1(7,3), 92, 400], [dtlz1(9, 5), 212, 600], [dtlz1(12, 8), 156, 750], [dtlz1(14, 10), 276, 1000], [dtlz1(19, 15), 136, 1500],
+    [dtlz2(12, 3), 92, 250], [dtlz2(14, 5), 212, 350], [dtlz2(17, 8), 156, 500], [dtlz2(19, 10), 276, 750], [dtlz2(24, 15), 136, 1000],
+    [dtlz3(12, 3), 92, 1000], [dtlz3(14, 5), 212, 1000], [dtlz3(17, 8), 156, 1000], [dtlz3(19, 10), 276, 1500], [dtlz3(24, 15), 136, 2000],
+    [dtlz4(12, 3), 92, 600], [dtlz4(14, 5), 212, 1000], [dtlz4(17, 8), 156, 1250], [dtlz4(19, 10), 276, 2000], [dtlz4(24, 15), 136, 3000],
+        ]
+
+for problem in problems:
+    problems_runner(problem)
