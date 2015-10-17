@@ -13,7 +13,7 @@ from Techniques.IGD_Calculation import IGD
 algorithms = [jmoo_NSGAIII()]
 Configurations = {
     "Universal": {
-        "Repeats" : 10,
+        "Repeats" : 5,
         "Population_Size" : 136,
         "No_of_Generations" : 1500
     },
@@ -30,11 +30,10 @@ def problems_runner(list_args):
     Configurations["Universal"]["No_of_Generations"] = list_args[2]
 
 
-    os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
+
     # Wrap the tests in the jmoo core framework
     tests = jmoo_test(problems, algorithms)
     IGD_Results = []
-    random.seed(20)
     for problem in tests.problems:
         print problem.name, " ",
         for algorithm in tests.algorithms:
@@ -51,16 +50,16 @@ def problems_runner(list_args):
             IGD_Results = sorted(IGD_Results)
 
             results_string = ""
-            results_string += "Problem Name: ", problem.name
-            results_string += "Algorithm Name: ", algorithm.name
-            results_string += "- Generated New Population"
-            results_string += "- Ran the algorithm for ", Configurations["Universal"]["Repeats"]
-            results_string += "- The SBX crossover and mutation parameters are correct"
-            results_string += "Best: ", IGD_Results[0]
-            results_string += "Worst: ", IGD_Results[-1]
-            results_string += "Median: ", IGD_Results[int(len(IGD_Results)/2)]
+            results_string += "Problem Name: " + str(problem.name) + "\n"
+            results_string += "Algorithm Name: "+ str(algorithm.name) + "\n"
+            results_string += "- Generated New Population" + "\n"
+            results_string += "- Ran the algorithm for "+ str(Configurations["Universal"]["Repeats"]) + "\n"
+            results_string += "- The SBX crossover and mutation parameters are correct" + "\n"
+            results_string += "Best: " + str(IGD_Results[0]) + "\n"
+            results_string += "Worst: " + str(IGD_Results[-1]) + "\n"
+            results_string += "Median: " + str(IGD_Results[int(len(IGD_Results)/2)]) + "\n"
 
-            filename = "./Results/" + problem.name + ".txt"
+            filename = "./Testing/Algorithms/NSGAIII/Results/" + str(problem.name) + ".txt"
             f = open(filename, "w")
             f.write(results_string)
             f.close()
@@ -214,11 +213,13 @@ def dtlz1_14_10():
 
 # dtlz1_14_10()
 problems = [
+
     [dtlz1(7,3), 92, 400], [dtlz1(9, 5), 212, 600], [dtlz1(12, 8), 156, 750], [dtlz1(14, 10), 276, 1000], [dtlz1(19, 15), 136, 1500],
     [dtlz2(12, 3), 92, 250], [dtlz2(14, 5), 212, 350], [dtlz2(17, 8), 156, 500], [dtlz2(19, 10), 276, 750], [dtlz2(24, 15), 136, 1000],
     [dtlz3(12, 3), 92, 1000], [dtlz3(14, 5), 212, 1000], [dtlz3(17, 8), 156, 1000], [dtlz3(19, 10), 276, 1500], [dtlz3(24, 15), 136, 2000],
     [dtlz4(12, 3), 92, 600], [dtlz4(14, 5), 212, 1000], [dtlz4(17, 8), 156, 1250], [dtlz4(19, 10), 276, 2000], [dtlz4(24, 15), 136, 3000],
         ]
 
+os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
 for problem in problems:
     problems_runner(problem)
