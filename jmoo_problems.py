@@ -47,10 +47,11 @@ def initialPopulation(problem, n, path=""):
     dataset = []
     for run in range(n):
         dataset.append(problem.generateInput())
-        
+
+
     #write the dataset to file
     if path == "":
-        filename = "Data/" + problem.name + "-p" + str(n) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
+        filename = "./Data/" + problem.name + "-p" + str(n) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
     elif path == "unittesting":
         filename = "../../Data/Testing-dataset.txt"
     else:

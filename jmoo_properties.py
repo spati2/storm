@@ -43,8 +43,8 @@ algorithms = [
               # jmoo_NSGAII(),
               # jmoo_SPEA2(),
               # jmoo_DE(),
-              # jmoo_MOEAD(),
-              jmoo_NSGAIII(),
+              jmoo_MOEAD(),
+              # jmoo_NSGAIII(),
               ]
 
 problems =[
@@ -52,11 +52,11 @@ problems =[
     # dtlz2(14, 5),
     # dtlz3(14, 5),
     # dtlz4(14, 5),
-    # dtlz1(7, 3),
+    dtlz1(7, 3),
     # dtlz2(12, 3),
     # dtlz3(12, 3),
     # dtlz4(12, 3),
-    dtlz1(12, 8),
+    # dtlz1(12, 8),
     # dtlz2(17, 8),
     # dtlz3(17, 8),
     # dtlz4(17, 8),
@@ -91,8 +91,8 @@ build_new_pop = False                                       # Whether or not to 
 Configurations = {
     "Universal": {
         "Repeats" : 10,
-        "Population_Size" : 136,
-        "No_of_Generations" : 1500
+        "Population_Size" : 91,
+        "No_of_Generations" : 400
     },
     "NSGAIII": {
         "SBX_Probability": 1,
@@ -112,6 +112,7 @@ Configurations = {
         "T" : 30,  # Neighbourhood size
         "MOEAD_F" : 0.5,
         "MOEAD_CF" : 1.0,
+        "ETA_M_DEFAULT_" : 20
     },
     "STORM": {
         "STORM_EXPLOSION" : 5,

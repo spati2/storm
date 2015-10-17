@@ -92,7 +92,12 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
     assert(len(population) == configurations["Universal"]["Population_Size"]), "The population loaded from the file must be equal to MU"
 
 
-
+    # # # # # # # # # # # # # # # #
+    # 3.1) Special Initialization #
+    # # # # # # # # # # # # # # # #
+    if algorithm.initializer is not None:
+        # TODO:fix MOEAD
+        population, numeval = algorithm.initializer(problem, population, configurations)
 
 
 
@@ -107,6 +112,7 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
     
     while gen < configurations["Universal"]["No_of_Generations"] and stoppingCriteria is False:
         gen+= 1
+        print gen, " | ",
         # # # # # # # # #
         # 4a) Selection #
         # # # # # # # # #
@@ -137,9 +143,9 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         # # # # # # # # # # #
         statBox.update(population, gen, numNewEvals)
 
-        # from Techniques.IGD_Calculation import IGD
-        # resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
-        # print IGD(resulting_pf, readpf(problem))
+        from Techniques.IGD_Calculation import IGD
+        resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+        print IGD(resulting_pf, readpf(problem))
             
         # # # # # # # # # # # # # # # # # #
         # 4e) Evaluate Stopping Criteria  #

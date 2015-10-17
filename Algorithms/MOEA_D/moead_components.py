@@ -1,39 +1,148 @@
 
 from __future__ import division
 import random
-import jmoo_properties
+# import jmoo_properties
 from jmoo_individual import *
 distance_matrix = []
 ideal_points = []
+reference_points = []
 
-import os, sys, inspect
-# cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0], "../Techniques")))
-# if cmd_subfolder not in sys.path:
-#     sys.path.insert(0, cmd_subfolder)
 from Techniques.euclidean_distance import euclidean_distance
+from Techniques.math_functions import combination
 
-# def assign_weights(number, summa = 100):
-#     assert(float(number).is_integer() is True), "Number is not correct"
-#     assert(float(summa).is_integer() is True), "sum is not correct"
-#     assert(number <= summa), "Integers can't be generated"
-#     ret_results = []
-#     min_value = 1
-#     temp_sum = 0
-#     for i in xrange(number-1):
-#         tem = random.randint(min_value, summa - (min_value * (number - (i+1))) - temp_sum)
-#         ret_results.append(tem)
-#         temp_sum += tem
-#     ret_results.append(summa - sum(ret_results))
-#     assert(sum(ret_results) == summa), "Result is wrong"
-#     return [x/float(summa) for x in ret_results]
 
-def assign_weights(number):
-    import random
-    rand_number = [random.random() for _ in xrange(number)]
-    r = sum(rand_number)
-    temp = [no/float(r) for no in rand_number]
-    assert(int(round(sum(temp),0)) == 1),"Something's wrong"
-    return temp
+division_dict = {"3": [12,0],
+                 "5": [6,0],
+                 "8": [3,2],
+                 "10": [3, 2],
+                 "15": [2, 1]}
+
+
+class Node(object):
+    def __init__(self, data=-1, level=0, parent=None):
+        self.data = data
+        self.level = level
+        self.children = []
+        self.parent = parent
+
+    def add_child(self, obj):
+        self.children.append(obj)
+
+
+def tree(node, n, p, level=0):
+    if level == 0:
+        from numpy import arange
+        for i in [j for j in arange(0, 1 + 10e-10, 1 / p)]:
+            node.add_child(Node(i, level + 1))
+        for child in node.children:
+            tree(child, n, p, level + 1)
+    elif level < (n - 1):
+        other_beta = 0
+
+        # Traversing up the tree to get other values of beta
+        temp = node
+        while temp is not None:
+            other_beta += temp.data
+            temp = temp.parent
+
+        k = (1 - other_beta) / (1 / p)
+        from numpy import arange
+        for i in [j for j in arange(0, k * (1 / p) + 10e-10, (1 / p))]:
+            node.add_child(Node(i, level + 1, node))
+        for child in node.children:
+            tree(child, n, p, level + 1)
+    elif level == (n - 1):
+        other_beta = 0
+        # Traversing up the tree to get other values of beta
+        temp = node
+        while temp is not None:
+            other_beta += temp.data
+            temp = temp.parent
+        node.add_child(Node(1 - other_beta, level + 1, node))
+
+    else:
+        return
+
+
+class reference_point:
+    def __init__(self, id, coordinates):
+        self.id = id
+        self.coordinates = coordinates
+
+    def __str__(self):
+        s = "id: " + str(self.id) + "\n"
+        s += "coordinates: " + str(self.coordinates) + "\n"
+        return s
+
+
+def get_ref_points(root):
+    ref_points = []
+    assert (root.data == -1 and root.level == 0), "Supplied node is not root"
+    visited, stack = set(), [root]
+    count = 0
+    while len(stack) != 0:
+        vertex = stack.pop()
+        if vertex not in visited:
+            if len(vertex.children) == 0:
+                temp = vertex
+                points = []
+                while temp is not None:
+                    points = [temp.data] + points
+                    temp = temp.parent
+                ref_points.append(reference_point(count, points))
+                count += 1
+            stack.extend(vertex.children)
+            visited.add(vertex)
+    return ref_points
+
+def generate_weight_vector(division, number_of_objectives):
+    root = Node(-1)
+    tree(root, number_of_objectives, division)
+    return get_ref_points(root)
+
+
+def two_level_weight_vector_generator(divisions, number_of_objectives):
+    division1 = divisions[0]
+    division2 = divisions[1]
+
+    N1 = 0
+    N2 = 0
+
+    if division1 != 0: N1 = combination(number_of_objectives + division1 - 1, division1)
+    if division2 != 0: N2 = combination(number_of_objectives + division2 - 1, division2)
+
+    first_layer = []
+    second_layer = []
+    if N1 != 0:  first_layer = generate_weight_vector(division1, number_of_objectives)
+    if N2 != 0:
+        second_layer = generate_weight_vector(division2, number_of_objectives)
+        mid = 1 / number_of_objectives
+        for tsl_objectives in second_layer:
+            tsl_objectives.id += int(N1)
+            tsl_objectives.coordinates = [(t + mid) / 2 for t in tsl_objectives.coordinates]
+
+    import numpy
+    for l in first_layer + second_layer:
+        l.coordinates = [ll.item() for ll in l.coordinates]
+        for ll in l.coordinates:
+            assert(type(ll) != numpy.float64), "Seomthing is wrong"
+    return first_layer + second_layer
+
+
+def create_reference_points(problem):
+    global reference_points, division_dict
+    number_of_objectives = len(problem.objectives)
+    reference_points = two_level_weight_vector_generator(division_dict[str(number_of_objectives)], number_of_objectives)
+
+
+def assign_weights():
+    global reference_points
+    from random import shuffle
+    shuffle(reference_points)
+    return_point = reference_points[0]
+    reference_points.pop(0)
+    return return_point.coordinates
+
 
 def create_distance_matrix(population):
     global distance_matrix
@@ -42,6 +151,8 @@ def create_distance_matrix(population):
     for i in xrange(len(weights)):
         for j in xrange(len(weights)):
             distance_matrix[i][j][0] = euclidean_distance(weights[i], weights[j])
+        assert(distance_matrix[i][i][0] == 0), "Diagonal of Distance matrix should be 0"
+
 
 def create_ideal_points(problem):
     global ideal_points
@@ -50,7 +161,8 @@ def create_ideal_points(problem):
 
 def update_ideal_points(problem, individual):
     global ideal_points
-    obj_in = individual.fitness.fitness
+    from copy import deepcopy
+    obj_in = deepcopy(individual.fitness.fitness)
     assert(len(ideal_points) == len(obj_in)), "Length of ideal points are not equal to length of objectives"
     for i, obj in enumerate(problem.objectives):
         if obj.lismore:
@@ -60,8 +172,12 @@ def update_ideal_points(problem, individual):
             if ideal_points[i] < obj_in[i]:
                 ideal_points[i] = obj_in[i]
 
-def find_neighbours(pop_id):
-    return [x[1] for x in sorted(distance_matrix[pop_id], key=lambda l: l[0])[1:jmoo_properties.T+1]]
+
+def find_neighbours(pop_id, configuration):
+    temp = [x[1] for x in sorted(distance_matrix[pop_id], key=lambda l: l[0])[1:configuration["MOEAD"]["T"]+1]]
+    assert(len(set(temp)) == len(temp)), "There should be no repetition"
+    return temp
+
 
 def trim(mutated, low, up):
     assert(low < up), "There is a mix up between low and up"
@@ -76,70 +192,71 @@ def assign_id_to_member(population):
         pop.id = i
     return population
 
+def mutate(problem, individual, configuration):
+    from numpy.random import random
+    eta_m_ = configuration["MOEAD"]["ETA_M_DEFAULT_"]
+    distributionIndex_ = eta_m_
+    output = jmoo_individual(problem, individual.decisionValues)
 
+    probability = 1/len(problem.decisions)
+    for var in xrange(len(problem.decisions)):
+        if random() <= probability:
+            y = individual.decisionValues[var]
+            yU = problem.decisions[var].up
+            yL = problem.decisions[var].low
+            delta1 = (y - yL)/(yU - yL)
+            delta2 = (yU - y)/(yU - yL)
+            rnd = random()
 
-def mutate(problem, individual, rate):
-    """
-    I am not really sure how this mutation function works. Need to work that out!
-    :param problem:
-    :param individual:
-    :param rate:
-    :return:
-    """
-    eta_m = 20
-    for i, decision in enumerate(problem.decisions):
-        if random.random() <= rate:
-            y = individual[i]
-            yl = decision.low
-            yu = decision.up
-
-            delta1 = (y - yl) / (yu - yl)
-            delta2 = (yu - y) / (yu - yl)
-
-            rnd = random.random()
-            mut_pow = 1 / (eta_m + 1)
-
-            if rnd <= 0.5:
-                xy = 1 - delta1
-                val = 2.0 * rnd + (1 - 2.0 * rnd) + xy ** (eta_m + 1.0)
-                deltaq = (val ** mut_pow) - 1
+            mut_pow = 1.0/(eta_m_ + 1.0)
+            if rnd < 0.5:
+                xy = 1.0 - delta1
+                val = 2.0 * rnd + (1 - 2 * rnd) * (xy ** (distributionIndex_ + 1.0))
+                deltaq = val ** mut_pow - 1
             else:
-                xy = 1 - delta2
-                val = 2.0 * (1.0 - rnd) + 2.0 * (rnd - 0.5) + xy ** (eta_m + 1.0)
+                xy = 1.0 - delta2
+                val = 2.0 * (1.0-rnd) + 2.0 * (rnd-0.5) * (xy ** (distributionIndex_+1.0))
                 deltaq = 1.0 - (val ** mut_pow)
 
-                individual[i] = trim(y + deltaq * (yu - yl), decision.low, decision.up)
+            y += deltaq * (yU - yL)
+            if y < yL: y = yL
+            if y > yU: y = yU
 
-    return individual
+            output.decisionValues[var] = y
 
-
-
-
-
-
+    return output
 
 
-
-
-def genetic_operation(problem, individual, population):
+def genetic_operation(problem, individual, population, configuration):
     assert(len(population) > 3), "Genetic operation is not possible without 3 individual"
     neighbours = list(individual.neighbor)
     a, b, c = sorted(neighbours, key=lambda k: random.random())[:3]
     item_a = [x for x in population if x.id == a][-1]
     item_b = [x for x in population if x.id == b][-1]
     item_c = [x for x in population if x.id == c][-1]
+
+
+    # de_members = sorted(neighbours, key=lambda k: random.random())[:3]
+    # item_a = [x for x in population if x.id == de_members[0]][-1]
+    # item_b = [x for x in population if x.id == de_members[1]][-1]
+    # item_c = [x for x in population if x.id == de_members[2]][-1]
+    import pdb
+    pdb.set_trace()
+
     offspring = problem.generateInput()
     D = len(problem.decisions)
     jrandom = int(random.random() * D)
 
     for i, decision in enumerate(problem.decisions):
-        if random.random() < jmoo_properties.MOEAD_CF or i == jrandom:
-            offspring[i] = trim(item_a.decisionValues[i] + jmoo_properties.MOEAD_F *
+        if random.random() < configuration["MOEAD"]["MOEAD_CF"] or i == jrandom:
+            offspring[i] = trim(item_a.decisionValues[i] + configuration["MOEAD"]["MOEAD_F"] *
                          (item_b.decisionValues[i] - item_c.decisionValues[i]), decision.low, decision.up)
         else:
             offspring[i] = individual.decisionValues[i]
-    offspring = mutate(problem, offspring, len(problem.decisions) ** -1)
+    offspring = jmoo_individual(problem, offspring, None)
+    offspring = mutate(problem, offspring, configuration)
     return offspring
+
 
 def weighted_tche(problem, weight_vector, individual):
     global ideal_points
@@ -167,11 +284,6 @@ def update_neighbor(problem, individual, mutant, population, dist_function):
         neigh = neigh[-1]
         d = dist_function(problem, individual.weight, neigh)
         e = dist_function(problem, individual.weight, mutant)
-        # print neigh.fitness.fitness
-        # print mutant.fitness.fitness
-        # print d, e
-        # import pdb
-        # pdb.set_trace()
         if d < e:
             # print "----change"
             neigh.decisionValues = list(mutant.decisionValues)
@@ -198,6 +310,7 @@ def three_others(individuals, one):
 
     return other(), other(), other()
 
+
 def crossover(problem, candidate_a, candidate_b):
     assert(len(candidate_a) == len(candidate_b)), "Candidate length are not the same"
     crossover_point = random.randrange(1, len(candidate_a), 1)
@@ -206,6 +319,7 @@ def crossover(problem, candidate_a, candidate_b):
     mutant.extend(list(candidate_b[crossover_point:]))
     assert(len(mutant) == len(candidate_a)), "Mutant created doesn't have the same length as candidates"
     return mutant
+
 
 def extrapolate(problem, individuals, one, f, cf):
     # #print "Extrapolate"
@@ -221,55 +335,52 @@ def extrapolate(problem, individuals, one, f, cf):
         else:
             solution.append(one.decisionValues[d])
 
-    if NEW_DE is True:
-        if random.random() < cf:
-            solution = crossover(problem, one.decisionValues, solution)
-
-
     return jmoo_individual(problem, [float(d) for d in solution], None)
 
 
-
-def evolve_neighbor(problem, individual, population):
-    mutant = genetic_operation(problem, individual, population)
-    mutant = jmoo_individual(problem, [float(d) for d in mutant], None)
+def evolve_neighbor(problem, individual, population, configuration):
+    mutant = genetic_operation(problem, individual, population, configuration)
     mutant.evaluate()
     return update_neighbor(problem, individual, mutant, population, weighted_tche)
 
 
-def initialize_population(problem, population):
+def initialize_moead(problem, population, configuration):
+    global reference_points
     for individual in population:
         if not individual.valid:
             individual.evaluate()
     population = assign_id_to_member(population)
+    create_reference_points(problem)
     for pop in population:
-        pop.weight = assign_weights(len(problem.objectives))
-        assert(int(round(sum(pop.weight), 0)) == 1), "Something's wrong"
+        pop.weight = assign_weights()
+        assert(int(round(sum(pop.weight), 0)) == 1), "The weights should add up to unity"
     create_ideal_points(problem)
+
     create_distance_matrix(population)
     for i, pop in enumerate(population):
-        pop.neighbor = find_neighbours(i)
+        pop.neighbor = find_neighbours(i, configuration)
     for pop in population:
         update_ideal_points(problem, pop)
     return population, len(population)
-
 # remeber to add len(population) to number of evals
 
-def moead_selector(problem, population):
+
+def moead_selector(problem, population, configuration):
+    print "#",
     from copy import deepcopy
     new_population = deepcopy(population)
-    print "="*30
     for no in xrange(len(new_population)):
-        pop, new_population = evolve_neighbor(problem, new_population[no], new_population)
+        pop, new_population = evolve_neighbor(problem, new_population[no], new_population, configuration)
         update_ideal_points(problem, pop)
-
 
     return new_population, len(population)
 
 
-def moead_mutate(problem, population):
+def moead_mutate(problem, population, configuration):
     return population, 0
-def moead_recombine(problem, unusedSlot, mutants, MU):
+
+
+def moead_recombine(problem, unusedSlot, mutants, configuration):
     return mutants, 0
 
 
@@ -318,6 +429,7 @@ def _euclidean_distance():
     for _ in xrange(10000):
         print ".",
         assert(one_test() is True), "Test Failed"
+
 
 
 

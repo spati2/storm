@@ -1,4 +1,4 @@
-#    Copyright (C) 2010 Simon Wessing
+x#    Copyright (C) 2010 Simon Wessing
 #    TU Dortmund University
 #
 #    This program is free software: you can redistribute it and/or modify

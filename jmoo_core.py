@@ -250,8 +250,8 @@ class JMOO:
                     #output every generation
                     for box in [representative]:
                         s_out = ""
-                        s_out += str(MU) + ","
-                        s_out += problem.name + "-p" + str(MU) + "-d"  + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + ","
+                        s_out += str(self.configurations["Universal"]["Population_Size"]) + ","
+                        s_out += problem.name + "-p" + str(self.configurations["Universal"]["Population_Size"]) + "-d"  + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + ","
                         s_out += algorithm.name + ","
                         s_out += str(box.numEval) + ","
                         for low in representative.fitnessMedians:

@@ -102,7 +102,7 @@ class jmoo_DE:
 class jmoo_MOEAD:
     def __init__(self, color="Blue"):
         self.name = "MOEAD"
-        self.initializer = initialize_population
+        self.initializer = initialize_moead
         self.selector = moead_selector
         self.adjustor = moead_mutate
         self.recombiner = moead_recombine
