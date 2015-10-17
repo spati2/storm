@@ -227,35 +227,134 @@ def mutate(problem, individual, configuration):
     return output
 
 
-def genetic_operation(problem, individual, population, configuration):
-    assert(len(population) > 3), "Genetic operation is not possible without 3 individual"
-    neighbours = list(individual.neighbor)
-    a, b, c = sorted(neighbours, key=lambda k: random.random())[:3]
-    item_a = [x for x in population if x.id == a][-1]
-    item_b = [x for x in population if x.id == b][-1]
-    item_c = [x for x in population if x.id == c][-1]
+def get_betaq(rand, alpha, eta=30):
+    betaq = 0.0
+    if rand <= (1.0 / alpha):
+        betaq = (rand * alpha) ** (1.0 / (eta + 1.0))
+    else:
+        betaq = (1.0 / (2.0 - rand * alpha)) ** (1.0 / (eta + 1.0))
+    return betaq
 
 
-    # de_members = sorted(neighbours, key=lambda k: random.random())[:3]
-    # item_a = [x for x in population if x.id == de_members[0]][-1]
-    # item_b = [x for x in population if x.id == de_members[1]][-1]
-    # item_c = [x for x in population if x.id == de_members[2]][-1]
-    import pdb
-    pdb.set_trace()
+def polynomial_mutation(problem, individual, configuration):
+    from numpy.random import random
+    eta_m_ = configuration["NSGAIII"]["ETA_M_DEFAULT_"]
+    distributionIndex_ = eta_m_
+    output = jmoo_individual(problem, individual.decisionValues)
 
-    offspring = problem.generateInput()
-    D = len(problem.decisions)
-    jrandom = int(random.random() * D)
+    probability = 1/len(problem.decisions)
+    for var in xrange(len(problem.decisions)):
+        if random() <= probability:
+            y = individual.decisionValues[var]
+            yU = problem.decisions[var].up
+            yL = problem.decisions[var].low
+            delta1 = (y - yL)/(yU - yL)
+            delta2 = (yU - y)/(yU - yL)
+            rnd = random()
 
-    for i, decision in enumerate(problem.decisions):
-        if random.random() < configuration["MOEAD"]["MOEAD_CF"] or i == jrandom:
-            offspring[i] = trim(item_a.decisionValues[i] + configuration["MOEAD"]["MOEAD_F"] *
-                         (item_b.decisionValues[i] - item_c.decisionValues[i]), decision.low, decision.up)
-        else:
-            offspring[i] = individual.decisionValues[i]
-    offspring = jmoo_individual(problem, offspring, None)
-    offspring = mutate(problem, offspring, configuration)
-    return offspring
+            mut_pow = 1.0/(eta_m_ + 1.0)
+            if rnd < 0.5:
+                xy = 1.0 - delta1
+                val = 2.0 * rnd + (1 - 2 * rnd) * (xy ** (distributionIndex_ + 1.0))
+                deltaq = val ** mut_pow - 1
+            else:
+                xy = 1.0 - delta2
+                val = 2.0 * (1.0-rnd) + 2.0 * (rnd-0.5) * (xy ** (distributionIndex_+1.0))
+                deltaq = 1.0 - (val ** mut_pow)
+
+
+            y +=  deltaq * (yU - yL)
+            if y < yL: y = yL
+            if y > yU: y = yU
+
+            output.decisionValues[var] = y
+
+    return output
+
+
+def sbxcrossover(problem, parent1, parent2, configuration):
+
+    EPS = 1.0e-14
+    distribution_index = configuration["NSGAIII"]["ETA_C_DEFAULT_"]
+    probability = configuration["NSGAIII"]["SBX_Probability"]
+    from numpy.random import random
+    offspring1 = jmoo_individual(problem, parent1.decisionValues)
+    offspring2 = jmoo_individual(problem, parent2.decisionValues)
+
+    number_of_variables = len(problem.decisions)
+    if random() <= probability:
+        for i in xrange(number_of_variables):
+            valuex1 = offspring1.decisionValues[i]
+            valuex2 = offspring2.decisionValues[i]
+            if random() <= 0.5:
+                if abs(valuex1 - valuex2) > EPS:
+                    if valuex1 < valuex2:
+                        y1 = valuex1
+                        y2 = valuex2
+                    else:
+                        y1 = valuex2
+                        y2 = valuex1
+
+                    yL = problem.decisions[i].low
+                    yU = problem.decisions[i].up
+                    rand = random()
+                    beta = 1.0 + (2.0 * (y1 - yL) / (y2 - y1))
+                    alpha = 2.0 - beta ** (-1 * (distribution_index + 1.0))
+
+                    if rand <= 1/alpha:
+                        betaq = (1.0 / (2.0 - rand * alpha)) ** (1.0 / (distribution_index + 1.0))
+                    else:
+                        betaq = (1.0 / (2.0 - rand * alpha)) ** (1.0 / (distribution_index + 1.0))
+
+                    c1 = 0.5 * ((y1 + y2) - betaq * (y2 - y1))
+                    beta = 1.0 + (2.0 * (yU - y2) / (y2 - y1))
+                    alpha = 2.0 - beta ** -(distribution_index + 1.0)
+
+                    if rand <= (1.0 / alpha):
+                        betaq = (rand * alpha) ** (1.0 / (distribution_index + 1.0))
+                    else:
+                        betaq = ((1.0 / (2.0 - rand * alpha)) ** (1.0 / (distribution_index + 1.0)))
+
+                    c2 = 0.5 * ((y1 + y2) + betaq * (y2 - y1))
+
+                    if c1 < yL: c1 = yL
+                    if c2 < yL: c2 = yL
+                    if c1 > yU: c1 = yU
+                    if c2 > yU: c2 = yU
+
+                    if random() <= 0.5:
+                        offspring1.decisionValues[i] = c2
+                        offspring2.decisionValues[i] = c1
+                    else:
+                        offspring1.decisionValues[i] = c1
+                        offspring2.decisionValues[i] = c2
+                else:
+                    offspring1.decisionValues[i] = valuex1
+                    offspring2.decisionValues[i] = valuex2
+            else:
+                offspring1.decisionValues[i] = valuex2
+                offspring2.decisionValues[i] = valuex1
+
+    return offspring1, offspring2
+
+
+def variation(problem, individual_index, population, configuration):
+    """ SBX regeneration Technique """
+
+    from random import randint
+    another_parent = individual_index
+    while another_parent == individual_index: another_parent = randint(0, len(population)-1)
+
+    from copy import deepcopy
+    parent1 = deepcopy([pop for pop in population if pop.id == individual_index][-1])
+    parent2 = deepcopy([pop for pop in population if pop.id == another_parent][-1])
+
+    child1, _ = sbxcrossover(problem, parent1, parent2, configuration)
+    mchild1 = polynomial_mutation(problem, child1, configuration)
+    mchild1.evaluate()  #checked| correct
+
+    assert(mchild1.valid is True), "Something is wrong| Check if the evaluation is complete"
+    return mchild1
 
 
 def weighted_tche(problem, weight_vector, individual):
@@ -274,10 +373,17 @@ def weighted_tche(problem, weight_vector, individual):
 
 
 def update_neighbor(problem, individual, mutant, population, dist_function):
+
+    need to change this!! population doesn't seem to be changing'
     global ideal_points
+
+    for pop in population:  pop.changed = False
+    assert(len([pop for pop in population if pop.id == individual.id]) == 1), "Id should be unique"
     popi = [pop for pop in population if pop.id == individual.id][-1]
-    popi.decisionValues = mutant.decisionValues
-    popi.fitness.fitness = mutant.fitness.fitness
+    from copy import deepcopy
+    popi.decisionValues = deepcopy(mutant.decisionValues)
+    popi.fitness.fitness = deepcopy(mutant.fitness.fitness)
+
     for i in individual.neighbor:
         neigh = [pop for pop in population if pop.id == i]
         assert(len(neigh) == 1), "Something is wrong"
@@ -285,16 +391,11 @@ def update_neighbor(problem, individual, mutant, population, dist_function):
         d = dist_function(problem, individual.weight, neigh)
         e = dist_function(problem, individual.weight, mutant)
         if d < e:
-            # print "----change"
-            neigh.decisionValues = list(mutant.decisionValues)
-            neigh.fitness.fitness = list(mutant.fitness.fitness)
-            neigh1 = [pop for pop in population if pop.id == i][-1]
-            for a, b in zip(neigh.decisionValues, neigh1.decisionValues):
-                assert(a == b), "Something's wrong"
-            for a, b in zip(neigh.fitness.fitness, neigh1.fitness.fitness):
-                assert(a == b), "Something's wrong"
-
-    return mutant, population
+            neigh.decisionValues = deepcopy(mutant.decisionValues)
+            neigh.fitness.fitness = ["X" for _ in xrange(3)]
+            neigh.changed = True
+    print ">> ", len([1 for pop in population if pop.fitness.fitness == ["X" for _ in xrange(3)]])
+    return population
 
 
 def three_others(individuals, one):
@@ -338,10 +439,10 @@ def extrapolate(problem, individuals, one, f, cf):
     return jmoo_individual(problem, [float(d) for d in solution], None)
 
 
-def evolve_neighbor(problem, individual, population, configuration):
-    mutant = genetic_operation(problem, individual, population, configuration)
+def evolve_neighbor(problem, individual_index, population, configuration):
+    mutant = variation(problem, individual_index, population, configuration)
     mutant.evaluate()
-    return update_neighbor(problem, individual, mutant, population, weighted_tche)
+    return mutant
 
 
 def initialize_moead(problem, population, configuration):
@@ -368,10 +469,17 @@ def initialize_moead(problem, population, configuration):
 def moead_selector(problem, population, configuration):
     print "#",
     from copy import deepcopy
+    from random import shuffle
     new_population = deepcopy(population)
-    for no in xrange(len(new_population)):
-        pop, new_population = evolve_neighbor(problem, new_population[no], new_population, configuration)
+    indexes = [i for i in xrange(len(new_population))]
+    shuffle(indexes)
+    for no in indexes:
+        pop = evolve_neighbor(problem, no, new_population, configuration)
         update_ideal_points(problem, pop)
+        new_population = update_neighbor(problem, new_population[no], pop, new_population, weighted_tche)
+        print ">>>> ", len([1 for pop in population if pop.fitness.fitness == ["X" for _ in xrange(3)]])
+        import pdb
+        pdb.set_trace()
 
     return new_population, len(population)
 
@@ -382,6 +490,7 @@ def moead_mutate(problem, population, configuration):
 
 def moead_recombine(problem, unusedSlot, mutants, configuration):
     return mutants, 0
+
 
 
 
