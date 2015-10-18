@@ -109,9 +109,9 @@ Configurations = {
         "CF" : 0.3, # prob of cross over
     },
     "MOEAD" : {
-        "T" : 30,  # Neighbourhood size
-        "MOEAD_F" : 0.5,
-        "MOEAD_CF" : 1.0,
+        "T" : 20,  # Neighbourhood size
+        "SBX_Probability": 1,
+        "ETA_C_DEFAULT_" : 30,
         "ETA_M_DEFAULT_" : 20
     },
     "STORM": {

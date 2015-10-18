@@ -6,6 +6,7 @@ from jmoo_individual import *
 distance_matrix = []
 ideal_points = []
 reference_points = []
+indivpoint = []
 
 from Techniques.euclidean_distance import euclidean_distance
 from Techniques.math_functions import combination
@@ -155,12 +156,13 @@ def create_distance_matrix(population):
 
 
 def create_ideal_points(problem):
-    global ideal_points
+    global ideal_points, indivpoint
     ideal_points = [1e30 if obj.lismore else 1e-30 for obj in problem.objectives]
+    indivpoint = [None for _ in problem.objectives]
 
 
 def update_ideal_points(problem, individual):
-    global ideal_points
+    global ideal_points, indivpoint
     from copy import deepcopy
     obj_in = deepcopy(individual.fitness.fitness)
     assert(len(ideal_points) == len(obj_in)), "Length of ideal points are not equal to length of objectives"
@@ -168,9 +170,11 @@ def update_ideal_points(problem, individual):
         if obj.lismore:
             if ideal_points[i] > obj_in[i]:
                 ideal_points[i] = obj_in[i]
+                indivpoint[i] = deepcopy(individual)
         else:
             if ideal_points[i] < obj_in[i]:
                 ideal_points[i] = obj_in[i]
+                indivpoint[i] = deepcopy(individual)
 
 
 def find_neighbours(pop_id, configuration):
@@ -191,6 +195,7 @@ def assign_id_to_member(population):
     for i, pop in enumerate(population):
         pop.id = i
     return population
+
 
 def mutate(problem, individual, configuration):
     from numpy.random import random
@@ -238,7 +243,7 @@ def get_betaq(rand, alpha, eta=30):
 
 def polynomial_mutation(problem, individual, configuration):
     from numpy.random import random
-    eta_m_ = configuration["NSGAIII"]["ETA_M_DEFAULT_"]
+    eta_m_ = configuration["MOEAD"]["ETA_M_DEFAULT_"]
     distributionIndex_ = eta_m_
     output = jmoo_individual(problem, individual.decisionValues)
 
@@ -275,8 +280,8 @@ def polynomial_mutation(problem, individual, configuration):
 def sbxcrossover(problem, parent1, parent2, configuration):
 
     EPS = 1.0e-14
-    distribution_index = configuration["NSGAIII"]["ETA_C_DEFAULT_"]
-    probability = configuration["NSGAIII"]["SBX_Probability"]
+    distribution_index = configuration["MOEAD"]["ETA_C_DEFAULT_"]
+    probability = configuration["MOEAD"]["SBX_Probability"]
     from numpy.random import random
     offspring1 = jmoo_individual(problem, parent1.decisionValues)
     offspring2 = jmoo_individual(problem, parent2.decisionValues)
@@ -342,11 +347,19 @@ def variation(problem, individual_index, population, configuration):
     """ SBX regeneration Technique """
 
     from random import randint
-    another_parent = individual_index
-    while another_parent == individual_index: another_parent = randint(0, len(population)-1)
+    from copy import deepcopy
+    individual = deepcopy([pop for pop in population if pop.id == individual_index][-1])
+    other_parent = individual.neighbor[randint(0, configuration["MOEAD"]["T"]-1)]
+    another_parent = other_parent
+    while another_parent == other_parent: another_parent = individual.neighbor[randint(0, configuration["MOEAD"]["T"]-1)]
+
+    assert(len([pop for pop in population if pop.id == other_parent]) == 1), "id should be unique"
+    print len([pop for pop in population if pop.id == another_parent])
+    print type(another_parent), another_parent
+    assert(len([pop for pop in population if pop.id == another_parent]) == 1), "id should be unique"
 
     from copy import deepcopy
-    parent1 = deepcopy([pop for pop in population if pop.id == individual_index][-1])
+    parent1 = deepcopy([pop for pop in population if pop.id == other_parent][-1])
     parent2 = deepcopy([pop for pop in population if pop.id == another_parent][-1])
 
     child1, _ = sbxcrossover(problem, parent1, parent2, configuration)
@@ -357,45 +370,92 @@ def variation(problem, individual_index, population, configuration):
     return mchild1
 
 
-def weighted_tche(problem, weight_vector, individual):
+def weighted_tche(problem, individual_fitness, weight_vector, local_indivpoint):
     global ideal_points
-    assert(len(weight_vector) == len(individual.fitness.fitness)), "Number of weights should be equal to objectives"
-    distance = -1 * 1e30
+    assert(len(weight_vector) == len(individual_fitness)), "Number of weights should be equal to objectives"
+    scale = []
     for i in xrange(len(problem.objectives)):
-        diff = ideal_points[i] - individual.fitness.fitness[i]
-        if weight_vector[i] == 0:
-            temp = 0.0001 * diff
+        min_value = 1e30
+        max_value = -1e30
+        for j in xrange(len(problem.objectives)):
+            tp = local_indivpoint[j].fitness.fitness[j]
+            if tp > max_value: max_value = tp
+            if tp < min_value: min_value = tp
+        scale.append(max_value - min_value)
+        if max_value == min_value: return 1e30
+
+    max_fun = -1e30
+    for n in xrange(len(problem.objectives)):
+        diff = (individual_fitness[n] - ideal_points[n])/scale[n]
+        if weight_vector[n] == 0:
+            feval = 0.0001 * diff
         else:
-            temp = weight_vector[i] * diff
-        if distance < temp:
-            distance = temp
-    return distance
+            feval = diff * weight_vector[n]
+        if feval > max_fun: max_fun = feval
+    return feval
 
 
-def update_neighbor(problem, individual, mutant, population, dist_function):
 
-    need to change this!! population doesn't seem to be changing'
-    global ideal_points
-
-    for pop in population:  pop.changed = False
-    assert(len([pop for pop in population if pop.id == individual.id]) == 1), "Id should be unique"
-    popi = [pop for pop in population if pop.id == individual.id][-1]
+def update_neighbor(problem, individual, mutant, population, dist_function, configuration):
+    global indivpoint
     from copy import deepcopy
-    popi.decisionValues = deepcopy(mutant.decisionValues)
-    popi.fitness.fitness = deepcopy(mutant.fitness.fitness)
+    new_population = deepcopy(population)
 
-    for i in individual.neighbor:
-        neigh = [pop for pop in population if pop.id == i]
-        assert(len(neigh) == 1), "Something is wrong"
-        neigh = neigh[-1]
-        d = dist_function(problem, individual.weight, neigh)
-        e = dist_function(problem, individual.weight, mutant)
-        if d < e:
-            neigh.decisionValues = deepcopy(mutant.decisionValues)
-            neigh.fitness.fitness = ["X" for _ in xrange(3)]
-            neigh.changed = True
-    print ">> ", len([1 for pop in population if pop.fitness.fitness == ["X" for _ in xrange(3)]])
-    return population
+    for i in xrange(configuration["MOEAD"]["T"]):
+
+        k = individual.neighbor[i]
+        f1 = dist_function(problem, individual.fitness.fitness, individual.weight, indivpoint)
+        f2 = dist_function(problem, mutant.fitness.fitness, individual.weight, indivpoint)
+        if f2 < f1:
+            print "bppm"
+            something is wrong here
+            for pop in new_population:
+                if pop.id == k:  new_population.remove(pop)
+            new_candidate = jmoo_individual(problem, mutant.decisionValues, mutant.fitness.fitness)
+            new_candidate.id = i
+            new_candidate.neighbor = deepcopy(pop.neighbor)
+            new_candidate.weight = deepcopy(pop.weight)
+            new_population.append(new_candidate)
+
+    ids = [pop.id for pop in new_population]
+    assert(len(set(ids)) == len(ids)), "Something is wrong"
+    return new_population
+
+
+    # assert(len([pop for pop in population if pop.id == individual.id]) == 1), "Id should be unique"
+    # for pop in new_population:
+    #     if pop.id == individual.id:
+    #         popi = deepcopy(pop)
+    #         new_population.remove(pop)
+    #
+    # assert(len(new_population) + 1 == len(population)), "Just removed an element"
+    #
+    # new_candidate = jmoo_individual(problem, mutant.decisionValues, mutant.fitness.fitness)
+    # new_candidate.id = deepcopy(popi.id)
+    # new_candidate.neighbor = deepcopy(popi.neighbor)
+    # new_candidate.weight = deepcopy(popi.weight)
+    #
+    # new_population.append(new_candidate)
+    #
+    # for i in individual.neighbor:
+    #     neigh = [pop for pop in new_population if pop.id == i]
+    #     # print pop.id, len(neigh), len(population)
+    #     assert(len(neigh) == 1), "Something is wrong"
+    #     neigh = neigh[-1]
+    #     d = dist_function(problem, individual.weight, neigh)
+    #     e = dist_function(problem, individual.weight, mutant)
+    #     if d < e:
+    #         for pop in new_population:
+    #             if pop.id == i:  new_population.remove(pop)
+    #         new_candidate = jmoo_individual(problem, mutant.decisionValues, mutant.fitness.fitness)
+    #         new_candidate.id = i
+    #         new_candidate.neighbor = deepcopy(pop.neighbor)
+    #         new_candidate.weight = deepcopy(pop.weight)
+    #         new_population.append(new_candidate)
+    #
+    # assert(len(new_population) == len(population)), "Length of new population should be equal to population"
+    # return new_population
+
 
 
 def three_others(individuals, one):
@@ -458,10 +518,8 @@ def initialize_moead(problem, population, configuration):
     create_ideal_points(problem)
 
     create_distance_matrix(population)
-    for i, pop in enumerate(population):
-        pop.neighbor = find_neighbours(i, configuration)
-    for pop in population:
-        update_ideal_points(problem, pop)
+    for i, pop in enumerate(population): pop.neighbor = find_neighbours(i, configuration)
+    for pop in population: update_ideal_points(problem, pop)
     return population, len(population)
 # remeber to add len(population) to number of evals
 
@@ -476,10 +534,8 @@ def moead_selector(problem, population, configuration):
     for no in indexes:
         pop = evolve_neighbor(problem, no, new_population, configuration)
         update_ideal_points(problem, pop)
-        new_population = update_neighbor(problem, new_population[no], pop, new_population, weighted_tche)
-        print ">>>> ", len([1 for pop in population if pop.fitness.fitness == ["X" for _ in xrange(3)]])
-        import pdb
-        pdb.set_trace()
+        new_population = update_neighbor(problem, new_population[no], pop, new_population, weighted_tche, configuration)
+
 
     return new_population, len(population)
 
