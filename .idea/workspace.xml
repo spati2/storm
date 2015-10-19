@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3320aa-1484-4329-99a5-9539995d5922" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_7_3-p91-d7-o3-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_7_3-p91-d7-o3-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_7_3-p92-d7-o3-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_7_3-p92-d7-o3-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_algorithms.py" afterPath="$PROJECT_DIR$/jmoo_algorithms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_individual.py" afterPath="$PROJECT_DIR$/jmoo_individual.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_jmoea.py" afterPath="$PROJECT_DIR$/jmoo_jmoea.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_properties.py" afterPath="$PROJECT_DIR$/jmoo_properties.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py" afterPath="$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_7_3-p91-d7-o3_MOEAD.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_7_3-p91-d7-o3_MOEAD.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_7_3-p92-d7-o3_NSGA3.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_7_3-p92-d7-o3_NSGA3.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="storm.iws" />
@@ -25,53 +34,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="moead_components.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6426117">
-              <caret line="410" column="35" selection-start-line="410" selection-start-column="35" selection-end-line="410" selection-end-column="35" />
-              <folding>
-                <element signature="e#469#692#0" expanded="false" />
-                <element signature="e#730#1784#0" expanded="false" />
-                <element signature="e#1814#2052#0" expanded="false" />
-                <element signature="e#2085#2735#0" expanded="false" />
-                <element signature="e#2974#3930#0" expanded="false" />
-                <element signature="e#4448#4871#0" expanded="false" />
-                <element signature="e#6001#6189#0" expanded="false" />
-                <element signature="e#6233#6310#0" expanded="false" />
-                <element signature="e#6365#7497#0" expanded="false" />
-                <element signature="e#7540#7730#0" expanded="false" />
-                <element signature="e#7798#8932#0" expanded="false" />
-                <element signature="e#9000#11657#0" expanded="false" />
-                <element signature="e#16605#16948#0" expanded="false" />
-                <element signature="e#17005#17461#0" expanded="false" />
-                <element signature="e#17519#18110#0" expanded="false" />
-                <element signature="e#19919#20451#0" expanded="false" />
-                <element signature="e#20485#21345#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nsgaiii_components.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/nsgaiii_components.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.185185">
-              <caret line="518" column="76" selection-start-line="518" selection-start-column="67" selection-end-line="518" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#5336#6472#0" expanded="false" />
-                <element signature="e#6540#9201#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jmoo_properties.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jmoo_interface.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmoo_interface.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moead_components.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16955018">
+              <caret line="592" column="80" selection-start-line="592" selection-start-column="80" selection-end-line="592" selection-end-column="80" />
+              <folding>
+                <element signature="e#392#615#0" expanded="false" />
+                <element signature="e#653#1707#0" expanded="false" />
+                <element signature="e#1737#1975#0" expanded="false" />
+                <element signature="e#2008#2658#0" expanded="false" />
+                <element signature="e#2897#3853#0" expanded="false" />
+                <element signature="e#6065#6253#0" expanded="false" />
+                <element signature="e#6509#7641#0" expanded="false" />
+                <element signature="e#7684#7874#0" expanded="false" />
+                <element signature="e#7942#9076#0" expanded="false" />
+                <element signature="e#9144#11801#0" expanded="false" />
+                <element signature="e#11877#12999#0" expanded="false" />
+                <element signature="e#13095#14338#0" expanded="false" />
+                <element signature="e#14444#15493#0" expanded="false" />
+                <element signature="e#15600#16133#0" expanded="false" />
+                <element signature="e#16253#17567#0" expanded="false" />
+                <element signature="e#17610#17953#0" expanded="false" />
+                <element signature="e#18010#18466#0" expanded="false" />
+                <element signature="e#18524#19115#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jmoo_algorithms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmoo_algorithms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.214286">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jmoo_jmoea.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmoo_jmoea.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="35.037037">
+              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jmoo_core.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmoo_core.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.074074">
+              <caret line="203" column="36" selection-start-line="203" selection-start-column="36" selection-end-line="203" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -92,9 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Problems/Tera/WHERE/main.py" />
-        <option value="$PROJECT_DIR$/Algorithms/NSGAIII/polynomial_mutation.py" />
-        <option value="$PROJECT_DIR$/Algorithms/NSGAIII/niche.py" />
         <option value="$PROJECT_DIR$/Techniques/stats.py" />
         <option value="$PROJECT_DIR$/joes_decision_binner.py" />
         <option value="$PROJECT_DIR$/Techniques/euclidean_distance.py" />
@@ -131,17 +184,20 @@
         <option value="$PROJECT_DIR$/jmoo_interface.py" />
         <option value="$PROJECT_DIR$/jmoo_core.py" />
         <option value="$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py" />
-        <option value="$PROJECT_DIR$/jmoo_algorithms.py" />
         <option value="$PROJECT_DIR$/Algorithms/DEAP/tools/emo.py" />
         <option value="$PROJECT_DIR$/Algorithms/DEAP/tools/__init__.py" />
         <option value="$PROJECT_DIR$/Algorithms/NSGAIII/nsgaiii_components.py" />
         <option value="$PROJECT_DIR$/jmoo_problem.py" />
-        <option value="$PROJECT_DIR$/jmoo_jmoea.py" />
         <option value="$PROJECT_DIR$/jmoo_stats_box.py" />
         <option value="$PROJECT_DIR$/hv.py" />
         <option value="$PROJECT_DIR$/jmoo_problems.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" />
+        <option value="$PROJECT_DIR$/jmoo_individual.py" />
+        <option value="$PROJECT_DIR$/jmoo_algorithms.py" />
         <option value="$PROJECT_DIR$/jmoo_properties.py" />
+        <option value="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/test.py" />
+        <option value="$PROJECT_DIR$/jmoo_jmoea.py" />
+        <option value="$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py" />
         <option value="$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py" />
       </list>
     </option>
@@ -206,7 +262,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Algorithms" />
+              <option name="myItemId" value="Testing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -217,6 +273,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="storm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Testing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -238,11 +298,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Testing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Algorithms" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MOEA_D" />
+              <option name="myItemId" value="MOEAD_TCH" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Testing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MOEAD_PBI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -259,11 +345,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI" />
       <recent name="$PROJECT_DIR$/Techniques" />
       <recent name="$PROJECT_DIR$/Testing/PF" />
       <recent name="$PROJECT_DIR$/Problems/NRP" />
       <recent name="$PROJECT_DIR$/Problems/MONRP" />
-      <recent name="$PROJECT_DIR$/Problems/Tera" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Helper" />
@@ -414,16 +500,16 @@
     <frame x="0" y="23" width="1920" height="1008" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30458516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30458516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1327" y="75" width="602" height="924" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32751092" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16271722" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16061085" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286026" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -433,6 +519,26 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.30458516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1327" y="75" width="602" height="924" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32751092" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286026" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16271722" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -452,48 +558,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Techniques/IGD_Calculation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33562824">
-          <caret line="14" column="52" selection-start-line="8" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Helper/originalpf.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5163511">
-          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Helper/IGD.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/joes_stats_suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/storm_components.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms/DE/de_components.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.962963">
@@ -636,44 +700,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_algorithms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
-          <folding>
-            <element signature="e#1065#1097#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jmoo_stats_box.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="203" column="34" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_jmoea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_interface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -683,7 +713,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#1#11#0" expanded="true" />
+            <element signature="e#1#11#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -701,19 +731,6 @@
         <state vertical-scroll-proportion="2.0098522">
           <caret line="89" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.333333">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="e#2758#4495#0" expanded="false" />
-            <element signature="e#4519#6257#0" expanded="false" />
-            <element signature="e#6281#8020#0" expanded="false" />
-            <element signature="e#8046#9791#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,9 +870,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_individual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48440066">
+          <caret line="41" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/nsgaiii_components.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.185185">
+        <state vertical-scroll-proportion="0.3546798">
           <caret line="518" column="76" selection-start-line="518" selection-start-column="67" selection-end-line="518" selection-end-column="76" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -865,36 +890,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Techniques/euclidean_distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/CPM/cpm_icse2016.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.049261082">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#2758#4495#0" expanded="false" />
+            <element signature="e#4519#6257#0" expanded="false" />
+            <element signature="e#6281#8020#0" expanded="false" />
+            <element signature="e#8046#9791#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_algorithms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.214286">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.074074">
+          <caret line="203" column="36" selection-start-line="203" selection-start-column="36" selection-end-line="203" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_jmoea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="35.037037">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="29" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="29" />
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6426117">
-          <caret line="410" column="35" selection-start-line="410" selection-start-column="35" selection-end-line="410" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.16955018">
+          <caret line="592" column="80" selection-start-line="592" selection-start-column="80" selection-end-line="592" selection-end-column="80" />
           <folding>
-            <element signature="e#469#692#0" expanded="false" />
-            <element signature="e#730#1784#0" expanded="false" />
-            <element signature="e#1814#2052#0" expanded="false" />
-            <element signature="e#2085#2735#0" expanded="false" />
-            <element signature="e#2974#3930#0" expanded="false" />
-            <element signature="e#4448#4871#0" expanded="false" />
-            <element signature="e#6001#6189#0" expanded="false" />
-            <element signature="e#6233#6310#0" expanded="false" />
-            <element signature="e#6365#7497#0" expanded="false" />
-            <element signature="e#7540#7730#0" expanded="false" />
-            <element signature="e#7798#8932#0" expanded="false" />
-            <element signature="e#9000#11657#0" expanded="false" />
-            <element signature="e#16605#16948#0" expanded="false" />
-            <element signature="e#17005#17461#0" expanded="false" />
-            <element signature="e#17519#18110#0" expanded="false" />
-            <element signature="e#19919#20451#0" expanded="false" />
-            <element signature="e#20485#21345#0" expanded="false" />
+            <element signature="e#392#615#0" expanded="false" />
+            <element signature="e#653#1707#0" expanded="false" />
+            <element signature="e#1737#1975#0" expanded="false" />
+            <element signature="e#2008#2658#0" expanded="false" />
+            <element signature="e#2897#3853#0" expanded="false" />
+            <element signature="e#6065#6253#0" expanded="false" />
+            <element signature="e#6509#7641#0" expanded="false" />
+            <element signature="e#7684#7874#0" expanded="false" />
+            <element signature="e#7942#9076#0" expanded="false" />
+            <element signature="e#9144#11801#0" expanded="false" />
+            <element signature="e#11877#12999#0" expanded="false" />
+            <element signature="e#13095#14338#0" expanded="false" />
+            <element signature="e#14444#15493#0" expanded="false" />
+            <element signature="e#15600#16133#0" expanded="false" />
+            <element signature="e#16253#17567#0" expanded="false" />
+            <element signature="e#17610#17953#0" expanded="false" />
+            <element signature="e#18010#18466#0" expanded="false" />
+            <element signature="e#18524#19115#0" expanded="false" />
           </folding>
         </state>
       </provider>

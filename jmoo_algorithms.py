@@ -99,11 +99,21 @@ class jmoo_DE:
         self.color = color
         self.type = 'o'
 
-class jmoo_MOEAD:
+class jmoo_MOEAD_TCH:
     def __init__(self, color="Blue"):
         self.name = "MOEAD"
         self.initializer = initialize_moead
-        self.selector = moead_selector
+        self.selector = moead_selector_tch
+        self.adjustor = moead_mutate
+        self.recombiner = moead_recombine
+        self.color = color
+        self.type = '*'
+
+class jmoo_MOEAD_PBI:
+    def __init__(self, color="Blue"):
+        self.name = "MOEAD"
+        self.initializer = initialize_moead
+        self.selector = moead_selector_pbi
         self.adjustor = moead_mutate
         self.recombiner = moead_recombine
         self.color = color

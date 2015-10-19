@@ -77,6 +77,7 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
     statBox          = jmoo_stats_box(problem,algorithm) # Record keeping device
     gen              = 0                                 # Just a number to track generations
     numeval = 0
+    values_to_be_passed = {}
     
     # # # # # # # # # # # # # # # #
     # 2) Load Initial Population  #
@@ -90,14 +91,15 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
     population = problem.loadInitialPopulation(configurations["Universal"]["Population_Size"])
 
     assert(len(population) == configurations["Universal"]["Population_Size"]), "The population loaded from the file must be equal to MU"
-
+    from time import time
+    old = time()
 
     # # # # # # # # # # # # # # # #
     # 3.1) Special Initialization #
     # # # # # # # # # # # # # # # #
     if algorithm.initializer is not None:
         # TODO:fix MOEAD
-        population, numeval = algorithm.initializer(problem, population, configurations)
+        population, numeval = algorithm.initializer(problem, population, configurations, values_to_be_passed)
 
 
 
@@ -112,14 +114,15 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
     
     while gen < configurations["Universal"]["No_of_Generations"] and stoppingCriteria is False:
         gen+= 1
-        print gen, " | ",
+        # print gen, " | ",
         # # # # # # # # #
         # 4a) Selection #
         # # # # # # # # #
 
         problem.referencePoint = statBox.referencePoint
-        selectees, evals = algorithm.selector(problem, population, configurations)
+        selectees, evals = algorithm.selector(problem, population, configurations, values_to_be_passed)
         numNewEvals = evals
+        old = time()
 
         # # # # # # # # # #
         # 4b) Adjustment  #
@@ -135,6 +138,7 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
 
         population, evals = algorithm.recombiner(problem, population, selectees, configurations)
 
+
         numNewEvals += evals
         assert(len(population) == configurations["Universal"]["Population_Size"]), \
             "Length of the population should be equal to MU"
@@ -143,9 +147,9 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         # # # # # # # # # # #
         statBox.update(population, gen, numNewEvals)
 
-        from Techniques.IGD_Calculation import IGD
-        resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
-        print IGD(resulting_pf, readpf(problem))
+        # from Techniques.IGD_Calculation import IGD
+        # resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+        # print IGD(resulting_pf, readpf(problem))
             
         # # # # # # # # # # # # # # # # # #
         # 4e) Evaluate Stopping Criteria  #

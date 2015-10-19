@@ -39,6 +39,11 @@ class jmoo_individual:
         s = "problem: " + str(ind.problem.name) + "\n"
         s += "decisions: " + str(ind.decisionValues) + "\n"
         s += "fitness: " + str(ind.fitness) + "\n"
+        try:  # specific for moead
+            s += "Neighbor: " + str(ind.neighbor) + "\n"
+            s += "weight: " + str(ind.weight) + "\n"
+            s += "Id: " + str(ind.id) + "\n"
+        except: pass
         return s
 
     def __eq__(ind, other):

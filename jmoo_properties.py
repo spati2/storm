@@ -43,7 +43,7 @@ algorithms = [
               # jmoo_NSGAII(),
               # jmoo_SPEA2(),
               # jmoo_DE(),
-              jmoo_MOEAD(),
+              jmoo_MOEAD_TCH(),
               # jmoo_NSGAIII(),
               ]
 
@@ -90,7 +90,7 @@ build_new_pop = False                                       # Whether or not to 
 
 Configurations = {
     "Universal": {
-        "Repeats" : 10,
+        "Repeats" : 1,
         "Population_Size" : 91,
         "No_of_Generations" : 400
     },
@@ -109,10 +109,11 @@ Configurations = {
         "CF" : 0.3, # prob of cross over
     },
     "MOEAD" : {
-        "T" : 20,  # Neighbourhood size
+        "niche" : 20,  # Neighbourhood size
         "SBX_Probability": 1,
-        "ETA_C_DEFAULT_" : 30,
-        "ETA_M_DEFAULT_" : 20
+        "ETA_C_DEFAULT_" : 20,
+        "ETA_M_DEFAULT_" : 20,
+        "Theta" : 5
     },
     "STORM": {
         "STORM_EXPLOSION" : 5,
