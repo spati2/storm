@@ -193,7 +193,7 @@ def trim(mutated, low, up):
 
 def assign_id_to_member(population):
     from copy import deepcopy
-    new_population = deepcopy(population)
+    new_population = population[:] #deepcopy(population)
     for i, pop in enumerate(new_population):
         pop.id = i
     return new_population
@@ -454,7 +454,7 @@ def weighted_tche2(problem, individual_fitness, weight_vector, values_to_be_pass
 
 def update_neighbor(problem, individual, mutant, population, dist_function, configuration, values_to_be_passed):
     from copy import deepcopy
-    new_population = deepcopy(population)
+    new_population = population[:] #deepcopy(population)
 
     for i in xrange(configuration["MOEAD"]["niche"]):
         k = individual.neighbor[i]
@@ -528,8 +528,7 @@ def evolve_neighbor(problem, individual_index, population, configuration):
 
 
 def assign_weights_wrapper(problem, population):
-    from copy import deepcopy
-    new_population = deepcopy(population)
+    new_population = population[:]
     reference_points = create_reference_points(problem)
     for pop in new_population:
         pop.weight = assign_weights(reference_points)
@@ -539,7 +538,7 @@ def assign_weights_wrapper(problem, population):
 
 def find_neighbours_wrapper(problem, population, distance_matrix,  configuration):
     from copy import deepcopy
-    new_population = deepcopy(population)
+    new_population = population[:]#deepcopy(population)
     for i, pop in enumerate(new_population): pop.neighbor = find_neighbours(i, distance_matrix, configuration)
     return new_population
 
@@ -568,14 +567,17 @@ def initialize_moead(problem, population, configuration, values_to_be_passed):
 
 
 def moead_selector_tch(problem, population, configuration, values_to_be_passed):
-    print "#",
     from copy import deepcopy
     from random import shuffle
+
+    print ". ",
+    import sys
+    sys.stdout.flush()
 
     ideal_point = values_to_be_passed["ideal_point"]
     indivpoint = values_to_be_passed["indivpoint"]
 
-    new_population = deepcopy(population)
+    new_population = population[:]
     indexes = [i for i in xrange(len(new_population))]
     shuffle(indexes)
     for no in indexes:
@@ -593,6 +595,11 @@ def moead_selector_tch(problem, population, configuration, values_to_be_passed):
 def moead_selector_pbi(problem, population, configuration, values_to_be_passed):
     from copy import deepcopy
     from random import shuffle
+
+
+    print ". ",
+    import sys
+    sys.stdout.flush()
 
     ideal_point = values_to_be_passed["ideal_point"]
     indivpoint = values_to_be_passed["indivpoint"]
@@ -619,56 +626,3 @@ def moead_recombine(problem, unusedSlot, mutants, configuration):
     return mutants, 0
 
 
-
-
-
-# ------------------------------------------------ Tests --------------------------------------------------- #
-def _find_weights():
-    def one_test():
-        summa = random.randint(1,100)
-        number = random.randint(1,summa)
-        ret = assign_weights(number, summa)
-        print ret
-        exit()
-        return ret
-
-    def test_list(lis):
-        temp = [1 if num < 1/100 else 0 for num in lis]
-        if sum(temp) > 0:
-            return True
-        elif sum(temp) == 0:
-            return False
-        else:
-            raise Exception("Shouldn't happen")
-
-    for _ in xrange(100):
-        assert(test_list(one_test()) is False), "Something's wrong"
-
-
-def _euclidean_distance():
-    def one_test():
-        dimension = random.randint(1, 100)
-        first = [random.randint(-100, 100) for _ in xrange(dimension)]
-        second = [random.randint(-100, 100) for _ in xrange(dimension)]
-        from scipy.spatial import distance
-        try:
-            assert(round(euclidean_distance(first, second), 6) == round(distance.euclidean(first, second),6)), "Mistakes" \
-                                                                                                               " discovered"
-        except:
-            print "First: ", first
-            print "Second: ", second
-            print "My: ", euclidean_distance(first, second)
-            print "Their: ", distance.euclidean(first, second)
-            return False
-        return True
-
-    for _ in xrange(10000):
-        print ".",
-        assert(one_test() is True), "Test Failed"
-
-
-
-
-
-if __name__ == "__main__":
-    _find_weights()

@@ -78,11 +78,6 @@ problems =[
     # cpm_BDBC(treatment=None)
 
 
-    # #, fonseca(3), srinivas(), schaffer(), osyczka2(),# water()
-       #camel(), ant(),  forrest(), ivy(), jedit(), lucene(), poi(), synapse(), velocity(), xerces(),
-     #antRF()  , camelRF(),  forrestRF(), ivyRF(), jeditRF(), luceneRF(), poiRF(), synapseRF(), velocityRF(), xercesRF(),
-     #antW()  , camelW(),  forrestW(), ivyW(), jeditW(), luceneW(), poiW(), synapseW(), velocityW(), xercesW()
-
 
 ]
 

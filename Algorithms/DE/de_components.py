@@ -43,17 +43,21 @@ def crossover(problem, candidate_a, candidate_b):
 
 
 def extrapolate(problem, individuals, one, f, cf):
+    from random import randint
     two, three, four = three_others(individuals, one)
     solution = []
     for d, decision in enumerate(problem.decisions):
         assert isinstance(two, jmoo_individual)
         x, y, z = two.decisionValues[d], three.decisionValues[d], four.decisionValues[d]
-        if random.random() < cf: solution.append(trim(x + f * (y - z), decision.low, decision.up))
+        if random.random() < cf or randint(0, len(problem.decisions)) == d:
+            solution.append(trim(x + f * (y - z), decision.low, decision.up))
         else: solution.append(one.decisionValues[d])
 
     return jmoo_individual(problem, [float(d) for d in solution], None)
 
+
 def better(problem,individual,mutant):
+    assert(len(individual.fitness.fitness) == len(mutant.fitness.fitness)), "Length of mutant and parent should be the same"
     if len(individual.fitness.fitness) > 1:
         weights = []
         for obj in problem.objectives:
@@ -78,25 +82,29 @@ def better(problem,individual,mutant):
         if indi >= mut:  return individual
         else:  return mutant
 
-def de_selector(problem, individuals):
+
+def de_selector(problem, individuals, configuration, values_to_be_passed):
     newer_generation = []
+    no_evals = 0
     for individual in individuals:
         if not individual.valid:
             individual.evaluate()
     no_evals = 0
     for individual in individuals:
 
-        mutant = extrapolate(problem, individuals, individual, jmoo_properties.F, jmoo_properties.CF)
+        mutant = extrapolate(problem, individuals, individual, configuration["DE"]["F"], configuration["DE"]["CF"])
         mutant.evaluate()
         no_evals += 1
         newer_generation.append(better(problem, individual, mutant))
 
+    # print find_median([pop.fitness.fitness for pop in newer_generation])
+
     return newer_generation, no_evals
 
 
-def de_mutate(problem, population):
+def de_mutate(problem, population, configurations):
     return population, 0
 
 
-def de_recombine(problem, unusedSlot, mutants, MU):
+def de_recombine(problem, unusedSlot, mutants, configurations):
     return mutants, 0

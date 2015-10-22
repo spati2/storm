@@ -10,19 +10,16 @@ def readpf(problem):
     return [[float(num) for num in line.split()] for line in open(filename, "r").readlines()]
 
 from Techniques.IGD_Calculation import IGD
-algorithms_TCH = [jmoo_MOEAD_TCH()]
+algorithms = [jmoo_DE()]
 Configurations = {
     "Universal": {
         "Repeats" : 5,
         "Population_Size" : 136,
         "No_of_Generations" : 1500
     },
-    "MOEAD" : {
-        "niche" : 20,  # Neighbourhood size
-        "SBX_Probability": 1,
-        "ETA_C_DEFAULT_" : 20,
-        "ETA_M_DEFAULT_" : 20,
-        "Theta" : 5
+    "DE": {
+        "F" : 0.8, # extrapolate amount
+        "CF" : 0.3, # prob of cross over
     },
 }
 
@@ -34,7 +31,7 @@ def problems_runner(list_args):
 
 
     # Wrap the tests in the jmoo core framework
-    tests = jmoo_test(problems, algorithms_TCH)
+    tests = jmoo_test(problems, algorithms)
     IGD_Results = []
     for problem in tests.problems:
         print problem.name, " ",
@@ -61,19 +58,19 @@ def problems_runner(list_args):
             results_string += "Worst: " + str(IGD_Results[-1]) + "\n"
             results_string += "Median: " + str(IGD_Results[int(len(IGD_Results)/2)]) + "\n"
 
-            filename = "./Testing/Algorithms/MOEAD_TCH/Results/" + str(problem.name) + ".txt"
+            filename = "./Testing/Algorithms/DE/Results/" + str(problem.name) + ".txt"
             f = open(filename, "w")
             f.write(results_string)
             f.close()
 
 
+# dtlz1_14_10()
 problems = [
 
-    [dtlz1(7,3), 91, 400], [dtlz1(9, 5), 210, 600], [dtlz1(12, 8), 156, 750],
-    [dtlz1(14, 10), 275, 1000], [dtlz1(19, 15), 135, 1500],
-    [dtlz2(12, 3), 91, 250], [dtlz2(14, 5), 210, 350], [dtlz2(17, 8), 156, 500], [dtlz2(19, 10), 275, 750], [dtlz2(24, 15), 135, 1000],
-    [dtlz3(12, 3), 91, 1000], [dtlz3(14, 5), 210, 1000], [dtlz3(17, 8), 156, 1000], [dtlz3(19, 10), 275, 1500], [dtlz3(24, 15), 135, 2000],
-    [dtlz4(12, 3), 91, 600], [dtlz4(14, 5), 210, 1000], [dtlz4(17, 8), 156, 1250], [dtlz4(19, 10), 275, 2000], [dtlz4(24, 15), 135, 3000],
+    [dtlz1(7,3), 92, 400], [dtlz1(9, 5), 212, 600], [dtlz1(12, 8), 156, 750], [dtlz1(14, 10), 276, 1000], [dtlz1(19, 15), 136, 1500],
+    [dtlz2(12, 3), 92, 250], [dtlz2(14, 5), 212, 350], [dtlz2(17, 8), 156, 500], [dtlz2(19, 10), 276, 750], [dtlz2(24, 15), 136, 1000],
+    [dtlz3(12, 3), 92, 1000], [dtlz3(14, 5), 212, 1000], [dtlz3(17, 8), 156, 1000], [dtlz3(19, 10), 276, 1500], [dtlz3(24, 15), 136, 2000],
+    [dtlz4(12, 3), 92, 600], [dtlz4(14, 5), 212, 1000], [dtlz4(17, 8), 156, 1250], [dtlz4(19, 10), 276, 2000], [dtlz4(24, 15), 136, 3000],
         ]
 
 os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
