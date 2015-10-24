@@ -371,25 +371,24 @@ def variation(problem, individual_index, population, configuration):
 
 
 def pbi(problem, individual_fitness, weight_vector, values_to_be_passed, configuration):
-    def normlized_vector(weight_array):
+    def normalized_vector(weight_array):
         div = norm_vector(weight_array)
         return [x/div for x in weight_array]
-
     def norm_vector(weight_array):
         from math import sqrt
-        return sqrt(sum([wa ** 2 for wa in weight_array]))
+        return sqrt(sum([wa * wa for wa in weight_array]))
 
     def inner_product(vector1, vector2):
+        assert(len(vector1) == len(vector2)), "Length of the vectors should be the same"
         return sum([v1*v2 for v1, v2 in zip(vector1, vector2)])
 
     ideal_point = values_to_be_passed["ideal_point"]
-    indivpoint = values_to_be_passed["indivpoint"]
-    normalized_weight_vector = normlized_vector(weight_vector) # namda after normalization
+    normalized_weight_vector = normalized_vector(weight_vector)  # namda after normalization
 
-    realA = [-1e30 for _ in problem.objectives]
-    realB = [-1e30 for _ in problem.objectives]
+    realB = [0 for _ in problem.objectives]
 
     # difference between current point and reference point
+    assert(len(individual_fitness) == len(ideal_point)), "Something is wrong"
     realA = [ifv - ipv for ifv, ipv in zip(individual_fitness, ideal_point)]
 
     # distance along the line segment
@@ -397,10 +396,13 @@ def pbi(problem, individual_fitness, weight_vector, values_to_be_passed, configu
     d1 = fabs(inner_product(realA, normalized_weight_vector))
 
     # distance to the line segment
-    for n in xrange(len(problem.objectives)): realB[n] = (individual_fitness[n] - (ideal_point[n]
-                                                                                   + d1 * normalized_weight_vector[n]))
+    for n in xrange(len(problem.objectives)):
+        realB[n] = individual_fitness[n] - (ideal_point[n] + (d1 * normalized_weight_vector[n]))
     d2 = norm_vector(realB)
-    return d1 + configuration["MOEAD"]["Theta"] * d2
+    return d1 + (5 * d2)
+
+
+
 
 
 def weighted_tche(problem, individual_fitness, weight_vector, values_to_be_passed, configuration):
@@ -597,16 +599,16 @@ def moead_selector_pbi(problem, population, configuration, values_to_be_passed):
     from random import shuffle
 
 
-    print ". ",
+    print "# ",
     import sys
     sys.stdout.flush()
 
     ideal_point = values_to_be_passed["ideal_point"]
     indivpoint = values_to_be_passed["indivpoint"]
 
-    new_population = deepcopy(population)
+    new_population = population[:]
     indexes = [i for i in xrange(len(new_population))]
-    shuffle(indexes)
+    # shuffle(indexes)
     for no in indexes:
         pop = evolve_neighbor(problem, no, new_population, configuration)
         ideal_point, indivpoint = update_ideal_points(problem, pop, ideal_point, indivpoint)

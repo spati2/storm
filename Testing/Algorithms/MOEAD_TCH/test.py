@@ -58,8 +58,8 @@ def problems_runner(list_args):
             results_string += "- Ran the algorithm for "+ str(Configurations["Universal"]["Repeats"]) + "\n"
             results_string += "- The SBX crossover and mutation parameters are correct" + "\n"
             results_string += "Best: " + str(IGD_Results[0]) + "\n"
-            results_string += "Worst: " + str(IGD_Results[-1]) + "\n"
             results_string += "Median: " + str(IGD_Results[int(len(IGD_Results)/2)]) + "\n"
+            results_string += "Worst: " + str(IGD_Results[-1]) + "\n"
 
             filename = "./Testing/Algorithms/MOEAD_TCH/Results/" + str(problem.name) + ".txt"
             f = open(filename, "w")

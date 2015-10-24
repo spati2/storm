@@ -2,38 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3320aa-1484-4329-99a5-9539995d5922" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ1_12_8.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ1_14_10.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ1_19_15.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ1_7_3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ1_9_5.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ2_12_3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ2_14_5.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ2_17_8.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ2_19_10.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ2_24_15.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ3_12_3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ3_14_5.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ3_17_8.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ3_19_10.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ3_24_15.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ4_12_3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ4_14_5.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ4_17_8.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ4_19_10.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/Results/DTLZ4_24_15.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/DE/test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test_pbi.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_12_8-p156-d12-o8-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_12_8-p156-d12-o8-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_12_8.txt" afterPath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_12_8.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_14_10-p275-d14-o10-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_14_10-p275-d14-o10-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_14_10.txt" afterPath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_14_10.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_19_15-p135-d19-o15-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_19_15-p135-d19-o15-dataset.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_7_3-p91-d7-o3-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_7_3-p91-d7-o3-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_7_3.txt" afterPath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_7_3.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_9_5-p210-d9-o5-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_9_5-p210-d9-o5-dataset.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/DE/de_components.py" afterPath="$PROJECT_DIR$/Algorithms/DE/de_components.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_properties.py" afterPath="$PROJECT_DIR$/jmoo_properties.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_9_5.txt" afterPath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_9_5.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ2_17_8-p156-d17-o8-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ2_17_8-p156-d17-o8-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ3_17_8-p156-d17-o8-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ3_17_8-p156-d17-o8-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ4_17_8-p156-d17-o8-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ4_17_8-p156-d17-o8-dataset.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py" afterPath="$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_12_8-p156-d12-o8_MOEAD.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_12_8-p156-d12-o8_MOEAD.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_14_10-p275-d14-o10_MOEAD.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_14_10-p275-d14-o10_MOEAD.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_19_15-p135-d19-o15_MOEAD.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_19_15-p135-d19-o15_MOEAD.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_7_3-p91-d7-o3_MOEAD.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_7_3-p91-d7-o3_MOEAD.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p210-d9-o5_MOEAD.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p210-d9-o5_MOEAD.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py" afterPath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/test.py" afterPath="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" afterPath="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="storm.iws" />
@@ -55,49 +44,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="moead_components.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5137457">
-              <caret line="195" column="36" selection-start-line="195" selection-start-column="36" selection-end-line="195" selection-end-column="36" />
-              <folding>
-                <element signature="e#392#615#0" expanded="false" />
-                <element signature="e#653#1707#0" expanded="false" />
-                <element signature="e#1737#1975#0" expanded="false" />
-                <element signature="e#2008#2658#0" expanded="false" />
-                <element signature="e#2897#3853#0" expanded="false" />
-                <element signature="e#6065#6253#0" expanded="false" />
-                <element signature="e#6524#7656#0" expanded="false" />
-                <element signature="e#7699#7889#0" expanded="false" />
-                <element signature="e#17640#17983#0" expanded="false" />
-                <element signature="e#18040#18496#0" expanded="false" />
-                <element signature="e#18554#19145#0" expanded="false" />
-                <marker date="1445548202000" expanded="true" signature="3905:4090" placeholder="..." />
-                <marker date="1445548202000" expanded="true" signature="4159:4323" placeholder="..." />
-                <marker date="1445548202000" expanded="false" signature="4365:4766" placeholder="..." />
-                <marker date="1445548202000" expanded="true" signature="4829:4962" placeholder="..." />
-                <marker date="1445548202000" expanded="true" signature="5100:5623" placeholder="..." />
-                <marker date="1445548202000" expanded="true" signature="16293:17598" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/test.py">
+      <file leaf-file-name="test_pbi.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test_pbi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="24" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="24" />
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="38" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jmoo_properties.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="101" column="7" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="7" />
+              <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -108,6 +69,46 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moead_components.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="394" column="25" selection-start-line="394" selection-start-column="25" selection-end-line="394" selection-end-column="25" />
+              <folding>
+                <element signature="e#392#615#0" expanded="false" />
+                <element signature="e#653#1707#0" expanded="false" />
+                <element signature="e#1737#1975#0" expanded="false" />
+                <element signature="e#2008#2658#0" expanded="false" />
+                <element signature="e#2897#3853#0" expanded="false" />
+                <element signature="e#6065#6253#0" expanded="false" />
+                <element signature="e#6297#6469#0" expanded="false" />
+                <element signature="e#6524#7656#0" expanded="false" />
+                <element signature="e#7699#7889#0" expanded="false" />
+                <element signature="e#7957#9091#0" expanded="false" />
+                <element signature="e#9159#11816#0" expanded="false" />
+                <element signature="e#17606#17949#0" expanded="false" />
+                <element signature="e#18006#18462#0" expanded="false" />
+                <element signature="e#18520#19111#0" expanded="false" />
+                <marker date="1445645818000" expanded="true" signature="3905:4090" placeholder="..." />
+                <marker date="1445645818000" expanded="true" signature="4159:4323" placeholder="..." />
+                <marker date="1445645818000" expanded="false" signature="4365:4766" placeholder="..." />
+                <marker date="1445645818000" expanded="true" signature="4829:4962" placeholder="..." />
+                <marker date="1445645818000" expanded="true" signature="5100:5623" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DTLZ2_12_3.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/Results/DTLZ2_12_3.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -128,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Techniques/stats.py" />
         <option value="$PROJECT_DIR$/joes_decision_binner.py" />
         <option value="$PROJECT_DIR$/Techniques/euclidean_distance.py" />
         <option value="$PROJECT_DIR$/Algorithms/deap/tools/emo.py" />
@@ -173,11 +173,12 @@
         <option value="$PROJECT_DIR$/jmoo_individual.py" />
         <option value="$PROJECT_DIR$/jmoo_algorithms.py" />
         <option value="$PROJECT_DIR$/jmoo_jmoea.py" />
-        <option value="$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" />
         <option value="$PROJECT_DIR$/jmoo_properties.py" />
         <option value="$PROJECT_DIR$/Algorithms/DE/de_components.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/test.py" />
+        <option value="$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py" />
+        <option value="$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test_pbi.py" />
         <option value="$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py" />
       </list>
     </option>
@@ -282,7 +283,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MOEAD_TCH" />
+              <option name="myItemId" value="MOEAD_PBI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,7 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MOEAD_TCH" />
+              <option name="myItemId" value="MOEAD_PBI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -510,9 +511,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1008" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30458516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1327" y="75" width="602" height="924" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30458516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="1327" y="75" width="602" height="924" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32751092" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -565,167 +566,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Algorithms/DEAP/tools/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/scores.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5542312">
-          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/poles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.76877236">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/better.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/ndimes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/perpendicular_distance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/nudge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/mutator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/geometry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_stats_box.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hypervolume_computer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#1#11#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_problems.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_problem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0098522">
-          <caret line="89" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="39" selection-start-line="23" selection-start-column="52" selection-end-line="24" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/DTLZ2_12_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/DTLZ2_14_5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/DTLZ2_17_8.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/DTLZ2_19_10.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/DTLZ2_24_15.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Testing/Algorithms/NSGAIII/Results/DTLZ3_12_3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -876,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms/NSGAIII/unit_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3596059">
@@ -983,6 +820,174 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_12_8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_14_10.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ2_12_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ2_14_5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12315271">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ2_17_8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ2_19_10.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ2_24_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ3_12_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ3_14_5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ3_17_8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ3_19_10.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ3_24_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ4_12_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ4_14_5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ4_17_8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ4_19_10.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12315271">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ4_24_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_7_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_9_5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_19_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="69" selection-start-line="61" selection-start-column="69" selection-end-line="61" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/jmoo_interface.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -991,42 +996,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/test.py">
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="24" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="24" />
+          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_12_8.txt">
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/test_pbi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_9_5.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_TCH/Results/DTLZ1_7_3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="38" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms/MOEA_D/moead_components.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5137457">
-          <caret line="195" column="36" selection-start-line="195" selection-start-column="36" selection-end-line="195" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="394" column="25" selection-start-line="394" selection-start-column="25" selection-end-line="394" selection-end-column="25" />
           <folding>
             <element signature="e#392#615#0" expanded="false" />
             <element signature="e#653#1707#0" expanded="false" />
@@ -1034,18 +1023,28 @@
             <element signature="e#2008#2658#0" expanded="false" />
             <element signature="e#2897#3853#0" expanded="false" />
             <element signature="e#6065#6253#0" expanded="false" />
+            <element signature="e#6297#6469#0" expanded="false" />
             <element signature="e#6524#7656#0" expanded="false" />
             <element signature="e#7699#7889#0" expanded="false" />
-            <element signature="e#17640#17983#0" expanded="false" />
-            <element signature="e#18040#18496#0" expanded="false" />
-            <element signature="e#18554#19145#0" expanded="false" />
-            <marker date="1445548202000" expanded="true" signature="3905:4090" placeholder="..." />
-            <marker date="1445548202000" expanded="true" signature="4159:4323" placeholder="..." />
-            <marker date="1445548202000" expanded="false" signature="4365:4766" placeholder="..." />
-            <marker date="1445548202000" expanded="true" signature="4829:4962" placeholder="..." />
-            <marker date="1445548202000" expanded="true" signature="5100:5623" placeholder="..." />
-            <marker date="1445548202000" expanded="true" signature="16293:17598" placeholder="..." />
+            <element signature="e#7957#9091#0" expanded="false" />
+            <element signature="e#9159#11816#0" expanded="false" />
+            <element signature="e#17606#17949#0" expanded="false" />
+            <element signature="e#18006#18462#0" expanded="false" />
+            <element signature="e#18520#19111#0" expanded="false" />
+            <marker date="1445645818000" expanded="true" signature="3905:4090" placeholder="..." />
+            <marker date="1445645818000" expanded="true" signature="4159:4323" placeholder="..." />
+            <marker date="1445645818000" expanded="false" signature="4365:4766" placeholder="..." />
+            <marker date="1445645818000" expanded="true" signature="4829:4962" placeholder="..." />
+            <marker date="1445645818000" expanded="true" signature="5100:5623" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Algorithms/MOEAD_PBI/Results/DTLZ2_12_3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
