@@ -12,7 +12,7 @@ def readpf(problem):
     filename = "./Testing/PF/" + problem.name.split("_")[0] + "(" + str(len(problem.objectives)) + ")-PF.txt"
     return [[float(num) for num in line.split()] for line in open(filename, "r").readlines()]
 
-from PerformanceMetrics.IGD_Calculation import IGD
+from PerformanceMetrics.IGD.IGD_Calculation import IGD
 algorithms_PBI = [jmoo_MOEAD_PBI()]
 Configurations = {
     "Universal": {
