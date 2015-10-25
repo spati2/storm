@@ -1,4 +1,7 @@
-import os, sys, inspect
+import os
+import sys
+import inspect
+
 cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(inspect.getfile( inspect.currentframe()))[0], "../../..")))
 if cmd_subfolder not in sys.path:
     sys.path.insert(0, cmd_subfolder)
@@ -9,7 +12,7 @@ def readpf(problem):
     filename = "./Testing/PF/" + problem.name.split("_")[0] + "(" + str(len(problem.objectives)) + ")-PF.txt"
     return [[float(num) for num in line.split()] for line in open(filename, "r").readlines()]
 
-from Techniques.IGD_Calculation import IGD
+from PerformanceMetrics.IGD_Calculation import IGD
 algorithms_PBI = [jmoo_MOEAD_PBI()]
 Configurations = {
     "Universal": {

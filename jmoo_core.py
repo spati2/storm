@@ -31,13 +31,9 @@ Random Stuff
 ------------
 
 """
-import os, sys, inspect
-
-
-from Techniques.IGD_Calculation import IGD
 
 import random
-import jmoo_properties
+
 any = random.uniform
 normal= random.gauss
 seed  = random.seed
@@ -89,16 +85,9 @@ def chosen_one(problem, lst):
 "Brief notes"
 "Core Part of JMOO accessed by jmoo_interface."
 
-from jmoo_problems import *
-from jmoo_algorithms import *
-from jmoo_jmoea import *
-from jmoo_properties import *
-from jmoo_core import *
-from joes_stats_suite import *
-from joes_moo_charter import *
-from joes_decision_binner import *
 from jmoo_defect_chart import *
-import time,sys
+import time
+
 
 class jmoo_stats_report:
     def __init__(self,tests):

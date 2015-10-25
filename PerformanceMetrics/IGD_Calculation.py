@@ -3,7 +3,7 @@
 
 
 from __future__ import division
-from euclidean_distance import euclidean_distance
+from Techniques.euclidean_distance import euclidean_distance
 
 
 def IGD(approximation_points, original_points):

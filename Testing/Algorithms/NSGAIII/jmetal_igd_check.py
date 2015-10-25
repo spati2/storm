@@ -24,6 +24,6 @@ def read_file(filename):
 
 resulting_pf = read_file("jmetal_PF")
 os.chdir("../../..")  # Since the this file is nested so the working directory has to be changed
-from Techniques.IGD_Calculation import IGD
+from PerformanceMetrics.IGD_Calculation import IGD
 
 print IGD(resulting_pf, readpf(problem))
