@@ -1,4 +1,4 @@
-x#    Copyright (C) 2010 Simon Wessing
+#    Copyright (C) 2010 Simon Wessing
 #    TU Dortmund University
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@ x#    Copyright (C) 2010 Simon Wessing
 __author__ = "Simon Wessing"
 
 
-class HyperVolume:
+class InnerHyperVolume:
     """
     Hypervolume computation based on variant 3 of the algorithm in the paper:
     C. M. Fonseca, L. Paquete, and M. Lopez-Ibanez. An improved dimension-sweep
@@ -65,7 +65,7 @@ class HyperVolume:
         self.preProcess(relevantPoints)
         bounds = [-1.0e308] * dimensions
         hyperVolume = self.hvRecursive(dimensions - 1, len(relevantPoints), bounds)
-        return hyperVolume
+        return round(hyperVolume, 4)
 
 
     def hvRecursive(self, dimIndex, length, bounds):
@@ -178,7 +178,7 @@ class MultiList:
     """
 
     class Node: 
-        
+
         def __init__(self, numberLists, cargo=None): 
             self.cargo = cargo 
             self.next  = [None] * numberLists
@@ -195,6 +195,7 @@ class MultiList:
         """Constructor. 
         
         Builds 'numberLists' doubly linked lists.
+        Vivek: numberLists means number of dimensions
 
         """
         self.numberLists = numberLists
@@ -266,8 +267,7 @@ class MultiList:
             if bounds[i] > node.cargo[i]:
                 bounds[i] = node.cargo[i]
         return node
-    
-    
+
     def reinsert(self, node, index, bounds):
         """
         Inserts 'node' at the position it had in all lists in [0, 'index'[
@@ -280,16 +280,16 @@ class MultiList:
             node.next[i].prev[i] = node
             if bounds[i] > node.cargo[i]:
                 bounds[i] = node.cargo[i]
-            
 
 
 if __name__ == "__main__":
 
     # Example:
-    referencePoint = [2, 2, 2]
+    referencePoint = [5,5]
     hv = HyperVolume(referencePoint)
-    front = [[1,0,1], [0,1,0]]
+    front = [[1,4], [2,2], [1,3], [4,1]]
     volume = hv.compute(front)
+    print volume
 
             
             

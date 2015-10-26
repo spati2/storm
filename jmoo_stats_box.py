@@ -38,7 +38,7 @@ cmd_subfolder = os.path.realpath(os.path.abspath(os.path.join(os.path.split(insp
 if cmd_subfolder not in sys.path:
     sys.path.insert(0, cmd_subfolder)
 
-import IGD_Calculation
+from PerformanceMetrics.IGD.IGD_Calculation import IGD
 
 def readpf(problem):
     # print problem.name.split("_")[0]

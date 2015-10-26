@@ -33,6 +33,8 @@ Random Stuff
 """
 
 import random
+from jmoo_properties import DATA_PREFIX, DATA_SUFFIX, SUMMARY_RESULTS, DECISION_BIN_TABLE, RRS_TABLE
+from jmoo_jmoea import jmoo_evo
 
 any = random.uniform
 normal= random.gauss

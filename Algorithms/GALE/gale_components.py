@@ -24,7 +24,7 @@ from jmoo_individual import *
 
 
 
-def galeWHERE(problem, population):
+def galeWHERE(problem, population, configuration, values_to_be_passed):
     "The Core method behind GALE"
     
     # Compile population into table form used by WHERE
@@ -54,7 +54,7 @@ def galeWHERE(problem, population):
     
       
      
-def galeMutate(problem, NDLeafs):
+def galeMutate(problem, NDLeafs, configuration, values_to_be_passed):
     
     #################
     # Mutation Phase
@@ -131,10 +131,10 @@ def galeMutate(problem, NDLeafs):
             x    = (a**2 + row.c**2 - b**2) / (2*row.c+0.00001)
             
             #Test Mutant for Acceptance
-            GAMMA = 0.15 #note: make this a property
+            # confGAMMA = 0.15 #note: make this a property
             
-            #print abs(cx-x), (cx + (g * GAMMA))
-            if abs(x-cx) > (g * GAMMA) or problem.evalConstraints(row.cells[:n]): #reject it
+            #print abs(cx-x), (cx + (g * configuration["GALE"]["GAMMA"]))
+            if abs(x-cx) > (g * configuration["GALE"]["GAMMA"]) or problem.evalConstraints(row.cells[:n]): #reject it
                 row.cells = copy
                 row.x = x
                 
@@ -151,9 +151,10 @@ def galeMutate(problem, NDLeafs):
     # Return selectees and number of evaluations
     return population, numEval
 
-def galeRegen(problem, unusedSlot, mutants, MU):
+
+def galeRegen(problem, unusedSlot, mutants, MU, configuration, values_to_be_passed):
     
-    howMany = MU - len(mutants)
+    howMany = configuration["Universal"]["Population_Size"] - len(mutants)
     
     # Generate random individuals
     population = []

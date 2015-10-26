@@ -39,20 +39,21 @@ from jmoo_problems import *
 
 # JMOO Experimental Definitions
 algorithms = [
-              # jmoo_GALE(),
-              # jmoo_NSGAII(),
-              # jmoo_SPEA2(),
+              jmoo_GALE(),
+              jmoo_NSGAII(),
+              jmoo_SPEA2(),
               # jmoo_DE(),
-              jmoo_MOEAD_TCH(),
+              # jmoo_MOEAD_TCH(),
               # jmoo_NSGAIII(),
               ]
 
 problems =[
+    srinivas()
     # dtlz1(9, 5),
     # dtlz2(14, 5),
     # dtlz3(14, 5),
     # dtlz4(14, 5),
-    dtlz1(7, 3),
+    # dtlz1(7, 3),
     # dtlz2(12, 3),
     # dtlz3(12, 3),
     # dtlz4(12, 3),
