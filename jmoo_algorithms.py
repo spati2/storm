@@ -148,9 +148,9 @@ class jmoo_ANYWHERE:
         self.type = '*'
 
 
-class jmoo_ANYWHERE2:
+class jmoo_STORM:
     def __init__(self, color="Green"):
-        self.name = "ANYWHERE2"
+        self.name = "STORM2"
         self.initializer = None
         self.selector = anywhere3_selector
         self.adjustor = anywhere_mutate

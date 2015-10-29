@@ -108,16 +108,22 @@ def find_poles2(problem, population):
     return stars
 
 
-
-    # return stars
-
-
-def find_poles3(problem, population):
-    poles = []
+def find_poles3(problem, population, configurations):
+    """This version of find_poles, randomly selects individuals from the population and considers
+    assumes them to be the directions
+    Intuition: Random directions are better than any
+    """
+    # min_point = minimum in all dimensions, max_point = maximum in all dimensions
     min_point, max_point = find_extreme_point([pop.decisionValues for pop in population])
-    mid_point = find_midpoint(min_point, max_point)
-    directions = [population[i] for i in sorted(random.sample(xrange(len(population)), jmoo_properties.ANYWHERE_POLES * 2)) ]
-    mid_point = jmoo_individual(problem, mid_point, None)
+    # find mid point between min_point and max_point (mean)
+    temp_mid_point = find_midpoint(min_point, max_point)
+    # Randomly Sample the population to generate directions. This is a simpler approach to find_poles2()
+    directions = [population[i] for i in sorted(random.sample(xrange(len(population)),
+                                                              configurations["STORM"]["STORM_POLES"] * 2))]
+    # Encapsulate the mid_point into an jmoo_individual structure
+    mid_point = jmoo_individual(problem, temp_mid_point, None)
+    assert(problem.validate(temp_mid_point) is True), "Mid point is not a valid solution and this shouldn't happen"
+    # stars now is a list of poles in the Poles format
     stars = rearrange(problem, mid_point, directions)
     return stars
 

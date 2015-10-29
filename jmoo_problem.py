@@ -38,8 +38,7 @@ class jmoo_problem(object):
         prob.decisions = []
         prob.objectives = []
         prob.numEvals = 0
-    
-        
+
     def generateInput(prob):
         "a way to generate decisions for this problem"
         while True: # repeat if we don't meet constraints
@@ -52,6 +51,7 @@ class jmoo_problem(object):
         assert(prob.validate(temp_value) is True), "Something's wrong"
         # print "Initial Population Generation Complete"
         return temp_value
+
     def generateExtreme(prob):
         
         for decision in prob.decisions:
@@ -59,7 +59,6 @@ class jmoo_problem(object):
             
         if prob.evalConstraints(): return prob.generateInput()
         return [decision.value for decision in prob.decisions]
-
 
     def loadInitialPopulation(problem, MU, path=""):
         "a way to load *the* initial problem as used in jmoo_jmoea.py"
@@ -115,7 +114,11 @@ class jmoo_problem(object):
                 header += ">>" + objective.name + ","
             else:
                 header += "<<" + objective.name + ","          
-        return header[:len(header)-1] #remove the last comma at the end
+        return header[:len(header)-1]  # remove the last comma at the end
 
-    def validate(self, temp):
+    def validate(prob, decision_value):
+        assert(len(decision_value) == len(prob.decisions)), "Something is wrong with the usage of validate function"
+        for i, decision in enumerate(prob.decisions):
+            if decision.low <= decision_value[i] <= decision.up: pass
+            else: return False
         return True

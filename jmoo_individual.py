@@ -58,5 +58,5 @@ class jmoo_individual:
             ind.fitness.setFitness( ind.problem.evaluate(ind.decisionValues) )       
     @property
     def valid(self):
-        if self.fitness == None: return False
+        if self.fitness is None: return False
         else: return self.fitness.valid

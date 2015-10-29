@@ -94,10 +94,13 @@ def anywhere_selector(problem, individuals):
         new_population.extend([extrapolate(problem, individuals, individual, jmoo_properties.F, jmoo_properties.CF)
                                for individual in individuals])
 
+    import pdb
+    pdb.set_trace()
+
     stars = find_poles2(problem, new_population)
 
 
-    print ">> ", len([x.fitness.fitness for x in new_population if x.fitness.fitness is not None]), len(new_population), jmoo_properties.ANYWHERE_POLES
+    # print ">> ", len([x.fitness.fitness for x in new_population if x.fitness.fitness is not None]), len(new_population), jmoo_properties.ANYWHERE_POLES
     # exit()
 
     # remove population from new population TODO: Clean up
@@ -143,20 +146,18 @@ def anywhere_selector(problem, individuals):
     return return_population, sum([1 if x.fitness.fitness != None else 0 for x in return_population])
 
 
-def anywhere3_selector(problem, individuals):
+def anywhere3_selector(problem, individuals, Configurations, values_to_be_passed):
     print "=" * 10
     new_population = []
     mutated_population = []
     new_population.extend(individuals)
-    for count in xrange(jmoo_properties.ANYWHERE_EXPLOSION):
-        new_population.extend([extrapolate(problem, individuals, individual, jmoo_properties.F, jmoo_properties.CF)
-                               for individual in individuals])
 
-    stars = find_poles3(problem, new_population)
+    # The population explodes by Configurations["STORM"]["STORM_EXPLOSION"] times
+    for count in xrange(Configurations["STORM"]["STORM_EXPLOSION"]):
+        new_population.extend([extrapolate(problem, individuals, individual, Configurations["STORM"]["F"],
+                                           Configurations["STORM"]["CF"]) for individual in individuals])
 
-
-    print ">> ", len([x.fitness.fitness for x in new_population if x.fitness.fitness is not None]), len(new_population), jmoo_properties.ANYWHERE_POLES
-    # exit()
+    stars = find_poles3(problem, new_population, Configurations)
 
     # remove population from new population TODO: Clean up
     raw_poles = []
@@ -168,14 +169,12 @@ def anywhere3_selector(problem, individuals):
                 raw_poles.append(star)
             else: continue
 
-            for pop in new_population:
-                if star. decisionValues == pop.decisionValues:
-                    new_population.remove(pop)
-
+            # Remove the star from the new_population
+            new_population = [pop for pop in new_population if pop != star]
 
     distribution_list = []
     for individual in new_population:
-        correct_poles, individual = scores2(individual, stars)
+        correct_poles, individual = scores2(individual, stars, Configurations) iam here need to fix this from this
         distribution_list.extend(correct_poles)
         for poles in correct_poles:
             temp_individual = nudge(problem, individual, stars[poles].east, individual.anyscore)

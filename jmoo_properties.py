@@ -43,18 +43,19 @@ from Problems.POM3.POM3D import POM3D
 
 # JMOO Experimental Definitions
 algorithms = [
-              jmoo_GALE(),
-              jmoo_NSGAII(),
-              jmoo_SPEA2(),
+              # jmoo_GALE(),
+              # jmoo_NSGAII(),
+              # jmoo_SPEA2(),
               # jmoo_DE(),
               # jmoo_MOEAD_TCH(),
               # jmoo_NSGAIII(),
+    jmoo_STORM()
               ]
 
 problems =[
     # srinivas()
-    POM3B(), #POM3A(), POM3C(), POM3D()
-    # dtlz1(9, 5),
+    # POM3B(), #POM3A(), POM3C(), POM3D()
+    dtlz1(9, 5),
     # dtlz2(14, 5),
     # dtlz3(14, 5),
     # dtlz4(14, 5),
@@ -118,7 +119,10 @@ Configurations = {
     },
     "STORM": {
         "STORM_EXPLOSION" : 5,
-        "STORM_POLES" : 20  # number of actual poles is 2 * ANYWHERE_POLES
+        "STORM_POLES" : 20,  # number of actual poles is 2 * ANYWHERE_POLES
+        "F" : 0.75, # extrapolate amount
+        "CF" : 0.3, # prob of cross over
+        "STORM_SPLIT": 6,  # Break and split into pieces
     }
 }
 
