@@ -21,7 +21,7 @@ import jmoo_properties
 # Non-Dominated Sorting   (NSGA-II)  #
 ######################################
 
-def selNSGA2(individuals, k):
+def deap_selNSGA2(individuals, k):
     """Apply NSGA-II selection operator on the *individuals*. Usually, the
     size of *individuals* will be larger than *k* because any individual
     present in *individuals* will appear in the returned list at most once.
@@ -38,7 +38,6 @@ def selNSGA2(individuals, k):
        non-dominated sorting genetic algorithm for multi-objective
        optimization: NSGA-II", 2002.
     """
-    print "Length of individuals: ", len(individuals)
     map_fit_ind = defaultdict(list)
     for i, ind in enumerate(individuals):
         map_fit_ind[ind.fitness].append(ind)
@@ -151,7 +150,8 @@ def assignCrowdingDist(individuals):
     for i, dist in enumerate(distances):
         individuals[i].fitness.crowding_dist = dist
 
-def selTournamentDCD(individuals, k):
+
+def selTournamentDCD(individuals, k, configuration, values_to_be_passed):
     """Tournament selection based on dominance (D) between two individuals, if
     the two individuals do not interdominate the selection is made
     based on crowding distance (CD). The *individuals* sequence length has to
@@ -584,5 +584,5 @@ def _partition(array, begin, end):
             return j
 
 
-__all__ = ['selNSGA3', 'selNSGA2', 'selSPEA2', 'sortNondominated', 'sortLogNondominated',
+__all__ = [ 'deap_selNSGA2', 'selSPEA2', 'sortNondominated', 'sortLogNondominated',
            'selTournamentDCD']

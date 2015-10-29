@@ -83,7 +83,7 @@ if build_new_pop:
 tests = jmoo_test(problems, algorithms)
 
 # Define the reports
-if chartOnly == True: reports = [jmoo_chart_report(tests)]
+if chartOnly == True: reports = [jmoo_chart_report(tests, Configurations)]
 elif binsOnly: reports = [jmoo_decision_report(tests)]
 
 elif reportOnly: reports = [jmoo_stats_report(tests)]

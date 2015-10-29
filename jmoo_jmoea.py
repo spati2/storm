@@ -114,7 +114,7 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
     
     while gen < configurations["Universal"]["No_of_Generations"] and stoppingCriteria is False:
         gen+= 1
-        # print gen, " | ",
+        print gen, " | ",
         # # # # # # # # #
         # 4a) Selection #
         # # # # # # # # #
@@ -157,7 +157,8 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         # stoppingCriteria = toStop(statBox)
         stoppingCriteria = False
 
-        assert(len(statBox.box[-1].population) == configurations["Universal"]["Population_Size"]), \
-            "Length in the statBox should be equal to MU"
+        print "Length: ", len(population)
+        # assert(len(statBox.box[-1].population) == configurations["Universal"]["Population_Size"]), \
+        #     "Length in the statBox should be equal to MU"
 
     return statBox

@@ -44,7 +44,7 @@ def modeld():
     m = Model('xomoall')
     headers,rows = m.trials(5)
     p(m,headers,rows)
-    m = Model('pom3')
+    m = Model('POM3')
     headers,rows = m.trials(5)
     p(m,headers,rows)
 

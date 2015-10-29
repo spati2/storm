@@ -37,12 +37,13 @@ import numpy
 from time import *
 import os
 from DEAP.tools.support import ParetoFront
+from pylab import *
 
-def joes_charter_reporter(problems, algorithms, tag=""):
+def joes_charter_reporter(problems, algorithms, Configurations, tag=""):
     date_folder_prefix = strftime("%m-%d-%Y")
     
     fignum = 0
-    
+    MU = Configurations["Universal"]["Population_Size"]
             
     base = []
     final = []
@@ -62,12 +63,16 @@ def joes_charter_reporter(problems, algorithms, tag=""):
         initial = []
 
         filename = "Data/" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt"
-        row_count = sum(1 for _ in csv.reader( open(filename)))
+        # print filename
+        row_count = sum(1 for _ in csv.reader(open(filename)))
         for i,row in enumerate(reader):
             if i > 1 and i != row_count-1:
                     row = map(float, row)
                     assert(prob.validate(row) is True), "Something's wrong"
-                    initial.append(prob.evaluate(row)[-1])
+                    # print i, row, row_count
+                    try:
+                        initial.append(prob.evaluate(row)[-1])
+                    except: pass
         baseline.append(initial)
 
 
@@ -78,15 +83,7 @@ def joes_charter_reporter(problems, algorithms, tag=""):
             f3input = open("Data/results_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + ".datatable", 'rb')
             f4input = open(DATA_PREFIX + "decision_bin_table" + "_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + DATA_SUFFIX, 'rb')
 
-            # print f2input.name
-            # print f3input.name
-            # print f4input.name
-            # Data/RRS_TABLE__DTLZ1_12_8-p100-d12-o8_GALE.datatable
-            # Data/results_DTLZ1_12_8-p100-d12-o8_GALE.datatable
-            # Data/decision_bin_table_DTLZ1_12_8-p100-d12-o8_GALE.datatable
-            # import pdb
-            # pdb.set_trace()
-            
+
             reader2 = csv.reader(f2input, delimiter=',')
             reader3 = csv.reader(f3input, delimiter=',')
             reader4 = csv.reader(f4input, delimiter=',')
@@ -108,23 +105,6 @@ def joes_charter_reporter(problems, algorithms, tag=""):
                 fitness = [float(col) for col in row[n:n+o]]#prob.evaluate(candidate)
                 final[p][a].append(candidate+fitness)
             
-            """
-            for o,obj in enumerate(prob.objectives): 
-                RRS[p][a].append([])
-                RRS[p][a][o] = {}
-                foam[p][a].append([])
-                foam[p][a][o] = {}
-            
-                        
-            for i,row in enumerate(reader2):
-                k = len(prob.objectives)
-                fitness = [float(col) for col in row[-k-1:-1]]
-                for o,fit in enumerate(fitness):
-                    n = int(row[k])
-                    n = (int(round(n/5.0)*5.0))
-                    if n in RRS[p][a][o]: RRS[p][a][o][n].append(fit)
-                    else: RRS[p][a][o][n] = [fit]    
-            """
             for i,row in enumerate(reader3):
                 if not str(row[0]) == "0":
                     for j,col in enumerate(row):
@@ -134,18 +114,6 @@ def joes_charter_reporter(problems, algorithms, tag=""):
                             if not col == "":
 
                                 data[p][a][j].append(float(col.strip("%)(")))
-                    """
-                    # row is now read
-                    if i > 0:
-                        for o,obj in enumerate(prob.objectives):
-                            n = Data[p][a][0][-1]
-                            n = (int(round(n/20.0)*20.0))
-                            if n in foam[p][a][o]: foam[p][a][o][n].append(float(Data[p][a][o*3+2][-1]))
-                            else: foam[p][a][o][n] = [float(Data[p][a][o*3+2][-1])]
-                    """ 
-
-
-
 
 
     fignum = 0
@@ -154,8 +122,9 @@ def joes_charter_reporter(problems, algorithms, tag=""):
     font = {'family' : 'sans-serif',
             'weight' : 'normal',
             'size'   : 8}
-    
-    matplotlib.rc('font', **font)
+
+    from matplotlib import rc
+    rc('font', **font)
     fontP = FontProperties()
     fontP.set_size('x-small')
     
@@ -174,134 +143,13 @@ def joes_charter_reporter(problems, algorithms, tag=""):
     #fig  = plt.figure()
     #ax = fig.gca(projection='3d')
     
-    #"""
-    #hypervolume and diversity deb metric stuff
-    # print 'hello'
-    #
-    # for p,prob in enumerate(problems):
-    #     for a,alg in enumerate(algorithms):
-    #
-    #         n = len(prob.decisions)
-    #         population = [jmoo_individual(prob, f[:n], f[n:]) for f in final[p][a]]
-    #         population = deap_format(prob, population)
-    #         front = population
-    #         front.sort(key=lambda x: x.fitness.values)
-    #
-    #         from stats import diversity
-    #         import hv
-    #         refPoint = ['s' for o in prob.objectives]
-    #         for row in population:
-    #             for i,fit in enumerate(row.fitness.values):
-    #                 if refPoint[i] == 's': refPoint[i] = row.fitness.values[i]
-    #                 else:
-    #                     if prob.objectives[i].lismore:
-    #                         if refPoint[i] < row.fitness.values[i]: refPoint[i] = row.fitness.values[i]
-    #                     else:
-    #                         if refPoint[i] > row.fitness.values[i]: refPoint[i] = row.fitness.values[i]
-    #
-    #         finput = open("Data/" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt", 'rb')
-    #         reader = csv.reader(finput, delimiter=',')
-    #
-    #         hellPoint = []
-    #         midPoint = []
-    #         initialFront = []
-    #         lowPoint = []
-    #
-    #         for i,line in enumerate(reader):
-    #             if i > 100:
-    #                 midPoint.append(float(line[1]))
-    #                 if (prob.objectives[i-100-1].lismore):
-    #                     hellPoint.append(float(line[2]))
-    #                     lowPoint.append(float(line[0]))
-    #                 else:
-    #                     hellPoint.append(float(line[0]))
-    #                     lowPoint.append(float(line[2]))
-    #                     hellPoint[i-100-1] *= -1
-    #                     midPoint[i-100-1] *= -1
-    #                     refPoint[i-100-1] *= -1
-    #                     lowPoint[i-100-1] *= -1
-    #             else:
-    #                 if i > 0:
-    #                     n = len(prob.decisions)
-    #                     o = len(prob.objectives)
-    #                     candidate = [float(col) for col in line[:n]]
-    #                     fitness = prob.evaluate(candidate)
-    #                     initialFront.append(jmoo_individual(prob, candidate, fitness))
-    #
-    #         initialFront = deap_format(prob, initialFront)
-    #         refPoint = ['s' for o in prob.objectives]
-    #         for row in initialFront:
-    #             for i,fit in enumerate(row.fitness.values):
-    #                 if refPoint[i] == 's': refPoint[i] = row.fitness.values[i]
-    #                 else:
-    #                     if prob.objectives[i].lismore:
-    #                         if refPoint[i] < row.fitness.values[i]: refPoint[i] = row.fitness.values[i]
-    #                     else:
-    #                         if refPoint[i] > row.fitness.values[i]: refPoint[i] = row.fitness.values[i]
-    #         for item in front:
-    #             item.fitness.weightedvalues = [item.fitness.values[o] for o in range(len(prob.objectives))]
-    #         for item in initialFront:
-    #             item.fitness.weightedvalues = [item.fitness.values[o] for o in range(len(prob.objectives))]
-    #         for o,obj in enumerate(prob.objectives):
-    #             if obj.lismore == False:
-    #                 for item in front:
-    #                     item.fitness.weightedvalues[o] = item.fitness.weightedvalues[o]*-1
-    #                 for item in initialFront:
-    #                     item.fitness.weightedvalues[o] = item.fitness.weightedvalues[o]*-1
-    #
-    #         #COMPUTE THE DEB SPREAD
-    #         if len(front) > 0:
-    #             div = diversity(front, front[0].fitness.values, front[-1].fitness.values)
-    #         else:
-    #             div = 0
-    #
-    #         #COMPUTE THE HV
-    #         start = time()
-    #         HV = hv.HyperVolume(refPoint)
-    #         result =    HV.compute([item.fitness.weightedvalues for item in front])
-    #
-    #         #resultInit =    HV.compute([item.fitness.weightedvalues for item in initialFront])
-    #         #HV = hv.HyperVolume(hellPoint)
-    #         #hellResult = HV.compute([item.fitness.weightedvalues for item in front])
-    #         #hellResultInit = HV.compute([item.fitness.weightedvalues for item in initialFront])
-    #         #HV = hv.HyperVolume(midPoint)
-    #         #midResult = HV.compute([item.fitness.weightedvalues for item in front])
-    #         #midResultInit = HV.compute([item.fitness.weightedvalues for item in initialFront])
-    #
-    #
-    #         end = time()
-    #         hvtime = (end-start)
-    #         zzz = prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "," + alg.name + "," + str(len(front))
-    #         zzz += "," + str( div ) + ", " + str(result) + ", " + str(hvtime)# + "," + str(midResult) + "," + str(resultInit) + "," + str(hellResultInit) + ',' + str(midResultInit)
-    #         print zzz
-    #
-    #
-    #
-    #         #import matplotlib.pyplot as plt
-    #         # import numpy
-    #         #
-    #         #front = numpy.array([ind.fitness.values for ind in population])
-    #         #optimal_front = numpy.array(optimal_front)
-    #         #plt.scatter(optimal_front[:,0], optimal_front[:,1], c="r")
-    #         #plt.scatter(front[:,0], front[:,1], c="b")
-    #         #plt.axis("tight")
-    #         #plt.show()
-    #         #d_ = []
-    #         #for i,fit_i in enumerate(front):
-    #         #    fma = []
-    #         #    for j,fit_j in enumerate(front):
-    #         #        if not i == j:
-    #         #            fma.append(sum([abs(fit_i.fitness.values[k] - fit_j.fitness.values[k]) for k in range(len(prob.objectives))]))
-    #         #    d_.append(min(fma))
-    #         #d_bar = average(d_)
-    #         #ssm =   ((1 / float(len(front) - 1)) * sum([(d_bar - d_i)**2 for d_i in d_]))**0.5
-    #         #print prob.name + "," + alg.name + ", size of pareto front: ", len(front), ", spacing: ", ssm
-    #
-    # #"""
-       
-    f, axarr = plt.subplots(2, len(prob.objectives))   #for dtlz123456
-    #f, axarr = plt.subplots(3, len(prob.objectives)-1)   #for pom3abc
+
+
+    f, axarr = plt.subplots(3, len(prob.objectives))   #for dtlz123456
+    # f, axarr = plt.subplots(3, len(prob.objectives)-1)   #for pom3abc
     #f, axarr = plt.subplots(3, len(prob.objectives))   #for xomo gr fl o2
+
+
     F = gcf()
     DefaultSize = F.get_size_inches()
     F.set_size_inches( (DefaultSize[0]*1.5, DefaultSize[1]) )
@@ -325,10 +173,6 @@ def joes_charter_reporter(problems, algorithms, tag=""):
                         first_percentile = percentile(baseline[p], 25)
                         second_percentile = percentile(baseline[p], 50)
                         third_percentile = percentile(baseline[p], 75)
-
-
-                        print first_percentile, second_percentile, third_percentile
-
 
                         for i, sc in enumerate([first_percentile, second_percentile, third_percentile]):
                             keylist = []
@@ -410,52 +254,6 @@ def joes_charter_reporter(problems, algorithms, tag=""):
     cla()
     clf()
     close()
-    #show()
-
-    # #--- For IGD -- Values #
-    # min_number = 1e32
-    # max_number = -1e32
-    #
-    # for p,prob in enumerate(problems):
-    #     for a,alg in enumerate(algorithms):
-    #
-    #         # to handle multiple runs
-    #         scores = {}
-    #         for score,eval in zip(Data[p][a][-2], Data[p][a][0]):
-    #             # print score
-    #             if eval in scores: scores[eval].append(score)
-    #             else: scores[eval] = [score]
-    #
-    #         score_list = []
-    #         try:
-    #             for eval in sorted(Data[p][a][0]):
-    #                 score_list.append(median(scores[int(eval)]))
-    #         except:
-    #             import traceback
-    #             traceback.print_exc()
-    #             print scores.keys()
-    #             exit()
-    #
-    #         # for xx, yy in zip(Data[p][a][0], score_list):
-    #         #     print xx, yy
-    #         # exit()
-    #
-    #
-    #         plt.plot(sorted(Data[p][a][0]), score_list, label=alg.name, marker=alg.type, color=alg.color) #MARKER PLOTS )
-    #         min_number = min(min(Data[p][a][-2]), min_number)
-    #         max_number = max(max(Data[p][a][-2]), max_number)
-    #         #max_number = 10
-    #
-    #
-    #
-    # plt.xlabel('Generations')
-    # plt.ylabel('IGD')
-    # plt.title('Variation of IGD')
-    # plt.legend()
-    # print min_number, max_number
-    # plt.ylim([min_number - 1, max_number + 1])# -- Tera
-    # plt.savefig('Charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + "IGD" + '.png', dpi=100)
-    # cla()
 
 
 

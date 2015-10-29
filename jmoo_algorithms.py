@@ -1,4 +1,3 @@
-
 """
 ##########################################################
 ### @Author Joe Krall      ###############################
@@ -30,6 +29,8 @@
 from Algorithms.DEAP import base
 from Algorithms.DEAP import creator
 from Algorithms.DEAP import tools
+from Algorithms.DEAP.tools.emo import *
+
 
 import os, sys, inspect
 
@@ -68,7 +69,8 @@ class jmoo_NSGAII:
         self.recombiner = selNSGA2
         self.color = color
         self.type = '^'
-    
+
+
 class jmoo_SPEA2:
     def __init__(self, color="Green"):
         self.name = "SPEA2"
@@ -78,7 +80,8 @@ class jmoo_SPEA2:
         self.recombiner = selSPEA2
         self.color = color
         self.type = 'h'
-        
+
+
 class jmoo_GALE:
     def __init__(self, color="Red"):
         self.name = "GALE"
@@ -89,15 +92,17 @@ class jmoo_GALE:
         self.color = color
         self.type = '*'
 
+
 class jmoo_DE:
     def __init__(self, color="Black"):
         self.name = "DE"
         self.initializer = None
         self.selector = de_selector
         self.adjustor = de_mutate
-        self.recombiner = de_recombine #stub
+        self.recombiner = de_recombine  # stub
         self.color = color
         self.type = 'o'
+
 
 class jmoo_MOEAD_TCH:
     def __init__(self, color="Blue"):
@@ -109,6 +114,7 @@ class jmoo_MOEAD_TCH:
         self.color = color
         self.type = '*'
 
+
 class jmoo_MOEAD_PBI:
     def __init__(self, color="Blue"):
         self.name = "MOEAD"
@@ -118,6 +124,7 @@ class jmoo_MOEAD_PBI:
         self.recombiner = moead_recombine
         self.color = color
         self.type = '*'
+
 
 class jmoo_NSGAIII:
     def __init__(self, color="blue"):
@@ -129,6 +136,7 @@ class jmoo_NSGAIII:
         self.color = color
         self.type = 'p'
 
+
 class jmoo_ANYWHERE:
     def __init__(self, color="Yellow"):
         self.name = "ANYWHERE"
@@ -138,6 +146,7 @@ class jmoo_ANYWHERE:
         self.recombiner = anywhere_recombine
         self.color = color
         self.type = '*'
+
 
 class jmoo_ANYWHERE2:
     def __init__(self, color="Green"):
@@ -152,69 +161,72 @@ class jmoo_ANYWHERE2:
 
 class Bin:
     def __init__(self):
-        self.low=0
-        self.up=0
-        self.mid=0
-        
-def binner(problem, mu):    
+        self.low = 0
+        self.up = 0
+        self.mid = 0
+
+
+def binner(problem, mu):
     numBins = 10
     Bins = [Bin() for x in problem.decisions]
     for dec in problem.decisions:
         for bin in range(numBins):
-            Bins[bin].low = dec.low + (bin  )*((dec.up - dec.low)/numBins)
-            Bins[bin].up  = dec.low + (bin+1)*((dec.up - dec.low)/numBins)
+            Bins[bin].low = dec.low + (bin) * ((dec.up - dec.low) / numBins)
+            Bins[bin].up = dec.low + (bin + 1) * ((dec.up - dec.low) / numBins)
             Bins[bin].mid = (Bins[bin].up - Bins[bin].low) / 2
-    
-    #random initial sample - pick bins for each decision
+
+    # random initial sample - pick bins for each decision
     initialBins = []
     for dec in problem.decisions:
-        initialBins.append(random.randint(0, numBins-1))
+        initialBins.append(random.randint(0, numBins - 1))
     population = []
     population.append(initialBins)
-    
-    #build population sample
-    for i in range(mu-1):
+
+    # build population sample
+    for i in range(mu - 1):
         furthest = 0
-        
-        #glob
-        
-        
-    
+
+        # glob
+
+
 #############################################################
 ### MOO Algorithm Selectors
 #############################################################
- 
-    
-    
-def selTournament(problem, individuals):
-    
+
+def selTournament(problem, individuals, configuration, value_to_be_passed):
     # Format a population Data structure usable by DEAP's package
     dIndividuals = deap_format(problem, individuals)
-    
+
     # Select elites
-    selectees = tools.selTournament(dIndividuals, len(individuals), 4)
-    
+    from Algorithms.DEAP.tools.selection import deap_selTournament
+    selectees = deap_selTournament(dIndividuals, len(individuals), 4)
+
     # Update beginning population Data structure
-    selectedIndices = [i for i,sel in enumerate(selectees)]
+    selectedIndices = [i for i, sel in enumerate(selectees)]
     return [individuals[s] for s in selectedIndices], len(individuals)
 
-def selTournamentDCD(problem, individuals):
-    
+
+def selTournamentDCD(problem, individuals, configuration, value_to_be_passed):
+
     # Evaluate any new guys
     for individual in individuals:
         if not individual.valid:
             individual.evaluate()
-            
-    # Format a population Data structure usable by DEAP's package
+
+    # Format a population data structure usable by DEAP's package
     dIndividuals = deap_format(problem, individuals)
-    
+    # import pdb
+    # pdb.set_trace()
+
     # Assign crowding distance
-    tools.emo.assignCrowdingDist(dIndividuals)
-    
+    from Algorithms.DEAP.tools.emo import assignCrowdingDist
+    assignCrowdingDist(dIndividuals)
+
     # Select elites
-    selectees = tools.selTournamentDCD(dIndividuals, len(individuals))
-    
-    # Update beginning population Data structure
+    from Algorithms.DEAP.tools.emo import selTournamentDCD
+    selectees = selTournamentDCD(dIndividuals, len(individuals), configuration, value_to_be_passed)
+
+    # Update beginning population data structure
     selectedIndices = [i for i,sel in enumerate(selectees)]
     return [individuals[s] for s in selectedIndices], len(individuals)
 
@@ -222,53 +234,30 @@ def selTournamentDCD(problem, individuals):
 ### MOO Algorithm Adjustors
 #############################################################
 
-def helper_list(lst, item):
 
-    item = [int(item[0]), int(item[1]), round(item[2], 2), int(item[3]), round(item[4], 2)]
-    # print " >>>>", item, len(lst)
-    if len(lst) == 0 or item not in lst:
-        lst.append(item)
-        return lst
-    else:
-        return lst
+def crossoverAndMutation(problem, individuals, configuration):
 
-def crossoverAndMutation(problem, individuals):
-
-    from copy import copy
-    new_individuals = individuals
-
-    # Format a population Data structure usable by DEAP's package
+    # Format a population data structure usable by DEAP's package
     dIndividuals = deap_format(problem, individuals)
-    new_dIndividuals = []
-    # print "Number of Individuals: ", len(dIndividuals)
 
     # Crossover
     for ind1, ind2 in zip(dIndividuals[::2], dIndividuals[1::2]):
-        if random.random() <= 1: #crossover rate
-            # print ".",
-            ind1, ind2 = tools.cxUniform(ind1, ind2, indpb=1.0/len(problem.decisions))
-            new_dIndividuals.append(ind1)
-            new_dIndividuals.append(ind2)
-        else:
-            new_dIndividuals.append(ind1)
-            new_dIndividuals.append(ind2)
-
+        if random.random() <= 0.9: #crossover rate
+            tools.cxUniform(ind1, ind2, indpb=1.0/len(problem.decisions))
 
 
     # Mutation
-    for ind in new_dIndividuals:
-        # print "+",
+    for ind in dIndividuals:
         tools.mutPolynomialBounded(ind, eta = 1.0, low=[dec.low for dec in problem.decisions], up=[dec.up for dec in problem.decisions], indpb=0.1 )
         del ind.fitness.values
 
-    # Update beginning population Data structure
-    for individual, dIndividual in zip(new_individuals, new_dIndividuals):
+    # Update beginning population data structure
+    for individual,dIndividual in zip(individuals, dIndividuals):
         for i in range(len(individual.decisionValues)):
             individual.decisionValues[i] = dIndividual[i]
             individual.fitness = None
 
-
-    return new_individuals,0
+    return individuals,0
 
 def variator(problem, selectees):
     return selectees, 0
@@ -278,60 +267,61 @@ def variator(problem, selectees):
     for r_index,row in enumerate(selectees):
         for i in range(len(problem.decisions)):
             selectees[r_index].decisionValues[i] = max(problem.decisions[i].low, min(problem.decisions[i].up,  row.decisionValues[i] + (random.uniform(0.0, d)-d/2) * (problem.decisions[i].up  - problem.decisions[i].low)))
-    
-    
-    return selectees, 0
 
 #############################################################
 ### MOO Algorithm Recombiners
 #############################################################
 
 
-def selSPEA2(problem, population, selectees, k):
+def selSPEA2(problem, population, selectees, configurations):
+    k = configurations["Universal"]["Population_Size"]
     # Evaluate any new guys
-    for individual in population+selectees:
+    for individual in population + selectees:
         if not individual.valid:
             individual.evaluate()
-            
-    # Format a population Data structure usable by DEAP's package
-    dIndividuals = deap_format(problem, population+selectees)
-    
-    # Combine
-    dIndividuals = tools.selSPEA2(dIndividuals, k)
-    
-    # Copy from DEAP structure to JMOO structure
-    population = []
-    for i,dIndividual in enumerate(dIndividuals):
-        cells = []
-        for j in range(len(dIndividual)):
-            cells.append(dIndividual[j])
-        population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
-        
-        
-    return population,k
 
-def selNSGA2(problem, population, selectees, k):
-    
-    # Evaluate any new guys
-    for individual in population+selectees:
-        if not individual.valid:
-            individual.evaluate()
-            
     # Format a population Data structure usable by DEAP's package
-    dIndividuals = deap_format(problem, population+selectees)
-    
+    dIndividuals = deap_format(problem, population + selectees)
+
     # Combine
-    dIndividuals = tools.selNSGA2(dIndividuals, k)
-    
+    from Algorithms.DEAP.tools.emo import selSPEA2
+    dIndividuals = selSPEA2(dIndividuals, k)
+
     # Copy from DEAP structure to JMOO structure
     population = []
-    for i,dIndividual in enumerate(dIndividuals):
+    for i, dIndividual in enumerate(dIndividuals):
         cells = []
         for j in range(len(dIndividual)):
             cells.append(dIndividual[j])
         population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
-        
-    return population,k
+
+    return population, k
+
+
+def selNSGA2(problem, population, selectees, configurations):
+    k = configurations["Universal"]["Population_Size"]
+    # Evaluate any new guys
+    for individual in population + selectees:
+        if not individual.valid:
+            individual.evaluate()
+
+    # Format a population Data structure usable by DEAP's package
+    dIndividuals = deap_format(problem, population + selectees)
+
+    # Combine
+    from Algorithms.DEAP.tools.emo import deap_selNSGA2
+    dIndividuals = deap_selNSGA2(dIndividuals, k)
+
+    # Copy from DEAP structure to JMOO structure
+    population = []
+    for i, dIndividual in enumerate(dIndividuals):
+        cells = []
+        for j in range(len(dIndividual)):
+            cells.append(dIndividual[j])
+        population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
+
+    return population, k
+
 
 #############################################################
 ### MOO Algorithm Convergence Stops
@@ -340,15 +330,16 @@ def selNSGA2(problem, population, selectees, k):
 def default_toStop(statBox):
     return False
 
+
 def bstop(statBox):
     stop = True
-    for o,obj in enumerate(statBox.problem.objectives):
+    for o, obj in enumerate(statBox.problem.objectives):
         if statBox.box[-1].changes[o] <= statBox.bests[o]: stop = False
-    
+
     if stop == True:
         statBox.lives += -1
-        print "#"*20
-        
+        print "#" * 20
+
     return stop and statBox.lives == 0
 
 
@@ -357,19 +348,19 @@ def bstop(statBox):
 #############################################################
 
 def deap_format(problem, individuals):
+    from Algorithms.DEAP import base, creator
+    import array
     "copy a jmoo-style list of individuals into a deap-style list of individuals"
     toolbox = base.Toolbox()
     creator.create("FitnessMin", base.Fitness, weights=[-1.0 if obj.lismore else 1.0 for obj in problem.objectives])
     creator.create("Individual", array.array, typecode='d', fitness=creator.FitnessMin)
 
     dIndividuals = []
-    for i,individual in enumerate(individuals):
+    for i, individual in enumerate(individuals):
         dIndividuals.append(creator.Individual([dv for dv in individual.decisionValues]))
         dIndividuals[-1].fitness.decisionValues = [dv for dv in individual.decisionValues]
         if individual.valid: dIndividuals[i].fitness.values = individual.fitness.fitness
         dIndividuals[-1].fitness.feasible = not problem.evalConstraints([dv for dv in individual.decisionValues])
         dIndividuals[-1].fitness.problem = problem
-        
-    
-    return dIndividuals 
-       
+
+    return dIndividuals

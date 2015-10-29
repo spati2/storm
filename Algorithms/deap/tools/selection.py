@@ -45,7 +45,7 @@ def selWorst(individuals, k):
     return sorted(individuals, key=attrgetter("fitness"))[:k]
 
 
-def selTournament(individuals, k, tournsize):
+def deap_selTournament(individuals, k, tournsize):
     """Select *k* individuals from the input *individuals* using *k*
     tournaments of *tournsize* individuals. The list returned contains
     references to the input *individuals*.
@@ -174,4 +174,4 @@ def selDoubleTournament(individuals, k, fitness_size, parsimony_size, fitness_fi
         return _fitTournament(individuals, k, tsize)
 
 __all__ = ['selRandom', 'selBest', 'selWorst', 'selRoulette',
-           'selTournament', 'selDoubleTournament']
+           'deap_selTournament', 'selDoubleTournament']

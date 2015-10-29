@@ -34,6 +34,10 @@ from jmoo_problems import *
 # from Problems.CPM.cpm_reduction import *
 # from Problems.NRP.nrp import *
 # from Problems.MONRP.monrp import *
+from Problems.POM3.POM3B import POM3B
+from Problems.POM3.POM3A import POM3A
+from Problems.POM3.POM3C import POM3C
+from Problems.POM3.POM3D import POM3D
 
 
 
@@ -48,7 +52,8 @@ algorithms = [
               ]
 
 problems =[
-    srinivas()
+    # srinivas()
+    POM3B(), #POM3A(), POM3C(), POM3D()
     # dtlz1(9, 5),
     # dtlz2(14, 5),
     # dtlz3(14, 5),
@@ -87,8 +92,8 @@ build_new_pop = False                                       # Whether or not to 
 Configurations = {
     "Universal": {
         "Repeats" : 1,
-        "Population_Size" : 91,
-        "No_of_Generations" : 400
+        "Population_Size" : 92,
+        "No_of_Generations" : 20
     },
     "NSGAIII": {
         "SBX_Probability": 1,

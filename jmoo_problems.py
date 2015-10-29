@@ -27,17 +27,13 @@
 "Brief notes"
 "Implementation of a variety of Multi-Objective Problems"
 
+from math import *
+
 from jmoo_objective import *
 from jmoo_decision import *
 from jmoo_problem import *
 from jmoo_stats_box import *
 
-import math
-from math import *
-import os,sys,inspect
-
-import Problems.pom3.pom3
-import Problems.xomo.xomo_liaison
 
 def distance(in1, in2):
     return sum([abs(x-y) for x,y in zip(in1,in2)])**0.5
@@ -956,187 +952,6 @@ class joetest1(jmoo_problem):
     def evalConstraints(prob):
         return False #no constraints
 
-class POM3A(jmoo_problem):
-    "POM3A"
-    def __init__(prob):
-        prob.name = "POM3A"
-        names = ["Culture", "Criticality", "Criticality Modifier", "Initial Known", "Inter-Dependency", "Dynamism", "Size", "Plan", "Team Size"]
-        LOWS = [0.1, 0.82, 2,  0.40, 1,   1,  0, 0, 1]
-        UPS  = [0.9, 1.20, 10, 0.70, 100, 50, 4, 5, 44]
-        prob.decisions = [jmoo_decision(names[i], LOWS[i], UPS[i]) for i in range(len(names))]
-        prob.objectives = [jmoo_objective("Cost", True, 0), jmoo_objective("Score", False, 0, 1), jmoo_objective("Completion", False, 0, 1), jmoo_objective("Idle", True, 0, 1)]
-        #prob.objectives = [jmoo_objective("Cost", True), jmoo_objective("Score", False), jmoo_objective("Idle", True)]
-    def evaluate(prob, input = None):
-        if input:
-            for i,decision in enumerate(prob.decisions):
-                decision.value = input[i]
-        else: input = [decision.value for decision in prob.decisions]
-        p3 = pom3.pom3()
-        output = p3.simulate(input)
-        for i,objective in enumerate(prob.objectives):
-            objective.value = output[i]
-        return [objective.value for objective in prob.objectives]
-    def evalConstraints(prob,input = None):
-        return False #no constraints
-    
-class POM3Asanscomp(jmoo_problem):
-    "POM3A"
-    def __init__(prob):
-        prob.name = "POM3Asanscomp"
-        names = ["Culture", "Criticality", "Criticality Modifier", "Initial Known", "Inter-Dependency", "Dynamism", "Size", "Plan", "Team Size"]
-        LOWS = [0.1, 0.82, 2,  0.40, 1,   1,  0, 0, 1]
-        UPS  = [0.9, 1.20, 10, 0.70, 100, 50, 4, 5, 44]
-        prob.decisions = [jmoo_decision(names[i], LOWS[i], UPS[i]) for i in range(len(names))]
-        prob.objectives = [jmoo_objective("Cost", True, 0), jmoo_objective("Score", False, 0, 1), jmoo_objective("Idle", True, 0, 1)]
-    def evaluate(prob, input = None):
-        if input:
-            for i,decision in enumerate(prob.decisions):
-                decision.value = input[i]
-        else: input = [decision.value for decision in prob.decisions]
-        p3 = pom3.pom3()
-        output = p3.simulate(input)
-        output = [output[0], output[1], output[3]]
-        for i,objective in enumerate(prob.objectives):
-            objective.value = output[i]
-        return [objective.value for objective in prob.objectives]
-    def evalConstraints(prob,input = None):
-        return False #no constraints
-    
-class POM3B(jmoo_problem):
-    "POM3B"
-    def __init__(prob):
-        prob.name = "POM3B"
-        names = ["Culture", "Criticality", "Criticality Modifier", "Initial Known", "Inter-Dependency", "Dynamism", "Size", "Plan", "Team Size"]
-        LOWS = [0.10, 0.82, 80, 0.40, 0,   1, 0, 0, 1]
-        UPS  = [0.90, 1.26, 95, 0.70, 100, 50, 2, 5, 20]
-        prob.decisions = [jmoo_decision(names[i], LOWS[i], UPS[i]) for i in range(len(names))]
-        prob.objectives = [jmoo_objective("Cost", True, 0), jmoo_objective("Score", False, 0, 1), jmoo_objective("Completion", False, 0, 1), jmoo_objective("Idle", True, 0, 1)]
-    def evaluate(prob, input = None):
-        if input:
-            for i,decision in enumerate(prob.decisions):
-                decision.value = input[i]
-        else: input = [decision.value for decision in prob.decisions]
-        p3 = pom3.pom3()
-        output = p3.simulate(input)
-        for i,objective in enumerate(prob.objectives):
-            objective.value = output[i]
-        return [objective.value for objective in prob.objectives]
-    def evalConstraints(prob,input = None):
-        return False #no constraints   
-    
-class POM3Bsanscomp(jmoo_problem):
-    "POM3B"
-    def __init__(prob):
-        prob.name = "POM3Bsanscomp"
-        names = ["Culture", "Criticality", "Criticality Modifier", "Initial Known", "Inter-Dependency", "Dynamism", "Size", "Plan", "Team Size"]
-        LOWS = [0.10, 0.82, 80, 0.40, 0,   1, 0, 0, 1]
-        UPS  = [0.90, 1.26, 95, 0.70, 100, 50, 2, 5, 20]
-        prob.decisions = [jmoo_decision(names[i], LOWS[i], UPS[i]) for i in range(len(names))]
-        prob.objectives = [jmoo_objective("Cost", True, 0), jmoo_objective("Score", False, 0, 1), jmoo_objective("Idle", True, 0, 1)]
-    def evaluate(prob, input = None):
-        if input:
-            for i,decision in enumerate(prob.decisions):
-                decision.value = input[i]
-        else: input = [decision.value for decision in prob.decisions]
-        p3 = pom3.pom3()
-        output = p3.simulate(input)
-        output = [output[0], output[1], output[3]]
-        for i,objective in enumerate(prob.objectives):
-            objective.value = output[i]
-        return [objective.value for objective in prob.objectives]
-    def evalConstraints(prob,input = None):
-        return False #no constraints  
-
-class POM3C(jmoo_problem):
-    "POM3C"
-    def __init__(prob):
-        prob.name = "POM3C"
-        names = ["Culture", "Criticality", "Criticality Modifier", "Initial Known", "Inter-Dependency", "Dynamism", "Size", "Plan", "Team Size"]
-        LOWS = [0.50, 0.82, 2, 0.20, 0,  40, 2, 0, 20]
-        UPS  = [0.90, 1.26, 8, 0.50, 50, 50, 4, 5, 44]
-        prob.decisions = [jmoo_decision(names[i], LOWS[i], UPS[i]) for i in range(len(names))]
-        prob.objectives = [jmoo_objective("Cost", True, 0), jmoo_objective("Score", False, 0, 1), jmoo_objective("Completion", False, 0, 1), jmoo_objective("Idle", True, 0, 1)]
-    def evaluate(prob, input = None):
-        if input:
-            for i,decision in enumerate(prob.decisions):
-                decision.value = input[i]
-        else: input = [decision.value for decision in prob.decisions]
-        p3 = pom3.pom3()
-        output = p3.simulate(input)
-        for i,objective in enumerate(prob.objectives):
-            objective.value = output[i]
-        return [objective.value for objective in prob.objectives]
-    def evalConstraints(prob,input = None):
-        return False #no constraints    
-    
-class POM3Csanscomp(jmoo_problem):
-    "POM3C"
-    def __init__(prob):
-        prob.name = "POM3Csanscomp"
-        names = ["Culture", "Criticality", "Criticality Modifier", "Initial Known", "Inter-Dependency", "Dynamism", "Size", "Plan", "Team Size"]
-        LOWS = [0.50, 0.82, 2, 0.20, 0,  40, 2, 0, 20]
-        UPS  = [0.90, 1.26, 8, 0.50, 50, 50, 4, 5, 44]
-        prob.decisions = [jmoo_decision(names[i], LOWS[i], UPS[i]) for i in range(len(names))]
-        prob.objectives = [jmoo_objective("Cost", True, 0), jmoo_objective("Score", False, 0, 1), jmoo_objective("Idle", True, 0, 1)]
-    def evaluate(prob, input = None):
-        if input:
-            for i,decision in enumerate(prob.decisions):
-                decision.value = input[i]
-        else: input = [decision.value for decision in prob.decisions]
-        p3 = pom3.pom3()
-        output = p3.simulate(input)
-        output = [output[0], output[1], output[3]]
-        for i,objective in enumerate(prob.objectives):
-            objective.value = output[i]
-        return [objective.value for objective in prob.objectives]
-    def evalConstraints(prob,input = None):
-        return False #no constraints 
-
-class POM3D(jmoo_problem):
-    "POM3D"
-    def __init__(prob):
-        prob.name = "POM3D"
-        names = ["Culture", "Criticality", "Criticality Modifier", "Initial Known", "Inter-Dependency", "Dynamism", "Size", "Plan", "Team Size"]
-        LOWS = [0.10, 0.82, 2, 0.60, 80,  1, 0, 0, 10]
-        UPS  = [0.20, 1.26, 8, 0.95, 100, 10, 2, 5, 20]
-        prob.decisions = [jmoo_decision(names[i], LOWS[i], UPS[i]) for i in range(len(names))]
-        prob.objectives = [jmoo_objective("Cost", True, 0), jmoo_objective("Score", False, 0, 1), jmoo_objective("Completion", False, 0, 1), jmoo_objective("Idle", True, 0, 1)]
-    def evaluate(prob, input = None):
-        if input:
-            for i,decision in enumerate(prob.decisions):
-                decision.value = input[i]
-        else: input = [decision.value for decision in prob.decisions]
-        p3 = pom3.pom3()
-        output = p3.simulate(input)
-        for i,objective in enumerate(prob.objectives):
-            objective.value = output[i]
-        return [objective.value for objective in prob.objectives]
-    def evalConstraints(prob,input = None):
-        return False #no constraints
-    
-class POM3MIN(jmoo_problem):
-    "POM3D"
-    def __init__(prob):
-        prob.name = "POM3MIN"
-        names = ["Culture", "Criticality", "Criticality Modifier", "Initial Known", "Inter-Dependency", "Dynamism", "Size", "Plan", "Team Size"]
-        LOWS = [0.80, 1.22, 2, 0.60, 0,  1, 0, 0, 1]
-        UPS  = [0.90, 1.62, 6, 0.62, 2, 3, 1, 1, 3]
-        prob.decisions = [jmoo_decision(names[i], LOWS[i], UPS[i]) for i in range(len(names))]
-        prob.objectives = [jmoo_objective("Cost", True), jmoo_objective("Score", False), jmoo_objective("Completion", False), jmoo_objective("Idle", True)]
-    def evaluate(prob, input = None):
-        if input:
-            for i,decision in enumerate(prob.decisions):
-                decision.value = input[i]
-        else: input = [decision.value for decision in prob.decisions]
-        p3 = pom3.pom3()
-        output = p3.simulate(input)
-        for i,objective in enumerate(prob.objectives):
-            objective.value = output[i]
-        return [objective.value for objective in prob.objectives]
-    def evalConstraints(prob):
-        return False #no constraints
-    
-    
 class UF10(jmoo_problem):
     def __init__(prob, n=30):
         prob.name = "UF10"
@@ -1149,21 +964,21 @@ class UF10(jmoo_problem):
         x1 = prob.decisions[0].value
         x2 = prob.decisions[1].value
         X = [prob.decisions[i].value for i in range(len(prob.decisions))]
-        
+
         Y = [None, None] + [  X[j] - 2*X[1]*sin(2*math.pi*X[0] + j*math.pi/len(prob.decisions)) for j in range(2,len(prob.decisions))  ]
-        
+
         J1 = [j  for j in range(2, len(prob.decisions)) if ((j-1) % 3 == 0) ]
         J2 = [j  for j in range(2, len(prob.decisions)) if ((j-2) % 3 == 0)]
         J3 = [j  for j in range(2, len(prob.decisions)) if ((j)   % 3 == 0)]
-        
+
         f1 = cos(0.5*X[0]*math.pi) * cos(0.5*X[1]*math.pi) + (2/len(J1)) * sum([   4*Y[j]**2 - cos(8*math.pi*Y[j])     for j in J1 ])
         f2 = cos(0.5*X[0]*math.pi) * sin(0.5*X[1]*math.pi) + (2/len(J2)) * sum([   4*Y[j]**2 - cos(8*math.pi*Y[j])     for j in J2 ])
         f3 = sin(0.5*X[0]*math.pi)  + (2/len(J3)) * sum([   4*Y[j]**2 - cos(8*math.pi*Y[j])     for j in J3 ])
-        
+
         prob.objectives[0].value = f1
         prob.objectives[1].value = f2
         prob.objectives[2].value = f3
-        
+
         return [objective.value for objective in prob.objectives]
     def evalConstraints(prob,input = None):
         return False #no constraints
