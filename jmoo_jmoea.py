@@ -147,9 +147,14 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         # # # # # # # # # # #
         statBox.update(population, gen, numNewEvals)
 
-        # from Techniques.IGD_Calculation import IGD
-        # resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
-        # print IGD(resulting_pf, readpf(problem))
+        from PerformanceMetrics.IGD.IGD_Calculation import IGD
+        resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+        fitnesses = statBox.box[-1].fitnesses
+        median_fitness = []
+        for i in xrange(len(problem.objectives)):
+            temp_fitness = [fit[i] for fit in fitnesses]
+            median_fitness.append(median(temp_fitness))
+        print IGD(resulting_pf, readpf(problem)), median_fitness
             
         # # # # # # # # # # # # # # # # # #
         # 4e) Evaluate Stopping Criteria  #
@@ -157,7 +162,6 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         # stoppingCriteria = toStop(statBox)
         stoppingCriteria = False
 
-        print "Length: ", len(population)
         # assert(len(statBox.box[-1].population) == configurations["Universal"]["Population_Size"]), \
         #     "Length in the statBox should be equal to MU"
 

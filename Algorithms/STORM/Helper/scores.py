@@ -36,6 +36,13 @@ def scores(individual, stars):
 
 
 def scores2(individual, stars, configurations):
+    """
+    Used to score points
+    :param individual: jmoo_individual
+    :param stars: Star formation for STORM
+    :param configurations: Configuration from jmoo_properties
+    :return: list of N(determined by STORM_SPLIT)  best poles (numbers), individual
+    """
     individual.anyscore = -1e30
     nearest_contours = []
     for count, star in enumerate(stars):
@@ -48,10 +55,14 @@ def scores2(individual, stars, configurations):
             # Difference in objective values
             diff = euclidean_distance(star.east.fitness.fitness, star.west.fitness.fitness)
             temp_score = ((b/a) * diff/(y**2) * (1/c))
-        except:
+        except (ZeroDivisionError, ValueError), e:
+            # Assumption for ZeroDivisionError: The cases where the code would be when a=0 (individual is east)
+            # | y=0 (on the line) | c=0 east and west are the same point. If these things happen then we assign
+            # a really high score to this individual.
+            # Assumption for ValueError: The above formula works under the assumption that a, b < c, but it might not be
+            # the case. For such cases we assign a high score.
             temp_score = 1e32
-        print temp_score
         nearest_contours.append([count, temp_score])
-    exit()
-    return [x[0] for x in sorted(nearest_contours, key=lambda item:item[-1], reverse=True)[:configurations["STORM"]["STORM_SPLIT"]]], individual
+    return [[x[0], x[-1]] for x in sorted(nearest_contours, key=lambda item:item[-1],
+                                 reverse=True)[:configurations["STORM"]["STORM_SPLIT"]]], individual
 

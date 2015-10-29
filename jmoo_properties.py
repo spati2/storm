@@ -94,7 +94,7 @@ Configurations = {
     "Universal": {
         "Repeats" : 1,
         "Population_Size" : 92,
-        "No_of_Generations" : 20
+        "No_of_Generations" : 100
     },
     "NSGAIII": {
         "SBX_Probability": 1,
@@ -123,6 +123,7 @@ Configurations = {
         "F" : 0.75, # extrapolate amount
         "CF" : 0.3, # prob of cross over
         "STORM_SPLIT": 6,  # Break and split into pieces
+        "GAMMA" : 0.15,
     }
 }
 

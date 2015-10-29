@@ -16,10 +16,12 @@ from STORM.Helper.nudge import nudge
 
 from STORM.Helper.scores import scores2
 
-def anywhere_mutate(problem, population):
+
+def anywhere_mutate(problem, population, configurations):
     return population, 0
 
-def anywhere_recombine(problem, unusedSlot, mutants, MU):
+
+def anywhere_recombine(problem, mutants, MU, configurations):
     return mutants, 0
 
 
@@ -85,7 +87,7 @@ def anywhere_recombine(problem, unusedSlot, mutants, MU):
 #     # print "Length of return population: ", len(return_population)
 #     return return_population, len(stars)
 
-def anywhere_selector(problem, individuals):
+def anywhere_selector(problem, individuals, configurations):
     print "=" * 10
     new_population = []
     mutated_population = []
@@ -147,7 +149,6 @@ def anywhere_selector(problem, individuals):
 
 
 def anywhere3_selector(problem, individuals, Configurations, values_to_be_passed):
-    print "=" * 10
     new_population = []
     mutated_population = []
     new_population.extend(individuals)
@@ -172,19 +173,28 @@ def anywhere3_selector(problem, individuals, Configurations, values_to_be_passed
             # Remove the star from the new_population
             new_population = [pop for pop in new_population if pop != star]
 
-    distribution_list = []
+    poles_distribution_list = []
     for individual in new_population:
-        correct_poles, individual = scores2(individual, stars, Configurations) iam here need to fix this from this
-        distribution_list.extend(correct_poles)
-        for poles in correct_poles:
-            temp_individual = nudge(problem, individual, stars[poles].east, individual.anyscore)
-            temp_individual.anyscore = individual.anyscore
+        # correct_poles, individual = scores(individual, stars, Configurations)
+        correct_poles_scores, individual = scores2(individual, stars, Configurations)
+        correct_poles = [x[0] for x in correct_poles_scores]
+        increments = [x[-1] for x in correct_poles_scores]
+
+        # distribution_list would be used to help in the culling process
+        poles_distribution_list.extend(correct_poles)
+        for poles, increment in zip(correct_poles, increments):
+            temp_individual = nudge(problem, individual, stars[poles].east, increment, Configurations)
+            temp_individual.anyscore = increment
             temp_individual.correct_pole = poles
             mutated_population.append(temp_individual)
 
     mutated_population.extend(raw_poles) # adding the poles to the population
+    # from Helper.culling import culling
+    # after_culling_population = culling(poles_distribution_list, mutated_population, Configurations)
+    # return after_culling_population, sum([1 if x.fitness.fitness is not None else 0 for x in after_culling_population])
 
-    distribution_list = list(set(distribution_list))
+
+    distribution_list = list(set(poles_distribution_list))
     return_population = []
     # print "Length of the new_population: ", len(new_population)
     # print "Length of the mutated population: ", len(mutated_population)
@@ -192,7 +202,7 @@ def anywhere3_selector(problem, individuals, Configurations, values_to_be_passed
     for point in distribution_list:
         temp_list = [individual for individual in mutated_population if individual.correct_pole == point]
         return_population += sorted(temp_list, key=lambda x:x.anyscore, reverse=True)[:(len(temp_list) * 100)/len(mutated_population)]
-    howmany = jmoo_properties.MU - len(return_population)
+    howmany = Configurations["Universal"]["Population_Size"] - len(return_population)
     for _ in xrange(howmany):
         return_population.append(jmoo_individual(problem, problem.generateInput(), None))
     # print "Length of return population: ", len(return_population)
