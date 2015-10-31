@@ -28,92 +28,68 @@
 "Objective Space Plotter"
 
 # from pylab import *
-import csv
-from jmoo_problems import *
-from jmoo_algorithms import *
-from jmoo_properties import *
-from utility import *
-import numpy
 from time import *
 import os
-from DEAP.tools.support import ParetoFront
+
 from pylab import *
 
-def joes_charter_reporter(problems, algorithms, Configurations, tag=""):
+from jmoo_properties import *
+from utility import *
+
+
+def charter_reporter(problems, algorithms, Configurations, tag=""):
     date_folder_prefix = strftime("%m-%d-%Y")
-    
-    fignum = 0
     MU = Configurations["Universal"]["Population_Size"]
             
-    base = []
+    initial_data = []
     final = []
     RRS = []
-    data = []
+    generation_data = []
     foam = []
     baseline =[]
     
     for p,prob in enumerate(problems):
-        base.append([])
-        final.append([])
+        initial_data.append([])
         RRS.append([])
-        data.append([])
+        generation_data.append([])
         foam.append([])
-        finput = open("Data/" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt", 'rb')
-        reader = csv.reader(finput, delimiter=',')
-        initial = []
-
         filename = "Data/" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt"
-        # print filename
+        fd_initial_data = open(filename, 'rb')
+        reader_initial_data = csv.reader(fd_initial_data, delimiter=',')
+        initial = []
+        
         row_count = sum(1 for _ in csv.reader(open(filename)))
-        for i,row in enumerate(reader):
+        for i,row in enumerate(reader_initial_data):
             if i > 1 and i != row_count-1:
                     row = map(float, row)
-                    assert(prob.validate(row) is True), "Something's wrong"
-                    # print i, row, row_count
-                    try:
-                        initial.append(prob.evaluate(row)[-1])
+                    try: initial.append(prob.evaluate(row)[-1])
                     except: pass
+                
         baseline.append(initial)
 
+        for a, alg in enumerate(algorithms):
+            fd_initial_data = open("data/" + prob.name + str(MU) + "dataset.txt", 'rb')
+            reader_initial_data = csv.reader(fd_initial_data, delimiter=',')
 
-            
-        for a,alg in enumerate(algorithms):
-            
-            f2input = open(DATA_PREFIX + RRS_TABLE + "_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + DATA_SUFFIX, 'rb')
-            f3input = open("Data/results_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + ".datatable", 'rb')
-            f4input = open(DATA_PREFIX + "decision_bin_table" + "_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + DATA_SUFFIX, 'rb')
+            fd_statistic_file = open("Data/results_" + prob.name + "-p" + str(MU) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + ".datatable", 'rb')
+            reader_statistic_file = csv.reader(fd_statistic_file, delimiter=',')
 
+            initial_data[p].append([])
+            generation_data[p].append([])
+            I am refactoring this!!
 
-            reader2 = csv.reader(f2input, delimiter=',')
-            reader3 = csv.reader(f3input, delimiter=',')
-            reader4 = csv.reader(f4input, delimiter=',')
-            base[p].append( [] )
-            final[p].append( [] )
-            RRS[p].append( [] )
-            data[p].append( [] )
-            foam[p].append( [] )
+            for i,row in enumerate(reader_initial_data):
+                if 0 < i <= 100:
+                    candidate = [float(col) for col in row]
+                    fitness = prob.evaluate(candidate)
+                    initial_data[p][a].append(candidate+fitness)
             
-            
-            
-            
-            
-            
-            for i,row in enumerate(reader4):
-                n = len(prob.decisions)
-                o = len(prob.objectives)
-                candidate = [float(col) for col in row[:n]]
-                fitness = [float(col) for col in row[n:n+o]]#prob.evaluate(candidate)
-                final[p][a].append(candidate+fitness)
-            
-            for i,row in enumerate(reader3):
+            for i,row in enumerate(reader_statistic_file):
                 if not str(row[0]) == "0":
-                    for j,col in enumerate(row):
-                        if i == 0:
-                            data[p][a].append([])
+                    for j, col in enumerate(row):
+                        if i == 0: generation_data[p][a].append([])
                         else:
-                            if not col == "":
-
-                                data[p][a][j].append(float(col.strip("%)(")))
+                            if not col == "": generation_data[p][a][j].append(float(col.strip("%)(")))
 
 
     fignum = 0
@@ -139,7 +115,6 @@ def joes_charter_reporter(problems, algorithms, Configurations, tag=""):
     codes2= ["b-", "r-", "g-"]
     colors= ["b", "r", "g"]
     ms = 8
-    from mpl_toolkits.mplot3d import Axes3D
     #fig  = plt.figure()
     #ax = fig.gca(projection='3d')
     
@@ -158,14 +133,14 @@ def joes_charter_reporter(problems, algorithms, Configurations, tag=""):
                 for o, obj in enumerate(prob.objectives):
                     min_yaxis = 1e32
                     max_yaxis = -1e32
-                    b = base[p][o]
+                    b = initial_data[p][o]
                     if o == 11:
                        pass
                     else:
                         oo += 1
                         maxEvals = 0
                         for a,alg in enumerate(algorithms):
-                            maxEvals = max(maxEvals, max(data[p][a][0]))
+                            maxEvals = max(maxEvals, max(generation_data[p][a][0]))
 
 
                         # print baseline
@@ -187,7 +162,7 @@ def joes_charter_reporter(problems, algorithms, Configurations, tag=""):
                             
                             scores = {}
                             
-                            for score,eval in zip(data[p][a][o*3+1], data[p][a][0]):
+                            for score,eval in zip(generation_data[p][a][o*3+1], generation_data[p][a][0]):
                                 eval = int(round(eval/5.0)*5.0)
                                 # print score
                                 if eval in scores: scores[eval].append(score)

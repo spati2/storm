@@ -32,7 +32,7 @@ from jmoo_problems import *
 
 # from Problems.CPM.cpm import *
 # from Problems.CPM.cpm_reduction import *
-# from Problems.NRP.nrp import *
+from Problems.NRP.nrp import *
 # from Problems.MONRP.monrp import *
 from Problems.POM3.POM3B import POM3B
 from Problems.POM3.POM3A import POM3A
@@ -43,16 +43,17 @@ from Problems.POM3.POM3D import POM3D
 
 # JMOO Experimental Definitions
 algorithms = [
-              # jmoo_GALE(),
-              # jmoo_NSGAII(),
-              # jmoo_SPEA2(),
+              jmoo_GALE(),
+              jmoo_NSGAII(),
+              jmoo_SPEA2(),
               # jmoo_DE(),
               # jmoo_MOEAD_TCH(),
               # jmoo_NSGAIII(),
-    jmoo_STORM()
+    # jmoo_STORM()
               ]
 
 problems =[
+    fonseca(3),
     # srinivas()
     # POM3B(), #POM3A(), POM3C(), POM3D()
     dtlz1(9, 5),

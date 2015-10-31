@@ -115,6 +115,8 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
     while gen < configurations["Universal"]["No_of_Generations"] and stoppingCriteria is False:
         gen+= 1
         print gen, " | ",
+        import sys
+        sys.stdout.flush()
         # # # # # # # # #
         # 4a) Selection #
         # # # # # # # # #
@@ -147,14 +149,14 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         # # # # # # # # # # #
         statBox.update(population, gen, numNewEvals)
 
-        from PerformanceMetrics.IGD.IGD_Calculation import IGD
-        resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
-        fitnesses = statBox.box[-1].fitnesses
-        median_fitness = []
-        for i in xrange(len(problem.objectives)):
-            temp_fitness = [fit[i] for fit in fitnesses]
-            median_fitness.append(median(temp_fitness))
-        print IGD(resulting_pf, readpf(problem)), median_fitness
+        # from PerformanceMetrics.IGD.IGD_Calculation import IGD
+        # resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
+        # fitnesses = statBox.box[-1].fitnesses
+        # median_fitness = []
+        # for i in xrange(len(problem.objectives)):
+        #     temp_fitness = [fit[i] for fit in fitnesses]
+        #     median_fitness.append(median(temp_fitness))
+        # print IGD(resulting_pf, readpf(problem)), median_fitness
             
         # # # # # # # # # # # # # # # # # #
         # 4e) Evaluate Stopping Criteria  #

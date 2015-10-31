@@ -33,10 +33,11 @@ Random Stuff
 """
 
 import random
-from jmoo_properties import DATA_PREFIX, DATA_SUFFIX, SUMMARY_RESULTS, DECISION_BIN_TABLE, RRS_TABLE
+from jmoo_properties import DECISION_BIN_TABLE, DATA_SUFFIX, DATA_PREFIX, DEFECT_PREDICT_PREFIX, SUMMARY_RESULTS, RRS_TABLE
 from jmoo_jmoea import jmoo_evo
 from jmoo_stats_box import percentChange
-from joes_moo_charter import joes_charter_reporter
+
+from Graphics.charter import charter_reporter
 
 any = random.uniform
 normal= random.gauss
@@ -111,7 +112,7 @@ class jmoo_chart_report:
         self.Configurations = Configurations
     def doit(self,tagnote=""):
         for problem in self.tests.problems:
-            joes_charter_reporter([problem], self.tests.algorithms, self.Configurations, tag=tagnote)
+            charter_reporter([problem], self.tests.algorithms, self.Configurations, tag=tagnote)
 
 class jmoo_df_report:
     def __init__(self, tag="stats", tests = None):

@@ -154,11 +154,11 @@ def galeMutate(problem, NDLeafs, configuration):
     return population, numEval
 
 
-def galeRegen(problem, mutants, MU, configuration):
+def galeRegen(problem, unusedslot, mutants, configuration):
     howMany = configuration["Universal"]["Population_Size"] - len(mutants)
     # Generate random individuals
     population = []
     for i in range(howMany):
         population.append(jmoo_individual(problem, problem.generateInput(), None))
-    mutants.extend(population)
-    return mutants, 0
+    
+    return mutants+population, 0

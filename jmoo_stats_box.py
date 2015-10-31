@@ -80,53 +80,43 @@ class jmoo_stats_box:
         statBox.bests_actuals = [0 for o in problem.objectives]
         statBox.lives = 3
     
-    def update(statBox, population, gen, numNewEvals, initial = False, printOption=True):
+    def update(statBox, population, gen, num_new_evals, initial = False, printOption=True):
         "add a stat box - compute the statistics first"
+
+        # Find a file name to write the stats to
         filename = "Data/results_"+statBox.problem.name + "-p" + str(len(population)) + "-d" + \
                    str(len(statBox.problem.decisions)) + "-o" + str(len(statBox.problem.objectives))+\
                    "_"+statBox.alg.name+".datatable"
         fa = open(filename, 'a')
-        
-        # Calculate percentage of violations
-        violationsPercent = sum([ 1 for pop in population if statBox.problem.evalConstraints(pop.decisionValues)])/float(len(population))
-        
+
         # Update Number of Evaluations
-        statBox.numEval += numNewEvals
-        #front = population
-        #for pop in population:
-        #    if not pop.valid: pop.evaluate()
-        population = [pop for pop in population if pop.fitness.valid]
+        statBox.numEval += num_new_evals
 
-
-        fitnesses = [individual.fitness.fitness for individual in population if individual.valid]
-
+        # population represents on the individuals which have been evaluated
+        shorten_population = [pop for pop in population if pop.fitness.valid]
+        objectives = [individual.fitness.fitness for individual in shorten_population]
         # Split Columns into Lists
-        fitnessColumns = [[fit[i] for fit in fitnesses] for i,obj in enumerate(statBox.problem.objectives)]
-
-
-    
-        # Calculate Medians and Spreads
-        fitnessMedians = [median(fitCol) for fitCol in fitnessColumns]
-        fitnessSpreads = [spread(fitCol) for fitCol in fitnessColumns]
+        objective_columns = [[objective[i] for objective in objectives] for i, obj in enumerate(statBox.problem.objectives)]
+        # Calculate Medians of objective scores
+        objective_medians = [median(fitCol) for fitCol in objective_columns]
+        # Calculate IQR of objective scores
+        objective_iqr = [spread(fitCol) for fitCol in objective_columns]
         
         # Initialize Reference Point on Initial Run
-        if initial == True:
-            statBox.referencePoint = [o.med for o in statBox.problem.objectives]
-
-            
+        if initial is True: statBox.referencePoint = [o.med for o in statBox.problem.objectives]
 
         # Calculate IBD & IBS
-        norms = [[min(fitnessColumns[i]+[statBox.referencePoint[i]]), max(fitnessColumns[i]+[statBox.referencePoint[i]])] for i,obj in enumerate(statBox.problem.objectives)]
+        # Finding min and max for each objectives
+        norms = [[min(objective_columns[i]+[statBox.referencePoint[i]]), max(objective_columns[i]+[statBox.referencePoint[i]])] for i,obj in enumerate(statBox.problem.objectives)]
 
-        lossInQualities = [{"qual": loss_in_quality(statBox.problem, [statBox.referencePoint], fit, norms), "index": i} for i,fit in enumerate(fitnesses)]
-        
+        lossInQualities = [{"qual": loss_in_quality(statBox.problem, [statBox.referencePoint], fit, norms), "index": i} for i,fit in enumerate(objectives)]
         lossInQualities.sort(key=lambda(r): r["qual"])
-        if len(fitnesses) > 0: 
-            best_fitness = fitnesses[lossInQualities[0]["index"]]
+        if len(objectives) > 0: 
+            best_fitness = objectives[lossInQualities[0]["index"]]
         else:
-            best_fitness = fitnessMedians
+            best_fitness = objective_medians
         lossInQualities = [item["qual"] for item in lossInQualities]
-        #best_fitness = [min(fitCol) for fitCol in fitnessColumns if len(fitCol) > 0]
+
 
 
         IBD = median(lossInQualities)
@@ -154,11 +144,9 @@ class jmoo_stats_box:
                     if statBox.numEval in statBox.foam[o]: statBox.foam[o][statBox.numEval].append(change)
                     else: statBox.foam[o][statBox.numEval] = [change]
                 outString += str("%8.4f" % IBD) + "," + percentChange(statBox.referenceIBD, statBox.referenceIBD, True, 0, 1) + "," + str("%8.4f" % IBS)
-                if IGDMEASURE is True:
-                    outString += "," + str("%8.4f" % IGD) + "," + percentChange(statBox.referenceIGD, statBox.referenceIGD, True, 0, 1e3)
             else:
                 outString += str(statBox.numEval) + ","
-                for med, spr, initmed, obj, o in zip(best_fitness, fitnessSpreads, statBox.referencePoint,
+                for med, spr, initmed, obj, o in zip(best_fitness, objective_iqr, statBox.referencePoint,
                                                  statBox.problem.objectives, range(len(statBox.problem.objectives))):
                     change = percentChange(med, initmed, obj.lismore, obj.low, obj.up)
                     changes.append(float(change.strip("%")))
@@ -169,18 +157,14 @@ class jmoo_stats_box:
                     if statBox.numEval in statBox.foam[o]: statBox.foam[o][statBox.numEval].append(change)
                     else: statBox.foam[o][statBox.numEval] = [change]
                 outString += str("%8.4f" % IBD) + "," + percentChange(IBD, statBox.referenceIBD, True, 0, 1) + "," + str("%8.4f" % IBS)
-                # print outString  + ", violations: " + str("%4.1f" % violationsPercent)
-
-
             fa.write(outString + "\n")
         
             
         # Add Stat to the Stat Box
         trunk = []
-        for i,pop in enumerate(population):
+        for i,pop in enumerate(shorten_population):
             trunk.append(jmoo_individual(statBox.problem, pop.decisionValues, pop.fitness.fitness))
-            #if i < 5: print trunk[-1].decisionValues, statBox.problem.evalConstraints(trunk[-1].decisionValues)
-        statBox.box[-1] = jmoo_stats(trunk, fitnesses, best_fitness, fitnessSpreads, statBox.numEval, gen, IBD, IBS, changes)
+        statBox.box[-1] = jmoo_stats(trunk, objectives, best_fitness, objective_iqr, statBox.numEval, gen, IBD, IBS, changes)
         fa.close()
 ###########
 ### Utility Functions
