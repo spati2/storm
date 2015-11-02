@@ -117,7 +117,7 @@ class FeatureTreeModel(jmoo_problem):
         self.url = "./Problems/Feature_Models/References/" + name + ".xml"
         spl_cost_data = "./Problems/Feature_Models/Cost/" + name + ".cost"
         self.ft = load_ft_url(self.url)
-        self.ft.loadCost(spl_cost_data)
+        self.ft.load_cost(spl_cost_data)
         lows = [0 for _ in xrange(len(self.ft.leaves))]
         ups = [1 for _ in xrange(len(self.ft.leaves))]
         names = ["x"+str(i) for i in xrange(len(self.ft.leaves))]
@@ -127,7 +127,8 @@ class FeatureTreeModel(jmoo_problem):
     def evaluate(self, input = None):
         t = self.ft
         if input:
-            input = [int(round(inp, 0)) for inp in input]
+            # print input
+            input = [int(round(inp, 0)) for inp in input[:len(self.decisions)]]
             # obj1: features numbers
             # initialize the fulfill list
             fulfill = [-1] * t.featureNum
@@ -149,6 +150,9 @@ class FeatureTreeModel(jmoo_problem):
         else:
             assert False, "BOOM"
             exit()
+
+    def evalConstraints(prob, input=None):
+        return False
 
     """
     checking whether the candidate meets ALL constraints

@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3320aa-1484-4329-99a5-9539995d5922" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/RRS_TABLE__Web_Portal-p92-d28-o3_GALE.datatable" afterPath="$PROJECT_DIR$/Data/RRS_TABLE__Web_Portal-p92-d28-o3_GALE.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Web_Portal-p92-d28-o3-dataset.txt" afterPath="$PROJECT_DIR$/Data/Web_Portal-p92-d28-o3-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/decision_bin_table_Web_Portal-p92-d28-o3_GALE.datatable" afterPath="$PROJECT_DIR$/Data/decision_bin_table_Web_Portal-p92-d28-o3_GALE.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problems/Feature_Models/feature_model.py" afterPath="$PROJECT_DIR$/Problems/Feature_Models/feature_model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_Web_Portal-p92-d28-o3_GALE.datatable" afterPath="$PROJECT_DIR$/Data/results_Web_Portal-p92-d28-o3_GALE.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_.datatable" afterPath="$PROJECT_DIR$/Data/summary_.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_Web_Portal-p92-d28-o3_GALE.datatable" afterPath="$PROJECT_DIR$/Data/summary_Web_Portal-p92-d28-o3_GALE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="storm.iws" />
@@ -22,86 +29,75 @@
     <favorites_list name="storm" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="jmoo_properties.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="nrp.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Problems/NRP/nrp.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#2#33#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="feature_model.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/feature_model.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6666667">
-                  <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Feature_tree.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="20.0">
-                  <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
-                  <folding>
-                    <element signature="e#25#38#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="cpm_reduction.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Problems/CPM/cpm_reduction.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="186" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                    <element signature="e#746#1309#0" expanded="false" />
-                    <element signature="e#1346#2095#0" expanded="false" />
-                    <element signature="e#2132#2360#0" expanded="false" />
-                    <element signature="e#2395#2691#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Web_Portal.xml" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/References/Web_Portal.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.103270225">
-                  <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="jmoo_properties.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nrp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problems/NRP/nrp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="119" selection-end-column="20" />
+              <folding>
+                <element signature="e#2#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feature_model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/feature_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.666667">
+              <caret line="153" column="36" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="figure01_Web_Portal_.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Charts/11-02-2015/figure01_Web_Portal_.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Feature_tree.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.777779">
+              <caret line="127" column="17" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="17" />
+              <folding>
+                <element signature="e#25#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cpm_reduction.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problems/CPM/cpm_reduction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="186" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#746#1309#0" expanded="false" />
+                <element signature="e#1346#2095#0" expanded="false" />
+                <element signature="e#2132#2360#0" expanded="false" />
+                <element signature="e#2395#2691#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -229,7 +225,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Problems" />
+              <option name="myItemId" value="Charts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="11-02-2015" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -243,29 +243,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Problems" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MONRP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Problems" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Feature_Models" />
+              <option name="myItemId" value="Charts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -490,7 +468,7 @@
     <frame x="0" y="23" width="1920" height="1008" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31477517" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="1327" y="75" width="602" height="924" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31477517" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="1327" y="75" width="602" height="924" />
       <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17305644" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32655245" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24920128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -548,14 +526,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jmoo_decision.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/scores.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -883,24 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/NRP/nrp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <element signature="e#2#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Problems/CPM/cpm_reduction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -915,14 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/References/Web_Portal.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.103270225">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm40/python_stubs/348993582/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75">
@@ -931,22 +875,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="20.0">
-          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+        <state vertical-scroll-proportion="-17.777779">
+          <caret line="127" column="17" selection-start-line="127" selection-start-column="8" selection-end-line="127" selection-end-column="17" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NRP/nrp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="119" selection-end-column="20" />
+          <folding>
+            <element signature="e#2#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/feature_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667">
-          <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+        <state vertical-scroll-proportion="-11.666667">
+          <caret line="153" column="36" selection-start-line="153" selection-start-column="36" selection-end-line="153" selection-end-column="36" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/References/Web_Portal.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14869282">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Charts/11-02-2015/figure01_Web_Portal_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>
