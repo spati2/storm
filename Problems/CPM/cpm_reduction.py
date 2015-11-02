@@ -86,7 +86,6 @@ def random_where(filename):
 # def mean_where(self, filename):
 #     # todo
 #
-
 def base_line(filename="./Data/Apache_AllMeasurements.csv"):
     cluster_table = WHEREDataTransformation(filename)
 

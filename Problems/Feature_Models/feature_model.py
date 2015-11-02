@@ -8,7 +8,11 @@ import pdb,re
 import xml.etree.ElementTree as ET
 import numpy as np
 from Feature_tree import *
-from model import *
+# from model import *
+from jmoo_objective import *
+from jmoo_decision import *
+from jmoo_problem import jmoo_problem
+
 
 def load_ft_url(url):
     # load the feature tree and constraints
@@ -16,22 +20,23 @@ def load_ft_url(url):
     root = tree.getroot()
 
     for child in root:
+        print child
         if child.tag == 'feature_tree':
-            feature_tree = child.text
+            feature_tree_text = child.text
         if child.tag == 'constraints':
             constraints = child.text
 
     # initialize the feature tree
-    ft = FeatureTree()
+    feature_tree = FeatureTree()
 
     # parse the feature tree text
-    feas = feature_tree.split("\n")
-    feas = filter(bool, feas)
+    features = feature_tree_text.split("\n")
+    features = filter(bool, features)  # Fastest way to remove empty strings
     common_feature_pattern = re.compile('(\t*):([romg]?).*\W(\w+)\W.*')
     group_pattern = re.compile('\t*:g \W(\w+)\W \W(\d),([\d\*])\W.*')
     layer_dict = dict()
-    for f in feas:
-        m = common_feature_pattern.match(f)
+    for feature in features:
+        m = common_feature_pattern.match(feature)
         """
         m.group(1) layer
         m.group(2) type
@@ -40,11 +45,11 @@ def load_ft_url(url):
         layer = len(m.group(1))
         t = m.group(2)
         if t == 'r':
-            treeRoot = Node(id = m.group(3), node_type = 'r')
-            layer_dict[layer] = treeRoot
-            ft.set_root(treeRoot)
+            tree_root = Node(id = m.group(3), node_type = 'r')
+            layer_dict[layer] = tree_root
+            feature_tree.set_root(tree_root)
         elif t== 'g':
-            mg = group_pattern.match(f)
+            mg = group_pattern.match(feature)
             """
             mg.group(1) id
             mg.group(2) down_count
@@ -77,7 +82,7 @@ def load_ft_url(url):
         con_id = m.group(1)
         li_pos.append(not bool(m.group(2)))
         literal.append(m.group(3))
-        while(m.group(4)):
+        while m.group(4):
             cc = m.group(4)
             m = common_more_con_pattern.match(cc)
             li_pos.append(not bool(m.group(2)))
@@ -88,61 +93,60 @@ def load_ft_url(url):
          li_pos: whether is positive or each literals
         """
         con_stmt = Constraint(id = con_id, literals = literal, literals_pos = li_pos)
-        ft.add_constraint(con_stmt)
+        feature_tree.add_constraint(con_stmt)
 
-    # pdb.set_trace()
-    ft.set_features_list()
+    feature_tree.set_features_list()
 
-    return ft
+    return feature_tree
+
+def if_exists(file_name):
+    folder_name = "./Problems/Feature_Models/References/"
+    from os.path import isfile
+    from os import getcwd
+    print getcwd()
+    print folder_name + file_name + ".xml"
+    print isfile(folder_name + file_name + ".xml")
+    return isfile(folder_name + file_name + ".xml")
 
 # three objectives at this time
-class FTModel(model):
-    def __init__(self, url, name, spldata, objnum = 3):
+class FeatureTreeModel(jmoo_problem):
+    def __init__(self, name,  objnum = 3):
+
         self.name = name
-        self.url = url
-        self.ft = load_ft_url(url)
-        self.ft.loadCost(spldata)
-        dec = [Has(l.id,0,1) for l in self.ft.leaves]
-        obj = [Has(name='fea', lo=0, hi=self.ft.featureNum-len(self.ft.groups), goal = gt),
-               Has(name='conVio', lo=0,hi=len(self.ft.con), goal = lt),
-               Has(name='cost', lo=0,hi=sum(self.ft.cost), goal = lt)]
-        model.__init__(self, dec, obj)
+        assert(if_exists(name) is True), "Check the filename"
+        self.url = "./Problems/Feature_Models/References/" + name + ".xml"
+        self.ft = load_ft_url(self.url)
+        lows = [0 for _ in xrange(len(self.ft.leaves))]
+        ups = [1 for _ in xrange(len(self.ft.leaves))]
+        names = ["x"+str(i) for i in xrange(len(self.ft.leaves))]
+        self.decisions = [jmoo_decision(names[i], lows[i], ups[i]) for i in xrange(len(self.ft.leaves))]
+        self.objectives = [jmoo_objective("fea", True), jmoo_objective("conVio", True), jmoo_objective("Cost", True)]
 
-    def eval(self, c, doNorm=True):
-        t = self.ft #abbr.
-        sol = c.decs
+    def evaluate(self, input = None):
+        t = self.ft
+        if input:
+            input = [int(round(inp, 0)) for inp in input]
+            # obj1: features numbers
+            # initialize the fulfill list
+            fulfill = [-1] * t.featureNum
+            for x in range(len(input)): fulfill[t.features.index(t.leaves[x])] = input[x]
 
-        # obj1: features numbers
-        # initialize the fulfill list
-        fulfill = [-1] * t.featureNum
-        for x in range(len(sol)):
-            fulfill[t.features.index(t.leaves[x])] = sol[x]
-        # fill other tree elements
-        t.fillForm4AlFea(fulfill)
-        #print fulfill
-        # here group should not count as feature
-        gsum = 0
-        for g in t.groups:
-            gsum += fulfill[t.features.index(g)]
-        obj1 = sum(fulfill) - gsum
+            # fill other tree elements
+            t.fill_form_4_all_features(fulfill)
 
-        # obj2: constraint violation
-        obj2 = 0
-        for cc in t.con:
-            if cc.iscorrect(t,fulfill):
-                obj2 += 1
-        obj2 = len(t.con) - obj2
+            # here group should not count as feature
+            obj1 = sum(fulfill) - sum([fulfill[t.features.index(g)] for g in t.groups])
 
-        # obj3: total cost
-        obj3 = 0
-        for i,f in enumerate(t.features):
-            if fulfill[i] == 1 and f.node_type != 'g':
-                obj3 += t.cost[i]
+            # obj2: constraint violation
+            obj2 = len(t.constraints) - sum([1 for cc in t.constraints if cc.iscorrect(t, fulfill) is True])
 
-        c.scores = [obj1, obj2, obj3]
-        if doNorm:
-            self.normObjs(c)
-        return c
+            # obj3: total cost
+            obj3 = sum([t.cost[i] for i,f in enumerate(t.features) if (fulfill[i] == 1 and f.node_type != 'g')])
+
+            return [obj1, obj2, obj3]
+        else:
+            assert False, "BOOM"
+            exit()
 
     """
     checking whether the candidate meets ALL constraints
@@ -167,11 +171,11 @@ class FTModel(model):
         print 'Name:', self.name
         print 'Leaves #:', len(self.ft.leaves)
         print 'Total Features#:', self.ft.featureNum-len(self.ft.groups)
-        print 'Constraints#:', len(self.ft.con)
+        print 'Constraints#:', len(self.ft.constraints)
         print '-'*30
 
 def main():
-    m = FTModel('../feature_tree_data/cellphone.xml')
+    m = FeatureTreeModel('../feature_tree_data/cellphone.xml')
     can = m.genRandomCan()
     m.eval(can,doNorm=False)
     pdb.set_trace()

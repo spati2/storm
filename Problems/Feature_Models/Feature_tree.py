@@ -1,13 +1,13 @@
 __author__ = 'viveknair'
-import pdb
-import numpy as np
 import random
 import pickle
 import os
 
+import numpy as np
+
 
 class Node(object):
-    def __init__(self, id, parent = None, node_type = 'o'):
+    def __init__(self, id, parent=None, node_type='o'):
         self.id = id
         self.parent = parent
         self.node_type = node_type
@@ -21,7 +21,7 @@ class Node(object):
         self.children.append(node)
 
     def __repr__(self):
-        return '\nid: %s\ntype:%s\n'%(
+        return '\nid: %s\ntype:%s\n' % (
             self.id,
             self.node_type)
 
@@ -33,7 +33,7 @@ class Constraint(object):
         self.li_pos = literals_pos
 
     def __repr__(self):
-        return self.id+'\n'+str(self.literals)+'\n'+str(self.li_pos)
+        return self.id + '\n' + str(self.literals) + '\n' + str(self.li_pos)
 
     def iscorrect(self, ft, filledForm):
         for i in range(len(self.literals)):
@@ -41,9 +41,10 @@ class Constraint(object):
                 if self.literals[i] == ft.features[index].id: break
             if self.li_pos[i] and filledForm[index] == 1:
                 return True
-            elif not self.li_pos[i] and  filledForm[index] == 0:
+            elif not self.li_pos[i] and filledForm[index] == 0:
                 return True
         return False
+
 
 class FeatureTree(object):
     def __init__(self):
@@ -51,19 +52,19 @@ class FeatureTree(object):
         self.features = []
         self.groups = []
         self.leaves = []
-        self.con = []
-        self.cost=[]
+        self.constraints = []
+        self.cost = []
         self.featureNum = 0
 
-    def set_root(self,root):
+    def set_root(self, root):
         self.root = root
 
-    def add_constraint(self,con):
-        self.con.append(con)
+    def add_constraint(self, con):
+        self.constraints.append(con)
 
-    # featch all the features in the tree basing on the children structure
     def set_features_list(self):
-        def setting_feature_list(self,node):
+        """fetch all the features in the tree basing on the children structure"""
+        def setting_feature_list(self, node):
             if node.node_type == 'g':
                 node.g_u = int(node.g_u) if node.g_u != np.inf else len(node.children)
                 node.g_d = int(node.g_d) if node.g_d != np.inf else len(node.children)
@@ -75,31 +76,31 @@ class FeatureTree(object):
                 self.leaves.append(node)
             for i in node.children:
                 setting_feature_list(self, i)
+
         setting_feature_list(self, self.root)
         self.featureNum = len(self.features)
 
-    def postorder(self, node, func, extraArgs = []):
+    def post_order(self, node, func, extra_args=[]):
         if node.children:
             for c in node.children:
-                self.postorder(c,func, extraArgs)
-        func(node, *extraArgs)
+                self.post_order(c, func, extra_args)
+        func(node, *extra_args)
 
-
-    # setting the form by the structure of feature tree
-    # leaves should be filled in the form in advanced
-    # all not filled feature should be -1 in the form
-    def fillForm4AlFea(self, form):
+    def fill_form_4_all_features(self, form):
+        """Setting the form by the structure of feature tree
+           leaves should be filled in the form in advanced
+           all not filled feature should be -1 in the form"""
         def filling(node):
             index = self.features.index(node)
             if form[index] != -1:
                 return
-            # handleing the group featues
+            # handling the group features
             if node.node_type == 'g':
                 sum = 0
                 for i in node.children:
                     i_index = self.features.index(i)
                     sum += form[i_index]
-                form[index] = 1 if sum >= node.g_d and sum <= node.g_u else 0
+                form[index] = 1 if node.g_d <= sum <= node.g_u else 0
                 return
             for i in node.children:
                 i_index = self.features.index(i)
@@ -109,24 +110,24 @@ class FeatureTree(object):
             form[index] = 1
             return
 
-        self.postorder(self.root, filling)
+        self.post_order(self.root, filling)
 
-    def getFeatureNum(self):
+    def get_feature_num(self):
         return len(self.features) - len(self.groups)
 
-    def getConsNum(self):
-        return len(self.con)
+    def get_cons_num(self):
+        return len(self.constraints)
 
-    def _genRandomCost(self,tofile):
-        any=random.random
+    def _gen_random_cost(self, tofile):
+        any = random.random
         self.cost = [any() for _ in self.features]
         f = open(tofile, 'w')
         pickle.dump(self.cost, f)
         f.close()
 
-    def loadCost(self, fromfile):
+    def load_cost(self, fromfile):
         if not os.path.isfile(fromfile):
-            self._genRandomCost(fromfile)
+            self._gen_random_cost(fromfile)
         f = open(fromfile)
         self.cost = pickle.load(f)
         f.close()

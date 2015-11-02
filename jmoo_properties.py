@@ -38,6 +38,7 @@ from Problems.POM3.POM3B import POM3B
 from Problems.POM3.POM3A import POM3A
 from Problems.POM3.POM3C import POM3C
 from Problems.POM3.POM3D import POM3D
+from Problems.Feature_Models.feature_model import FeatureTreeModel
 
 
 
@@ -75,7 +76,8 @@ problems =[
     # dtlz2(24, 15),
     # dtlz3(24, 15),
     # dtlz4(24, 15)
-    NRP(50, 5, 5, 20, 120)
+    # NRP(50, 5, 5, 20, 120)
+    FeatureTreeModel("Web_Portal")
     #MONRP(50, 5, 5, 20, 120)
     # cpm_apache(),cpm_X264(), cpm_SQL_4553(), cpm_SQL_100(), cpm_LLVM(), cpm_BDBJ(), cpm_BDBC()
     # cpm_apache_training_reduction(treatment=None),
