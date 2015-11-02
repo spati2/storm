@@ -115,7 +115,9 @@ class FeatureTreeModel(jmoo_problem):
         self.name = name
         assert(if_exists(name) is True), "Check the filename"
         self.url = "./Problems/Feature_Models/References/" + name + ".xml"
+        spl_cost_data = "./Problems/Feature_Models/Cost/" + name + ".cost"
         self.ft = load_ft_url(self.url)
+        self.ft.loadCost(spl_cost_data)
         lows = [0 for _ in xrange(len(self.ft.leaves))]
         ups = [1 for _ in xrange(len(self.ft.leaves))]
         names = ["x"+str(i) for i in xrange(len(self.ft.leaves))]
@@ -135,7 +137,7 @@ class FeatureTreeModel(jmoo_problem):
             t.fill_form_4_all_features(fulfill)
 
             # here group should not count as feature
-            obj1 = sum(fulfill) - sum([fulfill[t.features.index(g)] for g in t.groups])
+            obj1 = t.featureNum - sum(fulfill) - sum([fulfill[t.features.index(g)] for g in t.groups])
 
             # obj2: constraint violation
             obj2 = len(t.constraints) - sum([1 for cc in t.constraints if cc.iscorrect(t, fulfill) is True])

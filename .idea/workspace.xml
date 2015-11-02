@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3320aa-1484-4329-99a5-9539995d5922" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/Feature_Models/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Problems/Feature_Models/References/REAL-FM-3.xml" afterPath="$PROJECT_DIR$/Problems/Feature_Models/References/Web_Portal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py" afterPath="$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problems/CPM/cpm_reduction.py" afterPath="$PROJECT_DIR$/Problems/CPM/cpm_reduction.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problems/Feature_Models/feature_model.py" afterPath="$PROJECT_DIR$/Problems/Feature_Models/feature_model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_properties.py" afterPath="$PROJECT_DIR$/jmoo_properties.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_.datatable" afterPath="$PROJECT_DIR$/Data/summary_.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="storm.iws" />
@@ -54,20 +48,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="feature_model.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="feature_model.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/feature_model.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="6.111111">
-                  <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
+                <state vertical-scroll-proportion="0.25641027">
+                  <caret line="119" column="24" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Feature_tree.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Feature_tree.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.33333334">
+                <state vertical-scroll-proportion="20.0">
                   <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
                   <folding>
                     <element signature="e#25#38#0" expanded="true" />
@@ -960,21 +954,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/feature_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.111111">
-          <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
+        <state vertical-scroll-proportion="20.0">
           <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
           <folding>
             <element signature="e#25#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/feature_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25641027">
+          <caret line="119" column="24" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
