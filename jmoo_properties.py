@@ -46,7 +46,7 @@ algorithms = [
               jmoo_GALE(),
               jmoo_NSGAII(),
               jmoo_SPEA2(),
-              # jmoo_DE(),
+              jmoo_DE(),
               # jmoo_MOEAD_TCH(),
               # jmoo_NSGAIII(),
     # jmoo_STORM()
@@ -95,7 +95,7 @@ Configurations = {
     "Universal": {
         "Repeats" : 1,
         "Population_Size" : 92,
-        "No_of_Generations" : 100
+        "No_of_Generations" : 20
     },
     "NSGAIII": {
         "SBX_Probability": 1,
