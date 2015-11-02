@@ -31,7 +31,6 @@ class NRP(jmoo_problem):
         self.precedence = []
         self.generate_data()
 
-
     def generate_precedence(self):
         precedence = [[0 for _ in xrange(self.trequirements)] for _ in xrange(self.trequirements)]
         temp = []
@@ -93,8 +92,6 @@ class NRP(jmoo_problem):
                             if x_i[count] > current_release:
                                 return False
                     return True
-
-
 
     def evaluate(self, input = None):
 

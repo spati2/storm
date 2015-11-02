@@ -2,25 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3320aa-1484-4329-99a5-9539995d5922" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Testing/graphic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Problems/Feature_Models/feature_model.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Testing/graphic.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DTLZ1_9_5-p92-d9-o5-dataset.txt" afterPath="$PROJECT_DIR$/Data/DTLZ1_9_5-p92-d9-o5-dataset.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Fonseca-p92-d3-o2-dataset.txt" afterPath="$PROJECT_DIR$/Data/Fonseca-p92-d3-o2-dataset.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/RRS_TABLE__DTLZ1_9_5-p92-d9-o5_DE.datatable" afterPath="$PROJECT_DIR$/Data/RRS_TABLE__DTLZ1_9_5-p92-d9-o5_DE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/RRS_TABLE__DTLZ1_9_5-p92-d9-o5_GALE.datatable" afterPath="$PROJECT_DIR$/Data/RRS_TABLE__DTLZ1_9_5-p92-d9-o5_GALE.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/RRS_TABLE__DTLZ1_9_5-p92-d9-o5_NSGAII.datatable" afterPath="$PROJECT_DIR$/Data/RRS_TABLE__DTLZ1_9_5-p92-d9-o5_NSGAII.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/RRS_TABLE__DTLZ1_9_5-p92-d9-o5_SPEA2.datatable" afterPath="$PROJECT_DIR$/Data/RRS_TABLE__DTLZ1_9_5-p92-d9-o5_SPEA2.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/RRS_TABLE__Fonseca-p92-d3-o2_DE.datatable" afterPath="$PROJECT_DIR$/Data/RRS_TABLE__Fonseca-p92-d3-o2_DE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/RRS_TABLE__Fonseca-p92-d3-o2_GALE.datatable" afterPath="$PROJECT_DIR$/Data/RRS_TABLE__Fonseca-p92-d3-o2_GALE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/RRS_TABLE__Fonseca-p92-d3-o2_NSGAII.datatable" afterPath="$PROJECT_DIR$/Data/RRS_TABLE__Fonseca-p92-d3-o2_NSGAII.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/RRS_TABLE__Fonseca-p92-d3-o2_SPEA2.datatable" afterPath="$PROJECT_DIR$/Data/RRS_TABLE__Fonseca-p92-d3-o2_SPEA2.datatable" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graphics/charter.py" afterPath="$PROJECT_DIR$/Graphics/charter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/decision_bin_table_DTLZ1_9_5-p92-d9-o5_DE.datatable" afterPath="$PROJECT_DIR$/Data/decision_bin_table_DTLZ1_9_5-p92-d9-o5_DE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/decision_bin_table_DTLZ1_9_5-p92-d9-o5_GALE.datatable" afterPath="$PROJECT_DIR$/Data/decision_bin_table_DTLZ1_9_5-p92-d9-o5_GALE.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/decision_bin_table_DTLZ1_9_5-p92-d9-o5_NSGAII.datatable" afterPath="$PROJECT_DIR$/Data/decision_bin_table_DTLZ1_9_5-p92-d9-o5_NSGAII.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/decision_bin_table_DTLZ1_9_5-p92-d9-o5_SPEA2.datatable" afterPath="$PROJECT_DIR$/Data/decision_bin_table_DTLZ1_9_5-p92-d9-o5_SPEA2.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/decision_bin_table_Fonseca-p92-d3-o2_DE.datatable" afterPath="$PROJECT_DIR$/Data/decision_bin_table_Fonseca-p92-d3-o2_DE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/decision_bin_table_Fonseca-p92-d3-o2_GALE.datatable" afterPath="$PROJECT_DIR$/Data/decision_bin_table_Fonseca-p92-d3-o2_GALE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/decision_bin_table_Fonseca-p92-d3-o2_NSGAII.datatable" afterPath="$PROJECT_DIR$/Data/decision_bin_table_Fonseca-p92-d3-o2_NSGAII.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/decision_bin_table_Fonseca-p92-d3-o2_SPEA2.datatable" afterPath="$PROJECT_DIR$/Data/decision_bin_table_Fonseca-p92-d3-o2_SPEA2.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jmoo_properties.py" afterPath="$PROJECT_DIR$/jmoo_properties.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problems/NRP/nrp.py" afterPath="$PROJECT_DIR$/Problems/NRP/nrp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p92-d9-o5_DE.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p92-d9-o5_DE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p92-d9-o5_GALE.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p92-d9-o5_GALE.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p92-d9-o5_NSGAII.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p92-d9-o5_NSGAII.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p92-d9-o5_SPEA2.datatable" afterPath="$PROJECT_DIR$/Data/results_DTLZ1_9_5-p92-d9-o5_SPEA2.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_Fonseca-p92-d3-o2_DE.datatable" afterPath="$PROJECT_DIR$/Data/results_Fonseca-p92-d3-o2_DE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_Fonseca-p92-d3-o2_GALE.datatable" afterPath="$PROJECT_DIR$/Data/results_Fonseca-p92-d3-o2_GALE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_Fonseca-p92-d3-o2_NSGAII.datatable" afterPath="$PROJECT_DIR$/Data/results_Fonseca-p92-d3-o2_NSGAII.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/results_Fonseca-p92-d3-o2_SPEA2.datatable" afterPath="$PROJECT_DIR$/Data/results_Fonseca-p92-d3-o2_SPEA2.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_.datatable" afterPath="$PROJECT_DIR$/Data/summary_.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_DTLZ1_9_5-p92-d9-o5_DE.datatable" afterPath="$PROJECT_DIR$/Data/summary_DTLZ1_9_5-p92-d9-o5_DE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_DTLZ1_9_5-p92-d9-o5_GALE.datatable" afterPath="$PROJECT_DIR$/Data/summary_DTLZ1_9_5-p92-d9-o5_GALE.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_DTLZ1_9_5-p92-d9-o5_NSGAII.datatable" afterPath="$PROJECT_DIR$/Data/summary_DTLZ1_9_5-p92-d9-o5_NSGAII.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_DTLZ1_9_5-p92-d9-o5_SPEA2.datatable" afterPath="$PROJECT_DIR$/Data/summary_DTLZ1_9_5-p92-d9-o5_SPEA2.datatable" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_Fonseca-p92-d3-o2_DE.datatable" afterPath="$PROJECT_DIR$/Data/summary_Fonseca-p92-d3-o2_DE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_Fonseca-p92-d3-o2_GALE.datatable" afterPath="$PROJECT_DIR$/Data/summary_Fonseca-p92-d3-o2_GALE.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_Fonseca-p92-d3-o2_NSGAII.datatable" afterPath="$PROJECT_DIR$/Data/summary_Fonseca-p92-d3-o2_NSGAII.datatable" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/summary_Fonseca-p92-d3-o2_SPEA2.datatable" afterPath="$PROJECT_DIR$/Data/summary_Fonseca-p92-d3-o2_SPEA2.datatable" />
@@ -49,8 +67,42 @@
         <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+              <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nrp.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problems/NRP/nrp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+              <folding>
+                <element signature="e#2#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feature_model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/feature_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="69" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Feature_tree.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.95098037">
+              <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
+              <folding>
+                <element signature="e#25#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,70 +113,6 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charter.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Graphics/charter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74358976">
-              <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
-              <folding>
-                <element signature="e#1086#1104#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="figure12_Fonseca_.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Charts/11-01-2015/figure12_Fonseca_.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mre_vs_percentage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Problems/CPM/Scripts/mre_vs_percentage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="67" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jmoo_algorithms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jmoo_algorithms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="156" column="44" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graphics/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7586207">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graphic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Testing/graphic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -144,9 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/reference_point_check.py" />
-        <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/jmetal_igd_check.py" />
-        <option value="$PROJECT_DIR$/Algorithms/NSGAIII_New/nsgaiii_components.py" />
         <option value="$PROJECT_DIR$/Algorithms/DEAP/tools/__init__.py" />
         <option value="$PROJECT_DIR$/Algorithms/NSGAIII/nsgaiii_components.py" />
         <option value="$PROJECT_DIR$/Testing/Algorithms/NSGAIII/test.py" />
@@ -193,8 +178,11 @@
         <option value="$PROJECT_DIR$/jmoo_core.py" />
         <option value="$PROJECT_DIR$/Algorithms/GALE/gale_components.py" />
         <option value="$PROJECT_DIR$/Testing/graphic.py" />
-        <option value="$PROJECT_DIR$/jmoo_properties.py" />
         <option value="$PROJECT_DIR$/Graphics/charter.py" />
+        <option value="$PROJECT_DIR$/jmoo_properties.py" />
+        <option value="$PROJECT_DIR$/Problems/NRP/nrp.py" />
+        <option value="$PROJECT_DIR$/Problems/Feature_Models/feature_model.py" />
+        <option value="$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py" />
       </list>
     </option>
   </component>
@@ -257,11 +245,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Charts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="11-01-2015" />
+              <option name="myItemId" value="Problems" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,7 +259,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Charts" />
+              <option name="myItemId" value="Problems" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Feature_Models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -558,45 +546,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Problems/POM3/POM3Asanscomp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/POM3/POM3A.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7352941">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/geometry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04901961">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithms/STORM/Helper/better.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84313726">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -660,16 +609,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problems/NRP/nrp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76960784">
-          <caret line="126" column="34" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="34" />
-          <folding>
-            <element signature="e#2#33#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -809,35 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graphics/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7586207">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testing/graphic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_problems.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/results_Fonseca-p92-d3-o2_GALE.datatable">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -885,14 +795,6 @@
     <entry file="file://$PROJECT_DIR$/Charts/11-01-2015/figure02_Fonseca_.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jmoo_objective.py">
@@ -946,12 +848,93 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Charts/11-01-2015/figure14_Fonseca_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Graphics/charter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74358976">
-          <caret line="136" column="8" selection-start-line="136" selection-start-column="8" selection-end-line="136" selection-end-column="8" />
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding>
             <element signature="e#1086#1104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graphics/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38593483">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_problems.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/results_NRP_50_5_5_20_120-p92-d50-o1_GALE.datatable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/results_NRP_50_5_5_20_120-p92-d50-o1_DE.datatable">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Charts/11-01-2015/figure16_NRP_50_5_5_20_120_.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jmoo_properties.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/NRP/nrp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="e#2#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/feature_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="69" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problems/Feature_Models/Feature_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.95098037">
+          <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
+          <folding>
+            <element signature="e#25#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
