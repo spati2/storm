@@ -1,8 +1,6 @@
 # used from https://github.com/ai-se/SPL/blob/master/parser/parser.py
 
 import os,sys,random
-galedir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/GALE/'
-sys.path.insert(0,galedir)
 
 import pdb,re
 import xml.etree.ElementTree as ET
@@ -99,6 +97,7 @@ def load_ft_url(url):
 
     return feature_tree
 
+
 def if_exists(file_name):
     folder_name = "./Problems/Feature_Models/References/"
     from os.path import isfile
@@ -108,10 +107,10 @@ def if_exists(file_name):
     print isfile(folder_name + file_name + ".xml")
     return isfile(folder_name + file_name + ".xml")
 
+
 # three objectives at this time
 class FeatureTreeModel(jmoo_problem):
     def __init__(self, name,  objnum = 3):
-
         self.name = name
         assert(if_exists(name) is True), "Check the filename"
         self.url = "./Problems/Feature_Models/References/" + name + ".xml"
@@ -158,12 +157,10 @@ class FeatureTreeModel(jmoo_problem):
     checking whether the candidate meets ALL constraints
     """
     def ok(self,c):
-        try:
-            if c.scores == []:
-                self.eval(c)
-        except:
-            self.eval(c)
-        return c.scores[1] == 0
+        if not c.valid:
+            self.evaluate(c)
+
+        return c.fitness.fitness[1] == 0
 
     def genRandomCan(self,guranteeOK = False):
         while True:
@@ -183,7 +180,8 @@ class FeatureTreeModel(jmoo_problem):
 def main():
     m = FeatureTreeModel('../feature_tree_data/cellphone.xml')
     can = m.genRandomCan()
-    m.eval(can,doNorm=False)
+    m.evaluate(can,doNorm=False)
+    m.ok(can)
     pdb.set_trace()
 
 if __name__ == '__main__':

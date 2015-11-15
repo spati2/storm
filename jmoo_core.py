@@ -171,7 +171,9 @@ class JMOO:
                 sr = open(DATA_PREFIX + SUMMARY_RESULTS + filename, 'w')
                 rrs = open(DATA_PREFIX + RRS_TABLE + "_" + filename, 'w')
                 
-                
+                from Problems.Feature_Models.mutate_engine import unitTest
+                unitTest()
+                exit()
                 # Results Record:
                 # # # Every generation
                 # # # Decisions + Objectives
