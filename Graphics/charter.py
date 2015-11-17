@@ -186,15 +186,16 @@ def charter_reporter(problems, algorithms, Configurations, tag=""):
         data.append([])
 
         for a,alg in enumerate(algorithms):
-            finput = open("data/" + prob.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt", 'rb')
+            # finput = open("data/" + prob.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt", 'rb')
             f3input = open("data/results_" + prob.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + ".datatable", 'rb')
             # f4input = open(DATA_PREFIX + "decision_bin_table" + "_" + prob.name+ "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives))  + "_" + alg.name + DATA_SUFFIX, 'rb')
-            reader = csv.reader(finput, delimiter=',')
+            # reader = csv.reader(finput, delimiter=',')
             reader3 = csv.reader(f3input, delimiter=',')
             # reader4 = csv.reader(f4input, delimiter=',')
             base[p].append( [] )
             final[p].append( [] )
             data[p].append( [] )
+            print f3input
 
             # for i,row in enumerate(reader):
             #     if i <= 100 and i > 0:
