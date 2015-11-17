@@ -88,10 +88,10 @@ problems =[
     # FeatureTreeModel("eshop", valid_solutions=True),
     # FeatureTreeModel("cellphone", valid_solutions=True),
     # FeatureTreeModel("EIS", valid_solutions=True),
-    # FeatureTreeModel("Web_Portal"),
+    FeatureTreeModel("Web_Portal"),
     FeatureTreeModel("eshop"),
-    # FeatureTreeModel("cellphone"),
-    # FeatureTreeModel("EIS"),
+    FeatureTreeModel("cellphone"),
+    FeatureTreeModel("EIS"),
     #MONRP(50, 5, 5, 20, 120)
     # cpm_apache(),cpm_X264(), cpm_SQL_4553(), cpm_SQL_100(), cpm_LLVM(), cpm_BDBJ(), cpm_BDBC()
     # cpm_apache_training_reduction(treatment=None),
@@ -109,9 +109,9 @@ build_new_pop = False                                       # Whether or not to 
 
 Configurations = {
     "Universal": {
-        "Repeats" : 1,
-        "Population_Size" : 92,
-        "No_of_Generations" : 20
+        "Repeats" : 3,
+        "Population_Size" : 1000,
+        "No_of_Generations" : 1
     },
     "NSGAIII": {
         "SBX_Probability": 1,
