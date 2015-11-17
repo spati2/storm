@@ -44,6 +44,7 @@ from Algorithms.MOEA_D.moead_components import *
 from Algorithms.NSGAIII.nsgaiii_components import *
 from Algorithms.STORM.storm_components import *
 from Algorithms.NSGAIII.nsgaiii_components import *
+from Algorithms.GALE0.gale_components import *
 
 
 from jmoo_individual import *
@@ -93,19 +94,31 @@ class jmoo_GALE:
         self.type = '*'
 
 
+class jmoo_GALE0:
+    def __init__(self, color="Blue"):
+        self.name = "GALE0"
+        self.initializer = None
+        self.selector = gale0WHERE
+        self.adjustor = gale0Mutate
+        self.recombiner = gale0Regen
+        self.color = color
+        self.type = '*'
+
+
+
 class jmoo_DE:
-    def __init__(self, color="Black"):
+    def __init__(self, color="magenta"):
         self.name = "DE"
         self.initializer = None
         self.selector = de_selector
         self.adjustor = de_mutate
         self.recombiner = de_recombine  # stub
         self.color = color
-        self.type = 'o'
+        self.type = '*'
 
 
 class jmoo_MOEAD_TCH:
-    def __init__(self, color="Blue"):
+    def __init__(self, color="#6F3662"):
         self.name = "MOEAD"
         self.initializer = initialize_moead
         self.selector = moead_selector_tch
@@ -117,7 +130,7 @@ class jmoo_MOEAD_TCH:
 
 class jmoo_MOEAD_PBI:
     def __init__(self, color="Blue"):
-        self.name = "MOEAD"
+        self.name = "MOEAD_PBI"
         self.initializer = initialize_moead
         self.selector = moead_selector_pbi
         self.adjustor = moead_mutate
@@ -127,14 +140,14 @@ class jmoo_MOEAD_PBI:
 
 
 class jmoo_NSGAIII:
-    def __init__(self, color="blue"):
+    def __init__(self, color="green"):
         self.name = "NSGA3"
         self.initializer = None
         self.selector = nsgaiii_selector2
         self.adjustor = nsgaiii_regenerate2
         self.recombiner = nsgaiii_recombine2
         self.color = color
-        self.type = 'p'
+        self.type = '*'
 
 
 class jmoo_ANYWHERE:
@@ -350,7 +363,7 @@ def bstop(statBox):
 def deap_format(problem, individuals):
     from Algorithms.DEAP import base, creator
     import array
-    "copy a jmoo-style list of individuals into a deap-style list of individuals"
+    "copy a jmoo-style list of individuals into a DEAP-style list of individuals"
     toolbox = base.Toolbox()
     creator.create("FitnessMin", base.Fitness, weights=[-1.0 if obj.lismore else 1.0 for obj in problem.objectives])
     creator.create("Individual", array.array, typecode='d', fitness=creator.FitnessMin)

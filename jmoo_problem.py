@@ -122,3 +122,5 @@ class jmoo_problem(object):
             if decision.low <= decision_value[i] <= decision.up: pass
             else: return False
         return True
+
+

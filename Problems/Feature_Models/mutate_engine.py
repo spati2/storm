@@ -118,7 +118,6 @@ class mutateEngine(object):
         fulfill2return = []
         while True:
             try:
-                print ".",
                 self.refresh()
                 self.setFulfill(self.ft.root, 1)
                 self.mutateChild(self.ft.root)

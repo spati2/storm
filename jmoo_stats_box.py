@@ -84,7 +84,8 @@ class jmoo_stats_box:
         "add a stat box - compute the statistics first"
 
         # Find a file name to write the stats to
-        filename = "Data/results_"+statBox.problem.name + "-p" + str(len(population)) + "-d" + \
+        print "remember to change the filename HACK"
+        filename = "Data/results_"+statBox.problem.name + "-p" + str(92) + "-d" + \
                    str(len(statBox.problem.decisions)) + "-o" + str(len(statBox.problem.objectives))+\
                    "_"+statBox.alg.name+".datatable"
         fa = open(filename, 'a')

@@ -132,14 +132,25 @@ def create_reference_points(problem):
     reference_points = two_level_weight_vector_generator(division_dict[str(number_of_objectives)], number_of_objectives)
     return reference_points
 
+# This was written to baseline it with NSGAIII results
+# def assign_weights(reference_points):
+#     # import pdb
+#     # pdb.set_trace()
+#     print ". ",
+#     from random import shuffle
+#     shuffle(reference_points)
+#     return_point = reference_points[0]
+#     reference_points.pop(0)
+#     return return_point.coordinates
 
-def assign_weights(reference_points):
 
-    from random import shuffle
-    shuffle(reference_points)
-    return_point = reference_points[0]
-    reference_points.pop(0)
-    return return_point.coordinates
+def assign_weights(number):
+    import random
+    rand_number = [random.random() for _ in xrange(number)]
+    r = sum(rand_number)
+    temp = [no/float(r) for no in rand_number]
+    assert(int(round(sum(temp),0)) == 1),"Something's wrong"
+    return temp
 
 
 def create_distance_matrix(population):
@@ -529,13 +540,23 @@ def evolve_neighbor(problem, individual_index, population, configuration):
     return mutant
 
 
+# This was written to baseline it with NSGAIII results
+# def assign_weights_wrapper(problem, population):
+#     new_population = population[:]
+#     reference_points = create_reference_points(problem)
+#     for pop in new_population:
+#         pop.weight = assign_weights(reference_points)
+#         assert(int(round(sum(pop.weight), 0)) == 1), "The weights should add up to unity"
+#     return new_population
+
+
 def assign_weights_wrapper(problem, population):
     new_population = population[:]
-    reference_points = create_reference_points(problem)
     for pop in new_population:
-        pop.weight = assign_weights(reference_points)
+        pop.weight = assign_weights(len(problem.objectives))
         assert(int(round(sum(pop.weight), 0)) == 1), "The weights should add up to unity"
     return new_population
+
 
 
 def find_neighbours_wrapper(problem, population, distance_matrix,  configuration):

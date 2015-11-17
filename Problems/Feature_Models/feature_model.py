@@ -18,7 +18,6 @@ def load_ft_url(url):
     root = tree.getroot()
 
     for child in root:
-        print child
         if child.tag == 'feature_tree':
             feature_tree_text = child.text
         if child.tag == 'constraints':
@@ -102,16 +101,14 @@ def if_exists(file_name):
     folder_name = "./Problems/Feature_Models/References/"
     from os.path import isfile
     from os import getcwd
-    print getcwd()
-    print folder_name + file_name + ".xml"
-    print isfile(folder_name + file_name + ".xml")
     return isfile(folder_name + file_name + ".xml")
 
 
 # three objectives at this time
 class FeatureTreeModel(jmoo_problem):
-    def __init__(self, name,  objnum = 3):
+    def __init__(self, name,  valid_solutions = False, objnum = 3):
         self.name = name
+        self.valid_solutions = valid_solutions
         assert(if_exists(name) is True), "Check the filename"
         self.url = "./Problems/Feature_Models/References/" + name + ".xml"
         spl_cost_data = "./Problems/Feature_Models/Cost/" + name + ".cost"
@@ -121,7 +118,9 @@ class FeatureTreeModel(jmoo_problem):
         ups = [1 for _ in xrange(len(self.ft.leaves))]
         names = ["x"+str(i) for i in xrange(len(self.ft.leaves))]
         self.decisions = [jmoo_decision(names[i], lows[i], ups[i]) for i in xrange(len(self.ft.leaves))]
-        self.objectives = [jmoo_objective("fea", True), jmoo_objective("conVio", True), jmoo_objective("Cost", True)]
+        self.objectives = [jmoo_objective("number_of_features", True),
+                           jmoo_objective("constrained_violated", True),
+                           jmoo_objective("cost", True)]
 
     def evaluate(self, input = None):
         t = self.ft
@@ -149,6 +148,16 @@ class FeatureTreeModel(jmoo_problem):
         else:
             assert False, "BOOM"
             exit()
+
+    def generateInput(self):
+        if self.valid_solutions is True:
+            from mutate_engine import mutateEngine
+            engine = mutateEngine(self.ft)
+            engine.setFulfill(self.ft.root, 1)
+            q = engine.generate(1, True)[-1][-1]
+            return q
+        else:
+            return super(FeatureTreeModel, self).generateInput()
 
     def evalConstraints(prob, input=None):
         return False

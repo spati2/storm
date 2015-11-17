@@ -39,17 +39,23 @@ from Problems.POM3.POM3A import POM3A
 from Problems.POM3.POM3C import POM3C
 from Problems.POM3.POM3D import POM3D
 from Problems.Feature_Models.feature_model import FeatureTreeModel
+from Problems.XOMO.XOMO_flight import XOMO_flight
+from Problems.XOMO.XOMO_all import XOMO_all
+from Problems.XOMO.XOMO_ground import XOMO_ground
+from Problems.XOMO.XOMO_osp import XOMO_osp
+from Problems.XOMO.XOMO_osp2 import XOMO_osp2
 
 
 
 # JMOO Experimental Definitions
 algorithms = [
+              jmoo_GALE0(),
               jmoo_GALE(),
-              jmoo_NSGAII(),
-              jmoo_SPEA2(),
               jmoo_DE(),
-              # jmoo_MOEAD_TCH(),
-              # jmoo_NSGAIII(),
+              jmoo_MOEAD_TCH(),
+              jmoo_NSGAIII(),
+              # jmoo_NSGAII(),
+              # jmoo_SPEA2(),
     # jmoo_STORM()
               ]
 
@@ -76,8 +82,16 @@ problems =[
     # dtlz2(24, 15),
     # dtlz3(24, 15),
     # dtlz4(24, 15)
+    # XOMO_all(),
     # NRP(50, 5, 5, 20, 120)
-    FeatureTreeModel("Web_Portal")
+    # FeatureTreeModel("Web_Portal", valid_solutions=True),
+    # FeatureTreeModel("eshop", valid_solutions=True),
+    # FeatureTreeModel("cellphone", valid_solutions=True),
+    # FeatureTreeModel("EIS", valid_solutions=True),
+    # FeatureTreeModel("Web_Portal"),
+    FeatureTreeModel("eshop"),
+    # FeatureTreeModel("cellphone"),
+    # FeatureTreeModel("EIS"),
     #MONRP(50, 5, 5, 20, 120)
     # cpm_apache(),cpm_X264(), cpm_SQL_4553(), cpm_SQL_100(), cpm_LLVM(), cpm_BDBJ(), cpm_BDBC()
     # cpm_apache_training_reduction(treatment=None),
@@ -95,7 +109,7 @@ build_new_pop = False                                       # Whether or not to 
 
 Configurations = {
     "Universal": {
-        "Repeats" : 5,
+        "Repeats" : 1,
         "Population_Size" : 92,
         "No_of_Generations" : 20
     },
@@ -107,7 +121,8 @@ Configurations = {
     "GALE": {
         "GAMMA" : 0.15,  #Constrained Mutation Parameter
         "EPSILON" : 1.00,  #Continuous Domination Parameter
-        "LAMBDA" :  3     #Number of lives for bstop
+        "LAMBDA" :  3,     #Number of lives for bstop
+        "DELTA"  : 3       # Accelerator that increases mutation size
     },
     "DE": {
         "F" : 0.75, # extrapolate amount

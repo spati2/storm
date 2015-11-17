@@ -506,7 +506,7 @@ def assignment(problem, fullpopulation0, reference_points, configuration):
     return population
 
 # ---------------------- Helper --------------------------------
-def nsgaiii_selector2(problem, population, configuration):
+def nsgaiii_selector2(problem, population, configuration, values_to_be_passed):
     assert (len(population) % 4 == 0), "The population size needs to be multiple if 4. Look at footnote page 584"
     return population, 0
 

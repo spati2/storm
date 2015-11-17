@@ -147,7 +147,10 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         # # # # # # # # # # #
         # 4d) Collect Stats #
         # # # # # # # # # # #
-        statBox.update(population, gen, numNewEvals)
+        if algorithm.name == "GALE0":
+            statBox.update(selectees, gen, numNewEvals)
+        else:
+            statBox.update(population, gen, numNewEvals)
 
         # from PerformanceMetrics.IGD.IGD_Calculation import IGD
         # resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]

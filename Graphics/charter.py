@@ -178,59 +178,35 @@ def charter_reporter(problems, algorithms, Configurations, tag=""):
 
     base = []
     final = []
-    RRS = []
     data = []
-    foam = []
 
     for p,prob in enumerate(problems):
         base.append([])
         final.append([])
-        RRS.append([])
         data.append([])
-        foam.append([])
 
         for a,alg in enumerate(algorithms):
             finput = open("data/" + prob.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt", 'rb')
-            f2input = open(DATA_PREFIX + RRS_TABLE + "_" + prob.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + DATA_SUFFIX, 'rb')
             f3input = open("data/results_" + prob.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + ".datatable", 'rb')
-            f4input = open(DATA_PREFIX + "decision_bin_table" + "_" + prob.name+ "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives))  + "_" + alg.name + DATA_SUFFIX, 'rb')
+            # f4input = open(DATA_PREFIX + "decision_bin_table" + "_" + prob.name+ "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives))  + "_" + alg.name + DATA_SUFFIX, 'rb')
             reader = csv.reader(finput, delimiter=',')
-            reader2 = csv.reader(f2input, delimiter=',')
             reader3 = csv.reader(f3input, delimiter=',')
-            reader4 = csv.reader(f4input, delimiter=',')
+            # reader4 = csv.reader(f4input, delimiter=',')
             base[p].append( [] )
             final[p].append( [] )
-            RRS[p].append( [] )
             data[p].append( [] )
-            foam[p].append( [] )
 
-            for i,row in enumerate(reader):
-                if i <= 100 and i > 0:
-                    candidate = [float(col) for col in row]
-                    fitness = prob.evaluate(candidate)
-                    base[p][a].append(candidate+fitness)
-
-            for i,row in enumerate(reader4):
-                n = len(prob.decisions)
-                candidate = [float(col) for col in row[:n]]
-                fitness = prob.evaluate(candidate)
-                final[p][a].append(candidate+fitness)
-
-            for o,obj in enumerate(prob.objectives):
-                RRS[p][a].append([])
-                RRS[p][a][o] = {}
-                foam[p][a].append([])
-                foam[p][a][o] = {}
-
-
-            for i,row in enumerate(reader2):
-                k = len(prob.objectives)
-                fitness = [float(col) for col in row[-k-1:-1]]
-                for o,fit in enumerate(fitness):
-                    n = int(row[k])
-                    n = (int(round(n/5.0)*5.0))
-                    if n in RRS[p][a][o]: RRS[p][a][o][n].append(fit)
-                    else: RRS[p][a][o][n] = [fit]
+            # for i,row in enumerate(reader):
+            #     if i <= 100 and i > 0:
+            #         candidate = [float(col) for col in row]
+            #         fitness = prob.evaluate(candidate)
+            #         base[p][a].append(candidate+fitness)
+            #
+            # for i,row in enumerate(reader4):
+            #     n = len(prob.decisions)
+            #     candidate = [float(col) for col in row[:n]]
+            #     fitness = prob.evaluate(candidate)
+            #     final[p][a].append(candidate+fitness)
 
             for i,row in enumerate(reader3):
                 if not str(row[0]) == "0":
@@ -240,13 +216,8 @@ def charter_reporter(problems, algorithms, Configurations, tag=""):
                         else:
                             if not col == "":
                                 data[p][a][j].append(float(col.strip("%)(")))
-                    # row is now read
-                    if i > 0:
-                        for o,obj in enumerate(prob.objectives):
-                            n = data[p][a][0][-1]
-                            n = (int(round(n/20.0)*20.0))
-                            if n in foam[p][a][o]: foam[p][a][o][n].append(float(data[p][a][o*3+2][-1]))
-                            else: foam[p][a][o][n] = [float(data[p][a][o*3+2][-1])]
+
+
 
 
 
@@ -310,12 +281,13 @@ def charter_reporter(problems, algorithms, Configurations, tag=""):
                                 else:
                                     smallslist.append(    min(min(scores[eval]), min(smallslist))  )
 
-                        axarr[o].plot(keylist, scorelist, linestyle='None', marker=alg.type, color=alg.color, markersize=8, markeredgecolor='none')
+                        axarr[o].plot(keylist, scorelist, linestyle='None', label=alg.name, marker=alg.type, color=alg.color, markersize=8, markeredgecolor='none')
                         axarr[o].plot(keylist, smallslist, color=alg.color)
-                        axarr[o].set_ylim(0, 130)
+                        # axarr[o].set_ylim(0, 130)
                         # axarr[o].set_autoscale_on(True)
                         axarr[o].set_xlim([-10, 10000])
                         axarr[o].set_xscale('log', nonposx='clip')
+                        axarr[o].set_ylabel(obj.name)
 
 
                 if not os.path.isdir('charts/' + date_folder_prefix):
@@ -323,6 +295,7 @@ def charter_reporter(problems, algorithms, Configurations, tag=""):
 
                 f.suptitle(prob.name)
                 fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
+                plt.legend(loc='lower center', bbox_to_anchor=(1, 0.5))
                 plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + tag + '.png', dpi=100)
                 cla()
     #show()

@@ -42,7 +42,7 @@ from Techniques.stats import *
 from Techniques.a12 import *
 
 
-def joes_stats_reporter(problems, algorithms, tag=""):
+def joes_stats_reporter(problems, algorithms, Configurations,  tag=""):
     
     #folder prefix for storing reports
     date_folder_prefix = strftime("%m-%d-%Y")
@@ -65,9 +65,7 @@ def joes_stats_reporter(problems, algorithms, tag=""):
         data.append([])
         reports = []
         for a,algorithm in enumerate(algorithms):
-            filename = DATA_PREFIX + SUMMARY_RESULTS+problem.name + "-p" + str(MU) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives))+"_"+algorithm.name+DATA_SUFFIX
-            print filename
-            exit()
+            filename = DATA_PREFIX + SUMMARY_RESULTS+problem.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives))+"_"+algorithm.name+DATA_SUFFIX
             finput = open(filename, 'rb')
             reader = csv.reader(finput, delimiter=',')
             
@@ -85,20 +83,20 @@ def joes_stats_reporter(problems, algorithms, tag=""):
                 data[p][a][1+len(problem.objectives)].append( float(elements[4+len(problem.objectives)]) )
                 data[p][a][2+len(problem.objectives)].append( float(elements[5+len(problem.objectives)]) )
                 data[p][a][3+len(problem.objectives)].append( float(elements[6+len(problem.objectives)]) )
-            s = '{0: <12}'.format(problem.name + "-p" + str(MU) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives))) + "," + '{0: <12}'.format(algorithm.name) + ","
+            s = '{0: <12}'.format(problem.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives))) + "," + '{0: <12}'.format(algorithm.name) + ","
             s += str(avg(data[p][a][0])) + ","
             for dug in data[p][a]:#[len(problem.objectives)+1:]:
                 s += str("%10.2f" % avg(dug)) + ","
             reports.append( s  )
         
         #read baseline
-        filename = "Data/" + problem.name + "-p" + str(MU) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
+        filename = "Data/" + problem.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d" + str(len(problem.decisions)) + "-o" + str(len(problem.objectives)) + "-dataset.txt"
         f2input = open(filename, 'rb')
         reader2 = csv.reader(f2input, delimiter=',')
         
         s = '{0: <12}'.format(problem.name) + "," + '{0: <12}'.format("Baseline") + "," + str("%10.2f" % 0) + ",0,"
         for i,row in enumerate(reader2):
-            if i > MU:
+            if i > Configurations["Universal"]["Population_Size"]:
                 s += str("%10.2f" % float(row[1])) + ","
         s += str("%10.2f" % 1) + "," + str("%10.2f" % 0)
         print s
@@ -112,7 +110,7 @@ def joes_stats_reporter(problems, algorithms, tag=""):
         
         groups = IBDs
         num_groups =  len(algorithms)
-        num_blocks =  repeats
+        num_blocks =  Configurations["Universal"]["Repeats"]
         cd = critical_difference(0.01, num_groups, num_blocks)
         #normed_data = [ [(g - avg(group))/(var(group)**2) for g in group] for group in groups] 
         #rv = [stats.kstest(nd, 'norm') for nd in normed_data]

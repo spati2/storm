@@ -91,14 +91,16 @@ def chosen_one(problem, lst):
 "Core Part of JMOO accessed by jmoo_interface."
 
 from jmoo_defect_chart import *
+from joes_stats_suite import joes_stats_reporter
 import time
 
 
 class jmoo_stats_report:
-    def __init__(self,tests):
+    def __init__(self,tests, Configurations):
         self.tests = tests
+        self.Configurations = Configurations
     def doit(self,tagnote=""):
-        joes_stats_reporter(self.tests.problems, self.tests.algorithms, tag=tagnote)
+        joes_stats_reporter(self.tests.problems, self.tests.algorithms, self.Configurations, tag=tagnote)
         
 class jmoo_decision_report:
     def __init__(self,tests):
@@ -170,10 +172,7 @@ class JMOO:
                 dbt = open(DATA_PREFIX + DECISION_BIN_TABLE + "_" + filename, 'w')
                 sr = open(DATA_PREFIX + SUMMARY_RESULTS + filename, 'w')
                 rrs = open(DATA_PREFIX + RRS_TABLE + "_" + filename, 'w')
-                
-                from Problems.Feature_Models.mutate_engine import unitTest
-                unitTest()
-                exit()
+
                 # Results Record:
                 # # # Every generation
                 # # # Decisions + Objectives
