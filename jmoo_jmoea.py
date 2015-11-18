@@ -55,6 +55,7 @@ def read_file(problem, filename):
 
 def store_values(latestdir, generation_number, population):
     filename = latestdir + "/" + str(generation_number) + ".txt"
+    print filename
     shorten_population = [pop for pop in population if pop.fitness.valid]
     try:
         values = [", ".join(map(str, pop.decisionValues + pop.fitness.fitness)) for pop in shorten_population]
@@ -119,7 +120,7 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
     foldername = "./Population_Archives/" + algorithm.name + "_" + problem.name + "/"
     import os
     all_subdirs = [foldername + d for d in os.listdir(foldername) if os.path.isdir(foldername + d)]
-    latest_subdir = max(all_subdirs, key=os.path.getmtime)
+    latest_subdir = sorted(all_subdirs, key=os.path.getmtime)[-1]
 
 
     # # # # # # # # # # # # # # #

@@ -49,13 +49,13 @@ from Problems.XOMO.XOMO_osp2 import XOMO_osp2
 
 # JMOO Experimental Definitions
 algorithms = [
-              # jmoo_GALE(),
-              # jmoo_DE(),
-              # jmoo_MOEAD_TCH(),
-              # jmoo_NSGAIII(),
+              jmoo_GALE(),
+              jmoo_DE(),
+              jmoo_MOEAD_TCH(),
+              jmoo_NSGAIII(),
+              jmoo_GALE_no_mutation(),
               # jmoo_NSGAII(),
               # jmoo_SPEA2(),
-              jmoo_GALE_no_mutation(),
               # jmoo_DE(),
               # jmoo_MOEAD_TCH(),
               # jmoo_NSGAIII(),
@@ -112,7 +112,7 @@ build_new_pop = False                                       # Whether or not to 
 
 Configurations = {
     "Universal": {
-        "Repeats" : 1,
+        "Repeats" : 3,
         "Population_Size" : 92,
         "No_of_Generations" : 20
     },
