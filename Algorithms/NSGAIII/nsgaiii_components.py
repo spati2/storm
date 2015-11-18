@@ -384,9 +384,6 @@ def normalization(problem, population, intercept_point, ideal_point):
             temp_normalized.append((obj - ideal_point[count])/(intercept_point[count] - ideal_point[count]))
         individual.normalized = temp_normalized
 
-    # for pop in population:
-    #     for nor in pop.normalized:
-    #         assert(0<=nor<=1), "Something's wrong"
     return population
 
 
@@ -397,7 +394,7 @@ def convert_to_jmoo(problem, pareto_fronts):
             cells = []
             for j in xrange(len(dIndividual)):
                 cells.append(dIndividual[j])
-            tpopulation.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
+            tpopulation.append(jmoo_individual(problem, cells, list(dIndividual.fitness.values)))
     for pop in tpopulation: pop.front_no = 0  # all the front except the last front
 
     lpopulation = []
@@ -406,7 +403,7 @@ def convert_to_jmoo(problem, pareto_fronts):
             cells = []
             for j in xrange(len(dIndividual)):
                 cells.append(dIndividual[j])
-            lpopulation.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
+            lpopulation.append(jmoo_individual(problem, cells, list(dIndividual.fitness.values)))
     for pop in lpopulation: pop.front_no = -1  # last front
 
     from itertools import chain
@@ -552,14 +549,10 @@ def nsgaiii_recombine2(problem, population, selectees, configuration):
     divisions = division_dict[str(len(problem.objectives))]
     reference_points = two_level_weight_vector_generator(divisions, len(problem.objectives))  # is always constant | checked!
 
-    import pdb
-    pdb.set_trace()
+
     population = associate(problem, population, reference_points)
-    import pdb
-    pdb.set_trace()
     population = assignment(problem, population, reference_points, configuration)
-    import pdb
-    pdb.set_trace()
+
     assert(len(population) == configuration["Universal"]["Population_Size"]), "This function needs to generate remain number of population"
 
 
