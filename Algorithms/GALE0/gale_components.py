@@ -62,7 +62,6 @@ def gale0WHERE(problem, population, configuration, values_to_be_passed):
             else:
                 indi = jmoo_individual(problem, [x for x in row.cells[:len(problem.decisions)]], None)
                 indi.fitness.fitness = problem.evaluate(indi.decisionValues)
-                print "> ", indi.fitness.fitness
                 population.append(indi)
                 numEval += 1
 

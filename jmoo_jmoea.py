@@ -53,6 +53,19 @@ def read_file(problem, filename):
     return population
 
 
+def store_values(latestdir, generation_number, population):
+    filename = latestdir + "/" + str(generation_number) + ".txt"
+    shorten_population = [pop for pop in population if pop.fitness.valid]
+    try:
+        values = [", ".join(map(str, pop.decisionValues + pop.fitness.fitness)) for pop in shorten_population]
+    except:
+        import pdb
+        pdb.set_trace()
+    f = open(filename, 'w')
+    for value in values: f.write("%s\n" % value)
+    f.close()
+
+
 def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
     """
     ----------------------------------------------------------------------------
@@ -102,6 +115,12 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         population, numeval = algorithm.initializer(problem, population, configurations, values_to_be_passed)
 
 
+    # Generate a folder to store the population
+    foldername = "./Population_Archives/" + algorithm.name + "_" + problem.name + "/"
+    import os
+    all_subdirs = [foldername + d for d in os.listdir(foldername) if os.path.isdir(foldername + d)]
+    latest_subdir = max(all_subdirs, key=os.path.getmtime)
+
 
     # # # # # # # # # # # # # # #
     # 3) Collect Initial Stats  #
@@ -117,6 +136,7 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         print gen, " | ",
         import sys
         sys.stdout.flush()
+
         # # # # # # # # #
         # 4a) Selection #
         # # # # # # # # #
@@ -149,8 +169,10 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         # # # # # # # # # # #
         if algorithm.name == "GALE0":
             statBox.update(selectees, gen, numNewEvals)
+            store_values(latest_subdir, gen, selectees)
         else:
             statBox.update(population, gen, numNewEvals)
+            store_values(latest_subdir, gen, population)
 
         # from PerformanceMetrics.IGD.IGD_Calculation import IGD
         # resulting_pf = [[float(f) for f in individual.fitness.fitness] for individual in statBox.box[-1].population]
@@ -164,8 +186,8 @@ def jmoo_evo(problem, algorithm, configurations, toStop = bstop):
         # # # # # # # # # # # # # # # # # #
         # 4e) Evaluate Stopping Criteria  #
         # # # # # # # # # # # # # # # # # #
-        # stoppingCriteria = toStop(statBox)
-        stoppingCriteria = False
+        stoppingCriteria = toStop(statBox)
+        # stoppingCriteria = False
 
         # assert(len(statBox.box[-1].population) == configurations["Universal"]["Population_Size"]), \
         #     "Length in the statBox should be equal to MU"

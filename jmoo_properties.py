@@ -49,10 +49,10 @@ from Problems.XOMO.XOMO_osp2 import XOMO_osp2
 
 # JMOO Experimental Definitions
 algorithms = [
-              jmoo_GALE0(),
-              jmoo_GALE(),
-              jmoo_DE(),
-              jmoo_MOEAD_TCH(),
+              # jmoo_GALE0(),
+              # jmoo_GALE(),
+              # jmoo_DE(),
+              # jmoo_MOEAD_TCH(),
               jmoo_NSGAIII(),
               # jmoo_NSGAII(),
               # jmoo_SPEA2(),
@@ -64,7 +64,7 @@ problems =[
     # srinivas()
     # POM3B(), #POM3A(), POM3C(), POM3D()
     # dtlz1(9, 5),
-    # dtlz2(14, 5),
+    dtlz2(14, 5),
     # dtlz3(14, 5),
     # dtlz4(14, 5),
     # dtlz1(7, 3),
@@ -88,10 +88,10 @@ problems =[
     # FeatureTreeModel("eshop", valid_solutions=True),
     # FeatureTreeModel("cellphone", valid_solutions=True),
     # FeatureTreeModel("EIS", valid_solutions=True),
-    FeatureTreeModel("Web_Portal"),
-    FeatureTreeModel("eshop"),
-    FeatureTreeModel("cellphone"),
-    FeatureTreeModel("EIS"),
+    # FeatureTreeModel("Web_Portal"),
+    # FeatureTreeModel("eshop"),
+    # FeatureTreeModel("cellphone"),
+    # FeatureTreeModel("EIS"),
     #MONRP(50, 5, 5, 20, 120)
     # cpm_apache(),cpm_X264(), cpm_SQL_4553(), cpm_SQL_100(), cpm_LLVM(), cpm_BDBJ(), cpm_BDBC()
     # cpm_apache_training_reduction(treatment=None),
@@ -109,9 +109,9 @@ build_new_pop = False                                       # Whether or not to 
 
 Configurations = {
     "Universal": {
-        "Repeats" : 3,
+        "Repeats" : 1,
         "Population_Size" : 92,
-        "No_of_Generations" : 1
+        "No_of_Generations" : 20
     },
     "NSGAIII": {
         "SBX_Probability": 1,

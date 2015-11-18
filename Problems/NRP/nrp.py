@@ -50,7 +50,7 @@ class NRP(jmoo_problem):
     def generate_data(self):
         self.requirement = [Requirement(i) for i in xrange(self.trequirements)]
         self.client = [Client(i, self.trequirements) for i in xrange(self.tclients)]
-        budget_release = int((sum(req.cost for req in self.requirement) * (self.tbudget/100))/self.treleases)
+        budget_release = int(sum([req.cost for req in self.requirement]) * (self.tbudget/100)/self.treleases)
         self.release = [Release(i, budget_release) for i in xrange(self.treleases)]
         self.precedence = self.generate_precedence()
 

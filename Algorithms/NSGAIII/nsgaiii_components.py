@@ -552,9 +552,16 @@ def nsgaiii_recombine2(problem, population, selectees, configuration):
     divisions = division_dict[str(len(problem.objectives))]
     reference_points = two_level_weight_vector_generator(divisions, len(problem.objectives))  # is always constant | checked!
 
+    import pdb
+    pdb.set_trace()
     population = associate(problem, population, reference_points)
+    import pdb
+    pdb.set_trace()
     population = assignment(problem, population, reference_points, configuration)
+    import pdb
+    pdb.set_trace()
     assert(len(population) == configuration["Universal"]["Population_Size"]), "This function needs to generate remain number of population"
+
 
     return population, evaluate_no
 

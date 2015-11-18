@@ -79,6 +79,7 @@ class jmoo_stats_box:
         statBox.bests = [100.0 for o in problem.objectives]
         statBox.bests_actuals = [0 for o in problem.objectives]
         statBox.lives = 3
+        statBox.reference_point_for_hypervolume = None
     
     def update(statBox, population, gen, num_new_evals, initial = False, printOption=True):
         "add a stat box - compute the statistics first"
@@ -104,7 +105,10 @@ class jmoo_stats_box:
         objective_iqr = [spread(fitCol) for fitCol in objective_columns]
         
         # Initialize Reference Point on Initial Run
-        if initial is True: statBox.referencePoint = [o.med for o in statBox.problem.objectives]
+        if initial is True:
+            statBox.referencePoint = [o.med for o in statBox.problem.objectives]
+            statBox.reference_point_for_hypervolume = [o.up for o in statBox.problem.objectives]
+
 
         # Calculate IBD & IBS
         # Finding min and max for each objectives
@@ -118,18 +122,16 @@ class jmoo_stats_box:
             best_fitness = objective_medians
         lossInQualities = [item["qual"] for item in lossInQualities]
 
-
-
         IBD = median(lossInQualities)
         IBS = spread(lossInQualities)
 
-        if initial == True:
+        if initial is True:
             IBD = 1.0
             statBox.referenceIBD = 1.0
         
         changes = []
         # Print Option
-        if printOption == True:
+        if printOption is True:
             outString = ""
             
             if initial:
