@@ -49,13 +49,16 @@ from Problems.XOMO.XOMO_osp2 import XOMO_osp2
 
 # JMOO Experimental Definitions
 algorithms = [
-              # jmoo_GALE0(),
               # jmoo_GALE(),
               # jmoo_DE(),
               # jmoo_MOEAD_TCH(),
-              jmoo_NSGAIII(),
+              # jmoo_NSGAIII(),
               # jmoo_NSGAII(),
               # jmoo_SPEA2(),
+              jmoo_GALE_no_mutation(),
+              # jmoo_DE(),
+              # jmoo_MOEAD_TCH(),
+              # jmoo_NSGAIII(),
     # jmoo_STORM()
               ]
 
@@ -63,8 +66,8 @@ problems =[
     # fonseca(3),
     # srinivas()
     # POM3B(), #POM3A(), POM3C(), POM3D()
-    # dtlz1(9, 5),
-    dtlz2(14, 5),
+    dtlz1(9, 5),
+    # dtlz2(14, 5),
     # dtlz3(14, 5),
     # dtlz4(14, 5),
     # dtlz1(7, 3),

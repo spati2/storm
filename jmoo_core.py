@@ -194,6 +194,7 @@ class JMOO:
                 # - Number of Evaluations + Aggregated Objective Score
                 # - 
 
+
                 fa = open("Data/results_" + filename, 'w')
                 strings = ["NumEval"] \
                           + [obj.name + "_median,(%chg),"

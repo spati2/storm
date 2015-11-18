@@ -122,7 +122,7 @@ class FeatureTreeModel(jmoo_problem):
                            jmoo_objective("constrained_violated", True),
                            jmoo_objective("cost", True)]
 
-    def evaluate(self, input = None):
+    def evaluate(self, input = None, return_fulfill=False):
         t = self.ft
         if input:
             # print input
@@ -130,7 +130,8 @@ class FeatureTreeModel(jmoo_problem):
             # obj1: features numbers
             # initialize the fulfill list
             fulfill = [-1] * t.featureNum
-            for x in range(len(input)): fulfill[t.features.index(t.leaves[x])] = input[x]
+
+            for i,l in enumerate(t.leaves): fulfill[t.features.index(l)] = input[i]
 
             # fill other tree elements
             t.fill_form_4_all_features(fulfill)
@@ -144,7 +145,10 @@ class FeatureTreeModel(jmoo_problem):
             # obj3: total cost
             obj3 = sum([t.cost[i] for i,f in enumerate(t.features) if (fulfill[i] == 1 and f.node_type != 'g')])
 
-            return [obj1, obj2, obj3]
+            if return_fulfill is False:
+                return [obj1, obj2, obj3]
+            else:
+                return [obj1, obj2, obj3], fulfill
         else:
             assert False, "BOOM"
             exit()
@@ -153,9 +157,7 @@ class FeatureTreeModel(jmoo_problem):
         if self.valid_solutions is True:
             from mutate_engine import mutateEngine
             engine = mutateEngine(self.ft)
-            engine.setFulfill(self.ft.root, 1)
-            q = engine.generate(1, True)[-1][-1]
-            return q
+            return engine.genValidOne()
         else:
             return super(FeatureTreeModel, self).generateInput()
 
@@ -166,10 +168,12 @@ class FeatureTreeModel(jmoo_problem):
     checking whether the candidate meets ALL constraints
     """
     def ok(self,c):
-        if not c.valid:
-            self.evaluate(c)
-
-        return c.fitness.fitness[1] == 0
+        try:
+            if not c.valid:
+                objectives, fullfill = self.evaluate(c.decisionValues, returnFulfill=True)
+        except:
+            objectives, fullfill = self.evaluate(c.decisionValues, returnFulfill=True)
+        return objectives[1] == 0 and fullfill[0] == 1
 
     def genRandomCan(self,guranteeOK = False):
         while True:
@@ -187,7 +191,7 @@ class FeatureTreeModel(jmoo_problem):
         print '-'*30
 
 def main():
-    m = FeatureTreeModel('../feature_tree_data/cellphone.xml')
+    m = FeatureTreeModel('../feature_tree_data/webportal.xml')
     can = m.genRandomCan()
     m.evaluate(can,doNorm=False)
     m.ok(can)
