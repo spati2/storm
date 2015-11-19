@@ -49,13 +49,9 @@ def read_initial_population(prob, filename):
                 except: pass
     return initial
 
-
-def charter_reporter(problems, algorithms, Configurations, tag=""):
+def joes_diagrams():
     date_folder_prefix = strftime("%m-%d-%Y")
 
-    fignum = 0
-    from Graphics.PerformanceMeasures.base import get_archive_data
-    get_archive_data(problems, algorithms)
 
     base = []
     final = []
@@ -68,6 +64,7 @@ def charter_reporter(problems, algorithms, Configurations, tag=""):
 
         for a,alg in enumerate(algorithms):
 
+
             # finput = open("data/" + prob.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "-dataset.txt", 'rb')
             f3input = open("data/results_" + prob.name + "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives)) + "_" + alg.name + ".datatable", 'rb')
             # f4input = open(DATA_PREFIX + "decision_bin_table" + "_" + prob.name+ "-p" + str(Configurations["Universal"]["Population_Size"]) + "-d"  + str(len(prob.decisions)) + "-o" + str(len(prob.objectives))  + "_" + alg.name + DATA_SUFFIX, 'rb')
@@ -77,19 +74,6 @@ def charter_reporter(problems, algorithms, Configurations, tag=""):
             base[p].append( [] )
             final[p].append( [] )
             data[p].append( [] )
-            print f3input
-
-            # for i,row in enumerate(reader):
-            #     if i <= 100 and i > 0:
-            #         candidate = [float(col) for col in row]
-            #         fitness = prob.evaluate(candidate)
-            #         base[p][a].append(candidate+fitness)
-            #
-            # for i,row in enumerate(reader4):
-            #     n = len(prob.decisions)
-            #     candidate = [float(col) for col in row[:n]]
-            #     fitness = prob.evaluate(candidate)
-            #     final[p][a].append(candidate+fitness)
 
             for i,row in enumerate(reader3):
                 if not str(row[0]) == "0":
@@ -100,12 +84,6 @@ def charter_reporter(problems, algorithms, Configurations, tag=""):
                             if not col == "":
                                 data[p][a][j].append(float(col.strip("%)(")))
 
-
-
-
-
-
-    fignum = 0
     colors = ['r', 'b', 'g']
     from matplotlib.font_manager import FontProperties
     font = {'family' : 'sans-serif',
@@ -181,5 +159,34 @@ def charter_reporter(problems, algorithms, Configurations, tag=""):
                 plt.legend(loc='lower center', bbox_to_anchor=(1, 0.5))
                 plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + tag + '.png', dpi=100)
                 cla()
+
+# def hypervolume_graphs(problems, algorithms, Configurations, tag=""):
+
+
+def spread_graphs(problems, algorithms, Configurations, tag=""):
+    from PerformanceMeasures.DataFrame import ProblemFrame
+    for problem in problems:
+        data = ProblemFrame(problem, algorithms)
+
+
+
+def charter_reporter(problems, algorithms, Configurations, tag=""):
+    from PerformanceMeasures.DataFrame import ProblemFrame
+    for problem in problems:
+        data = ProblemFrame(problem, algorithms)
+        extreme_point1, extreme_point2 = data.get_extreme_points(Configurations["Universal"]["Repeats"])
+        print "Extreme Points: "
+        for generation in xrange(1):#Configurations["Universal"]["No_of_Generations"]):
+            population = data.get_frontier_values(generation)
+            import pdb
+            pdb.set_trace()
+            for algorithm in algorithms:
+                for repeat in xrange(Configurations["Universal"]["Repeats"]):
+                    candidates = [population[algorithm.name][repeat]
+                                  need to check the repeat etc
+                    from PerformanceMetrics.Spread.Spread import spread_calculator
+                    print spread_calculator(candidates, extreme_point1, extreme_point2)
+        import pdb
+        pdb.set_trace()
     #show()
 

@@ -7,6 +7,8 @@ def spread_calculator(obtained_front, extreme_point1, extreme_point2):
     """
 
     def euclidean_distance(list1, list2):
+        print list1
+        print list2
         assert(len(list1) == len(list2)), "The points don't have the same dimension"
         distance = sum([(i - j) ** 2 for i, j in zip(list1, list2)]) ** 0.5
         assert(distance >= 0), "Distance can't be less than 0"
@@ -79,5 +81,5 @@ def spread_calculator_wrapper():
 
     return None
 
-
-spread_calculator_wrapper()
+if __name__ == "__main__":
+    spread_calculator_wrapper()
