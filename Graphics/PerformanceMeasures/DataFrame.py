@@ -36,10 +36,11 @@ class ProblemFrame():
 
         return objectives[index[0]], objectives[index[1]]
 
-    def get_reference_point(self, number=-1):
+    def get_reference_point(self, number_of_generations):
         """This method should be used to find the reference point or the nadir point"""
         reference_point = [-1 for _ in self.problem.objectives]
-        points = self.get_frontiers(number)
+        from Techniques.flatten_list import flatten
+        points = flatten([d.get_frontiers_collection(number) for number in xrange(number_of_generations) for d in self.data])
         objectives = [point.objectives for point in points]
         for count, objective in enumerate(self.problem.objectives):
             one_objective = [point[count] for point in objectives]
@@ -50,6 +51,11 @@ class ProblemFrame():
     def get_frontier_values(self, generation_number):
         result = {}
         for d in self.data: result[d.algorithm.name] = d.get_frontiers_for_generation(generation_number)
+        return result
+
+    def get_evaluation_values(self, generation_number):
+        result = {}
+        for d in self.data: result[d.algorithm.name] = d.get_evaluations_for_generation(generation_number)
         return result
 
 
@@ -74,6 +80,9 @@ class AlgorithmFrame():
     def get_frontiers_for_generation(self, number):
         return [repeat.get_frontier(number) for repeat in self.repeats]
 
+    def get_evaluations_for_generation(self, number):
+        return [repeat.get_evaluations(number) for repeat in self.repeats]
+
 
 class RepeatFrame():
     def __init__(self, problem, folder_name):
@@ -94,6 +103,12 @@ class RepeatFrame():
         else:
             return []
 
+    def get_evaluations(self, number):
+        if number < len(self.generations):
+            return self.generations[number].evaluation
+        else:
+            return 0
+
 
 class GenerationFrame():
     def __init__(self, problem, filename):
@@ -101,6 +116,7 @@ class GenerationFrame():
         self.filename = filename
         self.problem = problem
         self.solutions = []
+        self.evaluation = -1
         self.get_data()
 
     def get_data(self):
@@ -108,6 +124,8 @@ class GenerationFrame():
         for line in open(self.filename).readlines():
             content = map(float, line.split(","))
             self.solutions.append(SolutionFrame(content[:number_of_decisions], content[number_of_decisions:]))
+        from Techniques.file_operations import count_number_of_lines
+        self.evaluation = count_number_of_lines(self.filename)
 
 
 class SolutionFrame():

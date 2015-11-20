@@ -28,7 +28,7 @@
 "Objective Space Plotter"
 
 # from pylab import *
-from time import *
+from time import strftime
 
 from pylab import *
 
@@ -160,33 +160,109 @@ def joes_diagrams():
                 plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + tag + '.png', dpi=100)
                 cla()
 
-# def hypervolume_graphs(problems, algorithms, Configurations, tag=""):
+
+
+
+
+def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
+    def get_data_from_archive(problems, algorithms, Configurations, function):
+        from PerformanceMeasures.DataFrame import ProblemFrame
+        problem_dict = {}
+        for problem in problems:
+            data = ProblemFrame(problem, algorithms)
+            reference_point = data.get_reference_point(Configurations["Universal"]["No_of_Generations"])
+            generation_dict = {}
+            for generation in xrange(Configurations["Universal"]["No_of_Generations"]):
+                population = data.get_frontier_values(generation)
+                evaluations = data.get_evaluation_values(generation)
+                algorithm_dict = {}
+                for algorithm in algorithms:
+                    repeat_dict = {}
+                    for repeat in xrange(Configurations["Universal"]["Repeats"]):
+                        candidates = [pop.objectives for pop in population[algorithm.name][repeat]]
+                        repeat_dict[str(repeat)] = {}
+                        if len(candidates) > 0:
+                            repeat_dict[str(repeat)]["HyperVolume"] = function(reference_point, candidates)
+                            repeat_dict[str(repeat)]["Evaluations"] = evaluations[algorithm.name][repeat]
+                        else:
+                            repeat_dict[str(repeat)]["HyperVolume"] = None
+                            repeat_dict[str(repeat)]["Evaluations"] = None
+
+                    algorithm_dict[algorithm.name] = repeat_dict
+                generation_dict[str(generation)] = algorithm_dict
+            problem_dict[problem.name] = generation_dict
+        return problem_dict
+
+    from PerformanceMetrics.HyperVolume.hv import get_hyper_volume
+    result = get_data_from_archive(problems, algorithms, Configurations, get_hyper_volume)
+
+    date_folder_prefix = strftime("%m-%d-%Y")
+
+    for problem in problems:
+        f, axarr = plt.subplots(1)
+        for algorithm in algorithms:
+            median_scores = []
+            median_evals = []
+            for generation in xrange(Configurations["Universal"]["No_of_Generations"]):
+                temp_result = result[problem.name][str(generation)][algorithm.name]
+                hypervolume_list = [temp_result[str(repeat)]["HyperVolume"] for repeat in xrange(Configurations["Universal"]["Repeats"]) if temp_result[str(repeat)]["HyperVolume"] is not None]
+
+                old_evals = [sum([result[problem.name][str(tgen)][algorithm.name][str(repeat)]["Evaluations"] for tgen in xrange(generation) if result[problem.name][str(tgen)][algorithm.name][str(repeat)]["Evaluations"] is not None]) for repeat in xrange(Configurations["Universal"]["Repeats"])]
+                evaluation_list = [temp_result[str(repeat)]["Evaluations"] for repeat in xrange(Configurations["Universal"]["Repeats"]) if temp_result[str(repeat)]["Evaluations"] is not None]
+
+                assert(len(hypervolume_list) == len(evaluation_list)), "Something is wrong"
+                if len(hypervolume_list) > 0 and len(evaluation_list) > 0:
+                    median_scores.append(median(hypervolume_list))
+                    median_evals.append(mean(old_evals))
+
+            axarr.plot(median_evals, median_scores, linestyle='None', label=algorithm.name, marker=algorithm.type, color=algorithm.color, markersize=8, markeredgecolor='none')
+            axarr.plot(median_evals, median_scores, color=algorithm.color)
+            # axarr[o].set_ylim(0, 130)
+            axarr.set_autoscale_on(True)
+            axarr.set_xlim([-10, 10000])
+            axarr.set_xscale('log', nonposx='clip')
+            axarr.set_ylabel("HyperVolume")
+        if not os.path.isdir('charts/' + date_folder_prefix):
+            os.makedirs('charts/' + date_folder_prefix)
+
+        f.suptitle(problem.name)
+        fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
+        plt.legend(loc='lower center', bbox_to_anchor=(1, 0.5))
+        plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
+        cla()
 
 
 def spread_graphs(problems, algorithms, Configurations, tag=""):
-    from PerformanceMeasures.DataFrame import ProblemFrame
-    for problem in problems:
-        data = ProblemFrame(problem, algorithms)
+    def get_data_from_archive(problems, algorithms, Configurations, function):
+        from PerformanceMeasures.DataFrame import ProblemFrame
+        problem_dict = {}
+        for problem in problems:
+            data = ProblemFrame(problem, algorithms)
+            extreme_point1, extreme_point2 = data.get_extreme_points(Configurations["Universal"]["Repeats"])
+            generation_dict = {}
+            for generation in xrange(Configurations["Universal"]["No_of_Generations"]):
+                population = data.get_frontier_values(generation)
+                algorithm_dict = {}
+                for algorithm in algorithms:
+                    repeat_dict = {}
+                    for repeat in xrange(Configurations["Universal"]["Repeats"]):
+                        candidates = [pop.objectives for pop in population[algorithm.name][repeat]]
+                        if len(candidates) > 0:
+                            repeat_dict[str(repeat)] = function(candidates, extreme_point1, extreme_point2)
+                        else:
+                            repeat_dict[str(repeat)] = None
+                    algorithm_dict[algorithm.name] = repeat_dict
+                generation_dict[str(generation)] = algorithm_dict
+            problem_dict[problem.name] = generation_dict
+        return problem_dict
+
+    from PerformanceMetrics.Spread.Spread import spread_calculator
+    result = get_data_from_archive(problems, algorithms, Configurations, spread_calculator)
 
 
 
 def charter_reporter(problems, algorithms, Configurations, tag=""):
-    from PerformanceMeasures.DataFrame import ProblemFrame
-    for problem in problems:
-        data = ProblemFrame(problem, algorithms)
-        extreme_point1, extreme_point2 = data.get_extreme_points(Configurations["Universal"]["Repeats"])
-        print "Extreme Points: "
-        for generation in xrange(1):#Configurations["Universal"]["No_of_Generations"]):
-            population = data.get_frontier_values(generation)
-            import pdb
-            pdb.set_trace()
-            for algorithm in algorithms:
-                for repeat in xrange(Configurations["Universal"]["Repeats"]):
-                    candidates = [population[algorithm.name][repeat]
-                                  need to check the repeat etc
-                    from PerformanceMetrics.Spread.Spread import spread_calculator
-                    print spread_calculator(candidates, extreme_point1, extreme_point2)
-        import pdb
-        pdb.set_trace()
-    #show()
+
+    hypervolume_graphs(problems, algorithms, Configurations)
+    checking pending
 

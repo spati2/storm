@@ -53,7 +53,7 @@ algorithms = [
               jmoo_DE(),
               jmoo_MOEAD_TCH(),
               jmoo_NSGAIII(),
-              jmoo_GALE_no_mutation(),
+              # jmoo_GALE_no_mutation(),
               # jmoo_NSGAII(),
               # jmoo_SPEA2(),
               # jmoo_DE(),

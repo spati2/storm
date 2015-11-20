@@ -18,7 +18,7 @@
 __author__ = "Simon Wessing"
 
 
-class InnerHyperVolume:
+class HyperVolume:
     """
     Hypervolume computation based on variant 3 of the algorithm in the paper:
     C. M. Fonseca, L. Paquete, and M. Lopez-Ibanez. An improved dimension-sweep
@@ -282,6 +282,12 @@ class MultiList:
                 bounds[i] = node.cargo[i]
 
 
+def get_hyper_volume(reference_point, results):
+    """Receives list of  lists"""
+
+    HV = HyperVolume(reference_point)
+    return HV.compute(results)
+
 if __name__ == "__main__":
 
     # Example:
@@ -291,7 +297,7 @@ if __name__ == "__main__":
     volume = hv.compute(front)
     print volume
 
-            
-            
-            
-        
+
+
+
+
