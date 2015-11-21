@@ -315,7 +315,7 @@ def selSPEA2(problem, population, selectees, configurations):
         cells = []
         for j in range(len(dIndividual)):
             cells.append(dIndividual[j])
-        population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
+        population.append(jmoo_individual(problem, cells, [f for f in dIndividual.fitness.values]))
 
     return population, k
 
@@ -340,7 +340,7 @@ def selNSGA2(problem, population, selectees, configurations):
         cells = []
         for j in range(len(dIndividual)):
             cells.append(dIndividual[j])
-        population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
+        population.append(jmoo_individual(problem, cells, [f for f in dIndividual.fitness.values]))
 
     return population, k
 

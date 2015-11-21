@@ -200,6 +200,7 @@ def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
 
     for problem in problems:
         f, axarr = plt.subplots(1)
+        scores = {}
         for algorithm in algorithms:
             median_scores = []
             median_evals = []
@@ -212,9 +213,11 @@ def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
 
                 assert(len(hypervolume_list) == len(evaluation_list)), "Something is wrong"
                 if len(hypervolume_list) > 0 and len(evaluation_list) > 0:
-                    median_scores.append(median(hypervolume_list))
+                    median_scores.append(mean(hypervolume_list))
                     median_evals.append(mean(old_evals))
 
+            # print "Problem: ", problem.name, " Algorithm: ", algorithm.name, " Mean HyperVolume: ", mean(median_scores)
+            scores[algorithm.name] = mean(median_scores)
             axarr.plot(median_evals, median_scores, linestyle='None', label=algorithm.name, marker=algorithm.type, color=algorithm.color, markersize=8, markeredgecolor='none')
             axarr.plot(median_evals, median_scores, color=algorithm.color)
             # axarr[o].set_ylim(0, 130)
@@ -231,8 +234,13 @@ def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
         plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
         cla()
 
+        print "Problem Name: ", problem.name
+        print "NSGA Percentage: ", (scores["GALE"]/scores["NSGAII"]) * 100
+        print "SPEA Percentage: ", (scores["GALE"]/scores["SPEA2"]) * 100
+        print
 
-def spread_graphs(problems, algorithms, Configurations, tag=""):
+
+def spread_graphs(problems, algorithms, Configurations, tag="Spread"):
     def get_data_from_archive(problems, algorithms, Configurations, function):
         from PerformanceMeasures.DataFrame import ProblemFrame
         problem_dict = {}
@@ -242,15 +250,19 @@ def spread_graphs(problems, algorithms, Configurations, tag=""):
             generation_dict = {}
             for generation in xrange(Configurations["Universal"]["No_of_Generations"]):
                 population = data.get_frontier_values(generation)
+                evaluations = data.get_evaluation_values(generation)
                 algorithm_dict = {}
                 for algorithm in algorithms:
                     repeat_dict = {}
                     for repeat in xrange(Configurations["Universal"]["Repeats"]):
                         candidates = [pop.objectives for pop in population[algorithm.name][repeat]]
+                        repeat_dict[str(repeat)] = {}
                         if len(candidates) > 0:
-                            repeat_dict[str(repeat)] = function(candidates, extreme_point1, extreme_point2)
+                            repeat_dict[str(repeat)]["Spread"] = function(candidates, extreme_point1, extreme_point2)
+                            repeat_dict[str(repeat)]["Evaluations"] = evaluations[algorithm.name][repeat]
                         else:
-                            repeat_dict[str(repeat)] = None
+                            repeat_dict[str(repeat)]["Spread"] = None
+                            repeat_dict[str(repeat)]["Evaluations"] = None
                     algorithm_dict[algorithm.name] = repeat_dict
                 generation_dict[str(generation)] = algorithm_dict
             problem_dict[problem.name] = generation_dict
@@ -258,11 +270,53 @@ def spread_graphs(problems, algorithms, Configurations, tag=""):
 
     from PerformanceMetrics.Spread.Spread import spread_calculator
     result = get_data_from_archive(problems, algorithms, Configurations, spread_calculator)
+    date_folder_prefix = strftime("%m-%d-%Y")
+
+    for problem in problems:
+        f, axarr = plt.subplots(1)
+        scores = {}
+        for algorithm in algorithms:
+            median_scores = []
+            median_evals = []
+            for generation in xrange(Configurations["Universal"]["No_of_Generations"]):
+                temp_result = result[problem.name][str(generation)][algorithm.name]
+                hypervolume_list = [temp_result[str(repeat)]["Spread"] for repeat in xrange(Configurations["Universal"]["Repeats"]) if temp_result[str(repeat)]["Spread"] is not None]
+
+                old_evals = [sum([result[problem.name][str(tgen)][algorithm.name][str(repeat)]["Evaluations"] for tgen in xrange(generation) if result[problem.name][str(tgen)][algorithm.name][str(repeat)]["Evaluations"] is not None]) for repeat in xrange(Configurations["Universal"]["Repeats"])]
+                evaluation_list = [temp_result[str(repeat)]["Evaluations"] for repeat in xrange(Configurations["Universal"]["Repeats"]) if temp_result[str(repeat)]["Evaluations"] is not None]
+
+                assert(len(hypervolume_list) == len(evaluation_list)), "Something is wrong"
+                if len(hypervolume_list) > 0 and len(evaluation_list) > 0:
+                    median_scores.append(mean(hypervolume_list))
+                    median_evals.append(mean(old_evals))
+
+            # print "Problem: ", problem.name, " Algorithm: ", algorithm.name, " Mean HyperVolume: ", mean(median_scores)
+            scores[algorithm.name] = mean(median_scores)
+            axarr.plot(median_evals, median_scores, linestyle='None', label=algorithm.name, marker=algorithm.type, color=algorithm.color, markersize=8, markeredgecolor='none')
+            axarr.plot(median_evals, median_scores, color=algorithm.color)
+            # axarr[o].set_ylim(0, 130)
+            axarr.set_autoscale_on(True)
+            axarr.set_xlim([-10, 10000])
+            axarr.set_xscale('log', nonposx='clip')
+            axarr.set_ylabel("HyperVolume")
+        if not os.path.isdir('charts/' + date_folder_prefix):
+            os.makedirs('charts/' + date_folder_prefix)
+
+        f.suptitle(problem.name)
+        fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
+        plt.legend(loc='lower center', bbox_to_anchor=(1, 0.5))
+        plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
+        cla()
+
+        print "Problem Name: ", problem.name
+        print "NSGA Percentage: ", (scores["GALE"]/scores["NSGAII"]) * 100
+        print "SPEA Percentage: ", (scores["GALE"]/scores["SPEA2"]) * 100
+        print
 
 
 
 def charter_reporter(problems, algorithms, Configurations, tag=""):
 
-    hypervolume_graphs(problems, algorithms, Configurations)
-    checking pending
+    # hypervolume_graphs(problems, algorithms, Configurations)
+    spread_graphs(problems, algorithms, Configurations)
 
