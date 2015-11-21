@@ -49,7 +49,8 @@ def read_initial_population(prob, filename):
                 except: pass
     return initial
 
-def joes_diagrams():
+
+def joes_diagrams(problems, algorithms, Configurations):
     date_folder_prefix = strftime("%m-%d-%Y")
 
 
@@ -317,6 +318,7 @@ def spread_graphs(problems, algorithms, Configurations, tag="Spread"):
 
 def charter_reporter(problems, algorithms, Configurations, tag=""):
 
-    # hypervolume_graphs(problems, algorithms, Configurations)
+    hypervolume_graphs(problems, algorithms, Configurations)
     spread_graphs(problems, algorithms, Configurations)
+    joes_diagrams(problems, algorithms, Configurations)
 
