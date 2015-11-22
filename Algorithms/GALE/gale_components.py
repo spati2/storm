@@ -61,6 +61,7 @@ def galeMutate(problem, NDLeafs, configuration):
 
     for leaf in NDLeafs:
 
+        # print "Number of mutants: ", len(leaf.table.rows)
         # Pull out the Poles
         east = leaf.table.rows[0]
         west = leaf.table.rows[-1]

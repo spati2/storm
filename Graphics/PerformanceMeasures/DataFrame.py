@@ -69,7 +69,7 @@ class AlgorithmFrame():
     def __init__(self, problem, algorithm):
         self.problem = problem
         self.algorithm = algorithm
-        self.foldername = "./PopulationArchives/" + algorithm.name + "_" + problem.name + "/"
+        self.foldername = "./RawData/PopulationArchives/" + algorithm.name + "_" + problem.name + "/"
         self.repeats = None
         self.get_repeat_data()
 

@@ -50,7 +50,7 @@ def read_initial_population(prob, filename):
     return initial
 
 
-def joes_diagrams(problems, algorithms, Configurations):
+def joes_diagrams(problems, algorithms, Configurations, tag="JoeDiagram"):
     date_folder_prefix = strftime("%m-%d-%Y")
 
 
@@ -232,10 +232,6 @@ def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
         plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
         cla()
 
-        print "Problem Name: ", problem.name
-        print "NSGA Percentage: ", (scores["GALE"]/scores["NSGAII"]) * 100
-        print "SPEA Percentage: ", (scores["GALE"]/scores["SPEA2"]) * 100
-        print
 
 
 def spread_graphs(problems, algorithms, Configurations, tag="Spread"):
@@ -306,10 +302,7 @@ def spread_graphs(problems, algorithms, Configurations, tag="Spread"):
         plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
         cla()
 
-        print "Problem Name: ", problem.name
-        print "NSGA Percentage: ", (scores["GALE"]/scores["NSGAII"]) * 100
-        print "SPEA Percentage: ", (scores["GALE"]/scores["SPEA2"]) * 100
-        print
+
 
 
 def statistic_reporter(problems, algorithms, Configurations, tag="RunTimes"):
@@ -379,8 +372,7 @@ def statistic_reporter(problems, algorithms, Configurations, tag="RunTimes"):
 
 def charter_reporter(problems, algorithms, Configurations, tag=""):
 
-    # hypervolume_graphs(problems, algorithms, Configurations)
-    # spread_graphs(problems, algorithms, Configurations)
-    # joes_diagrams(problems, algorithms, Configurations)
-    run_time_graphs(problems, algorithms, Configurations)
+    hypervolume_graphs(problems, algorithms, Configurations)
+    spread_graphs(problems, algorithms, Configurations)
+    joes_diagrams(problems, algorithms, Configurations)
 

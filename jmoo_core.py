@@ -119,8 +119,8 @@ class jmoo_chart_report:
         self.Configurations = Configurations
 
     def doit(self, tagnote=""):
-        # for problem in self.tests.problems:
-        #     charter_reporter([problem], self.tests.algorithms, self.Configurations, tag=tagnote)
+        for problem in self.tests.problems:
+            charter_reporter([problem], self.tests.algorithms, self.Configurations, tag=tagnote)
         statistic_reporter(self.tests.problems, self.tests.algorithms, self.Configurations, tag=tagnote)
 
 

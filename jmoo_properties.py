@@ -49,13 +49,14 @@ from Problems.XOMO.XOMO_osp2 import XOMO_osp2
 
 # JMOO Experimental Definitions
 algorithms = [
+              jmoo_GALE2(),
               jmoo_GALE(),
               # jmoo_DE(),
               # jmoo_MOEAD_TCH(),
               # jmoo_NSGAIII(),
               # jmoo_GALE_no_mutation(),
-              jmoo_NSGAII(),
-              jmoo_SPEA2(),
+              # jmoo_NSGAII(),
+              # jmoo_SPEA2(),
               # jmoo_DE(),
               # jmoo_MOEAD_TCH(),
               # jmoo_NSGAIII(),
@@ -64,14 +65,14 @@ algorithms = [
 
 problems =[
     # fonseca(3),
+    #     zdt1(),
+    #  zdt4(),
+    #  zdt3(),
+    # golinski(), zdt6()
     # srinivas()
     # POM3B(), #POM3A(), POM3C(), POM3D()
-    # dtlz1(9, 5),
+    dtlz1(9, 5),
     # dtlz2(14, 5),
-    zdt1(),
-     zdt4(),
-     zdt3(),
-    golinski(), zdt6()
     # dtlz3(14, 5),
     # dtlz4(14, 5),
     # dtlz1(7, 3),
@@ -82,7 +83,8 @@ problems =[
     # dtlz2(17, 8),
     # dtlz3(17, 8),
     # dtlz4(17, 8),
-    # dtlz1(14, 10), dtlz2(19, 10),
+    # dtlz1(14, 10),
+    # dtlz2(19, 10),
     # dtlz3(19, 10),
     # dtlz4(19, 10),
     # dtlz1(19, 15),
@@ -129,7 +131,7 @@ Configurations = {
         "GAMMA" : 0.15,  #Constrained Mutation Parameter
         "EPSILON" : 1.00,  #Continuous Domination Parameter
         "LAMBDA" :  3,     #Number of lives for bstop
-        "DELTA"  : 1       # Accelerator that increases mutation size
+        "DELTA"  : 3       # Accelerator that increases mutation size
     },
     "DE": {
         "F" : 0.75, # extrapolate amount
