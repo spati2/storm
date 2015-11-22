@@ -162,9 +162,6 @@ def joes_diagrams(problems, algorithms, Configurations):
                 cla()
 
 
-
-
-
 def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
     def get_data_from_archive(problems, algorithms, Configurations, function):
         from PerformanceMeasures.DataFrame import ProblemFrame
@@ -315,10 +312,74 @@ def spread_graphs(problems, algorithms, Configurations, tag="Spread"):
         print
 
 
+def statistic_reporter(problems, algorithms, Configurations, tag="RunTimes"):
+    def get_filename():
+        from time import strftime
+        date_folder_prefix = strftime("%m-%d-%Y")
+        folder_name = "./RawData/ExperimentalRecords/" + date_folder_prefix + "/"
+        from os import listdir
+        from os.path import isfile, getmtime
+        all_files = [folder_name + d for d in listdir(folder_name) if isfile(folder_name + d)]
+        latest_file = sorted(all_files, key=getmtime)[-1]
+        return latest_file
+
+    def draw(title, y, names, tag=""):
+        ind = np.arange(len(y))
+        width = 0.5
+        figure = plt.figure()
+        ax = plt.subplot(111)
+        ax.bar(ind, y)
+        plt.ylabel(tag)
+        plt.title(title)
+        plt.xticks(ind + width/2., names)
+        date_folder_prefix = strftime("%m-%d-%Y")
+        if not os.path.isdir('charts/' + date_folder_prefix):
+            os.makedirs('charts/' + date_folder_prefix)
+
+        fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
+        plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
+        cla()
+
+
+    import xml.etree.ElementTree as ET
+    doc = ET.parse(get_filename())
+    root = doc.getroot()
+
+    extracted_problems = [child for child in root if child.attrib["name"] in [problem.name for problem in problems]]
+    # assert(len(extracted_problems) == len(problem)), "The problems in the experiment have to be run at the same time"
+
+    results = {}
+    for extracted_problem in extracted_problems:
+        algorithm_result = {}
+        for extracted_algorithm in extracted_problem:
+            run_result = {}
+            for extracted_run in extracted_algorithm:
+                per_run_result = {"evaluation": float(extracted_run[0][0].text),
+                                  "run_time": float(extracted_run[0][1].text)}
+                run_result[extracted_run.attrib["id"]] = per_run_result
+            algorithm_result[extracted_algorithm.attrib["name"]] = run_result
+        results[extracted_problem.attrib["name"]] = algorithm_result
+
+
+    for problem in problems:
+        algorithm_name = []
+        average_runtime = []
+        average_evaluation = []
+        for a, algorithm in enumerate(algorithms):
+            algorithm_name.append(algorithm.name)
+            average_runtime.append(mean([float(results[problem.name][algorithm.name][str(r+1)]["run_time"]) for r in xrange(Configurations["Universal"]["Repeats"])]))
+            average_evaluation.append(mean([float(results[problem.name][algorithm.name][str(r+1)]["evaluation"]) for r in xrange(Configurations["Universal"]["Repeats"])]))
+
+        draw(problem.name, average_runtime, algorithm_name, "Runtimes")
+
+
+
+
 
 def charter_reporter(problems, algorithms, Configurations, tag=""):
 
-    hypervolume_graphs(problems, algorithms, Configurations)
-    spread_graphs(problems, algorithms, Configurations)
-    joes_diagrams(problems, algorithms, Configurations)
+    # hypervolume_graphs(problems, algorithms, Configurations)
+    # spread_graphs(problems, algorithms, Configurations)
+    # joes_diagrams(problems, algorithms, Configurations)
+    run_time_graphs(problems, algorithms, Configurations)
 

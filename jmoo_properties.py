@@ -68,7 +68,9 @@ problems =[
     # POM3B(), #POM3A(), POM3C(), POM3D()
     # dtlz1(9, 5),
     # dtlz2(14, 5),
-    zdt1(), zdt4(), zdt3(),
+    zdt1(),
+     zdt4(),
+     zdt3(),
     golinski(), zdt6()
     # dtlz3(14, 5),
     # dtlz4(14, 5),

@@ -13,13 +13,14 @@ class ProblemFrame():
         :param number: Front Number
         :return: List of all the solutions across all algorithms and repeats
         """
-        assert(len(self.data) != 0), "The frame was not initialized properly"
+        assert (len(self.data) != 0), "The frame was not initialized properly"
         return [item for d in self.data for item in d.get_frontiers_collection(number)]
 
     def get_extreme_points(self, number_of_generations):
         """This method should be used to find the extreme points of particular generation across all the algorithms"""
         from Techniques.flatten_list import flatten
-        points = flatten([d.get_frontiers_collection(number) for number in xrange(number_of_generations) for d in self.data])
+        points = flatten(
+            [d.get_frontiers_collection(number) for number in xrange(number_of_generations) for d in self.data])
         objectives = [point.objectives for point in points]
         maps_objectives = [[-1 for _ in objectives] for _ in objectives]
         from Techniques.euclidean_distance import euclidean_distance
@@ -28,9 +29,11 @@ class ProblemFrame():
                 if maps_objectives[i][j] == -1:
                     maps_objectives[i][j] = euclidean_distance(ii, jj)
                     maps_objectives[j][i] = euclidean_distance(ii, jj)
-                elif i == j: maps_objectives[i][j] = 0
+                elif i == j:
+                    maps_objectives[i][j] = 0
         max_distance = max([max(maps_objective) for maps_objective in maps_objectives])
-        indexes = [[(i, j) for j, distance in enumerate(distances) if distance == max_distance] for i, distances in enumerate(maps_objectives)]
+        indexes = [[(i, j) for j, distance in enumerate(distances) if distance == max_distance] for i, distances in
+                   enumerate(maps_objectives)]
         index = [index for index in indexes if len(index) > 0][-1][-1]  # Hack: To handle list of lists
         # indexes should always be a multiple of 2. And if there more than 2 entries in indexes just use any one.
 
@@ -40,12 +43,15 @@ class ProblemFrame():
         """This method should be used to find the reference point or the nadir point"""
         reference_point = [-1 for _ in self.problem.objectives]
         from Techniques.flatten_list import flatten
-        points = flatten([d.get_frontiers_collection(number) for number in xrange(number_of_generations) for d in self.data])
+        points = flatten(
+            [d.get_frontiers_collection(number) for number in xrange(number_of_generations) for d in self.data])
         objectives = [point.objectives for point in points]
         for count, objective in enumerate(self.problem.objectives):
             one_objective = [point[count] for point in objectives]
-            if objective.lismore is True: reference_point[count] = max(one_objective)
-            else: reference_point[count] = min(one_objective)
+            if objective.lismore is True:
+                reference_point[count] = max(one_objective)
+            else:
+                reference_point[count] = min(one_objective)
         return reference_point
 
     def get_frontier_values(self, generation_number):
@@ -59,13 +65,11 @@ class ProblemFrame():
         return result
 
 
-
-
 class AlgorithmFrame():
     def __init__(self, problem, algorithm):
         self.problem = problem
         self.algorithm = algorithm
-        self.foldername =  "./Population_Archives/" + algorithm.name + "_" + problem.name + "/"
+        self.foldername = "./PopulationArchives/" + algorithm.name + "_" + problem.name + "/"
         self.repeats = None
         self.get_repeat_data()
 
@@ -94,7 +98,7 @@ class RepeatFrame():
     def get_generation_data(self):
         from os import listdir
         from os.path import isfile, join
-        files = [join(self.foldername,f) for f in listdir(self.foldername) if isfile(join(self.foldername,f))]
+        files = [join(self.foldername, f) for f in listdir(self.foldername) if isfile(join(self.foldername, f))]
         self.generations = [GenerationFrame(self.problem, file) for file in files]
 
     def get_frontier(self, number):

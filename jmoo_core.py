@@ -32,7 +32,7 @@ Random Stuff
 
 import random
 
-from Graphics.charter import charter_reporter
+from Graphics.charter import charter_reporter, statistic_reporter
 from jmoo_jmoea import jmoo_evo
 from jmoo_properties import DECISION_BIN_TABLE, DATA_SUFFIX, DATA_PREFIX, DEFECT_PREDICT_PREFIX, SUMMARY_RESULTS, \
     RRS_TABLE
@@ -119,8 +119,9 @@ class jmoo_chart_report:
         self.Configurations = Configurations
 
     def doit(self, tagnote=""):
-        for problem in self.tests.problems:
-            charter_reporter([problem], self.tests.algorithms, self.Configurations, tag=tagnote)
+        # for problem in self.tests.problems:
+        #     charter_reporter([problem], self.tests.algorithms, self.Configurations, tag=tagnote)
+        statistic_reporter(self.tests.problems, self.tests.algorithms, self.Configurations, tag=tagnote)
 
 
 class jmoo_df_report:
@@ -145,7 +146,6 @@ class jmoo_df_report:
 
     def doRanks(self):
         assert (self.tests != None), "Problems not passed"
-        print self.filename
         parseXML(self.filename, self.tag, self.tests)
 
 
@@ -169,10 +169,17 @@ class JMOO:
         sc2 = open(DATA_PREFIX + SUMMARY_RESULTS + DATA_SUFFIX, 'w')
 
         # Main control loop
-        representatives = []  # List of resulting final generations (stat boxe datatype)
+        representatives = []                        # List of resulting final generations (stat boxe datatype)
+        record_string = "<Experiment>\n"
         for problem in self.tests.problems:
+              
+            record_string += "<Problem name = '" + problem.name + "'>\n"
+            
             for algorithm in self.tests.algorithms:
-
+                
+                
+                record_string += "<Algorithm name = '" + algorithm.name + "'>\n"
+                
                 print "#<------- " + problem.name + " + " + algorithm.name + " ------->#"
 
                 # Initialize Data file for recording summary information [for just this problem + algorithm]
@@ -208,11 +215,12 @@ class JMOO:
                 # Repeat Core
                 for repeat in range(self.configurations["Universal"]["Repeats"]):
 
-                    foldername = "./Population_Archives/" + algorithm.name + "_" + problem.name + "/" + str(repeat)
+                    foldername = "./RawData/PopulationArchives/" + algorithm.name + "_" + problem.name + "/" + str(repeat)
                     import os
                     if not os.path.exists(foldername):
                         os.makedirs(foldername)
                     # Run
+                    record_string += "<Run id = '" + str(repeat+1) + "'>\n"
 
                     start = time.time()
                     statBox = jmoo_evo(problem, algorithm, self.configurations)
@@ -275,34 +283,38 @@ class JMOO:
                         sr.write(s_out + "\n")
                         sc2.write(s_out + "\n")
 
+
+                    record_string += "<Summary>\n"
+                    record_string += "<NumEvals>" + str(representative.numEval) + "</NumEvals>\n"
+                    record_string += "<RunTime>" + str((end-start)) + "</RunTime>\n"
+                    record_string += "<IBD>" + str(box.IBD) + "</IBD>\n"
+                    record_string += "<IBS>" + str(box.IBS) + "</IBS>\n"
+                    for i in range(len(problem.objectives)):
+                        record_string += "<" + problem.objectives[i].name + ">" + str(representative.fitnessMedians[i]) + "</" + problem.objectives[i].name + ">\n"
+                    record_string += "</Summary>"
+                        
+                        
+                    
+                    
                     # Finish
-                    print " # Finished: Celebrate! # " + " Time taken: " + str("%10.5f" % (end - start)) + " seconds."
+                    record_string += "</Run>\n"
+                    print " # Finished: Celebrate! # " + " Time taken: " + str("%10.5f" % (end-start)) + " seconds."
+                    
+                record_string += "</Algorithm>\n"
+            record_string += "</Problem>\n"
+        record_string += "</Experiment>\n"
 
-    def remove_dominated_solution(self, problem, final_generation):
-        # change format from jmoo_individula to deap_structure
-        deap_final_generation = deap_format(problem, final_generation)
-        front = ParetoFront()
-        front.update(deap_final_generation)
-        # Copy from DEAP structure to JMOO structure
-        population = []
-        for i, dIndividual in enumerate(front):
-            cells = []
-            for j in range(len(dIndividual)):
-                cells.append(dIndividual[j])
-            population.append(jmoo_individual(problem, cells, dIndividual.fitness.values))
-        return population
-
-    def medianlist(self, list):
-        print "List: ", list
-        ret = []
-        for i in xrange(len(list[0])):
-            temp = []
-            print "i: ", i
-            for l in list:
-                temp.append(l[i])
-            ret.append(median(temp))
-        return ret
-
-    def doReports(self, thing=""):
+        from time import strftime
+        date_folder_prefix = strftime("%m-%d-%Y")
+        if not os.path.isdir('./RawData/ExperimentalRecords/' + date_folder_prefix):
+            os.makedirs('./RawData/ExperimentalRecords/' + date_folder_prefix)
+        record_number = len([name for name in os.listdir('./RawData/ExperimentalRecords/' + date_folder_prefix)]) + 1
+        filename = './RawData/ExperimentalRecords/' + date_folder_prefix + '/Record' + "_" + str("%02d" % record_number) + "_" + 'ExperimentRecords.xml'
+        zOutFile = open(filename, 'w')
+        zOutFile.write(record_string)
+                    
+                    
+                    
+    def doReports(self,thing=""):
         for report in self.reports:
             report.doit(tagnote=thing)
