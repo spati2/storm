@@ -371,6 +371,7 @@ def statistic_reporter(problems, algorithms, Configurations, tag="RunTimes"):
             average_evaluation.append(mean([float(results[problem.name][algorithm.name][str(r+1)]["evaluation"]) for r in xrange(Configurations["Universal"]["Repeats"])]))
 
         draw(problem.name, average_runtime, algorithm_name, "Runtimes")
+        draw(problem.name, average_evaluation, algorithm_name, "Evaluations")
 
 
 
