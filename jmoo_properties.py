@@ -51,9 +51,9 @@ from Problems.XOMO.XOMO_osp2 import XOMO_osp2
 algorithms = [
               jmoo_GALE2(),
               jmoo_GALE(),
-              # jmoo_DE(),
-              # jmoo_MOEAD_TCH(),
-              # jmoo_NSGAIII(),
+              jmoo_DE(),
+              jmoo_MOEAD_TCH(),
+              jmoo_NSGAIII(),
               # jmoo_GALE_no_mutation(),
               # jmoo_NSGAII(),
               # jmoo_SPEA2(),
@@ -72,8 +72,8 @@ problems =[
     # srinivas()
     # POM3B(), #POM3A(), POM3C(), POM3D()
     dtlz1(9, 5),
-    # dtlz2(14, 5),
-    # dtlz3(14, 5),
+    dtlz2(14, 5),
+    dtlz3(14, 5),
     # dtlz4(14, 5),
     # dtlz1(7, 3),
     # dtlz2(12, 3),

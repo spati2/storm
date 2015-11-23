@@ -32,7 +32,7 @@ Random Stuff
 
 import random
 
-from Graphics.charter import charter_reporter, statistic_reporter
+from Graphics.charter import charter_reporter, statistic_reporter, comparision_reporter
 from jmoo_jmoea import jmoo_evo
 from jmoo_properties import DECISION_BIN_TABLE, DATA_SUFFIX, DATA_PREFIX, DEFECT_PREDICT_PREFIX, SUMMARY_RESULTS, \
     RRS_TABLE
@@ -119,9 +119,11 @@ class jmoo_chart_report:
         self.Configurations = Configurations
 
     def doit(self, tagnote=""):
+        hv_spread =[]
         for problem in self.tests.problems:
-            charter_reporter([problem], self.tests.algorithms, self.Configurations, tag=tagnote)
-        statistic_reporter(self.tests.problems, self.tests.algorithms, self.Configurations, tag=tagnote)
+            hv_spread.append(charter_reporter([problem], self.tests.algorithms, self.Configurations, tag=tagnote))
+        # statistic_reporter(self.tests.problems, self.tests.algorithms, self.Configurations, tag=tagnote)
+        comparision_reporter(self.tests.problems, self.tests.algorithms, [hvp[0] for hvp in hv_spread], [hvp[1] for hvp in hv_spread], "GALE")
 
 
 class jmoo_df_report:

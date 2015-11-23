@@ -196,6 +196,7 @@ def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
 
     date_folder_prefix = strftime("%m-%d-%Y")
 
+    problem_scores = {}
     for problem in problems:
         f, axarr = plt.subplots(1)
         scores = {}
@@ -231,8 +232,9 @@ def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
         plt.legend(loc='lower center', bbox_to_anchor=(1, 0.5))
         plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
         cla()
+        problem_scores[problem.name] = scores
 
-
+    return problem_scores
 
 def spread_graphs(problems, algorithms, Configurations, tag="Spread"):
     def get_data_from_archive(problems, algorithms, Configurations, function):
@@ -266,6 +268,8 @@ def spread_graphs(problems, algorithms, Configurations, tag="Spread"):
     result = get_data_from_archive(problems, algorithms, Configurations, spread_calculator)
     date_folder_prefix = strftime("%m-%d-%Y")
 
+
+    problem_scores = {}
     for problem in problems:
         f, axarr = plt.subplots(1)
         scores = {}
@@ -301,15 +305,16 @@ def spread_graphs(problems, algorithms, Configurations, tag="Spread"):
         plt.legend(loc='lower center', bbox_to_anchor=(1, 0.5))
         plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
         cla()
-
-
+        problem_scores[problem.name] = scores
+    return problem_scores
 
 
 def statistic_reporter(problems, algorithms, Configurations, tag="RunTimes"):
     def get_filename():
         from time import strftime
         date_folder_prefix = strftime("%m-%d-%Y")
-        folder_name = "./RawData/ExperimentalRecords/" + date_folder_prefix + "/"
+        folder_name = "./RawData/ExperimentalRecords/"
+        folder_name = sorted([os.path.join(folder_name,d) for d in os.listdir(folder_name)], key=os.path.getmtime)[-1]
         from os import listdir
         from os.path import isfile, getmtime
         all_files = [folder_name + d for d in listdir(folder_name) if isfile(folder_name + d)]
@@ -367,12 +372,39 @@ def statistic_reporter(problems, algorithms, Configurations, tag="RunTimes"):
         draw(problem.name, average_evaluation, algorithm_name, "Evaluations")
 
 
+def comparision_reporter(problems, algorithms, list_hypervolume_scores, list_spread_scores,base_line, tag="Comparisions"):
+    # TODO: write comment
 
+    for measure_name, list_xx_scores in zip(["HyperVolume", "Spread"], [list_hypervolume_scores, list_spread_scores]):
+        # concatenating the dictionaries
+        x_scores = list_xx_scores[0]
+        for x_score in list_xx_scores: x_scores.update(x_score)
+
+        x_dpoints = []
+        for problem in problems:
+            base_score = int(x_scores[problem.name][base_line])
+            for algorithm in algorithms:
+                temp_score = (x_scores[problem.name][algorithm.name]/base_score) * 100
+                x_dpoints.append([algorithm.name, problem.name, temp_score])
+
+        np_x_dpoints = np.array(x_dpoints)
+        spread doesn't work'
+
+        date_folder_prefix = strftime("%m-%d-%Y")
+        if not os.path.isdir('charts/' + date_folder_prefix):
+                os.makedirs('charts/' + date_folder_prefix)
+        fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
+        file_name = 'charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + tag + name + '.png'
+
+        from Graphs.grouped_bar_plots import barplot
+        barplot(np_x_dpoints, file_name, tag + measure_name)
 
 
 def charter_reporter(problems, algorithms, Configurations, tag=""):
 
-    hypervolume_graphs(problems, algorithms, Configurations)
-    spread_graphs(problems, algorithms, Configurations)
-    joes_diagrams(problems, algorithms, Configurations)
+    hypervolume_scores = hypervolume_graphs(problems, algorithms, Configurations)
+    spread_scores = spread_graphs(problems, algorithms, Configurations)
+    # joes_diagrams(problems, algorithms, Configurations)
+    # comparision_reporter(problems, algorithms, hypervolume_scores, spread_scores, "GALE")
+    return [hypervolume_scores, spread_scores]
 
