@@ -1,4 +1,4 @@
-
+from __future__ import division
 """
 ##########################################################
 ### @Author Joe Krall      ###############################
@@ -28,6 +28,7 @@
 "Objective Space Plotter"
 
 # from pylab import *
+
 from time import strftime
 
 from pylab import *
@@ -375,26 +376,27 @@ def statistic_reporter(problems, algorithms, Configurations, tag="RunTimes"):
 def comparision_reporter(problems, algorithms, list_hypervolume_scores, list_spread_scores,base_line, tag="Comparisions"):
     # TODO: write comment
 
+
     for measure_name, list_xx_scores in zip(["HyperVolume", "Spread"], [list_hypervolume_scores, list_spread_scores]):
         # concatenating the dictionaries
         x_scores = list_xx_scores[0]
         for x_score in list_xx_scores: x_scores.update(x_score)
-
+        import pdb
+        pdb.set_trace()
         x_dpoints = []
         for problem in problems:
-            base_score = int(x_scores[problem.name][base_line])
+            base_score = float(x_scores[problem.name][base_line])
             for algorithm in algorithms:
                 temp_score = (x_scores[problem.name][algorithm.name]/base_score) * 100
                 x_dpoints.append([algorithm.name, problem.name, temp_score])
 
         np_x_dpoints = np.array(x_dpoints)
-        spread doesn't work'
 
         date_folder_prefix = strftime("%m-%d-%Y")
         if not os.path.isdir('charts/' + date_folder_prefix):
                 os.makedirs('charts/' + date_folder_prefix)
         fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
-        file_name = 'charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + tag + name + '.png'
+        file_name = 'charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + tag + measure_name + '.png'
 
         from Graphs.grouped_bar_plots import barplot
         barplot(np_x_dpoints, file_name, tag + measure_name)
