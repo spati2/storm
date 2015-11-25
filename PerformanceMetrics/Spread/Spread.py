@@ -14,16 +14,19 @@ def spread_calculator(obtained_front, extreme_point1, extreme_point2):
 
     def closest(obtained_front, point, distance=euclidean_distance):
         """Returns the point from obtained_front which is closed to point"""
-        from sys import maxint
         closest_point = None
-        min_distance = maxint
+        min_distance = 1e100
         for opoint in obtained_front:
             temp_distance = distance(opoint, point)
-            if temp_distance < min_distance:
+            if temp_distance <= min_distance:
                 min_distance = temp_distance
                 closest_point = opoint
+
+
         assert(closest_point is not None), "closest_point cannot be None"
         return closest_point, min_distance
+
+
 
     _, df = closest(obtained_front, extreme_point1)
     _, dl = closest(obtained_front, extreme_point2)

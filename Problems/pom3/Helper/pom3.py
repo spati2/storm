@@ -119,8 +119,8 @@ class pom3:
         
         
         
-        return [cost, score, completion, idle]
-        #return [cost, score, idle]
+        # return [cost, score, completion, idle]
+        return [cost, 1e10-score, idle]
         
         
 

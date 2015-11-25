@@ -376,7 +376,6 @@ def statistic_reporter(problems, algorithms, Configurations, tag="RunTimes"):
 def comparision_reporter(problems, algorithms, list_hypervolume_scores, list_spread_scores,base_line, tag="Comparisions"):
     # TODO: write comment
 
-
     for measure_name, list_xx_scores in zip(["HyperVolume", "Spread"], [list_hypervolume_scores, list_spread_scores]):
         # concatenating the dictionaries
         x_scores = list_xx_scores[0]

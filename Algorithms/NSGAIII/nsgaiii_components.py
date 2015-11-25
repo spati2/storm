@@ -381,7 +381,7 @@ def normalization(problem, population, intercept_point, ideal_point):
     for individual in population:
         temp_normalized = []
         for count, obj in enumerate(individual.fitness.fitness):
-            temp_normalized.append((obj - ideal_point[count])/(intercept_point[count] - ideal_point[count]))
+            temp_normalized.append((obj - ideal_point[count])/(intercept_point[count] - ideal_point[count] + 0.0000001))
         individual.normalized = temp_normalized
 
     return population

@@ -15,7 +15,7 @@ class POM3A(jmoo_problem):
         UPS = [0.9, 1.20, 10, 0.70, 100, 50, 4, 5, 44]
         prob.decisions = [jmoo_decision(names[i], LOWS[i], UPS[i]) for i in range(len(names))]
         prob.objectives = [jmoo_objective("Cost", True, 0), jmoo_objective("Score", False, 0, 1),
-                           jmoo_objective("Completion", False, 0, 1), jmoo_objective("Idle", True, 0, 1)]
+                           jmoo_objective("Completion", False, 0, 1)]#, jmoo_objective("Idle", True, 0, 1)]
 
     def evaluate(prob, input=None):
         if input:
