@@ -122,7 +122,7 @@ class jmoo_chart_report:
         hv_spread =[]
         for problem in self.tests.problems:
             hv_spread.append(charter_reporter([problem], self.tests.algorithms, self.Configurations, tag=tagnote))
-        # statistic_reporter(self.tests.problems, self.tests.algorithms, self.Configurations, tag=tagnote)
+        statistic_reporter(self.tests.problems, self.tests.algorithms, self.Configurations, tag=tagnote)
         comparision_reporter(self.tests.problems, self.tests.algorithms, [hvp[0] for hvp in hv_spread], [hvp[1] for hvp in hv_spread], "GALE")
 
 

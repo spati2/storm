@@ -318,7 +318,7 @@ def statistic_reporter(problems, algorithms, Configurations, tag="RunTimes"):
         folder_name = sorted([os.path.join(folder_name,d) for d in os.listdir(folder_name)], key=os.path.getmtime)[-1]
         from os import listdir
         from os.path import isfile, getmtime
-        all_files = [folder_name + d for d in listdir(folder_name) if isfile(folder_name + d)]
+        all_files = [folder_name + "/" + d for d in listdir(folder_name) if isfile(folder_name + "/" + d)]
         latest_file = sorted(all_files, key=getmtime)[-1]
         return latest_file
 
@@ -381,8 +381,6 @@ def comparision_reporter(problems, algorithms, list_hypervolume_scores, list_spr
         # concatenating the dictionaries
         x_scores = list_xx_scores[0]
         for x_score in list_xx_scores: x_scores.update(x_score)
-        import pdb
-        pdb.set_trace()
         x_dpoints = []
         for problem in problems:
             base_score = float(x_scores[problem.name][base_line])
@@ -407,6 +405,5 @@ def charter_reporter(problems, algorithms, Configurations, tag=""):
     hypervolume_scores = hypervolume_graphs(problems, algorithms, Configurations)
     spread_scores = spread_graphs(problems, algorithms, Configurations)
     # joes_diagrams(problems, algorithms, Configurations)
-    # comparision_reporter(problems, algorithms, hypervolume_scores, spread_scores, "GALE")
     return [hypervolume_scores, spread_scores]
 
