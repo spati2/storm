@@ -593,9 +593,6 @@ def moead_selector_tch(problem, population, configuration, values_to_be_passed):
     from copy import deepcopy
     from random import shuffle
 
-    print ". ",
-    import sys
-    sys.stdout.flush()
 
     ideal_point = values_to_be_passed["ideal_point"]
     indivpoint = values_to_be_passed["indivpoint"]
