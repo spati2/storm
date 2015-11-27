@@ -5,7 +5,7 @@ import operator as o
 import numpy as np
 
 
-def barplot(dpoints, file_name, title):
+def barplot(dpoints, file_name, title, color):
     '''
     Create a barchart for data across different categories with
     multiple conditions for each category.
@@ -43,12 +43,12 @@ def barplot(dpoints, file_name, title):
         vals = dpoints[dpoints[:,0] == cond][:,2].astype(np.float)
         pos = [j - (1 - space) / 2. + i * width for j in indeces]
         ax.bar(pos, vals, width=width, label=cond,
-               color=cm.Accent(float(i) / n))
+               color=color[conditions[i]]) #cm.Accent(float(i) / n))
 
     # Set the x-axis tick labels to be equal to the categories
     ax.set_xticks(indeces)
     ax.set_xticklabels(categories)
-    plt.setp(plt.xticks()[1], rotation=90)
+    plt.setp(plt.xticks()[1])
 
     # Add the axis labels
     ax.set_ylabel("Ratio of Algorithm/BaseLine")
@@ -56,7 +56,11 @@ def barplot(dpoints, file_name, title):
 
     # Add a legend
     handles, labels = ax.get_legend_handles_labels()
-    ax.legend(handles[::-1], labels[::-1], loc='upper left')
+    # ax.legend(handles[::-1], labels[::-1])
+    # Shrink current axis by 20%
+    box = ax.get_position()
+    ax.set_position([box.x0, box.y0, box.width * 0.8, box.height])
+    ax.legend(handles[::-1], labels[::-1], loc='center left', bbox_to_anchor=(1, 0.5))
     fig.savefig(file_name)
 
 
@@ -71,5 +75,5 @@ if __name__ == "__main__":
            ['random', '1gid', 31.46],
            ['random', '1y26', 18.16]])
 
-
-    barplot(dpoints, 'barchart_3.png', "blah")
+    color = {"rosetta":"Black", "rnacomposer": "Green", "random": "Red"}
+    barplot(dpoints, 'barchart_3.png', "blah", color)

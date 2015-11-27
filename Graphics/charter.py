@@ -396,13 +396,13 @@ def comparision_reporter(problems, algorithms, list_hypervolume_scores, list_spr
         file_name = 'charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + tag + measure_name + '.png'
 
         from Graphs.grouped_bar_plots import barplot
-        barplot(np_x_dpoints, file_name, tag + measure_name)
+        barplot(np_x_dpoints, file_name, tag + measure_name, {alg.name:alg.color for alg in algorithms})
 
 
 def charter_reporter(problems, algorithms, Configurations, tag=""):
 
     hypervolume_scores = hypervolume_graphs(problems, algorithms, Configurations)
     spread_scores = spread_graphs(problems, algorithms, Configurations)
-    # joes_diagrams(problems, algorithms, Configurations)
+    joes_diagrams(problems, algorithms, Configurations)
     return [hypervolume_scores, spread_scores]
 
