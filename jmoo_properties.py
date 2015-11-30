@@ -44,16 +44,19 @@ from Problems.XOMO.XOMO_all import XOMO_all
 from Problems.XOMO.XOMO_ground import XOMO_ground
 from Problems.XOMO.XOMO_osp import XOMO_osp
 from Problems.XOMO.XOMO_osp2 import XOMO_osp2
+from Problems.RE.re import RE
+from Problems.RE.dot_models import *
+
 
 
 
 # JMOO Experimental Definitions
 algorithms = [
-              jmoo_GALE2(),
+              #jmoo_GALE2(),
               jmoo_GALE(),
               jmoo_DE(),
-              jmoo_MOEAD_TCH(),
-              jmoo_NSGAIII(),
+              #jmoo_MOEAD_TCH(),
+              #jmoo_NSGAIII(),
               # jmoo_GALE_no_mutation(),
               # jmoo_NSGAII(),
               # jmoo_SPEA2(),
@@ -70,9 +73,9 @@ problems =[
     #  zdt3(),
     # golinski(), zdt6()
     # srinivas()
-    POM3B(),
-    POM3A(),
-    POM3C(), POM3D(),
+    #POM3B(),
+    #POM3A(),
+    #POM3C(), POM3D(),
     # dtlz1(9, 5),
     # dtlz2(14, 5),
     # dtlz3(14, 5),
@@ -93,7 +96,8 @@ problems =[
     # dtlz2(24, 15),
     # dtlz3(24, 15),
     # dtlz4(24, 15)
-    XOMO_all(),
+    RE(CSServices())
+    #XOMO_all(),
     # NRP(50, 5, 5, 20, 120)
     # FeatureTreeModel("Web_Portal", valid_solutions=True),
     # FeatureTreeModel("eshop", valid_solutions=True),
@@ -120,7 +124,7 @@ build_new_pop = False                                       # Whether or not to 
 
 Configurations = {
     "Universal": {
-        "Repeats" : 3,
+        "Repeats" : 10,
         "Population_Size" : 92,
         "No_of_Generations" : 20
     },

@@ -33,6 +33,9 @@ from time import strftime
 
 from pylab import *
 
+import matplotlib.pyplot as plt
+import numpy as np
+from numpy import mean
 from jmoo_properties import *
 from utility import *
 from Algorithms.DEAP.tools.support import ParetoFront
@@ -160,7 +163,7 @@ def joes_diagrams(problems, algorithms, Configurations, tag="JoeDiagram"):
                 fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
                 plt.legend(loc='lower center', bbox_to_anchor=(1, 0.5))
                 plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + prob.name + "_" + tag + '.png', dpi=100)
-                cla()
+                plt.cla()
 
 
 def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
@@ -170,6 +173,7 @@ def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
         for problem in problems:
             data = ProblemFrame(problem, algorithms)
             reference_point = data.get_reference_point(Configurations["Universal"]["No_of_Generations"])
+
             generation_dict = {}
             for generation in xrange(Configurations["Universal"]["No_of_Generations"]):
                 population = data.get_frontier_values(generation)
@@ -232,7 +236,7 @@ def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
         fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
         plt.legend(loc='lower center', bbox_to_anchor=(1, 0.5))
         plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
-        cla()
+        plt.cla()
         problem_scores[problem.name] = scores
 
     return problem_scores
@@ -305,7 +309,7 @@ def spread_graphs(problems, algorithms, Configurations, tag="Spread"):
         fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
         plt.legend(loc='lower center', bbox_to_anchor=(1, 0.5))
         plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
-        cla()
+        plt.cla()
         problem_scores[problem.name] = scores
     return problem_scores
 
@@ -337,7 +341,7 @@ def statistic_reporter(problems, algorithms, Configurations, tag="RunTimes"):
 
         fignum = len([name for name in os.listdir('charts/' + date_folder_prefix)]) + 1
         plt.savefig('charts/' + date_folder_prefix + '/figure' + str("%02d" % fignum) + "_" + problem.name + "_" + tag + '.png', dpi=100)
-        cla()
+        plt.cla()
 
 
     import xml.etree.ElementTree as ET
