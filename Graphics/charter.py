@@ -174,6 +174,7 @@ def hypervolume_graphs(problems, algorithms, Configurations, tag="HyperVolume"):
             data = ProblemFrame(problem, algorithms)
             reference_point = data.get_reference_point(Configurations["Universal"]["No_of_Generations"])
 
+
             generation_dict = {}
             for generation in xrange(Configurations["Universal"]["No_of_Generations"]):
                 population = data.get_frontier_values(generation)
